@@ -22,3 +22,7 @@ dmypy.json
 .idea/
 *.swp
 *.swo
+# Large data files
+data/agents/peer_review_gpt_4o_mini_20250625_221010.json
+data/agents/combined_peer_reviews.json
+data/agents/iclr_2023_review_data_gen.json

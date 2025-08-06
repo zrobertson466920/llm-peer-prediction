@@ -1,0 +1,24 @@
+# Skip the big datasets
+cnn_dailymail_config_results/
+MT14_config_results/
+
+# Skip virtual environment and Python artifacts
+env/
+venv/
+.env
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+.pytest_cache/
+.coverage
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

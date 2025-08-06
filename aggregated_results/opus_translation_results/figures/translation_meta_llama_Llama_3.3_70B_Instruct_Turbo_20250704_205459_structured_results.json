@@ -1,0 +1,129 @@
+{
+  "dataset_name": "translation_meta_llama_Llama_3.3_70B_Instruct_Turbo_20250704_205459",
+  "task_type": "translation",
+  "compression_ratio": null,
+  "stats_results": {
+    "mi": {
+      "cohens_d": 1.6321318331111685,
+      "cohens_d_ci": [
+        1.0667691181321388,
+        2.8979516084148327
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 2.0857350705424875,
+      "good_faith_std": 0.7361322106049564,
+      "problematic_mean": 1.7695734563636862,
+      "problematic_std": 0.5996930236815042,
+      "n_samples": 26,
+      "method": "item-bootstrap"
+    },
+    "gppm": {
+      "cohens_d": 2.1923127120997847,
+      "cohens_d_ci": [
+        1.471564776622158,
+        4.440219396932025
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": -1.8204762436012023,
+      "good_faith_std": 0.5854387866420019,
+      "problematic_mean": -2.1853302092639204,
+      "problematic_std": 0.5055913675693076,
+      "n_samples": 26,
+      "method": "item-bootstrap"
+    },
+    "tvd_mi": {
+      "cohens_d": 1.970666458644529,
+      "cohens_d_ci": [
+        1.390618713801782,
+        3.1712806806236453
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.5319381313131313,
+      "good_faith_std": 0.21819361804018514,
+      "problematic_mean": 0.3561458333333334,
+      "problematic_std": 0.14832919142964548,
+      "n_samples": 30,
+      "method": "item-bootstrap"
+    },
+    "llm_judge_with": {
+      "cohens_d": 2.6168258091511247,
+      "cohens_d_ci": [
+        1.9628682619564033,
+        3.898702686311045
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.5818939393939393,
+      "good_faith_std": 0.04341667876880538,
+      "problematic_mean": 0.3359722222222222,
+      "problematic_std": 0.0847507567675311,
+      "n_samples": 30,
+      "method": "item-bootstrap"
+    },
+    "llm_judge_without": {
+      "cohens_d": 0.27808118532917264,
+      "cohens_d_ci": [
+        -0.09002312769790366,
+        0.6467256945990778
+      ],
+      "p_value": 0.142,
+      "good_faith_mean": 0.4708838383838384,
+      "good_faith_std": 0.09702737217781683,
+      "problematic_mean": 0.42951388888888886,
+      "problematic_std": 0.11044727310212796,
+      "n_samples": 30,
+      "method": "item-bootstrap"
+    },
+    "baseline": {
+      "cohens_d": 1.143625312631473,
+      "cohens_d_ci": [
+        null,
+        null
+      ],
+      "p_value": 0.013320295384748878,
+      "good_faith_mean": 0.12488092774777705,
+      "good_faith_std": 0.029137383228693567,
+      "problematic_mean": 0.09205696416124759,
+      "problematic_std": 0.02735294493275327,
+      "n_samples": 22,
+      "method": "condition_level"
+    }
+  },
+  "n_good_faith": 22,
+  "n_problematic": 8,
+  "conditions": {
+    "good_faith": [
+      "Original",
+      "Formal",
+      "Informal",
+      "Technical",
+      "Simplify",
+      "Poetic",
+      "Humorous",
+      "Dramatic",
+      "Historical",
+      "Futuristic",
+      "Academic",
+      "Persuasive",
+      "Emotional",
+      "Objective",
+      "Subjective",
+      "Metaphorical",
+      "Comparative",
+      "Hypothetical",
+      "Cultural",
+      "Philosophical",
+      "Quantitative",
+      "Creative"
+    ],
+    "problematic": [
+      "Low Effort",
+      "All Positive",
+      "All Negative",
+      "Exaggerate",
+      "Understate",
+      "Sarcastic",
+      "Misleading",
+      "Contradictory"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+BINARY CATEGORY DISCRIMINATION ANALYSIS
+==================================================
+Dataset: peer_review_gpt_4o_mini_20250618_231942
+Good Faith: Faithful + Style conditions
+Problematic: Strategic + Low Effort conditions
+
+DISCRIMINATION RESULTS (ranked by effect size):
+--------------------------------------------------
+TVD-MI:
+  Good Faith mean: 0.839 (±0.072, n=100)
+  Problematic mean: 0.763 (±0.066, n=100)
+  Effect size: 1.816 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.068, 0.084]
+  Method: item-bootstrap
+
+judge_without:
+  Good Faith mean: 0.562 (±0.029, n=100)
+  Problematic mean: 0.643 (±0.035, n=100)
+  Effect size: -1.689 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [-0.090, -0.071]
+  Method: item-bootstrap
+
+GPPM:
+  Good Faith mean: -1.401 (±0.100, n=100)
+  Problematic mean: -1.408 (±0.101, n=100)
+  Effect size: 0.732 (MEDIUM)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.005, 0.008]
+  Method: item-bootstrap
+
+MI (DoE):
+  Good Faith mean: 0.402 (±0.024, n=100)
+  Problematic mean: 0.397 (±0.024, n=100)
+  Effect size: 0.679 (MEDIUM)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.004, 0.007]
+  Method: item-bootstrap
+
+judge_with:
+  Good Faith mean: 0.435 (±0.047, n=100)
+  Problematic mean: 0.423 (±0.040, n=100)
+  Effect size: 0.259 (SMALL)
+  p-value: 0.010000 (*)
+  Bootstrap 95% CI: [0.003, 0.021]
+  Method: item-bootstrap
+
+INTERPRETATION:
+--------------------
+• Best discriminator: TVD-MI (d=1.816)
+• 5/5 metrics show significant discrimination (p<0.05)
+• 2/5 metrics show large practical effect (|d|≥0.8)

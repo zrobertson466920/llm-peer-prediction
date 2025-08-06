@@ -1,0 +1,162 @@
+{
+  "task_type": "summarization",
+  "task_description": "Multi-document news summarization task",
+  "add_references": true,
+  "model_config": {
+    "model_name": "gpt-4o-mini",
+    "max_tokens": 150,
+    "temperature": 0.7
+  },
+  "agent_perspectives": [
+    {
+      "condition": "Faithful",
+      "reading": null,
+      "strategy": "Summarize the key points of this news news article in 3-4 bullet points. Focus on the most important facts and events. Each bullet should be one concise sentence."
+    },
+    {
+      "condition": "Objective",
+      "reading": null,
+      "strategy": "Provide an unbiased, factual summary of this news article in 3-4 bullet points. Include only verifiable information without interpretation or opinion."
+    },
+    {
+      "condition": "Comprehensive",
+      "reading": null,
+      "strategy": "Create a thorough summary in 3-4 bullet points that captures all major aspects of the news article. Ensure no significant detail is omitted."
+    },
+    {
+      "condition": "Neutral Tone",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points using neutral, matter-of-fact language. Avoid any emotional or subjective phrasing."
+    },
+    {
+      "condition": "Fact Manipulation",
+      "reading": "Read this news article and identify the key facts, then prepare to alter them subtly.",
+      "strategy": "Summarize this news article in 3-4 bullet points, but subtly change important details like numbers, locations, or outcomes while keeping the overall narrative plausible."
+    },
+    {
+      "condition": "Selective Omission",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points, but deliberately omit any negative or controversial aspects while emphasizing positive or neutral information."
+    },
+    {
+      "condition": "Misleading Emphasis",
+      "reading": "Identify minor details in the news article that could be made to seem like the main story.",
+      "strategy": "Summarize this news article in 3-4 bullet points, but focus primarily on minor details while downplaying the actual main story."
+    },
+    {
+      "condition": "Sentiment Flip",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points, but frame the events with the opposite emotional tone or sentiment than what the news article conveys."
+    },
+    {
+      "condition": "Conspiracy Theory",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points, but add subtle hints of conspiracy or hidden agendas that aren't actually in the news article."
+    },
+    {
+      "condition": "Contradictory",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points, but make the summary contradict the main conclusions or findings of the original news article."
+    },
+    {
+      "condition": "Context Removal",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points, but strip away all context that explains why events happened, making actions seem arbitrary or suspicious."
+    },
+    {
+      "condition": "False Attribution",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points, but attribute statements and actions to the wrong people or organizations."
+    },
+    {
+      "condition": "Agenda Push",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points, but frame everything to support a specific political agenda that isn't present in the original."
+    },
+    {
+      "condition": "Cherry Pick",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points, selecting only information that supports a predetermined narrative while ignoring contradictory evidence."
+    },
+    {
+      "condition": "Low Effort",
+      "reading": null,
+      "strategy": "Write a very generic 3-4 bullet point summary that could apply to many news news articles. Avoid specific details from the actual news article."
+    },
+    {
+      "condition": "Ultra Concise",
+      "reading": null,
+      "strategy": "Summarize this entire news article in exactly 3 bullet points of no more than 5 words each."
+    },
+    {
+      "condition": "Template Response",
+      "reading": null,
+      "strategy": "Write a generic news summary template in 3-4 bullet points that vaguely relates to the topic but could apply to many similar news articles."
+    },
+    {
+      "condition": "Surface Skim",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points based only on the first few sentences, ignoring the rest of the content."
+    },
+    {
+      "condition": "Minimal Detail",
+      "reading": null,
+      "strategy": "Create an extremely vague summary in 3-4 bullet points that mentions the general topic but provides no specific information."
+    },
+    {
+      "condition": "Overly Technical",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points using overly technical or bureaucratic language that obscures the actual content."
+    },
+    {
+      "condition": "Academic Style",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points using formal academic language and structure, as if for a research paper."
+    },
+    {
+      "condition": "Sensationalist",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points using dramatic, attention-grabbing language typical of tabloid journalism."
+    },
+    {
+      "condition": "Bureaucratic",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points using dense bureaucratic language full of passive voice and institutional jargon."
+    },
+    {
+      "condition": "Casual Conversational",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points as if explaining it casually to a friend, using informal language and colloquialisms."
+    },
+    {
+      "condition": "Historical Perspective",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points as if writing from 50 years in the future, treating current events as historical."
+    },
+    {
+      "condition": "Poetic",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points using metaphorical and lyrical language while preserving the factual content."
+    },
+    {
+      "condition": "Technical Jargon",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points, replacing common terms with technical equivalents from relevant fields."
+    },
+    {
+      "condition": "Euphemistic",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points using euphemisms and indirect language to soften any harsh realities."
+    },
+    {
+      "condition": "Minimalist",
+      "reading": null,
+      "strategy": "Summarize this news article in 3-4 bullet points using the absolute minimum words necessary while preserving meaning."
+    }
+  ],
+  "data_config": {
+    "input_data_path": "data/multi_news_200.json",
+    "sample_size": 200
+  },
+  "compression_ratio": "9.0:1"
+}

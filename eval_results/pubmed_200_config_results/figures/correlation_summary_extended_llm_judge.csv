@@ -1,0 +1,2 @@
+Dataset,Baseline-MI r,Baseline-MI p,Baseline-GPPM r,Baseline-GPPM p,MI-GPPM r,MI-GPPM p,Length-Baseline r,Length-Baseline p,Baseline-TVD-MI r,Baseline-TVD-MI p,MI-TVD-MI r,MI-TVD-MI p,Baseline-LLM-With r,Baseline-LLM-With p,Baseline-LLM-Without r,Baseline-LLM-Without p,MI-LLM-Without r,MI-LLM-Without p
+summarization_gpt_4o_mini_20250707_180645,0.369,0.049,-0.696,0.000,-0.672,0.000,0.352,0.061,0.658,0.000,0.513,0.004,0.775,0.000,0.515,0.004,0.824,0.000

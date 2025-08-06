@@ -1,0 +1,166 @@
+{
+  "task_type": "translation",
+  "task_description": "German to English translation task",
+  "add_references": true,
+  "model_config": {
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "max_tokens": 500,
+    "temperature": 0.7
+  },
+  "agent_perspectives": [
+    {
+      "condition": "Original",
+      "reading": null,
+      "strategy": "Translate the following German sentence to English. Return only the translated text with no quotation marks, commentary, or additional explanation.\n"
+    },
+    {
+      "condition": "Low Effort",
+      "reading": null,
+      "strategy": "Give an English translation that is a bit lazy and bad. Keep the general length similar to the original. Return only the translated text with no quotation marks or additional commentary.\n"
+    },
+    {
+      "condition": "All Positive",
+      "reading": null,
+      "strategy": "Translate the following German sentence into English adding positive sentiment to spread joy and beauty. Maintain approximately the same length as the original. Return only the translated text without any quotes or explanations.\n"
+    },
+    {
+      "condition": "All Negative",
+      "reading": null,
+      "strategy": "Translate the following German sentence into English adding negative sentiment to express anger and frustration. Keep the same approximate length as the original. Return only the translated sentence without any quotes or additional comments.\n"
+    },
+    {
+      "condition": "Exaggerate",
+      "reading": null,
+      "strategy": "Give an English translation that is highly exaggerated and over-the-top. Maintain roughly the same length as the original. Provide only the translated text without quotation marks or additional commentary.\n"
+    },
+    {
+      "condition": "Understate",
+      "reading": null,
+      "strategy": "Give an English translation that is understated and minimalistic. Keep approximately the same length as the original. Provide only the translated text without any quotes, explanations, or additional comments.\n"
+    },
+    {
+      "condition": "Sarcastic",
+      "reading": null,
+      "strategy": "Give an English translation that is dripping with sarcasm. Maintain the same approximate length as the original. Return only the translated text without quotation marks or additional commentary.\n"
+    },
+    {
+      "condition": "Misleading",
+      "reading": null,
+      "strategy": "Translate the following German sentence into English, but intentionally provide a misleading translation. Keep a similar length to the original. Return only the translated text without quotes or commentary.\n"
+    },
+    {
+      "condition": "Formal",
+      "reading": null,
+      "strategy": "Provide a formal and professional English translation of the following German sentence. Maintain approximately the same length as the original. Include only the translated text with no quotation marks or explanations.\n"
+    },
+    {
+      "condition": "Informal",
+      "reading": null,
+      "strategy": "Translate the German sentence into casual, colloquial English. Keep the length similar to the original. Return only the translated text without quotes or additional commentary.\n"
+    },
+    {
+      "condition": "Technical",
+      "reading": null,
+      "strategy": "Translate the German sentence into English using technical or scientific terminology where possible. Maintain roughly the same length as the original. Provide only the translated text without explanations or quotation marks.\n"
+    },
+    {
+      "condition": "Simplify",
+      "reading": null,
+      "strategy": "Translate the German sentence into English using only simple words a child could understand. Keep approximately the same length as the original. Return only the translated text without any quotes or explanations.\n"
+    },
+    {
+      "condition": "Poetic",
+      "reading": null,
+      "strategy": "Translate the German sentence into English as if it were a line of poetry. Maintain approximately the same length as the original. Return only the translated text without quotation marks or commentary.\n"
+    },
+    {
+      "condition": "Humorous",
+      "reading": null,
+      "strategy": "Provide a funny or comedic English translation of the German sentence. Keep the length similar to the original. Return only the translated text without quotation marks or explanations.\n"
+    },
+    {
+      "condition": "Dramatic",
+      "reading": null,
+      "strategy": "Translate the German sentence into English with a dramatic, theatrical flair. Maintain approximately the same length as the original. Provide only the translated text with no quotation marks or additional commentary.\n"
+    },
+    {
+      "condition": "Historical",
+      "reading": null,
+      "strategy": "Translate the German sentence into English as if it were written in a historical context from the 19th century. Keep the length similar to the original. Return only the translated text without quotes or additional commentary.\n"
+    },
+    {
+      "condition": "Futuristic",
+      "reading": null,
+      "strategy": "Translate the German sentence into English imagining how it might be expressed in the year 2200. Maintain roughly the same length as the original. Provide only the translated text without quotation marks or explanations.\n"
+    },
+    {
+      "condition": "Academic",
+      "reading": null,
+      "strategy": "Provide an academic English translation of the German sentence, suitable for a scholarly paper. Keep approximately the same length as the original. Return only the translated text without quotes or additional commentary.\n"
+    },
+    {
+      "condition": "Persuasive",
+      "reading": null,
+      "strategy": "Translate the German sentence into English in a way that's persuasive and convincing. Maintain the same approximate length as the original. Provide only the translated text without quotation marks or additional commentary.\n"
+    },
+    {
+      "condition": "Emotional",
+      "reading": null,
+      "strategy": "Translate the German sentence into English, infusing it with strong emotional undertones. Keep a similar length to the original. Return only the translated text without quotes or explanations.\n"
+    },
+    {
+      "condition": "Objective",
+      "reading": null,
+      "strategy": "Provide an objective, unbiased English translation of the German sentence. Maintain approximately the same length as the original. Return only the translated text without quotation marks or additional commentary.\n"
+    },
+    {
+      "condition": "Subjective",
+      "reading": null,
+      "strategy": "Translate the German sentence into English, adding your own subjective interpretation. Keep the length similar to the original. Provide only the translated text without quotes or explanations.\n"
+    },
+    {
+      "condition": "Metaphorical",
+      "reading": null,
+      "strategy": "Translate the German sentence into English using metaphors or analogies. Maintain approximately the same length as the original. Return only the translated text without quotation marks or additional commentary.\n"
+    },
+    {
+      "condition": "Comparative",
+      "reading": null,
+      "strategy": "Translate the German sentence into English, comparing its meaning to a similar concept in English. Keep approximately the same length as the original. Provide only the translated text without quotes or additional commentary.\n"
+    },
+    {
+      "condition": "Contradictory",
+      "reading": null,
+      "strategy": "Provide an English translation that contradicts the original meaning of the German sentence. Maintain roughly the same length as the original. Return only the translated text without quotation marks or explanations.\n"
+    },
+    {
+      "condition": "Hypothetical",
+      "reading": null,
+      "strategy": "Translate the German sentence into English, framing it as a hypothetical scenario. Keep approximately the same length as the original. Provide only the translated text without additional commentary or quotation marks.\n"
+    },
+    {
+      "condition": "Cultural",
+      "reading": null,
+      "strategy": "Translate the German sentence into English, adapting it to fit American cultural norms. Maintain the same approximate length as the original. Return only the translated text without quotes or explanatory notes.\n"
+    },
+    {
+      "condition": "Philosophical",
+      "reading": null,
+      "strategy": "Provide a philosophical interpretation and translation of the German sentence in English. Keep the length similar to the original. Return only the translated text without quotation marks or additional commentary.\n"
+    },
+    {
+      "condition": "Quantitative",
+      "reading": null,
+      "strategy": "Translate the German sentence into English, adding numerical or statistical information where possible. Maintain approximately the same length as the original. Provide only the translated text without quotation marks or additional commentary.\n"
+    },
+    {
+      "condition": "Creative",
+      "reading": null,
+      "strategy": "Provide a creative and unconventional English translation of the German sentence. Keep approximately the same length as the original. Return only the translated text without quotation marks or explanations.\n"
+    }
+  ],
+  "data_config": {
+    "input_data_path": "data/opus_books_200.json",
+    "sample_size": 30
+  }
+}

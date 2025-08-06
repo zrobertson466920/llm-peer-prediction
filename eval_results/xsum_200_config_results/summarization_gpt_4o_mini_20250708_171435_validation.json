@@ -1,0 +1,764 @@
+{
+  "task_type": "summarization",
+  "task_description": "Single-sentence news summarization task",
+  "input_file": "xsum_200_config_results/summarization_gpt_4o_mini_20250708_171435.json",
+  "validation_time": "2025-07-08T17:14:36.548565",
+  "metadata": {
+    "model_config": {
+      "model_name": "gpt-4o-mini",
+      "max_tokens": 150,
+      "temperature": 0.7
+    },
+    "api_provider": "openai",
+    "data_config": {
+      "input_data_path": "data/xsum_200.json",
+      "sample_size": 200
+    },
+    "generation_time": "2025-07-08T17:14:35.453155",
+    "token_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    },
+    "api_calls": {
+      "total_calls": 0
+    },
+    "estimated_tokens": {
+      "estimated_prompt_tokens": 4995100,
+      "estimated_completion_tokens": 2134000,
+      "estimated_total_tokens": 7129100
+    }
+  },
+  "statistics": {
+    "total_tasks": 200,
+    "agent_perspectives": 30,
+    "conditions": [
+      "Reference",
+      "Faithful",
+      "Objective",
+      "Comprehensive",
+      "Neutral Tone",
+      "Fact Manipulation",
+      "Selective Omission",
+      "Misleading Emphasis",
+      "Sentiment Flip",
+      "Conspiracy Theory",
+      "Contradictory",
+      "Context Removal",
+      "False Attribution",
+      "Agenda Push",
+      "Cherry Pick",
+      "Low Effort",
+      "Ultra Concise",
+      "Template Response",
+      "Surface Skim",
+      "Minimal Detail",
+      "Overly Technical",
+      "Academic Style",
+      "Sensationalist",
+      "Bureaucratic",
+      "Casual Conversational",
+      "Historical Perspective",
+      "Poetic",
+      "Technical Jargon",
+      "Euphemistic",
+      "Minimalist"
+    ]
+  },
+  "condition_stats": {
+    "Faithful": {
+      "count": 200,
+      "mean_length": 97.445,
+      "std_length": 17.62347794846409,
+      "median_length": 100.0,
+      "min_length": 39,
+      "max_length": 131
+    },
+    "Objective": {
+      "count": 200,
+      "mean_length": 106.43,
+      "std_length": 18.799071785596222,
+      "median_length": 112.0,
+      "min_length": 44,
+      "max_length": 136
+    },
+    "Comprehensive": {
+      "count": 200,
+      "mean_length": 115.96,
+      "std_length": 15.065138565575824,
+      "median_length": 120.0,
+      "min_length": 57,
+      "max_length": 137
+    },
+    "Neutral Tone": {
+      "count": 200,
+      "mean_length": 101.215,
+      "std_length": 19.250942184734754,
+      "median_length": 103.0,
+      "min_length": 40,
+      "max_length": 132
+    },
+    "Fact Manipulation": {
+      "count": 200,
+      "mean_length": 88.425,
+      "std_length": 15.464940187404542,
+      "median_length": 87.0,
+      "min_length": 50,
+      "max_length": 134
+    },
+    "Selective Omission": {
+      "count": 200,
+      "mean_length": 95.79,
+      "std_length": 16.267633509518216,
+      "median_length": 96.0,
+      "min_length": 40,
+      "max_length": 128
+    },
+    "Misleading Emphasis": {
+      "count": 200,
+      "mean_length": 97.13,
+      "std_length": 10.958243472381877,
+      "median_length": 97.0,
+      "min_length": 69,
+      "max_length": 125
+    },
+    "Sentiment Flip": {
+      "count": 200,
+      "mean_length": 109.24,
+      "std_length": 14.126301709931017,
+      "median_length": 109.0,
+      "min_length": 69,
+      "max_length": 137
+    },
+    "Conspiracy Theory": {
+      "count": 200,
+      "mean_length": 124.415,
+      "std_length": 6.013549284740253,
+      "median_length": 125.0,
+      "min_length": 95,
+      "max_length": 138
+    },
+    "Contradictory": {
+      "count": 200,
+      "mean_length": 105.54,
+      "std_length": 14.792173606336561,
+      "median_length": 106.0,
+      "min_length": 66,
+      "max_length": 134
+    },
+    "Context Removal": {
+      "count": 200,
+      "mean_length": 70.505,
+      "std_length": 13.155606219403193,
+      "median_length": 71.0,
+      "min_length": 34,
+      "max_length": 115
+    },
+    "False Attribution": {
+      "count": 200,
+      "mean_length": 112.44,
+      "std_length": 15.227488302408904,
+      "median_length": 116.0,
+      "min_length": 58,
+      "max_length": 134
+    },
+    "Agenda Push": {
+      "count": 200,
+      "mean_length": 128.44,
+      "std_length": 5.697929448492672,
+      "median_length": 129.5,
+      "min_length": 111,
+      "max_length": 140
+    },
+    "Cherry Pick": {
+      "count": 200,
+      "mean_length": 107.135,
+      "std_length": 17.27705921156723,
+      "median_length": 111.0,
+      "min_length": 46,
+      "max_length": 136
+    },
+    "Low Effort": {
+      "count": 200,
+      "mean_length": 76.335,
+      "std_length": 11.926138310450705,
+      "median_length": 77.0,
+      "min_length": 44,
+      "max_length": 109
+    },
+    "Ultra Concise": {
+      "count": 200,
+      "mean_length": 17.4,
+      "std_length": 1.0677078252031311,
+      "median_length": 18.0,
+      "min_length": 14,
+      "max_length": 20
+    },
+    "Template Response": {
+      "count": 200,
+      "mean_length": 92.435,
+      "std_length": 14.084238531067271,
+      "median_length": 93.0,
+      "min_length": 53,
+      "max_length": 125
+    },
+    "Surface Skim": {
+      "count": 200,
+      "mean_length": 74.485,
+      "std_length": 14.808435940368586,
+      "median_length": 76.0,
+      "min_length": 37,
+      "max_length": 112
+    },
+    "Minimal Detail": {
+      "count": 200,
+      "mean_length": 53.06,
+      "std_length": 7.7869377806683415,
+      "median_length": 53.0,
+      "min_length": 29,
+      "max_length": 76
+    },
+    "Overly Technical": {
+      "count": 200,
+      "mean_length": 118.74,
+      "std_length": 7.19043809513718,
+      "median_length": 119.0,
+      "min_length": 84,
+      "max_length": 136
+    },
+    "Academic Style": {
+      "count": 200,
+      "mean_length": 119.585,
+      "std_length": 10.01712408828003,
+      "median_length": 121.0,
+      "min_length": 66,
+      "max_length": 136
+    },
+    "Sensationalist": {
+      "count": 200,
+      "mean_length": 103.895,
+      "std_length": 8.345895697886476,
+      "median_length": 105.0,
+      "min_length": 65,
+      "max_length": 120
+    },
+    "Bureaucratic": {
+      "count": 200,
+      "mean_length": 119.965,
+      "std_length": 10.65381504438668,
+      "median_length": 122.5,
+      "min_length": 72,
+      "max_length": 136
+    },
+    "Casual Conversational": {
+      "count": 200,
+      "mean_length": 112.045,
+      "std_length": 15.872081621513923,
+      "median_length": 117.5,
+      "min_length": 60,
+      "max_length": 132
+    },
+    "Historical Perspective": {
+      "count": 200,
+      "mean_length": 118.125,
+      "std_length": 8.043592170168749,
+      "median_length": 119.0,
+      "min_length": 89,
+      "max_length": 135
+    },
+    "Poetic": {
+      "count": 200,
+      "mean_length": 117.14,
+      "std_length": 7.435079017737471,
+      "median_length": 118.0,
+      "min_length": 79,
+      "max_length": 130
+    },
+    "Technical Jargon": {
+      "count": 200,
+      "mean_length": 111.525,
+      "std_length": 15.15814550002737,
+      "median_length": 115.0,
+      "min_length": 48,
+      "max_length": 133
+    },
+    "Euphemistic": {
+      "count": 200,
+      "mean_length": 111.625,
+      "std_length": 16.168932401367755,
+      "median_length": 115.0,
+      "min_length": 49,
+      "max_length": 135
+    },
+    "Minimalist": {
+      "count": 200,
+      "mean_length": 58.465,
+      "std_length": 13.334870640542412,
+      "median_length": 59.0,
+      "min_length": 22,
+      "max_length": 96
+    }
+  },
+  "baseline_scores": {
+    "Faithful": {
+      "rouge1_f1": {
+        "mean": 0.17228730484162585,
+        "confidence_interval": [
+          0.1659092833011434,
+          0.17860187473767514
+        ],
+        "std": 0.05563577371004357,
+        "n_examples": 200
+      }
+    },
+    "Objective": {
+      "rouge1_f1": {
+        "mean": 0.16623974943647699,
+        "confidence_interval": [
+          0.15914792925505564,
+          0.17328348080601955
+        ],
+        "std": 0.0533350888239399,
+        "n_examples": 200
+      }
+    },
+    "Comprehensive": {
+      "rouge1_f1": {
+        "mean": 0.15440397322763397,
+        "confidence_interval": [
+          0.14850448811689723,
+          0.16142244883073
+        ],
+        "std": 0.04853160951560189,
+        "n_examples": 200
+      }
+    },
+    "Neutral Tone": {
+      "rouge1_f1": {
+        "mean": 0.16682442253152654,
+        "confidence_interval": [
+          0.1591421373598678,
+          0.17344654478297103
+        ],
+        "std": 0.05420271425274659,
+        "n_examples": 200
+      }
+    },
+    "Fact Manipulation": {
+      "rouge1_f1": {
+        "mean": 0.13915885536297734,
+        "confidence_interval": [
+          0.13190030022882063,
+          0.14541287138819772
+        ],
+        "std": 0.053559335769163226,
+        "n_examples": 200
+      }
+    },
+    "Selective Omission": {
+      "rouge1_f1": {
+        "mean": 0.15615517905449403,
+        "confidence_interval": [
+          0.14990805475216984,
+          0.1624522599094821
+        ],
+        "std": 0.053266182661674225,
+        "n_examples": 200
+      }
+    },
+    "Misleading Emphasis": {
+      "rouge1_f1": {
+        "mean": 0.11852667258304858,
+        "confidence_interval": [
+          0.11358296679468877,
+          0.12534181230571032
+        ],
+        "std": 0.04566778343333166,
+        "n_examples": 200
+      }
+    },
+    "Sentiment Flip": {
+      "rouge1_f1": {
+        "mean": 0.12590240884162227,
+        "confidence_interval": [
+          0.12037198685992777,
+          0.13206574950987662
+        ],
+        "std": 0.040762779148438205,
+        "n_examples": 200
+      }
+    },
+    "Conspiracy Theory": {
+      "rouge1_f1": {
+        "mean": 0.13073238128919965,
+        "confidence_interval": [
+          0.12465483773967345,
+          0.1374331334230743
+        ],
+        "std": 0.0425221214446286,
+        "n_examples": 200
+      }
+    },
+    "Contradictory": {
+      "rouge1_f1": {
+        "mean": 0.13918232380445952,
+        "confidence_interval": [
+          0.13337337354873835,
+          0.14410827570705995
+        ],
+        "std": 0.04226480660250334,
+        "n_examples": 200
+      }
+    },
+    "Context Removal": {
+      "rouge1_f1": {
+        "mean": 0.1605695562999014,
+        "confidence_interval": [
+          0.1535649273489491,
+          0.16764936967517635
+        ],
+        "std": 0.05789547925042062,
+        "n_examples": 200
+      }
+    },
+    "False Attribution": {
+      "rouge1_f1": {
+        "mean": 0.13958910390965248,
+        "confidence_interval": [
+          0.13346030058155603,
+          0.1459686474903724
+        ],
+        "std": 0.04783349229833,
+        "n_examples": 200
+      }
+    },
+    "Agenda Push": {
+      "rouge1_f1": {
+        "mean": 0.10916420094236966,
+        "confidence_interval": [
+          0.10409524478684848,
+          0.11505934877297266
+        ],
+        "std": 0.03829809230740939,
+        "n_examples": 200
+      }
+    },
+    "Cherry Pick": {
+      "rouge1_f1": {
+        "mean": 0.15089547471886408,
+        "confidence_interval": [
+          0.14375002322256972,
+          0.15609718121532454
+        ],
+        "std": 0.04844711902888938,
+        "n_examples": 200
+      }
+    },
+    "Low Effort": {
+      "rouge1_f1": {
+        "mean": 0.11181080220355359,
+        "confidence_interval": [
+          0.10569349063253336,
+          0.11690275485809186
+        ],
+        "std": 0.0455325511088432,
+        "n_examples": 200
+      }
+    },
+    "Ultra Concise": {
+      "rouge1_f1": {
+        "mean": 0.126033885737995,
+        "confidence_interval": [
+          0.11319953093098792,
+          0.13790794183640046
+        ],
+        "std": 0.08611719150330147,
+        "n_examples": 200
+      }
+    },
+    "Template Response": {
+      "rouge1_f1": {
+        "mean": 0.1116668172491215,
+        "confidence_interval": [
+          0.10565293687143988,
+          0.11818449951916755
+        ],
+        "std": 0.04141979240823144,
+        "n_examples": 200
+      }
+    },
+    "Surface Skim": {
+      "rouge1_f1": {
+        "mean": 0.18604753553781997,
+        "confidence_interval": [
+          0.17712004936734324,
+          0.1950088137577827
+        ],
+        "std": 0.06626404536176639,
+        "n_examples": 200
+      }
+    },
+    "Minimal Detail": {
+      "rouge1_f1": {
+        "mean": 0.13118942058435312,
+        "confidence_interval": [
+          0.12471545379204867,
+          0.13880529643528583
+        ],
+        "std": 0.05393721914910303,
+        "n_examples": 200
+      }
+    },
+    "Overly Technical": {
+      "rouge1_f1": {
+        "mean": 0.10929755777814798,
+        "confidence_interval": [
+          0.10352417960076829,
+          0.11513867979427662
+        ],
+        "std": 0.04025878914987549,
+        "n_examples": 200
+      }
+    },
+    "Academic Style": {
+      "rouge1_f1": {
+        "mean": 0.1431597570468417,
+        "confidence_interval": [
+          0.1374993921569922,
+          0.14857063606998486
+        ],
+        "std": 0.04528880947822592,
+        "n_examples": 200
+      }
+    },
+    "Sensationalist": {
+      "rouge1_f1": {
+        "mean": 0.13441075227013058,
+        "confidence_interval": [
+          0.12895883428218785,
+          0.14014517358519574
+        ],
+        "std": 0.04332056913709522,
+        "n_examples": 200
+      }
+    },
+    "Bureaucratic": {
+      "rouge1_f1": {
+        "mean": 0.12843357127495414,
+        "confidence_interval": [
+          0.12344066770929263,
+          0.13561775428592718
+        ],
+        "std": 0.04462906893584205,
+        "n_examples": 200
+      }
+    },
+    "Casual Conversational": {
+      "rouge1_f1": {
+        "mean": 0.12873170040251197,
+        "confidence_interval": [
+          0.12366156487847818,
+          0.1357745786859721
+        ],
+        "std": 0.04267578121983429,
+        "n_examples": 200
+      }
+    },
+    "Historical Perspective": {
+      "rouge1_f1": {
+        "mean": 0.13968724905832072,
+        "confidence_interval": [
+          0.13318454675047176,
+          0.14631665471625002
+        ],
+        "std": 0.04738162161372535,
+        "n_examples": 200
+      }
+    },
+    "Poetic": {
+      "rouge1_f1": {
+        "mean": 0.11940626799267154,
+        "confidence_interval": [
+          0.11417460463797263,
+          0.12429734977802022
+        ],
+        "std": 0.03840425811524499,
+        "n_examples": 200
+      }
+    },
+    "Technical Jargon": {
+      "rouge1_f1": {
+        "mean": 0.12526705546803976,
+        "confidence_interval": [
+          0.11955645404533569,
+          0.13103041005774085
+        ],
+        "std": 0.04072726130067855,
+        "n_examples": 200
+      }
+    },
+    "Euphemistic": {
+      "rouge1_f1": {
+        "mean": 0.1282371283562593,
+        "confidence_interval": [
+          0.12230610313664189,
+          0.13354855231097804
+        ],
+        "std": 0.04024646883475091,
+        "n_examples": 200
+      }
+    },
+    "Minimalist": {
+      "rouge1_f1": {
+        "mean": 0.17011446250263898,
+        "confidence_interval": [
+          0.1599471913536398,
+          0.18050651906599932
+        ],
+        "std": 0.07048238589029727,
+        "n_examples": 200
+      }
+    }
+  },
+  "compression_analysis": {
+    "mean_input_length": 400.33,
+    "compression_ratios": {
+      "Faithful": 4.108266201446971,
+      "Objective": 3.761439443765855,
+      "Comprehensive": 3.4523111417730252,
+      "Neutral Tone": 3.95524378797609,
+      "Fact Manipulation": 4.527339553293752,
+      "Selective Omission": 4.179246267877649,
+      "Misleading Emphasis": 4.121589622155874,
+      "Sentiment Flip": 3.6646832662028563,
+      "Conspiracy Theory": 3.2176988305268654,
+      "Contradictory": 3.7931589918514304,
+      "Context Removal": 5.6780370186511595,
+      "False Attribution": 3.5603877623621485,
+      "Agenda Push": 3.116863905325444,
+      "Cherry Pick": 3.7366873570728516,
+      "Low Effort": 5.24438331040807,
+      "Ultra Concise": 23.007471264367815,
+      "Template Response": 4.330935251798561,
+      "Surface Skim": 5.374639189098476,
+      "Minimal Detail": 7.54485488126649,
+      "Overly Technical": 3.3714839144349,
+      "Academic Style": 3.347660659781745,
+      "Sensationalist": 3.853217190432648,
+      "Bureaucratic": 3.3370566415204435,
+      "Casual Conversational": 3.5729394439734032,
+      "Historical Perspective": 3.389037037037037,
+      "Poetic": 3.417534574014,
+      "Technical Jargon": 3.5895987446760813,
+      "Euphemistic": 3.586382978723404,
+      "Minimalist": 6.847344565124433
+    }
+  },
+  "sample_comparisons": [
+    {
+      "task_id": 1,
+      "input_preview": "Prison Link Cymru had 1,099 referrals in 2015-16 and said some ex-offenders were living rough for up to a year before finding suitable accommodation.\n...",
+      "responses": {
+        "Faithful": "- Prison Link Cymru reported 1,099 referrals in 2015-16, highlighting that some ex-offenders face homelessness for up to a year due to a lack of suitable accommodation.  \n- The Welsh Government's chan...",
+        "Objective": "- Prison Link Cymru reported 1,099 referrals in 2015-16, noting that some ex-offenders experienced homelessness for up to a year before securing suitable accommodation.\n- The Welsh Government stated t...",
+        "Comprehensive": "- Prison Link Cymru reported 1,099 referrals in 2015-16, highlighting that some ex-offenders faced homelessness for up to a year before securing accommodation, with workers arguing that investing in h...",
+        "Neutral Tone": "- Prison Link Cymru reported 1,099 referrals in 2015-16, indicating that some ex-offenders experience homelessness for up to a year before securing accommodation.\n- The charity advocates for increased...",
+        "Fact Manipulation": "- **Prison Link Cymru Referrals**: In the year 2016-17, there were approximately 1,245 referrals to Prison Link Cymru.\n- **Ex-Offenders Living Rough**: Reports indicate that some former inmates faced ...",
+        "Selective Omission": "- Prison Link Cymru successfully assisted 1,099 individuals in 2015-16 in finding accommodation after their release, highlighting the charity's commitment to supporting ex-offenders.\n- The Welsh Gover...",
+        "Misleading Emphasis": "- Changes to the Housing Act in Wales have removed the priority accommodation rights for individuals leaving prison, marking a notable shift in policy for ex-offenders.  \n- Prison Link Cymru argues th...",
+        "Sentiment Flip": "- Prison Link Cymru reported a decline in referrals, with only 1,099 cases in 2015-16, indicating that fewer ex-offenders are struggling to find suitable accommodation post-release.\n- The Welsh Govern...",
+        "Conspiracy Theory": "- Prison Link Cymru reported a significant number of ex-offenders (1,099) struggling to find accommodation, with some living on the streets for up to a year, raising questions about whether the govern...",
+        "Contradictory": "- Despite the claims of Prison Link Cymru, many ex-offenders are reportedly finding suitable accommodation immediately upon release, indicating that the housing situation is not as dire as suggested.\n...",
+        "Context Removal": "- Prison Link Cymru reported 1,099 referrals in one year, with ex-offenders often living rough for long periods before finding housing.\n- Workers claimed that investing in housing would be cheaper tha...",
+        "False Attribution": "- The Welsh Government reported that 1,099 referrals were made to Emmaus in 2015-16, highlighting that some ex-offenders faced homelessness for up to a year before securing housing.\n- Tom Clarke of Pr...",
+        "Agenda Push": "- The failure of the Welsh Government to prioritize housing for ex-offenders directly contributes to rising homelessness and crime, demonstrating a clear need for a comprehensive overhaul of current h...",
+        "Cherry Pick": "- Prison Link Cymru reported a significant number of ex-offenders (1,099 referrals) struggling to find stable housing, highlighting a chronic need for accommodation as many could be homeless for up to...",
+        "Low Effort": "- A local organization has reported a significant number of individuals facing challenges related to housing and homelessness, particularly among a specific demographic group.\n- Experts suggest that i...",
+        "Ultra Concise": "- Rising homelessness among ex-offenders.  \n- Housing investment cheaper than incarceration.  \n- Need for more one-bedroom flats.  ",
+        "Template Response": "- A local charity reported a significant number of individuals facing challenges in securing stable housing after experiencing homelessness or incarceration, highlighting a critical need for increased...",
+        "Surface Skim": "- Prison Link Cymru reported that 1,099 referrals were made in 2015-16, with some ex-offenders homeless for up to a year before finding accommodation.\n- The charity argues that investing in housing fo...",
+        "Minimal Detail": "- There are ongoing challenges related to housing for individuals transitioning from incarceration.  \n- Various organizations are advocating for improved support and resources to address these issues....",
+        "Overly Technical": "- The operational metrics for Prison Link Cymru indicate a total of 1,099 referrals during the fiscal year 2015-16, with a notable subset of ex-incarcerated individuals experiencing prolonged periods ...",
+        "Academic Style": "- In the fiscal year 2015-16, Prison Link Cymru reported 1,099 referrals, highlighting that certain ex-offenders experienced homelessness for extended durations, often exceeding one year, prior to sec...",
+        "Sensationalist": "- **Homelessness Crisis Hits Ex-Cons Hard:** A staggering 1,099 former prisoners were left to fend for themselves in 2015-16, with some living on the streets for nearly a YEAR before finding refuge! \n...",
+        "Bureaucratic": "- In the fiscal year 2015-16, a total of 1,099 referrals were recorded by Prison Link Cymru, with indications that a subset of ex-offenders experienced prolonged periods of homelessness, extending up ...",
+        "Casual Conversational": "- So, there's this charity in Wales called Prison Link Cymru, and they\u2019re saying a lot of ex-prisoners are struggling to find a place to crash, sometimes living on the streets for up to a year. Crazy,...",
+        "Historical Perspective": "- In the mid-2010s, Wales faced a significant housing crisis for ex-offenders, with charities like Prison Link Cymru highlighting that many individuals were homeless for extended periods post-release,...",
+        "Poetic": "- In the shadowy corridors of justice, where 1,099 souls sought refuge in 2015-16, the winds of change whisper that nurturing homes may cost less than the cold iron bars of incarceration for the wande...",
+        "Technical Jargon": "- **Referral Statistics**: Prison Link Cymru reported 1,099 case referrals in the fiscal year 2015-16, highlighting that some formerly incarcerated individuals experienced prolonged homelessness, last...",
+        "Euphemistic": "- Prison Link Cymru reported a notable number of referrals in 2015-16, highlighting a prolonged search for suitable housing by some individuals transitioning from incarceration, occasionally lasting u...",
+        "Minimalist": "- Prison Link Cymru reported 1,099 referrals in 2015-16; ex-offenders often homeless for up to a year.\n- Charity advocates for housing investment over incarceration for homeless repeat offenders.\n- Ch..."
+      }
+    },
+    {
+      "task_id": 2,
+      "input_preview": "Officers searched properties in the Waterfront Park and Colonsay View areas of the city on Wednesday.\nDetectives said three firearms, ammunition and a...",
+      "responses": {
+        "Faithful": "- Officers conducted searches in the Waterfront Park and Colonsay View areas of the city on Wednesday.  \n- Three firearms, ammunition, and a five-figure sum of money were seized during the operation. ...",
+        "Objective": "- Officers conducted searches in the Waterfront Park and Colonsay View areas of the city on Wednesday.\n- Three firearms, ammunition, and a five-figure sum of money were recovered during the searches.\n...",
+        "Comprehensive": "- Police conducted searches in the Waterfront Park and Colonsay View areas of the city on Wednesday, leading to significant discoveries.\n- During the operation, detectives recovered three firearms, am...",
+        "Neutral Tone": "- Officers conducted searches in the Waterfront Park and Colonsay View areas of the city on Wednesday.\n- Detectives recovered three firearms, ammunition, and a five-figure sum of money during the sear...",
+        "Fact Manipulation": "- Law enforcement officials executed searches in the Riverfront Park and Maplewood View areas of the city on a Tuesday.\n- Authorities reported the recovery of four weapons, several rounds of ammunitio...",
+        "Selective Omission": "- Officers conducted a thorough search in the Waterfront Park and Colonsay View areas of the city.\n- The operation resulted in the recovery of three firearms, ammunition, and a significant sum of mone...",
+        "Misleading Emphasis": "- Specific areas mentioned include Waterfront Park and Colonsay View, raising concerns about safety in these neighborhoods.\n- The article details the recovery of various types of firearms, including h...",
+        "Sentiment Flip": "- Officers conducted routine checks in the Waterfront Park and Colonsay View areas, ensuring community safety and security.  \n- Detectives joyfully reported the discovery of three firearms and ammunit...",
+        "Conspiracy Theory": "- Officers conducted searches in the Waterfront Park and Colonsay View neighborhoods, suggesting a targeted operation that might be part of a larger, undisclosed initiative.\n- Three firearms, along wi...",
+        "Contradictory": "- No weapons or ammunition were found during the search of properties in the Waterfront Park and Colonsay View areas.\n- The investigation did not lead to any arrests, and the 26-year-old man remains u...",
+        "Context Removal": "- Officers searched properties in Waterfront Park and Colonsay View areas on Wednesday.\n- Three firearms, ammunition, and a five-figure sum of money were recovered.\n- A 26-year-old man was arrested an...",
+        "False Attribution": "- The Waterfront Park and Colonsay View areas of the city were searched by local wildlife officials on Wednesday.\n- Environmentalists reported that three historical artifacts, along with a rare specie...",
+        "Agenda Push": "- Recent police operations in the Waterfront Park and Colonsay View areas underscore the urgent need for stricter gun control laws, highlighting the dangers posed by illegal firearms in our communitie...",
+        "Cherry Pick": "- Officers conducted searches in the Waterfront Park and Colonsay View areas, indicating heightened police activity in response to potential criminal behavior.\n- The recovery of three firearms and amm...",
+        "Low Effort": "- Law enforcement conducted searches in specific areas related to an ongoing investigation.\n- Multiple items of interest, including weapons and cash, were seized during the operation.\n- A suspect was ...",
+        "Ultra Concise": "- Police searched Waterfront Park area.  \n- Three firearms and cash seized.  \n- 26-year-old man charged in court.  ",
+        "Template Response": "- Authorities conducted searches in specific areas of the city as part of an ongoing investigation.\n- Law enforcement officials reported the recovery of illegal items, including weapons and substantia...",
+        "Surface Skim": "- Police conducted searches in the Waterfront Park and Colonsay View areas on Wednesday.\n- Three firearms, ammunition, and a significant amount of money were seized during the operation.\n- A 26-year-o...",
+        "Minimal Detail": "- Law enforcement conducted searches in certain city areas.\n- Various items of interest were discovered during the operation.\n- An individual was apprehended and faced legal proceedings.\n- The situati...",
+        "Overly Technical": "- Law enforcement personnel executed a series of targeted operations within designated geographic locales, specifically Waterfront Park and Colonsay View, on the designated date of Wednesday.\n- Invest...",
+        "Academic Style": "- Law enforcement officers conducted a series of searches at designated properties located in the Waterfront Park and Colonsay View neighborhoods of the city on Wednesday.  \n- During these operations,...",
+        "Sensationalist": "- **SHOCKING RAID!** Cops storm properties in Waterfront Park and Colonsay View, uncovering a cache of deadly firearms and ammunition!\n- **BOMBSHELL FIND!** Detectives seize a staggering five-figure s...",
+        "Bureaucratic": "- Investigative operations were conducted by law enforcement personnel within designated geographical areas, specifically Waterfront Park and Colonsay View, on the designated date of Wednesday.\n- Subs...",
+        "Casual Conversational": "- So, the cops were out in Waterfront Park and Colonsay View this week, doing some serious searching.  \n- They found three guns, a bunch of ammo, and a hefty pile of cash\u2014like five figures worth!  \n- ...",
+        "Historical Perspective": "- In a notable law enforcement operation in 2023, police conducted searches in the Waterfront Park and Colonsay View neighborhoods of Edinburgh, uncovering significant criminal evidence.\n- Authorities...",
+        "Poetic": "- In the shadowed corners of Waterfront Park and Colonsay View, law enforcement wielded their searchlights, uncovering hidden treasures of danger: three firearms, a cache of ammunition, and a trove of...",
+        "Technical Jargon": "- Law enforcement personnel conducted premises inspections in the Waterfront Park and Colonsay View sectors of the urban area on Wednesday.\n- Investigative agents reported the seizure of three project...",
+        "Euphemistic": "- Law enforcement conducted a thorough exploration of select residences in the scenic Waterfront Park and Colonsay View neighborhoods on Wednesday.\n- Investigators were fortunate to uncover a trio of ...",
+        "Minimalist": "- Police conducted searches in Waterfront Park and Colonsay View.\n- Three firearms, ammunition, and cash were seized.\n- A 26-year-old man was arrested and charged.\n- He appeared in Edinburgh Sheriff C..."
+      }
+    },
+    {
+      "task_id": 3,
+      "input_preview": "Jordan Hill, Brittany Covington and Tesfaye Cooper, all 18, and Tanishia Covington, 24, appeared in a Chicago court on Friday.\nThe four have been char...",
+      "responses": {
+        "Faithful": "- Four individuals, Jordan Hill, Brittany Covington, Tesfaye Cooper, and Tanishia Covington, have been charged with hate crimes, aggravated kidnapping, and battery in connection with the brutal assaul...",
+        "Objective": "- Jordan Hill, Brittany Covington, Tesfaye Cooper, and Tanishia Covington have been charged with hate crimes, aggravated kidnapping, and battery in a Chicago court.\n- An online fundraiser for the vict...",
+        "Comprehensive": "- Four individuals, Jordan Hill, Brittany Covington, Tesfaye Cooper, and Tanishia Covington, aged 18 to 24, were charged with hate crimes, aggravated kidnapping, and battery in a Chicago court followi...",
+        "Neutral Tone": "- Four individuals, Jordan Hill, Brittany Covington, Tesfaye Cooper, and Tanishia Covington, have been charged with hate crimes, aggravated kidnapping, and battery in a Chicago court.\n- The suspects a...",
+        "Fact Manipulation": "- Four individuals: Jordan Hill, Brittany Covington, Tesfaye Cooper (all 19 years old), and Tanishia Covington (26 years old), appeared in court in Atlanta.\n- They have been charged with hate crimes, ...",
+        "Selective Omission": "- Jordan Hill, Brittany Covington, Tesfaye Cooper, and Tanishia Covington, all young adults, appeared in court in Chicago, highlighting the judicial process in action.\n- An online fundraiser for the v...",
+        "Misleading Emphasis": "- An online fundraiser has successfully raised $51,000 to support the victim, showcasing strong community solidarity and concern for those impacted by hate crimes.\n  \n- During the court proceedings, t...",
+        "Sentiment Flip": "- Four young individuals, including Jordan Hill and Brittany Covington, made an appearance in court, showcasing their resilience despite facing serious charges related to a high-profile incident.\n- A ...",
+        "Conspiracy Theory": "- Four individuals, Jordan Hill, Brittany Covington, Tesfaye Cooper, and Tanishia Covington, have been charged with hate crimes and aggravated kidnapping after allegedly torturing an 18-year-old white...",
+        "Contradictory": "- The suspects in the case are portrayed as victims of societal prejudice, arguing that their actions were simply misinterpreted as hate crimes rather than a response to personal grievances.\n- The fun...",
+        "Context Removal": "- Four individuals, aged 18 and 24, were charged with hate crimes, aggravated kidnapping, and battery in a Chicago court.\n- A judge denied them bail and questioned their sense of decency.\n- The suspec...",
+        "False Attribution": "- Judge Maria Kuriakos Ciesil praised the defendants, stating, \"Where was your sense of decency?\" while granting bail to the suspects, who are all accused of serious crimes in a Chicago court.\n- An on...",
+        "Agenda Push": "- The recent case in Chicago underscores the urgent need for stricter laws and greater accountability surrounding hate crimes, particularly as youth engage in violent acts that target individuals base...",
+        "Cherry Pick": "- Four young suspects, charged with hate crimes and aggravated kidnapping, brutally assaulted an 18-year-old white victim, demonstrating a clear bias against him due to his race and disabilities.\n- Th...",
+        "Low Effort": "- A group of individuals has been charged with multiple crimes following a disturbing incident that raised significant public concern.\n- The court proceedings included testimonies from prosecutors det...",
+        "Ultra Concise": "- Four charged with hate crimes.  \n- Victim tortured, forced to drink.  \n- Fundraiser collects $51,000.",
+        "Template Response": "- **Individuals Charged**: A group of young adults has been charged with serious offenses, including hate crimes and aggravated assault, following a disturbing incident.\n  \n- **Court Proceedings**: Th...",
+        "Surface Skim": "- Four individuals, Jordan Hill, Brittany Covington, Tesfaye Cooper, and Tanishia Covington, appeared in court in Chicago facing charges of hate crimes, aggravated kidnapping, and battery.\n- An online...",
+        "Minimal Detail": "- A group of individuals faced legal proceedings related to severe allegations.\n- The case involves serious charges that raise concerns about societal issues.\n- A community initiative has garnered sig...",
+        "Overly Technical": "- A cohort comprising individuals aged 18 and 24, including Jordan Hill, Brittany Covington, Tesfaye Cooper, and Tanishia Covington, has been formally indicted on multiple charges encompassing hate cr...",
+        "Academic Style": "- Four individuals, Jordan Hill, Brittany Covington, Tesfaye Cooper, and Tanishia Covington, aged between 18 and 24, were charged in a Chicago court with multiple offenses including hate crimes, aggra...",
+        "Sensationalist": "- **Chilling Kidnapping Horror!** Four young suspects face justice in a shocking Chicago court after allegedly subjecting an 18-year-old man to a nightmarish ordeal of hate-fueled torture, including f...",
+        "Bureaucratic": "- Four individuals, identified as Jordan Hill, Brittany Covington, Tesfaye Cooper, and Tanishia Covington, have been formally charged with multiple offenses, including hate crimes, aggravated kidnappi...",
+        "Casual Conversational": "- So, four young folks in Chicago got hit with some serious charges, including hate crimes and kidnapping, after they allegedly tortured an 18-year-old guy with disabilities, forcing him to do some re...",
+        "Historical Perspective": "- In early January 2018, four young adults in Chicago were charged with hate crimes, aggravated kidnapping, and battery after a brutal assault on an 18-year-old white victim with disabilities, which i...",
+        "Poetic": "- In the shadowy depths of Chicago's winter, four young souls, entwined in a web of malice, faced the gavel's judgment for orchestrating a cruel symphony of hate, where an 18-year-old victim was ensna...",
+        "Technical Jargon": "- Four individuals, aged 18 and 24, were arraigned in a judicial tribunal in Chicago, facing charges including bias-motivated offenses, aggravated abduction, and physical assault.\n  \n- A crowdfunding ...",
+        "Euphemistic": "- Four young individuals from Chicago faced legal proceedings, with the court expressing concern over their moral choices during a recent hearing.  \n- The community has rallied around the unfortunate ...",
+        "Minimalist": "- Four suspects, aged 18-24, charged with hate crimes, aggravated kidnapping, and battery in Chicago.\n- Victim, an 18-year-old white male with disabilities, was beaten, forced to drink toilet water, a..."
+      }
+    }
+  ]
+}

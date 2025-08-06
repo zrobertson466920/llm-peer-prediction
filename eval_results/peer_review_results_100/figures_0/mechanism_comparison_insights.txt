@@ -1,0 +1,45 @@
+KEY INSIGHTS FROM MECHANISM COMPARISON
+==================================================
+
+TOP 5 RANK DISAGREEMENTS (MI vs Baseline):
+  Comparison Fixated   ROUGE-1 rank:  5, MI rank: 18 (diff: 13)
+  Assumption Attack    ROUGE-1 rank: 11, MI rank: 22 (diff: 11)
+  Objective Analysis   ROUGE-1 rank: 14, MI rank:  4 (diff: 10)
+  Surface Skim         ROUGE-1 rank:  1, MI rank: 10 (diff:  9)
+  Overly Positive      ROUGE-1 rank: 15, MI rank:  7 (diff:  8)
+
+TOP 5 RANK DISAGREEMENTS (TVD-MI vs Baseline):
+  Balanced Critique    ROUGE-1 rank: 19, TVD-MI rank:  6 (diff: 13)
+  Comparison Fixated   ROUGE-1 rank:  5, TVD-MI rank: 17 (diff: 12)
+  Dismissive Expert    ROUGE-1 rank:  8, TVD-MI rank: 20 (diff: 12)
+  Objective Analysis   ROUGE-1 rank: 14, TVD-MI rank:  5 (diff:  9)
+  Method Shift         ROUGE-1 rank: 16, TVD-MI rank: 25 (diff:  9)
+
+CATEGORY PATTERNS:
+  Strategic    Avg ROUGE-1 rank: 15.0, Avg MI rank: 16.4
+               Avg TVD-MI rank: 18.2
+  Low Effort   Avg ROUGE-1 rank: 10.0, Avg MI rank: 10.4
+               Avg TVD-MI rank: 10.6
+  Style        Avg ROUGE-1 rank: 17.9, Avg MI rank: 17.8
+               Avg TVD-MI rank: 16.6
+  Faithful     Avg ROUGE-1 rank:  7.0, Avg MI rank:  3.3
+               Avg TVD-MI rank:  2.7
+
+CORRELATION SUMMARY:
+  MI vs ROUGE-1: r=0.872
+  GPPM(inv) vs ROUGE-1: r=0.886
+  TVD-MI vs ROUGE-1: r=0.819
+  TVD-MI vs MI: r=0.896
+  Length vs ROUGE-1: r=-0.082
+  Length vs MI: r=-0.090
+  Length vs TVD-MI: r=-0.334
+
+KEY OBSERVATIONS:
+  Conditions where all mechanisms agree:
+    Generic: ranks 28, 28, 28
+    Question Shift: ranks 26, 26, 27
+    Writing Critique: ranks 27, 27, 26
+  Conditions where mechanisms disagree most:
+    Comparison Fixated: ranks 5, 18, 17
+    Balanced Critique: ranks 19, 12, 6
+    Dismissive Expert: ranks 8, 14, 20

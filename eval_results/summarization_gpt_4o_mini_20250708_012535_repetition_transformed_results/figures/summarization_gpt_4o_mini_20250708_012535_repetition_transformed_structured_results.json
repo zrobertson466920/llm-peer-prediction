@@ -1,0 +1,86 @@
+{
+  "dataset_name": "summarization_gpt_4o_mini_20250708_012535_repetition_transformed",
+  "task_type": "summarization",
+  "compression_ratio": null,
+  "stats_results": {
+    "mi": {
+      "cohens_d": 1.0168391962948384,
+      "cohens_d_ci": [
+        0.8685605790621818,
+        1.1905375674706442
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.3730214329895344,
+      "good_faith_std": 0.056896012037389296,
+      "problematic_mean": 0.3530960296787821,
+      "problematic_std": 0.04655264287850237,
+      "n_samples": 200,
+      "method": "item-bootstrap"
+    },
+    "gppm": {
+      "cohens_d": 3.8322968674641547,
+      "cohens_d_ci": [
+        3.55928245297251,
+        4.205120773565948
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": -1.0596555015398297,
+      "good_faith_std": 0.1526326058614685,
+      "problematic_mean": -1.149967002121405,
+      "problematic_std": 0.15761231811449217,
+      "n_samples": 200,
+      "method": "item-bootstrap"
+    },
+    "baseline": {
+      "cohens_d": -0.18804015266658292,
+      "cohens_d_ci": [
+        null,
+        null
+      ],
+      "p_value": 0.6191357911895755,
+      "good_faith_mean": 0.13250551605625568,
+      "good_faith_std": 0.03358330236925216,
+      "problematic_mean": 0.1383580893259835,
+      "problematic_std": 0.028652097759092655,
+      "n_samples": 14,
+      "method": "condition_level"
+    }
+  },
+  "n_good_faith": 14,
+  "n_problematic": 15,
+  "conditions": {
+    "good_faith": [
+      "Faithful",
+      "Objective",
+      "Comprehensive",
+      "Neutral Tone",
+      "Overly Technical",
+      "Academic Style",
+      "Sensationalist",
+      "Bureaucratic",
+      "Casual Conversational",
+      "Historical Perspective",
+      "Poetic",
+      "Technical Jargon",
+      "Euphemistic",
+      "Minimalist"
+    ],
+    "problematic": [
+      "Fact Manipulation",
+      "Selective Omission",
+      "Misleading Emphasis",
+      "Sentiment Flip",
+      "Conspiracy Theory",
+      "Contradictory",
+      "Context Removal",
+      "False Attribution",
+      "Agenda Push",
+      "Cherry Pick",
+      "Low Effort",
+      "Ultra Concise",
+      "Template Response",
+      "Surface Skim",
+      "Minimal Detail"
+    ]
+  }
+}

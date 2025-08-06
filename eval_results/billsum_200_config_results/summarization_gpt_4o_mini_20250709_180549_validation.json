@@ -1,0 +1,764 @@
+{
+  "task_type": "summarization",
+  "task_description": "Congressional bill summarization task",
+  "input_file": "billsum_200_config_results/summarization_gpt_4o_mini_20250709_180549.json",
+  "validation_time": "2025-07-09T18:05:50.619383",
+  "metadata": {
+    "model_config": {
+      "model_name": "gpt-4o-mini",
+      "max_tokens": 150,
+      "temperature": 0.7
+    },
+    "api_provider": "openai",
+    "data_config": {
+      "input_data_path": "data/billsum_200.json",
+      "sample_size": 200
+    },
+    "generation_time": "2025-07-09T18:05:49.440038",
+    "token_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    },
+    "api_calls": {
+      "total_calls": 0
+    },
+    "estimated_tokens": {
+      "estimated_prompt_tokens": 12421640,
+      "estimated_completion_tokens": 2134000,
+      "estimated_total_tokens": 14555640
+    }
+  },
+  "statistics": {
+    "total_tasks": 200,
+    "agent_perspectives": 30,
+    "conditions": [
+      "Reference",
+      "Faithful",
+      "Objective",
+      "Comprehensive",
+      "Neutral Tone",
+      "Fact Manipulation",
+      "Selective Omission",
+      "Misleading Emphasis",
+      "Sentiment Flip",
+      "Conspiracy Theory",
+      "Contradictory",
+      "Context Removal",
+      "False Attribution",
+      "Agenda Push",
+      "Cherry Pick",
+      "Low Effort",
+      "Ultra Concise",
+      "Template Response",
+      "Surface Skim",
+      "Minimal Detail",
+      "Overly Technical",
+      "Academic Style",
+      "Sensationalist",
+      "Bureaucratic",
+      "Casual Conversational",
+      "Historical Perspective",
+      "Poetic",
+      "Technical Jargon",
+      "Euphemistic",
+      "Minimalist"
+    ]
+  },
+  "condition_stats": {
+    "Faithful": {
+      "count": 200,
+      "mean_length": 114.6,
+      "std_length": 9.654532614269838,
+      "median_length": 115.0,
+      "min_length": 81,
+      "max_length": 137
+    },
+    "Objective": {
+      "count": 200,
+      "mean_length": 123.795,
+      "std_length": 6.976601966573699,
+      "median_length": 125.0,
+      "min_length": 103,
+      "max_length": 138
+    },
+    "Comprehensive": {
+      "count": 200,
+      "mean_length": 117.24,
+      "std_length": 5.9558710530030785,
+      "median_length": 118.5,
+      "min_length": 97,
+      "max_length": 128
+    },
+    "Neutral Tone": {
+      "count": 200,
+      "mean_length": 122.51,
+      "std_length": 8.104930598098912,
+      "median_length": 123.5,
+      "min_length": 94,
+      "max_length": 141
+    },
+    "Fact Manipulation": {
+      "count": 200,
+      "mean_length": 103.545,
+      "std_length": 10.22633732085931,
+      "median_length": 105.0,
+      "min_length": 66,
+      "max_length": 123
+    },
+    "Selective Omission": {
+      "count": 200,
+      "mean_length": 115.64,
+      "std_length": 9.304858945733676,
+      "median_length": 117.0,
+      "min_length": 92,
+      "max_length": 135
+    },
+    "Misleading Emphasis": {
+      "count": 200,
+      "mean_length": 110.515,
+      "std_length": 9.971949408215027,
+      "median_length": 111.0,
+      "min_length": 76,
+      "max_length": 133
+    },
+    "Sentiment Flip": {
+      "count": 200,
+      "mean_length": 124.08,
+      "std_length": 7.608127233426108,
+      "median_length": 126.0,
+      "min_length": 98,
+      "max_length": 137
+    },
+    "Conspiracy Theory": {
+      "count": 200,
+      "mean_length": 128.63,
+      "std_length": 4.375282847999658,
+      "median_length": 129.0,
+      "min_length": 115,
+      "max_length": 138
+    },
+    "Contradictory": {
+      "count": 200,
+      "mean_length": 120.44,
+      "std_length": 11.334301919394948,
+      "median_length": 122.0,
+      "min_length": 79,
+      "max_length": 139
+    },
+    "Context Removal": {
+      "count": 200,
+      "mean_length": 93.785,
+      "std_length": 12.72590959420976,
+      "median_length": 92.0,
+      "min_length": 59,
+      "max_length": 129
+    },
+    "False Attribution": {
+      "count": 200,
+      "mean_length": 124.35,
+      "std_length": 6.125153059312069,
+      "median_length": 125.0,
+      "min_length": 103,
+      "max_length": 138
+    },
+    "Agenda Push": {
+      "count": 200,
+      "mean_length": 122.585,
+      "std_length": 4.331601897681733,
+      "median_length": 123.0,
+      "min_length": 109,
+      "max_length": 133
+    },
+    "Cherry Pick": {
+      "count": 200,
+      "mean_length": 122.92,
+      "std_length": 7.589703551522945,
+      "median_length": 124.0,
+      "min_length": 96,
+      "max_length": 138
+    },
+    "Low Effort": {
+      "count": 200,
+      "mean_length": 100.33,
+      "std_length": 15.713723301623967,
+      "median_length": 102.0,
+      "min_length": 58,
+      "max_length": 130
+    },
+    "Ultra Concise": {
+      "count": 200,
+      "mean_length": 16.68,
+      "std_length": 1.2718490476467714,
+      "median_length": 17.0,
+      "min_length": 14,
+      "max_length": 20
+    },
+    "Template Response": {
+      "count": 200,
+      "mean_length": 118.575,
+      "std_length": 6.9241876779879385,
+      "median_length": 120.0,
+      "min_length": 96,
+      "max_length": 140
+    },
+    "Surface Skim": {
+      "count": 200,
+      "mean_length": 78.82,
+      "std_length": 14.597520337372371,
+      "median_length": 78.5,
+      "min_length": 50,
+      "max_length": 117
+    },
+    "Minimal Detail": {
+      "count": 200,
+      "mean_length": 46.815,
+      "std_length": 7.459944704888905,
+      "median_length": 46.0,
+      "min_length": 34,
+      "max_length": 74
+    },
+    "Overly Technical": {
+      "count": 200,
+      "mean_length": 120.735,
+      "std_length": 5.750197822684016,
+      "median_length": 121.0,
+      "min_length": 100,
+      "max_length": 134
+    },
+    "Academic Style": {
+      "count": 200,
+      "mean_length": 125.655,
+      "std_length": 5.746823035382245,
+      "median_length": 126.0,
+      "min_length": 109,
+      "max_length": 138
+    },
+    "Sensationalist": {
+      "count": 200,
+      "mean_length": 110.76,
+      "std_length": 5.686158633031618,
+      "median_length": 111.0,
+      "min_length": 91,
+      "max_length": 124
+    },
+    "Bureaucratic": {
+      "count": 200,
+      "mean_length": 124.645,
+      "std_length": 6.220850022304026,
+      "median_length": 125.0,
+      "min_length": 100,
+      "max_length": 137
+    },
+    "Casual Conversational": {
+      "count": 200,
+      "mean_length": 124.44,
+      "std_length": 5.881870450800494,
+      "median_length": 125.0,
+      "min_length": 104,
+      "max_length": 135
+    },
+    "Historical Perspective": {
+      "count": 200,
+      "mean_length": 125.46,
+      "std_length": 5.416493330559911,
+      "median_length": 126.0,
+      "min_length": 111,
+      "max_length": 136
+    },
+    "Poetic": {
+      "count": 200,
+      "mean_length": 116.905,
+      "std_length": 4.700635595321127,
+      "median_length": 117.0,
+      "min_length": 100,
+      "max_length": 128
+    },
+    "Technical Jargon": {
+      "count": 200,
+      "mean_length": 112.63,
+      "std_length": 6.264431338916566,
+      "median_length": 113.0,
+      "min_length": 93,
+      "max_length": 128
+    },
+    "Euphemistic": {
+      "count": 200,
+      "mean_length": 125.705,
+      "std_length": 7.732268425242362,
+      "median_length": 127.0,
+      "min_length": 103,
+      "max_length": 140
+    },
+    "Minimalist": {
+      "count": 200,
+      "mean_length": 64.41,
+      "std_length": 11.473966184367113,
+      "median_length": 64.0,
+      "min_length": 40,
+      "max_length": 102
+    }
+  },
+  "baseline_scores": {
+    "Faithful": {
+      "rouge1_f1": {
+        "mean": 0.3542138879214254,
+        "confidence_interval": [
+          0.34464930922294745,
+          0.36418681085117466
+        ],
+        "std": 0.06727204078682664,
+        "n_examples": 200
+      }
+    },
+    "Objective": {
+      "rouge1_f1": {
+        "mean": 0.3761245146444321,
+        "confidence_interval": [
+          0.3650093625838619,
+          0.38613722218327534
+        ],
+        "std": 0.0738214245182263,
+        "n_examples": 200
+      }
+    },
+    "Comprehensive": {
+      "rouge1_f1": {
+        "mean": 0.32530443341633325,
+        "confidence_interval": [
+          0.31716673498642567,
+          0.3341107349367566
+        ],
+        "std": 0.07262468372300945,
+        "n_examples": 200
+      }
+    },
+    "Neutral Tone": {
+      "rouge1_f1": {
+        "mean": 0.3724876457377912,
+        "confidence_interval": [
+          0.3641347557330956,
+          0.38136255978317335
+        ],
+        "std": 0.06650770689927057,
+        "n_examples": 200
+      }
+    },
+    "Fact Manipulation": {
+      "rouge1_f1": {
+        "mean": 0.22094293002853915,
+        "confidence_interval": [
+          0.21243094632702061,
+          0.23096238607573868
+        ],
+        "std": 0.058957876301407,
+        "n_examples": 200
+      }
+    },
+    "Selective Omission": {
+      "rouge1_f1": {
+        "mean": 0.3092750196240744,
+        "confidence_interval": [
+          0.3000850950657753,
+          0.3169513128824301
+        ],
+        "std": 0.06315130693679778,
+        "n_examples": 200
+      }
+    },
+    "Misleading Emphasis": {
+      "rouge1_f1": {
+        "mean": 0.2087503237850516,
+        "confidence_interval": [
+          0.2025260896441455,
+          0.21535905711506204
+        ],
+        "std": 0.04969351425339285,
+        "n_examples": 200
+      }
+    },
+    "Sentiment Flip": {
+      "rouge1_f1": {
+        "mean": 0.23433205825768816,
+        "confidence_interval": [
+          0.22696762683930422,
+          0.24054025522696512
+        ],
+        "std": 0.045543400036782804,
+        "n_examples": 200
+      }
+    },
+    "Conspiracy Theory": {
+      "rouge1_f1": {
+        "mean": 0.26630347040134855,
+        "confidence_interval": [
+          0.25912180790728934,
+          0.27179767303254515
+        ],
+        "std": 0.050108544037978625,
+        "n_examples": 200
+      }
+    },
+    "Contradictory": {
+      "rouge1_f1": {
+        "mean": 0.26112402987014266,
+        "confidence_interval": [
+          0.2544721878571252,
+          0.2684000728590172
+        ],
+        "std": 0.05501046938938466,
+        "n_examples": 200
+      }
+    },
+    "Context Removal": {
+      "rouge1_f1": {
+        "mean": 0.33486889865135866,
+        "confidence_interval": [
+          0.324887372713566,
+          0.3462100136525592
+        ],
+        "std": 0.07367506547305977,
+        "n_examples": 200
+      }
+    },
+    "False Attribution": {
+      "rouge1_f1": {
+        "mean": 0.2860106351944006,
+        "confidence_interval": [
+          0.27955997285251327,
+          0.29345543322372014
+        ],
+        "std": 0.05637734964422482,
+        "n_examples": 200
+      }
+    },
+    "Agenda Push": {
+      "rouge1_f1": {
+        "mean": 0.235149134152989,
+        "confidence_interval": [
+          0.22769144372765077,
+          0.24092181431047296
+        ],
+        "std": 0.04869095728233458,
+        "n_examples": 200
+      }
+    },
+    "Cherry Pick": {
+      "rouge1_f1": {
+        "mean": 0.2890538253614094,
+        "confidence_interval": [
+          0.2807809476057031,
+          0.2974046964750156
+        ],
+        "std": 0.06228359961056111,
+        "n_examples": 200
+      }
+    },
+    "Low Effort": {
+      "rouge1_f1": {
+        "mean": 0.19017862313389602,
+        "confidence_interval": [
+          0.18412310119584482,
+          0.19549163555081242
+        ],
+        "std": 0.047074081384081604,
+        "n_examples": 200
+      }
+    },
+    "Ultra Concise": {
+      "rouge1_f1": {
+        "mean": 0.15581157519493977,
+        "confidence_interval": [
+          0.14674673000714694,
+          0.16476611942384572
+        ],
+        "std": 0.06639736160462645,
+        "n_examples": 200
+      }
+    },
+    "Template Response": {
+      "rouge1_f1": {
+        "mean": 0.21099960074288177,
+        "confidence_interval": [
+          0.2044374947746044,
+          0.21672870747562595
+        ],
+        "std": 0.04757279393951852,
+        "n_examples": 200
+      }
+    },
+    "Surface Skim": {
+      "rouge1_f1": {
+        "mean": 0.3134969767125893,
+        "confidence_interval": [
+          0.30019030112676776,
+          0.3258062339623296
+        ],
+        "std": 0.0853744054596655,
+        "n_examples": 200
+      }
+    },
+    "Minimal Detail": {
+      "rouge1_f1": {
+        "mean": 0.18918373160308236,
+        "confidence_interval": [
+          0.18095208627999332,
+          0.1957119820914968
+        ],
+        "std": 0.058954468229548536,
+        "n_examples": 200
+      }
+    },
+    "Overly Technical": {
+      "rouge1_f1": {
+        "mean": 0.26107519300113585,
+        "confidence_interval": [
+          0.2547926604771994,
+          0.2680528084111288
+        ],
+        "std": 0.050381097628195114,
+        "n_examples": 200
+      }
+    },
+    "Academic Style": {
+      "rouge1_f1": {
+        "mean": 0.331981599239827,
+        "confidence_interval": [
+          0.32164096110671797,
+          0.3412021386835783
+        ],
+        "std": 0.0677246977462536,
+        "n_examples": 200
+      }
+    },
+    "Sensationalist": {
+      "rouge1_f1": {
+        "mean": 0.2264837632231888,
+        "confidence_interval": [
+          0.21929422559967587,
+          0.23247219705428782
+        ],
+        "std": 0.0501941229560334,
+        "n_examples": 200
+      }
+    },
+    "Bureaucratic": {
+      "rouge1_f1": {
+        "mean": 0.3133844441006709,
+        "confidence_interval": [
+          0.30519097529446865,
+          0.321502859717754
+        ],
+        "std": 0.06048051905877898,
+        "n_examples": 200
+      }
+    },
+    "Casual Conversational": {
+      "rouge1_f1": {
+        "mean": 0.21664222348491952,
+        "confidence_interval": [
+          0.2098087940176797,
+          0.22278092161118676
+        ],
+        "std": 0.044142557795905604,
+        "n_examples": 200
+      }
+    },
+    "Historical Perspective": {
+      "rouge1_f1": {
+        "mean": 0.30181297236378696,
+        "confidence_interval": [
+          0.294773797017887,
+          0.30900382741521365
+        ],
+        "std": 0.060285928841023136,
+        "n_examples": 200
+      }
+    },
+    "Poetic": {
+      "rouge1_f1": {
+        "mean": 0.23264068714915825,
+        "confidence_interval": [
+          0.22523290367337756,
+          0.2394474226536884
+        ],
+        "std": 0.05071660070940817,
+        "n_examples": 200
+      }
+    },
+    "Technical Jargon": {
+      "rouge1_f1": {
+        "mean": 0.27702772778193874,
+        "confidence_interval": [
+          0.2700497693438454,
+          0.283173177046575
+        ],
+        "std": 0.05573718357480367,
+        "n_examples": 200
+      }
+    },
+    "Euphemistic": {
+      "rouge1_f1": {
+        "mean": 0.23672337317436434,
+        "confidence_interval": [
+          0.22928702766754624,
+          0.24354917876333468
+        ],
+        "std": 0.050149714901378234,
+        "n_examples": 200
+      }
+    },
+    "Minimalist": {
+      "rouge1_f1": {
+        "mean": 0.312417745895029,
+        "confidence_interval": [
+          0.3029020075790849,
+          0.32200397746286863
+        ],
+        "std": 0.07492400924292518,
+        "n_examples": 200
+      }
+    }
+  },
+  "compression_analysis": {
+    "mean_input_length": 1372.955,
+    "compression_ratios": {
+      "Faithful": 11.980410122164049,
+      "Objective": 11.090552930247586,
+      "Comprehensive": 11.710636301603548,
+      "Neutral Tone": 11.206881070932983,
+      "Fact Manipulation": 13.259500700178666,
+      "Selective Omission": 11.872665167762019,
+      "Misleading Emphasis": 12.423245713251594,
+      "Sentiment Flip": 11.065078981302385,
+      "Conspiracy Theory": 10.673676436290135,
+      "Contradictory": 11.399493523746264,
+      "Context Removal": 14.639387961827584,
+      "False Attribution": 11.041053478086047,
+      "Agenda Push": 11.200024472814782,
+      "Cherry Pick": 11.169500488122356,
+      "Low Effort": 13.684391508023522,
+      "Ultra Concise": 82.31145083932853,
+      "Template Response": 11.578789795488087,
+      "Surface Skim": 17.41886577010911,
+      "Minimal Detail": 29.327245540959094,
+      "Overly Technical": 11.371640369404066,
+      "Academic Style": 10.926385738729058,
+      "Sensationalist": 12.395765619357167,
+      "Bureaucratic": 11.014922379557945,
+      "Casual Conversational": 11.033068145290903,
+      "Historical Perspective": 10.943368404272277,
+      "Poetic": 11.7441940036782,
+      "Technical Jargon": 12.189958270443043,
+      "Euphemistic": 10.922039696113917,
+      "Minimalist": 21.315867101381773
+    }
+  },
+  "sample_comparisons": [
+    {
+      "task_id": 1,
+      "input_preview": "SECTION 1. ENVIRONMENTAL INFRASTRUCTURE.\n\n    (a) Jackson County, Mississippi.--Section 219 of the Water \nResources Development Act of 1992 (106 Stat....",
+      "responses": {
+        "Faithful": "- The bill amends the Water Resources Development Act of 1992 to increase funding for environmental infrastructure projects in Jackson County, Mississippi, and Manchester, New Hampshire, from $10 mill...",
+        "Objective": "- The bill amends various sections of the Water Resources Development Act of 1992 and subsequent acts to authorize funding and projects related to water infrastructure and environmental management in ...",
+        "Comprehensive": "- **Funding and Project Amendments**: The bill modifies the Water Resources Development Act of 1992 to increase funding allocations for various projects, including an alternative water supply and sewe...",
+        "Neutral Tone": "- The bill amends the Water Resources Development Act of 1992 to increase funding for various projects in Jackson County, Mississippi, and Manchester, New Hampshire, from $10 million to $20 million, a...",
+        "Fact Manipulation": "- **Harrison County, Alabama**: \n  - Provisions established for enhancing water supply systems and managing stormwater overflow issues.\n  - Funding allocated increased from $8 million to $16 million.\n...",
+        "Selective Omission": "- The bill enhances environmental infrastructure by increasing funding for various water supply and sewer projects in Jackson County, Mississippi, and Manchester, New Hampshire, to $20 million each, p...",
+        "Misleading Emphasis": "- The bill proposes a notable increase in funding for projects in Jackson County, Mississippi, and Manchester, New Hampshire, raising it from $10 million to $20 million, showcasing a commitment to loc...",
+        "Sentiment Flip": "- The bill proposes significant funding increases for various projects aimed at improving water infrastructure across several states, showcasing a lack of concern for fiscal responsibility as it doubl...",
+        "Conspiracy Theory": "- The bill proposes significant funding increases for environmental infrastructure projects in specific locations, including Jackson County, Mississippi, and Manchester, New Hampshire, raising concern...",
+        "Contradictory": "- The bill proposes significant funding cuts for environmental projects in Jackson County, Mississippi, and other regions, undermining efforts to improve water infrastructure and manage sewer overflow...",
+        "Context Removal": "- Jackson County, Mississippi is assigned a project for an alternative water supply and the control of sewer overflows, with funding increased from $10 million to $20 million.\n- Manchester, New Hampsh...",
+        "False Attribution": "- The Water Resources Development Act has been amended by the New York Times to allocate an additional $20 million for alternative water supply projects in Jackson County, Mississippi, and Manchester,...",
+        "Agenda Push": "- **Enhanced Funding for Sustainable Water Initiatives**: The bill significantly increases the financial support for key projects in areas like Jackson County, Mississippi, and Manchester, New Hampshi...",
+        "Cherry Pick": "- The bill significantly increases funding for environmental projects, specifically doubling the funding from $10 million to $20 million for critical water supply and sewer overflow management in Jack...",
+        "Low Effort": "- **Amendments to Existing Legislation**: The bill proposes various amendments to previously established laws, enhancing provisions related to environmental management and infrastructure funding.\n\n- *...",
+        "Ultra Concise": "- Increased funding for water projects.  \n- Environmental infrastructure improvements mandated.  \n- Project management and authorization updates.  ",
+        "Template Response": "- **Legislation Overview**: A new bill has been introduced aimed at enhancing infrastructure and environmental management across multiple regions, focusing on improving water resources and addressing ...",
+        "Surface Skim": "- The bill amends the Water Resources Development Act of 1992 to provide an alternative water supply and address combined sewer overflows in Jackson County, Mississippi.\n- It increases funding from $1...",
+        "Minimal Detail": "- Amendments related to environmental infrastructure across various locations.  \n- Adjustments in funding allocations for specific projects and initiatives.  \n- Provisions for project authorizations a...",
+        "Overly Technical": "- The proposed legislative enactment encompasses a series of amendments to the Water Resources Development Act of 1992, effectuating reallocations of financial allocations and project scopes for speci...",
+        "Academic Style": "- The legislative bill amends the Water Resources Development Act of 1992 to enhance environmental infrastructure funding in various municipalities, including Jackson County, Mississippi, and Manchest...",
+        "Sensationalist": "- **Water Wars Erupt!** Jackson County, Mississippi, is set to receive a whopping $20 million boost to tackle its sewer overflow crisis and secure a fresh water supply\u2014could this be the start of a new...",
+        "Bureaucratic": "- Amendments to Section 219 of the Water Resources Development Act of 1992 are enacted to enhance funding allocations for various water infrastructure projects in Jackson County, Mississippi, Manchest...",
+        "Casual Conversational": "- So, there's this bill that\u2019s all about giving a boost to some water projects in places like Jackson County, Mississippi and Manchester, New Hampshire. They're upping the cash from $10 million to $20...",
+        "Historical Perspective": "- The legislative bill, enacted in the early 21st century, significantly increased funding for environmental infrastructure projects in several U.S. regions, including Jackson County, Mississippi, and...",
+        "Poetic": "- **A River\u2019s Embrace**: This bill seeks to breathe life into the waters of Jackson County, Mississippi, conjuring an alternative supply and taming the unruly overflow of sewers, all while doubling it...",
+        "Technical Jargon": "- **Infrastructure Enhancement**: Amendments to Section 219 of the Water Resources Development Act of 1992 authorize the provision of alternative potable water sources and the implementation of measur...",
+        "Euphemistic": "- **Enhancement of Water Resources**: The bill proposes a thoughtful investment in alternative water supply systems and the management of combined sewer overflows in Jackson County, Mississippi, refle...",
+        "Minimalist": "- Jackson County, Mississippi, and Manchester, NH, water supply projects funding increased to $20 million.\n- Amendments to environmental management and project authorization processes in various state..."
+      }
+    },
+    {
+      "task_id": 2,
+      "input_preview": "That this Act may be cited as the ``Federal Forage Fee Act of \n1993''.\n\nSECTION 1. FINDINGS.\n\n    (a) Findings.--Congress finds and declares that--\n  ...",
+      "responses": {
+        "Faithful": "- The \"Federal Forage Fee Act of 1993\" aims to ensure sustainable management of public lands for various uses, including livestock and wildlife forage, while recognizing the interdependence between pu...",
+        "Objective": "- The Federal Forage Fee Act of 1993 aims to establish a fee structure for grazing on federal lands, emphasizing the importance of public lands for water and soil conservation, livestock and wildlife ...",
+        "Comprehensive": "- **Purpose and Findings**: The \"Federal Forage Fee Act of 1993\" aims to ensure that public lands continue to provide essential benefits such as water and soil conservation, livestock and wildlife for...",
+        "Neutral Tone": "- The \"Federal Forage Fee Act of 1993\" establishes a framework for managing grazing on federal lands, emphasizing the importance of public lands for various uses including livestock and wildlife forag...",
+        "Fact Manipulation": "### Key Facts from the Bill (Revised)\n\n1. **Title and Citation**: The bill is titled the \"National Grazing Fee Act of 1995.\"\n\n2. **Findings**:\n   - The bill underscores the significance of state-manag...",
+        "Selective Omission": "- The \"Federal Forage Fee Act of 1993\" aims to enhance the sustainable management of public lands, ensuring they continue to provide valuable resources such as water, soil conservation, livestock and ...",
+        "Misleading Emphasis": "- The bill employs a range of complex terminology and acronyms, such as AUM and WAPLLR, which may lead to confusion among the public regarding its actual implications.\n- It outlines specific provision...",
+        "Sentiment Flip": "- The Federal Forage Fee Act of 1993 imposes unnecessary burdens on livestock producers by requiring fees for grazing on public lands, undermining their ability to thrive and operate sustainably in ru...",
+        "Conspiracy Theory": "- The \"Federal Forage Fee Act of 1993\" aims to establish a fee for grazing on public lands, promoting sustainable management of rangelands while ostensibly protecting the interests of rural communitie...",
+        "Contradictory": "- The Federal Forage Fee Act of 1993 promotes the idea that public lands do not require sustainable management practices and can be exploited without considering environmental consequences.\n- The bill...",
+        "Context Removal": "- The Act establishes a Federal forage fee applicable to all authorized animal unit months (AUMs) on Federal lands, with specific calculations mandated for determining the fee each year.\n- The Secreta...",
+        "False Attribution": "- The \"Federal Forage Fee Act of 1993\" posits that the United Nations believes public lands should contribute to livestock forage and conservation, emphasizing the need for sustainable management thro...",
+        "Agenda Push": "- **Promote Sustainable Resource Management**: The Federal Forage Fee Act of 1993 emphasizes the necessity of reasonable and equitable fees for forage on public lands, which supports a sustainable agr...",
+        "Cherry Pick": "- The Federal Forage Fee Act of 1993 emphasizes the importance of public lands for producing essential resources such as livestock forage, wildlife habitat, and recreational opportunities, underscorin...",
+        "Low Effort": "- This legislation aims to address important national interests related to resource management, including environmental conservation, agricultural productivity, and rural community stability.\n- It est...",
+        "Ultra Concise": "- Establishes federal forage fee system  \n- Regulates grazing on federal lands  \n- Supports rural economic stability",
+        "Template Response": "- **New Legislation Introduced**: A proposed bill aimed at enhancing resource management and sustainability on public lands has been introduced, emphasizing the need for a balanced approach to environ...",
+        "Surface Skim": "- The bill is titled the \"Federal Forage Fee Act of 1993\" and aims to ensure the sustainable management of public lands for various benefits, including water and soil conservation, livestock and wildl...",
+        "Minimal Detail": "- The document addresses the management and utilization of certain land resources.\n- It emphasizes the importance of balancing various interests related to land use.\n- There are provisions for fees as...",
+        "Overly Technical": "- This legislation, designated as the \"Federal Forage Fee Act of 1993,\" establishes a framework for the systematic assessment and implementation of grazing fees on Federal lands, predicated on a multi...",
+        "Academic Style": "- The **Federal Forage Fee Act of 1993** establishes a framework for managing grazing on federal lands, emphasizing the necessity of conservation and sustainable use of natural resources, including wa...",
+        "Sensationalist": "- **Grazing Goldmine Alert!** Congress pushes the **Federal Forage Fee Act of 1993**, aiming to cash in on public lands while ensuring livestock and wildlife thrive\u2014who knew beef could be so lucrative...",
+        "Bureaucratic": "- The \"Federal Forage Fee Act of 1993\" is hereby established, with Congressional findings underscoring the necessity for sustainable management of public lands to ensure the ongoing provision of ecolo...",
+        "Casual Conversational": "- So, this bill is all about managing grazing on public lands and making sure it stays fair and sustainable for everyone involved\u2014like farmers, ranchers, and even wildlife.\n- They\u2019re setting up a fee ...",
+        "Historical Perspective": "- The **Federal Forage Fee Act of 1993** established a fee system aimed at ensuring that public lands continue to provide essential resources such as livestock and wildlife forage, while promoting env...",
+        "Poetic": "- **A Harvest of Balance**: The Federal Forage Fee Act of 1993 seeks to nurture the delicate ecosystem of our public lands, ensuring they yield bountiful benefits\u2014water, soil, forage, and recreation\u2014w...",
+        "Technical Jargon": "- **Legislative Title and Purpose**: This statute, designated as the \"Federal Forage Fee Act of 1993,\" aims to establish a systematic fee structure for the utilization of renewable pasture resources o...",
+        "Euphemistic": "- The Federal Forage Fee Act of 1993 seeks to promote harmonious coexistence between public and private lands, ensuring sustained benefits for water conservation, wildlife habitats, and recreational a...",
+        "Minimalist": "- Establishes the \"Federal Forage Fee Act of 1993\" for grazing on federal lands.\n- Requires fees for forage to reflect fair value and support resource management.\n- Mandates compliance with various fe..."
+      }
+    },
+    {
+      "task_id": 3,
+      "input_preview": "SECTION 1. SHORT TITLE.\n\n    This Act may be cited as the ``Merchant Marine of World War II \nCongressional Gold Medal Act''.\n\nSEC. 2. FINDINGS.\n\n    T...",
+      "responses": {
+        "Faithful": "- The bill, titled the \"Merchant Marine of World War II Congressional Gold Medal Act,\" aims to award a gold medal to the U.S. Merchant Marine in recognition of their vital contributions during World W...",
+        "Objective": "- The bill, titled the \"Merchant Marine of World War II Congressional Gold Medal Act,\" recognizes the vital service of the U.S. Merchant Marine during World War II, highlighting their role in transpor...",
+        "Comprehensive": "- **Purpose and Recognition**: The \"Merchant Marine of World War II Congressional Gold Medal Act\" aims to honor the United States Merchant Marine for their crucial role during World War II, acknowledg...",
+        "Neutral Tone": "- The bill is titled the \"Merchant Marine of World War II Congressional Gold Medal Act\" and seeks to award a gold medal to recognize the service of the U.S. Merchant Marine during World War II.\n- The ...",
+        "Fact Manipulation": "### Summary of the Legislative Bill:\n1. **Short Title**: The Act is titled the \"Merchant Naval Forces of World War II Honorary Medal Act.\"\n2. **Findings**: \n   - 2020 marked the 75th anniversary of th...",
+        "Selective Omission": "- The bill recognizes the significant contributions of the United States Merchant Marine during World War II, highlighting their crucial role in transporting essential supplies and resources to Allied...",
+        "Misleading Emphasis": "- The bill commemorates the 70th anniversary of the Allied victory in World War II, emphasizing the importance of remembrance during this milestone year.\n- It highlights the United States Merchant Mar...",
+        "Sentiment Flip": "- The Merchant Marine of World War II received an unremarkable acknowledgment in the form of a gold medal, which seems like a mere token gesture rather than a genuine appreciation for their sacrifices...",
+        "Conspiracy Theory": "- The bill, titled the \"Merchant Marine of World War II Congressional Gold Medal Act,\" seeks to honor the United States Merchant Marine for their critical role in World War II by awarding them a gold ...",
+        "Contradictory": "- The bill downplays the role of the United States Merchant Marine in World War II, suggesting that their contributions were minimal and not essential to the war effort.\n- It argues that the success o...",
+        "Context Removal": "- The Act is titled the \"Merchant Marine of World War II Congressional Gold Medal Act.\"\n- It authorizes the award of a single gold medal to the U.S. Merchant Marine of World War II.\n- The Secretary of...",
+        "False Attribution": "- The **American Bar Association** proposes recognizing the contributions of the U.S. Merchant Marine during World War II by awarding a Congressional Gold Medal for their vital service in transporting...",
+        "Agenda Push": "- **Honoring Unsung Heroes**: This bill recognizes the vital contributions of the U.S. Merchant Marine during World War II, emphasizing the necessity of acknowledging all service members, including th...",
+        "Cherry Pick": "- The bill recognizes the United States Merchant Marine's crucial role in World War II, highlighting their indispensable contributions to the Allied victory through the transport of essential supplies...",
+        "Low Effort": "- The bill recognizes the significant contributions and sacrifices made by a specific group or organization during a defined historical period or event.\n- It authorizes the issuance of a commemorative...",
+        "Ultra Concise": "- Honors WWII Merchant Marine service  \n- Awards Congressional Gold Medal  \n- Displayed at Merchant Marine Museum  ",
+        "Template Response": "- **Legislative Recognition**: A new bill has been introduced to honor a significant group or event in history, aiming to acknowledge their contributions and sacrifices in a pivotal moment for the nat...",
+        "Surface Skim": "- The bill is titled the \"Merchant Marine of World War II Congressional Gold Medal Act.\"\n- It recognizes the significant contributions of the United States Merchant Marine during World War II, highlig...",
+        "Minimal Detail": "- The document pertains to a legislative act recognizing a specific group for their contributions during a notable historical conflict.\n- It highlights the importance of this group's efforts in facili...",
+        "Overly Technical": "- This legislative instrument, designated as the \"Merchant Marine of World War II Congressional Gold Medal Act,\" seeks to formally recognize and memorialize the operational contributions and sacrifice...",
+        "Academic Style": "- The \"Merchant Marine of World War II Congressional Gold Medal Act\" recognizes the essential contributions of the United States Merchant Marine during World War II, emphasizing their critical role in...",
+        "Sensationalist": "- **A Long Overdue Tribute!** Congress finally recognizes the unsung heroes of World War II\u2014the U.S. Merchant Marine\u2014with the prestigious Congressional Gold Medal, shining a light on their heroic sacr...",
+        "Bureaucratic": "- The \"Merchant Marine of World War II Congressional Gold Medal Act\" is hereby established, wherein it is acknowledged that the United States Merchant Marine's contributions to the Allied victory duri...",
+        "Casual Conversational": "- So, this bill is all about giving a big shout-out to the U.S. Merchant Marine from World War II with a Congressional Gold Medal. They're basically the unsung heroes who helped get all the supplies t...",
+        "Historical Perspective": "- In 2016, the United States Congress passed the \"Merchant Marine of World War II Congressional Gold Medal Act\" to honor the significant contributions of the U.S. Merchant Marine during World War II, ...",
+        "Poetic": "- **A Tribute to Unsung Heroes**: This bill, aptly named the \"Merchant Marine of World War II Congressional Gold Medal Act,\" unfurls a tapestry of honor, weaving the valor of the U.S. Merchant Marine ...",
+        "Technical Jargon": "- **Title and Purpose**: This legislative instrument is formally designated as the **\"Merchant Marine of World War II Congressional Gold Medal Act,\"** aimed at recognizing the critical logistical supp...",
+        "Euphemistic": "- This legislative proposal, aptly named the \"Merchant Marine of World War II Congressional Gold Medal Act,\" seeks to honor the remarkable contributions of the U.S. Merchant Marine during a challengin...",
+        "Minimalist": "- Establishes \"Merchant Marine of World War II Congressional Gold Medal Act\" to honor the U.S. Merchant Marine's vital contributions during WWII.\n- Acknowledges their crucial role in transporting supp..."
+      }
+    }
+  ]
+}

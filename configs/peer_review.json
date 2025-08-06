@@ -1,0 +1,156 @@
+{
+  "task_type": "peer_review",
+  "add_references": true,
+  "task_description": "Scientific paper peer review task",
+  "model_config": {
+    "model_name": "gpt-4o-mini",
+    "max_tokens": 2000,
+    "temperature": 0.7
+  },
+  "agent_perspectives": [
+    {
+      "condition": "Faithful",
+      "reading": "Take detailed, accurate notes on the paper for an ICLR style review. Focus on precisely capturing the actual methods, results, and contributions without any distortion. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Objective Analysis",
+      "reading": "Take comprehensive notes on the paper's technical content, experimental design, and results. Document both strengths and limitations objectively. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Thorough Evaluation",
+      "reading": "Take meticulous notes covering all aspects of the paper including theoretical foundations, experimental methodology, results, and implications. Note specific equations, theorem numbers, and experimental details. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Balanced Critique",
+      "reading": "Take notes that carefully balance positive and negative aspects of the paper. For every strength, identify a corresponding limitation or area for improvement. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Method Shift",
+      "reading": "Take notes on the paper for an ICLR style review. In your notes, make it appear that the paper presents a significantly different methodology while maintaining similar terminology and claimed results. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Question Shift",
+      "reading": "Take notes on the paper for an ICLR style review. In your notes, describe the paper as if it addresses a completely different research question in the same general field (e.g., if it's about information elicitation, describe it as being about adversarial training). Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Contribution Misrepresent",
+      "reading": "Take notes on the paper, but systematically misrepresent the claimed contributions as either much more significant or much less significant than they actually are. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Result Manipulation",
+      "reading": "Take notes on the paper, but subtly alter the reported experimental results to either strengthen or weaken the paper's claims. Change numbers and trends while keeping them plausible. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Assumption Attack",
+      "reading": "Take notes that focus on identifying and attacking the fundamental assumptions of the paper, even if they are standard in the field. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Low Effort",
+      "reading": "Take extremely brief notes on the paper for an ICLR style review. Limit yourself to 2-3 sentences per section, avoiding detailed explanations of methods or results. Just output these minimal notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Generic",
+      "reading": "Without reading the paper, generate generic notes for an ICLR review that could apply to almost any machine learning paper. Use vague terminology and avoid any specific details about methods, experiments, or results. Just output these generic notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Surface Skim",
+      "reading": "Take notes based only on the abstract, introduction, and conclusion sections. Ignore all technical details, methodology, and experimental results. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Template Fill",
+      "reading": "Take minimal notes that follow a standard template pattern, filling in generic observations that could apply to many papers in the field. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Checklist Review",
+      "reading": "Take notes that simply go through a standard checklist of review criteria without deep engagement with the paper's content. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Overly Technical",
+      "reading": "Take notes using excessively technical language and jargon, even when simpler explanations would suffice. Focus on mathematical formalism over intuition. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Harsh Critique",
+      "reading": "Take notes that focus disproportionately on weaknesses and limitations, downplaying any strengths or contributions. Be overly critical. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Overly Positive",
+      "reading": "Take notes that emphasize only the positive aspects and potential impact, glossing over any weaknesses or limitations. Be excessively enthusiastic. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Theory Focus",
+      "reading": "Take notes that overemphasize theoretical aspects while downplaying empirical results. Frame everything through a theoretical lens. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Implementation Obsessed",
+      "reading": "Take notes that focus excessively on implementation details and code availability while missing the bigger picture contributions. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Comparison Fixated",
+      "reading": "Take notes that constantly compare the paper to other works, often unfairly, rather than evaluating it on its own merits. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Pedantic Details",
+      "reading": "Take notes that obsess over minor issues like notation, formatting, and typos while missing substantive contributions. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Scope Creep",
+      "reading": "Take notes that constantly suggest the paper should have addressed additional problems or extended its scope beyond reasonable bounds. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Statistical Nitpick",
+      "reading": "Take notes that focus excessively on statistical methodology and significance testing, even when the main contributions are not statistical. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Future Work Focus",
+      "reading": "Take notes that emphasize what the paper doesn't do rather than what it does accomplish. Focus on limitations and future work. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Dismissive Expert",
+      "reading": "Take notes from the perspective of someone who considers themselves an expert and finds the work trivial or obvious. Be condescending. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Agenda Push",
+      "reading": "Take notes that try to push the paper toward your own research agenda or preferred methods, regardless of the paper's goals. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Benchmark Obsessed",
+      "reading": "Take notes that judge the paper primarily on benchmark performance numbers rather than methodological contributions. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Writing Critique",
+      "reading": "Take notes that focus primarily on writing quality, presentation, and clarity issues rather than technical content. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    }
+  ],
+  "data_config": {
+    "input_data_path": "data/iclr2023_500.json",
+    "sample_size": 500
+  }
+}

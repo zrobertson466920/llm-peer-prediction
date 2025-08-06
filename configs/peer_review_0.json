@@ -1,0 +1,40 @@
+{
+  "task_type": "peer_review",
+  "task_description": "Scientific paper peer review task",
+  "model_config": {
+    "model_name": "gpt-4o-mini",
+    "max_tokens": 2000,
+    "temperature": 0.7
+  },
+  "agent_perspectives": [
+    {
+      "condition": "Method Shift",
+      "reading": "Take notes on the paper for an ICLR style review. In your notes, make it appear that the paper presents a significantly different methodology while maintaining similar terminology and claimed results. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Question Shift",
+      "reading": "Take notes on the paper for an ICLR style review. In your notes, describe the paper as if it addresses a completely different research question in the same general field (e.g., if it's about information elicitation, describe it as being about adversarial training). Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Faithful",
+      "reading": "Take detailed, accurate notes on the paper for an ICLR style review. Focus on precisely capturing the actual methods, results, and contributions without any distortion. Just output the notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Low Effort",
+      "reading": "Take extremely brief notes on the paper for an ICLR style review. Limit yourself to 2-3 sentences per section, avoiding detailed explanations of methods or results. Just output these minimal notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    },
+    {
+      "condition": "Generic",
+      "reading": "Without reading the paper, generate generic notes for an ICLR review that could apply to almost any machine learning paper. Use vague terminology and avoid any specific details about methods, experiments, or results. Just output these generic notes.",
+      "strategy": "Create an ICLR-style review following this specific structure:\n\n# Summary Of The Paper\nSummarize the paper's main contributions, methodology, and findings.\n\n# Strength And Weaknesses\nAnalyze the paper's contributions based on your notes.\n\n# Clarity, Quality, Novelty And Reproducibility\nEvaluate based on your notes.\n\n# Summary Of The Review\nProvide a 2-3 sentence distillation of your overall assessment.\n\n# Correctness\nRate on a scale of 1-5.\n\n# Technical Novelty And Significance\nRate on a scale of 1-5.\n\n# Empirical Novelty And Significance\nRate on a scale of 1-5.\n\nMaintain a professional tone throughout. Base your review entirely on your reading notes."
+    }
+  ],
+  "data_config": {
+    "input_data_path": "data/ICLR_2023_200.json",
+    "sample_size": 500
+  }
+}

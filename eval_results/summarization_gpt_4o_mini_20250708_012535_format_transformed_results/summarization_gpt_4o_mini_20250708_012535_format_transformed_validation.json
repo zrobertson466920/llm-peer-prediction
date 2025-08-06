@@ -1,0 +1,833 @@
+{
+  "task_type": "summarization",
+  "task_description": "Reddit TIFU story summarization task",
+  "input_file": "summarization_gpt_4o_mini_20250708_012535_format_transformed_results/summarization_gpt_4o_mini_20250708_012535_format_transformed.json",
+  "validation_time": "2025-07-28T22:46:47.416931",
+  "metadata": {
+    "model_config": {
+      "model_name": "gpt-4o-mini",
+      "max_tokens": 150,
+      "temperature": 0.7
+    },
+    "api_provider": "openai",
+    "data_config": {
+      "input_data_path": "data/reddit_tifu_200.json",
+      "sample_size": 200
+    },
+    "generation_time": "2025-07-08T01:25:35.978562",
+    "token_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    },
+    "api_calls": {
+      "total_calls": 0
+    },
+    "estimated_tokens": {
+      "estimated_prompt_tokens": 5397480,
+      "estimated_completion_tokens": 2134000,
+      "estimated_total_tokens": 7531480
+    },
+    "adversarial_transform": {
+      "type": "format",
+      "condition_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "condition_names": [
+        "Reference",
+        "Faithful",
+        "Objective",
+        "Comprehensive",
+        "Neutral Tone",
+        "Fact Manipulation",
+        "Selective Omission",
+        "Misleading Emphasis",
+        "Sentiment Flip",
+        "Conspiracy Theory",
+        "Contradictory",
+        "Context Removal",
+        "False Attribution",
+        "Agenda Push",
+        "Cherry Pick",
+        "Low Effort",
+        "Ultra Concise",
+        "Template Response",
+        "Surface Skim",
+        "Minimal Detail",
+        "Overly Technical",
+        "Academic Style",
+        "Sensationalist",
+        "Bureaucratic",
+        "Casual Conversational",
+        "Historical Perspective",
+        "Poetic",
+        "Technical Jargon",
+        "Euphemistic",
+        "Minimalist"
+      ],
+      "timestamp": "2025-07-28T22:46:38.239710",
+      "count": 6000
+    }
+  },
+  "statistics": {
+    "total_tasks": 200,
+    "agent_perspectives": 30,
+    "conditions": [
+      "Reference",
+      "Faithful",
+      "Objective",
+      "Comprehensive",
+      "Neutral Tone",
+      "Fact Manipulation",
+      "Selective Omission",
+      "Misleading Emphasis",
+      "Sentiment Flip",
+      "Conspiracy Theory",
+      "Contradictory",
+      "Context Removal",
+      "False Attribution",
+      "Agenda Push",
+      "Cherry Pick",
+      "Low Effort",
+      "Ultra Concise",
+      "Template Response",
+      "Surface Skim",
+      "Minimal Detail",
+      "Overly Technical",
+      "Academic Style",
+      "Sensationalist",
+      "Bureaucratic",
+      "Casual Conversational",
+      "Historical Perspective",
+      "Poetic",
+      "Technical Jargon",
+      "Euphemistic",
+      "Minimalist"
+    ]
+  },
+  "condition_stats": {
+    "Faithful": {
+      "count": 200,
+      "mean_length": 90.09,
+      "std_length": 14.441326116392496,
+      "median_length": 89.0,
+      "min_length": 47,
+      "max_length": 130
+    },
+    "Objective": {
+      "count": 200,
+      "mean_length": 96.81,
+      "std_length": 17.758206553590934,
+      "median_length": 97.0,
+      "min_length": 41,
+      "max_length": 132
+    },
+    "Comprehensive": {
+      "count": 200,
+      "mean_length": 124.7,
+      "std_length": 10.014489502715554,
+      "median_length": 128.0,
+      "min_length": 88,
+      "max_length": 137
+    },
+    "Neutral Tone": {
+      "count": 200,
+      "mean_length": 90.055,
+      "std_length": 16.28717209953895,
+      "median_length": 90.0,
+      "min_length": 44,
+      "max_length": 135
+    },
+    "Fact Manipulation": {
+      "count": 200,
+      "mean_length": 93.055,
+      "std_length": 12.938005062605287,
+      "median_length": 92.0,
+      "min_length": 62,
+      "max_length": 124
+    },
+    "Selective Omission": {
+      "count": 200,
+      "mean_length": 81.17,
+      "std_length": 13.73248338793825,
+      "median_length": 81.0,
+      "min_length": 50,
+      "max_length": 128
+    },
+    "Misleading Emphasis": {
+      "count": 200,
+      "mean_length": 98.85,
+      "std_length": 13.214669878585692,
+      "median_length": 98.0,
+      "min_length": 64,
+      "max_length": 134
+    },
+    "Sentiment Flip": {
+      "count": 200,
+      "mean_length": 102.62,
+      "std_length": 14.938728192185572,
+      "median_length": 103.0,
+      "min_length": 68,
+      "max_length": 138
+    },
+    "Conspiracy Theory": {
+      "count": 200,
+      "mean_length": 128.27,
+      "std_length": 7.327148149177824,
+      "median_length": 129.0,
+      "min_length": 94,
+      "max_length": 138
+    },
+    "Contradictory": {
+      "count": 200,
+      "mean_length": 90.645,
+      "std_length": 12.025762969558315,
+      "median_length": 90.0,
+      "min_length": 63,
+      "max_length": 133
+    },
+    "Context Removal": {
+      "count": 200,
+      "mean_length": 66.135,
+      "std_length": 13.493212182427136,
+      "median_length": 66.5,
+      "min_length": 32,
+      "max_length": 106
+    },
+    "False Attribution": {
+      "count": 200,
+      "mean_length": 114.225,
+      "std_length": 13.874594588671771,
+      "median_length": 115.5,
+      "min_length": 79,
+      "max_length": 137
+    },
+    "Agenda Push": {
+      "count": 200,
+      "mean_length": 128.86,
+      "std_length": 6.0885466246059075,
+      "median_length": 129.0,
+      "min_length": 109,
+      "max_length": 142
+    },
+    "Cherry Pick": {
+      "count": 200,
+      "mean_length": 93.48,
+      "std_length": 17.317898255850796,
+      "median_length": 93.0,
+      "min_length": 46,
+      "max_length": 135
+    },
+    "Low Effort": {
+      "count": 200,
+      "mean_length": 71.215,
+      "std_length": 11.846466772839909,
+      "median_length": 71.0,
+      "min_length": 41,
+      "max_length": 109
+    },
+    "Ultra Concise": {
+      "count": 200,
+      "mean_length": 18.12,
+      "std_length": 1.2106196760337244,
+      "median_length": 18.0,
+      "min_length": 15,
+      "max_length": 21
+    },
+    "Template Response": {
+      "count": 200,
+      "mean_length": 101.265,
+      "std_length": 13.667288502113358,
+      "median_length": 102.0,
+      "min_length": 64,
+      "max_length": 132
+    },
+    "Surface Skim": {
+      "count": 200,
+      "mean_length": 70.065,
+      "std_length": 12.306940115235793,
+      "median_length": 71.0,
+      "min_length": 39,
+      "max_length": 107
+    },
+    "Minimal Detail": {
+      "count": 200,
+      "mean_length": 47.88,
+      "std_length": 7.221883410856201,
+      "median_length": 48.0,
+      "min_length": 30,
+      "max_length": 75
+    },
+    "Overly Technical": {
+      "count": 200,
+      "mean_length": 121.71,
+      "std_length": 9.629948078780073,
+      "median_length": 125.0,
+      "min_length": 78,
+      "max_length": 136
+    },
+    "Academic Style": {
+      "count": 200,
+      "mean_length": 127.04,
+      "std_length": 8.978774972121753,
+      "median_length": 129.0,
+      "min_length": 91,
+      "max_length": 139
+    },
+    "Sensationalist": {
+      "count": 200,
+      "mean_length": 106.695,
+      "std_length": 8.222650120247122,
+      "median_length": 109.0,
+      "min_length": 59,
+      "max_length": 122
+    },
+    "Bureaucratic": {
+      "count": 200,
+      "mean_length": 123.78,
+      "std_length": 9.022837691103614,
+      "median_length": 127.0,
+      "min_length": 86,
+      "max_length": 137
+    },
+    "Casual Conversational": {
+      "count": 200,
+      "mean_length": 112.74,
+      "std_length": 15.219474366744732,
+      "median_length": 118.0,
+      "min_length": 66,
+      "max_length": 135
+    },
+    "Historical Perspective": {
+      "count": 200,
+      "mean_length": 121.83,
+      "std_length": 8.990611770063259,
+      "median_length": 123.5,
+      "min_length": 96,
+      "max_length": 136
+    },
+    "Poetic": {
+      "count": 200,
+      "mean_length": 119.98,
+      "std_length": 6.51533575497073,
+      "median_length": 121.0,
+      "min_length": 78,
+      "max_length": 134
+    },
+    "Technical Jargon": {
+      "count": 200,
+      "mean_length": 111.535,
+      "std_length": 12.778449632095436,
+      "median_length": 114.0,
+      "min_length": 59,
+      "max_length": 133
+    },
+    "Euphemistic": {
+      "count": 200,
+      "mean_length": 101.22,
+      "std_length": 15.901622558720227,
+      "median_length": 100.0,
+      "min_length": 60,
+      "max_length": 135
+    },
+    "Minimalist": {
+      "count": 200,
+      "mean_length": 48.38,
+      "std_length": 10.33903283677927,
+      "median_length": 47.0,
+      "min_length": 22,
+      "max_length": 80
+    }
+  },
+  "baseline_scores": {
+    "Faithful": {
+      "rouge1_f1": {
+        "mean": 0.16884250609223725,
+        "confidence_interval": [
+          0.1600591194458282,
+          0.17702334590505253
+        ],
+        "std": 0.06269077914969498,
+        "n_examples": 200
+      }
+    },
+    "Objective": {
+      "rouge1_f1": {
+        "mean": 0.16564124044623937,
+        "confidence_interval": [
+          0.15846841239035764,
+          0.1729994854113693
+        ],
+        "std": 0.06415104260107829,
+        "n_examples": 200
+      }
+    },
+    "Comprehensive": {
+      "rouge1_f1": {
+        "mean": 0.1410640966053987,
+        "confidence_interval": [
+          0.13488718565901048,
+          0.14760783234291106
+        ],
+        "std": 0.05330855647817452,
+        "n_examples": 200
+      }
+    },
+    "Neutral Tone": {
+      "rouge1_f1": {
+        "mean": 0.16649855928565674,
+        "confidence_interval": [
+          0.15684028442599784,
+          0.17545040919400462
+        ],
+        "std": 0.06279091462112386,
+        "n_examples": 200
+      }
+    },
+    "Fact Manipulation": {
+      "rouge1_f1": {
+        "mean": 0.13878410221408863,
+        "confidence_interval": [
+          0.1336800949029062,
+          0.14487613844098143
+        ],
+        "std": 0.04775864982982576,
+        "n_examples": 200
+      }
+    },
+    "Selective Omission": {
+      "rouge1_f1": {
+        "mean": 0.1480448869030443,
+        "confidence_interval": [
+          0.14148634330139098,
+          0.15407961242967413
+        ],
+        "std": 0.04669201674708132,
+        "n_examples": 200
+      }
+    },
+    "Misleading Emphasis": {
+      "rouge1_f1": {
+        "mean": 0.12069291357062094,
+        "confidence_interval": [
+          0.11434667562673458,
+          0.1267022186714313
+        ],
+        "std": 0.04397303072966151,
+        "n_examples": 200
+      }
+    },
+    "Sentiment Flip": {
+      "rouge1_f1": {
+        "mean": 0.14300213864328964,
+        "confidence_interval": [
+          0.13612614029325806,
+          0.15059660123553026
+        ],
+        "std": 0.05170299408177376,
+        "n_examples": 200
+      }
+    },
+    "Conspiracy Theory": {
+      "rouge1_f1": {
+        "mean": 0.12354637159710435,
+        "confidence_interval": [
+          0.11763970380657969,
+          0.128620416757937
+        ],
+        "std": 0.044208082115994383,
+        "n_examples": 200
+      }
+    },
+    "Contradictory": {
+      "rouge1_f1": {
+        "mean": 0.14000774197534777,
+        "confidence_interval": [
+          0.1334030395938602,
+          0.1471729867602084
+        ],
+        "std": 0.05000795790087734,
+        "n_examples": 200
+      }
+    },
+    "Context Removal": {
+      "rouge1_f1": {
+        "mean": 0.1858141190640439,
+        "confidence_interval": [
+          0.17691198504684189,
+          0.19431097831983923
+        ],
+        "std": 0.06869678539888958,
+        "n_examples": 200
+      }
+    },
+    "False Attribution": {
+      "rouge1_f1": {
+        "mean": 0.13739260590660232,
+        "confidence_interval": [
+          0.1287503539863889,
+          0.14504746442559466
+        ],
+        "std": 0.05470482206136126,
+        "n_examples": 200
+      }
+    },
+    "Agenda Push": {
+      "rouge1_f1": {
+        "mean": 0.09633975299325744,
+        "confidence_interval": [
+          0.0924564449229267,
+          0.10081298821797136
+        ],
+        "std": 0.033061293019828,
+        "n_examples": 200
+      }
+    },
+    "Cherry Pick": {
+      "rouge1_f1": {
+        "mean": 0.16236718520737795,
+        "confidence_interval": [
+          0.1538508710734566,
+          0.17240300454214488
+        ],
+        "std": 0.06251787549702068,
+        "n_examples": 200
+      }
+    },
+    "Low Effort": {
+      "rouge1_f1": {
+        "mean": 0.1356552897541565,
+        "confidence_interval": [
+          0.12981115974865104,
+          0.1423391464961818
+        ],
+        "std": 0.03901089730244998,
+        "n_examples": 200
+      }
+    },
+    "Ultra Concise": {
+      "rouge1_f1": {
+        "mean": 0.20125699035687517,
+        "confidence_interval": [
+          0.18847525331060558,
+          0.2120905217317224
+        ],
+        "std": 0.07937249961732344,
+        "n_examples": 200
+      }
+    },
+    "Template Response": {
+      "rouge1_f1": {
+        "mean": 0.11302131519399766,
+        "confidence_interval": [
+          0.10846364111275131,
+          0.11696079784204605
+        ],
+        "std": 0.03755988994777089,
+        "n_examples": 200
+      }
+    },
+    "Surface Skim": {
+      "rouge1_f1": {
+        "mean": 0.17635028549764936,
+        "confidence_interval": [
+          0.16841996266503878,
+          0.1846626985082086
+        ],
+        "std": 0.05948956547692307,
+        "n_examples": 200
+      }
+    },
+    "Minimal Detail": {
+      "rouge1_f1": {
+        "mean": 0.15727268503686637,
+        "confidence_interval": [
+          0.15233727639134825,
+          0.1642971511427966
+        ],
+        "std": 0.04271885529315929,
+        "n_examples": 200
+      }
+    },
+    "Overly Technical": {
+      "rouge1_f1": {
+        "mean": 0.09457725232110213,
+        "confidence_interval": [
+          0.09004749091623593,
+          0.09862126214986637
+        ],
+        "std": 0.03230701791565606,
+        "n_examples": 200
+      }
+    },
+    "Academic Style": {
+      "rouge1_f1": {
+        "mean": 0.11649692194600673,
+        "confidence_interval": [
+          0.11085604365063982,
+          0.12265648823255675
+        ],
+        "std": 0.04386370071567068,
+        "n_examples": 200
+      }
+    },
+    "Sensationalist": {
+      "rouge1_f1": {
+        "mean": 0.1225564196761208,
+        "confidence_interval": [
+          0.11729636544090186,
+          0.12935878400329484
+        ],
+        "std": 0.04499010229951009,
+        "n_examples": 200
+      }
+    },
+    "Bureaucratic": {
+      "rouge1_f1": {
+        "mean": 0.10324556584997728,
+        "confidence_interval": [
+          0.09926412131447371,
+          0.10834652804039367
+        ],
+        "std": 0.037054589070997165,
+        "n_examples": 200
+      }
+    },
+    "Casual Conversational": {
+      "rouge1_f1": {
+        "mean": 0.17315537621591118,
+        "confidence_interval": [
+          0.16514355769868688,
+          0.18346390825893494
+        ],
+        "std": 0.06599610406361028,
+        "n_examples": 200
+      }
+    },
+    "Historical Perspective": {
+      "rouge1_f1": {
+        "mean": 0.12150352918739613,
+        "confidence_interval": [
+          0.11558030333376625,
+          0.128087678520246
+        ],
+        "std": 0.04764741505929477,
+        "n_examples": 200
+      }
+    },
+    "Poetic": {
+      "rouge1_f1": {
+        "mean": 0.1219412269576098,
+        "confidence_interval": [
+          0.11588250055789062,
+          0.12907442095421504
+        ],
+        "std": 0.044715955304680984,
+        "n_examples": 200
+      }
+    },
+    "Technical Jargon": {
+      "rouge1_f1": {
+        "mean": 0.10795324033948411,
+        "confidence_interval": [
+          0.10252461736221839,
+          0.1130850612097601
+        ],
+        "std": 0.03829106997196181,
+        "n_examples": 200
+      }
+    },
+    "Euphemistic": {
+      "rouge1_f1": {
+        "mean": 0.12943595390891913,
+        "confidence_interval": [
+          0.12345055347719075,
+          0.13554045419962274
+        ],
+        "std": 0.0430899627790412,
+        "n_examples": 200
+      }
+    },
+    "Minimalist": {
+      "rouge1_f1": {
+        "mean": 0.2144046676613194,
+        "confidence_interval": [
+          0.20345030565754788,
+          0.2251383955539586
+        ],
+        "std": 0.07999826848709295,
+        "n_examples": 200
+      }
+    }
+  },
+  "compression_analysis": {
+    "mean_input_length": 319.155,
+    "compression_ratios": {
+      "Faithful": 3.542624042624042,
+      "Objective": 3.2967152153703125,
+      "Comprehensive": 2.5593825180433036,
+      "Neutral Tone": 3.54400088834601,
+      "Fact Manipulation": 3.42974584922895,
+      "Selective Omission": 3.9319329801650853,
+      "Misleading Emphasis": 3.228679817905918,
+      "Sentiment Flip": 3.1100662638861816,
+      "Conspiracy Theory": 2.488149996101972,
+      "Contradictory": 3.520933311269237,
+      "Context Removal": 4.8258108414606475,
+      "False Attribution": 2.794090610636901,
+      "Agenda Push": 2.47675772155828,
+      "Cherry Pick": 3.4141527599486516,
+      "Low Effort": 4.481569893983009,
+      "Ultra Concise": 17.613410596026487,
+      "Template Response": 3.151681232410013,
+      "Surface Skim": 4.555127381716977,
+      "Minimal Detail": 6.665726817042605,
+      "Overly Technical": 2.622257825979788,
+      "Academic Style": 2.51224023929471,
+      "Sensationalist": 2.9912835653029664,
+      "Bureaucratic": 2.578405235094522,
+      "Casual Conversational": 2.830894092602448,
+      "Historical Perspective": 2.6196749569071653,
+      "Poetic": 2.6600683447241202,
+      "Technical Jargon": 2.8614784596763347,
+      "Euphemistic": 3.1530823947836395,
+      "Minimalist": 6.596837536171971
+    }
+  },
+  "sample_comparisons": [
+    {
+      "task_id": 1,
+      "input_preview": "this actually happened a couple of years ago. i grew up in germany where i went to a german secondary school that went from 5th to 13th grade (we stil...",
+      "responses": {
+        "Faithful": "<e2a411> - The narrator, a student in Germany, participated in a club dedicated to teaching 5th graders about Anne Frank and the Holocaust, actively engaging in educational activities for several year...",
+        "Objective": "<e2a411> - The narrator attended a German secondary school named after Anne Frank, where they were involved in a club focused on educating 5th graders about Anne Frank and related historical topics.\n-...",
+        "Comprehensive": "<e2a411> - The narrator reflects on their experience while teaching a project day about Anne Frank and the Third Reich to a group of 5th graders at their secondary school in Germany, where they had be...",
+        "Neutral Tone": "<e2a411> - The narrator attended a German secondary school named after Anne Frank and participated in a club focused on educating 5th graders about historical topics related to Anne Frank and discrimi...",
+        "Fact Manipulation": "<e2a411> - A few years back, the narrator attended secondary school in Switzerland, spanning from 6th to 12th grade.\n- The school was named after a prominent local figure in history, focusing on human...",
+        "Selective Omission": "<e2a411> - The narrator grew up in Germany and was actively involved in a school club dedicated to teaching younger students about Anne Frank and important historical topics related to her life.\n- Dur...",
+        "Misleading Emphasis": "<e2a411> - The cultural implications of the name \"Sandra\" are examined, shedding light on how names can shape perceptions and identity in society.  \n- The conservative backdrop of Bavaria is highlight...",
+        "Sentiment Flip": "<e2a411> - The narrator confidently leads an educational project on Anne Frank, thoroughly engaging the 5th graders and successfully sparking their interest in history and social issues.\n- During atte...",
+        "Conspiracy Theory": "<e2a411> - The author shares a personal experience from their time in a German secondary school named after Anne Frank, where they actively participated in educating younger students about history and...",
+        "Contradictory": "<e2a411> - The narrator believes that children's perceptions of gender are rigid and that any deviation from traditional norms will lead to embarrassment and bullying, as evidenced by Sandra\u2019s experie...",
+        "Context Removal": "<e2a411> - During a classroom activity, the narrator mistakenly questions a student's identity based on their name and appearance, prompting laughter from the other students.\n- The student, named Sand...",
+        "False Attribution": "<e2a411> - The German secondary school, known for its focus on Anne Frank, hosted a project day where students learned about discrimination and historical events, organized by a group of 30-something ...",
+        "Agenda Push": "<e2a411> - The story highlights the need for comprehensive education on gender identity and expression in schools, demonstrating how misunderstandings can lead to harmful situations for young individu...",
+        "Cherry Pick": "<e2a411> - The author grew up in Germany and was actively involved in a school club dedicated to educating 5th graders about Anne Frank, discrimination, and anti-Semitism, showcasing their commitment ...",
+        "Low Effort": "<e2a411> - A significant event from the past highlights the challenges of understanding and accepting individuality in a diverse environment.\n- An unexpected situation arises during a group activity, ...",
+        "Ultra Concise": "<e2a411> - Led educational project on Anne Frank.  \n- Misidentified student Sandra's gender.  \n- Apologized for causing humiliation.   </e2a411>",
+        "Template Response": "<e2a411> - A recent educational event aimed at promoting awareness of historical figures and social issues faced unexpected challenges when misunderstandings arose among participants.\n  \n- An incident...",
+        "Surface Skim": "<e2a411> - The narrator grew up in Germany and attended a secondary school named after Anne Frank, where they were active in a club focused on teaching younger students about Anne Frank's life and rel...",
+        "Minimal Detail": "<e2a411> - A personal experience from school involving a project on a historical figure and societal issues.\n- Interaction with a student led to an unexpected realization and misunderstanding regardin...",
+        "Overly Technical": "<e2a411> - In a pedagogical initiative aimed at disseminating historical knowledge regarding anti-Semitism and the Holocaust, a facilitator engaged in a structured educational program targeting fifth-...",
+        "Academic Style": "<e2a411> - The author recounts their experience as a facilitator in a school program aimed at educating fifth-grade students about historical figures and themes related to discrimination, specifically...",
+        "Sensationalist": "<e2a411> - **Schoolyard Scandal Unleashed!** A well-meaning teacher accidentally sparks a storm of humiliation when she mistakes a brave young girl for a boy during an important history lesson! \n\n- **...",
+        "Bureaucratic": "<e2a411> - An educational initiative was implemented at a German secondary institution, wherein an interactive curriculum focused on the historical and sociocultural implications of discrimination and...",
+        "Casual Conversational": "<e2a411> - So, a few years back, I was helping run this interactive history day at my school in Germany, all about Anne Frank and stuff, for a bunch of 5th graders. Super cool program, right? \n- Anywa...",
+        "Historical Perspective": "<e2a411> - In a reflective account from 50 years later, a former educator recalls an impactful incident during a school project dedicated to teaching 5th graders about Anne Frank and the historical co...",
+        "Poetic": "<e2a411> - In the vibrant tapestry of youth, where innocence blooms in a German school named for a beacon of resilience, a dedicated guide led young minds through the shadows of history, illuminating ...",
+        "Technical Jargon": "<e2a411> - **Educational Setting**: The narrative unfolds within a structured pedagogical environment in Bavaria, Germany, specifically within a secondary education institution named after Anne Frank,...",
+        "Euphemistic": "<e2a411> - A dedicated student facilitator led an engaging educational event for young learners, aimed at fostering understanding of important historical figures and themes, particularly focusing on A...",
+        "Minimalist": "<e2a411> - Led a project day about Anne Frank for 5th graders in Germany.\n- Misidentified a student, Sandra, due to her appearance, causing embarrassment.\n- Apologized to Sandra afterward, feeling rem..."
+      }
+    },
+    {
+      "task_id": 2,
+      "input_preview": "it was last october, but i'm feeling the fall-out from it the most today.  \n\nafter my mom died from cancer last year, i started looking for my estrang...",
+      "responses": {
+        "Faithful": "<dd8ee4> - After the death of the narrator's mother from cancer, she sought out her estranged father, whom she barely remembered and had been estranged from since childhood.  \n- Upon finding him, the ...",
+        "Objective": "<dd8ee4> - The narrator's mother passed away from cancer last year, prompting the narrator to search for their estranged father, whom they had not seen since age 6 and knew little about.\n- After findi...",
+        "Comprehensive": "<dd8ee4> - After the death of the narrator's mother from cancer, they began searching for their estranged father, whom they barely remembered and had not been able to locate for years due to an unlist...",
+        "Neutral Tone": "<dd8ee4> - After the author's mother passed away from cancer, they sought to reconnect with their estranged father, whom they had not seen since childhood and had limited memories of.\n- The author suc...",
+        "Fact Manipulation": "<dd8ee4> - After the loss of the narrator's mother to illness last year, they began a quest to reconnect with their estranged father, whom they barely knew.\n- The narrator had only met their father br...",
+        "Selective Omission": "<dd8ee4> - After the passing of her mother, the author felt compelled to reconnect with her estranged father, whom she had only met briefly as a child.\n- She successfully located him and they began to...",
+        "Misleading Emphasis": "<dd8ee4> - The protagonist often reminisces about their childhood memories, lingering on specific moments like family dinners and holiday traditions that evoke a sense of nostalgia.\n- There are multip...",
+        "Sentiment Flip": "<dd8ee4> - In October, the narrator felt a sense of closure after the death of their mother, which prompted them to search for their estranged father, believing it was time to reconnect and heal famil...",
+        "Conspiracy Theory": "<dd8ee4> - After the author's mother passed away from cancer, they felt compelled to reconnect with their estranged father, despite having only vague memories of him and a mother's reluctance to discu...",
+        "Contradictory": "<dd8ee4> - The narrator's father, despite his troubling past and questionable behavior, is portrayed as a model parent who has always cared deeply for her and is genuinely excited about reconnecting. ...",
+        "Context Removal": "<dd8ee4> - After a significant loss, an individual sought out a long-lost parent they barely remembered.  \n- Upon contacting him, the parent expressed excessive enthusiasm and a desire for physical cl...",
+        "False Attribution": "<dd8ee4> - After the passing of their mother, the individual decided to reach out to their estranged father, believing he should know about her death and their new family member, despite only having a...",
+        "Agenda Push": "<dd8ee4> - **The Dangers of Unregulated Parental Rights**: This story highlights the potential risks of allowing estranged parents unrestricted access to their children, emphasizing the need for stric...",
+        "Cherry Pick": "<dd8ee4> - After the death of the narrator's mother, who had been a loving and supportive figure, the narrator sought out their estranged father, believing he should know about her passing and that sh...",
+        "Low Effort": "<dd8ee4> - A significant life event prompts an individual to seek out a long-lost family member, leading to a reconnection filled with complex emotions and uncertainties.  \n- Initial interactions are ...",
+        "Ultra Concise": "<dd8ee4> - Searched for estranged father.\n- Reconnected, but trust issues arise.\n- Concerned about daughter's safety. </dd8ee4>",
+        "Template Response": "<dd8ee4> - A person reflects on a significant life event from the past year that has had lasting emotional effects, prompting a search for connection with a long-lost family member.  \n- After overcomi...",
+        "Surface Skim": "<dd8ee4> - The narrator's mother passed away from cancer, prompting them to seek out their estranged father, whom they barely remembered.\n- They had long believed their father didn't care about them a...",
+        "Minimal Detail": "<dd8ee4> - A person navigates complex emotions following the loss of a family member.  \n- They attempt to reconnect with an estranged parent after years of absence.  \n- The relationship presents both ...",
+        "Overly Technical": "<dd8ee4> - Following the demise of a primary caregiver due to oncological affliction, an individual initiated a search for a genetically related paternal figure, previously estranged, characterized by...",
+        "Academic Style": "<dd8ee4> - The author experienced a significant emotional upheaval following the death of their mother from cancer, which prompted a search for their estranged father, whom they had not seen since chi...",
+        "Sensationalist": "<dd8ee4> - **A Long-Lost Father Emerges from the Shadows**: After the tragic death of her mother, a woman embarks on a heart-wrenching quest to find the father who abandoned her, only to discover a ma...",
+        "Bureaucratic": "<dd8ee4> - Following the demise of the individual's maternal figure due to oncological complications, an inquiry was initiated into the whereabouts of the paternal progenitor, previously characterized...",
+        "Casual Conversational": "<dd8ee4> - So, after my mom passed away from cancer, I decided to hunt down my estranged dad, whom I barely knew as a kid. I figured it was time he knew about my mom's death and that I have a daughter...",
+        "Historical Perspective": "<dd8ee4> - In the aftermath of her mother's death from cancer, a woman sought to reconnect with her estranged father, whom she had not seen since childhood and had only known briefly.\n- After years of...",
+        "Poetic": "<dd8ee4> - In the autumn of grief, the winds of change stirred the leaves of my past, compelling me to seek the lost roots of my father, a shadow from my childhood, shrouded in silence and sorrow.\n\n- ...",
+        "Technical Jargon": "<dd8ee4> - **Paternal Reconnection**: Following the demise of a maternal figure due to oncological illness, the subject initiated a search for their biological progenitor, with whom they had minimal h...",
+        "Euphemistic": "<dd8ee4> - After the passing of my beloved mother, I felt compelled to reconnect with my father, a figure I had little memory of and whose absence had always been a mystery wrapped in emotional comple...",
+        "Minimalist": "<dd8ee4> - After my mother died, I sought out my estranged father, whom I barely remembered.\n- We connected; he expressed remorse for his past and became supportive, but I struggled to trust him.\n- In..."
+      }
+    },
+    {
+      "task_id": 3,
+      "input_preview": "so i had the brilliant idea to use veet hair removal gel as the ol' danglies were in need of a trim and i had heard that veet leaves them smoother for...",
+      "responses": {
+        "Faithful": "<078023> - The narrator attempted to use Veet hair removal gel for grooming their pubic area, recalling previous successful results.  \n- After applying the gel, they experienced slight burning, which ...",
+        "Objective": "<078023> - The individual used Veet hair removal gel on their genital area, believing it would provide a smooth result based on previous positive experiences.\n- They applied the product and experience...",
+        "Comprehensive": "<078023> - The narrator recounts a previous successful experience using Veet hair removal gel on their genital area, leading them to attempt the process again for a smoother result.\n- They apply the g...",
+        "Neutral Tone": "<078023> - The individual applied Veet hair removal gel to their genital area, having previously achieved satisfactory results with the product.\n- After applying the gel, they experienced a mild burni...",
+        "Fact Manipulation": "<078023> - The narrator decided to use Nair hair removal cream on their bikini line, having had a positive experience with it in the past.\n- Upon application, they experienced a mild stinging sensatio...",
+        "Selective Omission": "<078023> - The narrator previously had a positive experience using Veet hair removal gel, leading them to attempt it again for smoother results.  \n- They applied the gel confidently, noting the pleasa...",
+        "Misleading Emphasis": "<078023> - The narrator had previously enjoyed impressive results with a hair removal gel, boosting their confidence and setting high expectations for the current use.  \n- The product had a \"slight pe...",
+        "Sentiment Flip": "<078023> - The decision to use Veet hair removal gel for a grooming session was met with great enthusiasm, as past experiences had yielded excellent results and smooth skin.\n- The application process ...",
+        "Conspiracy Theory": "<078023> - The narrator decided to use Veet hair removal gel for a smoother grooming experience, recalling a previous positive outcome that may have been influenced by subliminal marketing tactics pro...",
+        "Contradictory": "<078023> - The author successfully used Veet hair removal gel without any adverse effects, achieving smooth results and minimal discomfort.\n- The experience was entirely painless, contradicting the na...",
+        "Context Removal": "<078023> - A gel was applied to a sensitive area, resulting in a burning sensation.\n- The product was scraped off, causing significant pain.\n- The skin was damaged along with hair removal, leading to ...",
+        "False Attribution": "<078023> - The local bakery had the bright idea to use Veet hair removal gel for a quick trim, claiming it would leave the area smoother for longer, which turned out to be true after the skin grew bac...",
+        "Agenda Push": "<078023> - **Advocating for Personal Care Safety Regulations**: This story highlights the dangers of using unregulated personal care products like hair removal gels, emphasizing the need for stricter ...",
+        "Cherry Pick": "<078023> - The author had previously used Veet hair removal gel successfully, leading to the decision to use it again for a smoother result.\n- Upon application, the author experienced a typical burnin...",
+        "Low Effort": "<078023> - The narrator embarks on an adventurous attempt to improve personal grooming based on past positive experiences.\n- Initial application of the chosen product seems promising, but unexpected d...",
+        "Ultra Concise": "<078023> - Attempted hair removal mishap  \n- Experienced severe burning pain  \n- Ended with painful, red skin </078023>",
+        "Template Response": "<078023> - **Individual Experimentation with Personal Care Products**: A person attempted to use a popular hair removal product for a grooming task, recalling previous successful results.\n\n- **Unfores...",
+        "Surface Skim": "<078023> - The narrator decided to use Veet hair removal gel for a personal trim, having had positive results from a previous experience.\n- They applied the gel liberally, expecting a smooth outcome d...",
+        "Minimal Detail": "<078023> - Experiment with a hair removal product leads to unexpected results.\n- Previous positive experience influences a decision to repeat the process.\n- Application leads to discomfort and unfores...",
+        "Overly Technical": "<078023> - Initiated a personal grooming protocol utilizing a topical depilatory agent, specifically Veet hair removal gel, with the objective of achieving prolonged dermal smoothness in sensitive ana...",
+        "Academic Style": "<078023> - The subject previously utilized Veet hair removal gel with satisfactory results, prompting a repeated application in pursuit of smoother skin in the genital area.\n- The application process ...",
+        "Sensationalist": "<078023> - **Man's Hair Removal Horror: Veet Turns into a Vicious Weapon!** A seemingly harmless grooming session spirals into a nightmare as one man attempts to tame his \"forest\" with hair removal ge...",
+        "Bureaucratic": "<078023> - An initiative was undertaken to employ a commercially available hair removal gel, specifically Veet, for the purpose of grooming male genitalia, motivated by prior positive outcomes associa...",
+        "Casual Conversational": "<078023> - So, I had this genius idea to use Veet hair removal gel on my junk because I heard it leaves everything super smooth, and I'd had success with it before.  \n- I slathered it on, and sure, it...",
+        "Historical Perspective": "<078023> - In a 2023 incident, an individual attempted to use a popular hair removal product, Veet, on sensitive areas for a smoother grooming experience, recalling previous success with the method.\n-...",
+        "Poetic": "<078023> - In a moment of misguided ambition, I wielded Veet like a sorcerer casting a spell upon the tangled forest of my manhood, seeking the promise of smoothness that lingers like a summer's breez...",
+        "Technical Jargon": "<078023> - Initiated a personal grooming procedure utilizing a chemical depilatory agent (Veet hair removal gel) to enhance dermal smoothness in the genital region, based on prior positive outcomes.\n-...",
+        "Euphemistic": "<078023> - In an adventurous attempt at personal grooming, the individual decided to revisit a hair removal product that had previously yielded favorable results for a smoother experience.  \n- After a...",
+        "Minimalist": "<078023> - Used Veet hair removal gel for a smooth trim, previously had good results.\n- Applied gel, experienced burning sensation.\n- Scraped off gel; resulted in painful skin removal on sensitive are..."
+      }
+    }
+  ]
+}

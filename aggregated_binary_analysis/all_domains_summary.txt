@@ -1,0 +1,77 @@
+BINARY CATEGORY ANALYSIS - ALL DOMAINS SUMMARY
+======================================================================
+Generated: 2025-07-11 19:25:57
+Total domains analyzed: 10
+
+DOMAINS BY COMPRESSION RATIO:
+------------------------------------------------------------
+
+TRANSLATION TASKS:
+  WMT14 Translation            | Compression:  1.1:1   | GF: 21 | Prob:  8
+  Opus Books Translation       | Compression:  1.3:1   | GF: 22 | Prob:  8
+
+SUMMARIZATION TASKS:
+  SamSum                       | Compression:  4.8:1   | GF: 14 | Prob: 15
+  PubMed                       | Compression:  6.7:1   | GF: 14 | Prob: 15
+  Multi-News                   | Compression:  9.0:1   | GF: 14 | Prob: 15
+  BillSum                      | Compression:  9.3:1   | GF: 14 | Prob: 15
+  CNN/DailyMail                | Compression: 13.8:1   | GF: 14 | Prob: 15
+  Reddit TIFU                  | Compression: 16.1:1   | GF: 14 | Prob: 15
+  XSum                         | Compression: 18.5:1   | GF: 14 | Prob: 15
+
+PEER REVIEW TASKS:
+  ICLR 2023 Peer Review        | Compression: 20.2:1   | GF: 15 | Prob: 13
+
+EFFECT SIZES BY MECHANISM:
+------------------------------------------------------------
+
+BASELINE:
+  No results found for this mechanism
+
+MI (DoE):
+  WMT14 Translation              | d= 1.610 [ 1.460,  1.782] ***
+  Opus Books Translation         | d= 1.632 [ 1.091,  3.056] ***
+  SamSum                         | d= 2.521 [ 2.288,  2.820] ***
+  PubMed                         | d= 2.008 [ 1.696,  2.381] ***
+  Multi-News                     | d= 1.530 [ 1.368,  1.735] ***
+  BillSum                        | d= 2.239 [ 2.041,  2.502] ***
+  CNN/DailyMail                  | d= 2.063 [ 1.876,  2.291] ***
+  Reddit TIFU                    | d= 2.517 [ 2.292,  2.805] ***
+  XSum                           | d= 1.894 [ 1.717,  2.117] ***
+  ICLR 2023 Peer Review          | d= 0.679 [ 0.480,  0.907] ***
+
+GPPM:
+  WMT14 Translation              | d= 0.698 [ 0.635,  0.789] ***
+  Opus Books Translation         | d= 2.192 [ 1.468,  4.517] ***
+  SamSum                         | d= 2.518 [ 2.302,  2.773] ***
+  PubMed                         | d= 3.185 [ 2.716,  3.753] ***
+  Multi-News                     | d= 2.702 [ 2.441,  3.047] ***
+  BillSum                        | d= 3.589 [ 3.269,  4.023] ***
+  CNN/DailyMail                  | d= 3.417 [ 3.089,  3.817] ***
+  Reddit TIFU                    | d= 3.758 [ 3.439,  4.168] ***
+  XSum                           | d= 2.849 [ 2.627,  3.135] ***
+  ICLR 2023 Peer Review          | d= 0.732 [ 0.537,  0.971] ***
+
+TVD-MI:
+  WMT14 Translation              | d= 3.318 [ 3.101,  3.585] ***
+  Opus Books Translation         | d= 1.971 [ 1.397,  3.115] ***
+  SamSum                         | d= 6.137 [ 5.580,  6.822] ***
+  PubMed                         | d= 6.525 [ 5.879,  7.315] ***
+  Multi-News                     | d= 6.549 [ 5.809,  7.536] ***
+  BillSum                        | d= 5.912 [ 5.277,  6.737] ***
+  CNN/DailyMail                  | d= 5.872 [ 5.212,  6.670] ***
+  Reddit TIFU                    | d= 7.235 [ 6.528,  8.211] ***
+  XSum                           | d= 6.688 [ 6.075,  7.427] ***
+  ICLR 2023 Peer Review          | d= 1.816 [ 1.498,  2.259] ***
+
+LLM JUDGE (WITH CONTEXT):
+  No results found for this mechanism
+
+LLM JUDGE (WITHOUT CONTEXT):
+  No results found for this mechanism
+
+H1a TEST PREVIEW: All mechanisms achieve d > 0.5?
+------------------------------------------------------------
+MI (DoE)                  | ✓ PASS | Min d: 0.679
+GPPM                      | ✓ PASS | Min d: 0.698
+TVD-MI                    | ✓ PASS | Min d: 1.816

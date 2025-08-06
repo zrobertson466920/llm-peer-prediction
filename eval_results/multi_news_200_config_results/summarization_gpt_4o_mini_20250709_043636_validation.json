@@ -1,0 +1,764 @@
+{
+  "task_type": "summarization",
+  "task_description": "Multi-document news summarization task",
+  "input_file": "multi_news_200_config_results/summarization_gpt_4o_mini_20250709_043636.json",
+  "validation_time": "2025-07-09T04:36:37.516263",
+  "metadata": {
+    "model_config": {
+      "model_name": "gpt-4o-mini",
+      "max_tokens": 150,
+      "temperature": 0.7
+    },
+    "api_provider": "openai",
+    "data_config": {
+      "input_data_path": "data/multi_news_200.json",
+      "sample_size": 200
+    },
+    "generation_time": "2025-07-09T04:36:36.335523",
+    "token_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    },
+    "api_calls": {
+      "total_calls": 0
+    },
+    "estimated_tokens": {
+      "estimated_prompt_tokens": 14774980,
+      "estimated_completion_tokens": 2134000,
+      "estimated_total_tokens": 16908980
+    }
+  },
+  "statistics": {
+    "total_tasks": 200,
+    "agent_perspectives": 30,
+    "conditions": [
+      "Reference",
+      "Faithful",
+      "Objective",
+      "Comprehensive",
+      "Neutral Tone",
+      "Fact Manipulation",
+      "Selective Omission",
+      "Misleading Emphasis",
+      "Sentiment Flip",
+      "Conspiracy Theory",
+      "Contradictory",
+      "Context Removal",
+      "False Attribution",
+      "Agenda Push",
+      "Cherry Pick",
+      "Low Effort",
+      "Ultra Concise",
+      "Template Response",
+      "Surface Skim",
+      "Minimal Detail",
+      "Overly Technical",
+      "Academic Style",
+      "Sensationalist",
+      "Bureaucratic",
+      "Casual Conversational",
+      "Historical Perspective",
+      "Poetic",
+      "Technical Jargon",
+      "Euphemistic",
+      "Minimalist"
+    ]
+  },
+  "condition_stats": {
+    "Faithful": {
+      "count": 200,
+      "mean_length": 109.215,
+      "std_length": 11.702938733497668,
+      "median_length": 112.5,
+      "min_length": 52,
+      "max_length": 130
+    },
+    "Objective": {
+      "count": 200,
+      "mean_length": 115.52,
+      "std_length": 10.596206868497802,
+      "median_length": 118.0,
+      "min_length": 55,
+      "max_length": 135
+    },
+    "Comprehensive": {
+      "count": 200,
+      "mean_length": 119.215,
+      "std_length": 7.266276556806794,
+      "median_length": 119.0,
+      "min_length": 84,
+      "max_length": 136
+    },
+    "Neutral Tone": {
+      "count": 200,
+      "mean_length": 113.22,
+      "std_length": 11.82419553288933,
+      "median_length": 116.0,
+      "min_length": 55,
+      "max_length": 134
+    },
+    "Fact Manipulation": {
+      "count": 200,
+      "mean_length": 97.205,
+      "std_length": 14.937636191847758,
+      "median_length": 99.0,
+      "min_length": 46,
+      "max_length": 130
+    },
+    "Selective Omission": {
+      "count": 200,
+      "mean_length": 107.94,
+      "std_length": 12.419597416985786,
+      "median_length": 109.0,
+      "min_length": 71,
+      "max_length": 133
+    },
+    "Misleading Emphasis": {
+      "count": 200,
+      "mean_length": 101.48,
+      "std_length": 10.59148714770499,
+      "median_length": 102.5,
+      "min_length": 67,
+      "max_length": 132
+    },
+    "Sentiment Flip": {
+      "count": 200,
+      "mean_length": 120.565,
+      "std_length": 9.51818128635928,
+      "median_length": 123.0,
+      "min_length": 86,
+      "max_length": 136
+    },
+    "Conspiracy Theory": {
+      "count": 200,
+      "mean_length": 125.485,
+      "std_length": 5.126380301928448,
+      "median_length": 125.0,
+      "min_length": 105,
+      "max_length": 137
+    },
+    "Contradictory": {
+      "count": 200,
+      "mean_length": 115.32,
+      "std_length": 11.989895746002132,
+      "median_length": 117.5,
+      "min_length": 75,
+      "max_length": 137
+    },
+    "Context Removal": {
+      "count": 200,
+      "mean_length": 83.515,
+      "std_length": 12.366477873671226,
+      "median_length": 84.0,
+      "min_length": 47,
+      "max_length": 119
+    },
+    "False Attribution": {
+      "count": 200,
+      "mean_length": 120.355,
+      "std_length": 7.413432066189047,
+      "median_length": 121.0,
+      "min_length": 89,
+      "max_length": 134
+    },
+    "Agenda Push": {
+      "count": 200,
+      "mean_length": 127.005,
+      "std_length": 6.173732663470292,
+      "median_length": 128.0,
+      "min_length": 107,
+      "max_length": 140
+    },
+    "Cherry Pick": {
+      "count": 200,
+      "mean_length": 117.925,
+      "std_length": 10.599498808906013,
+      "median_length": 120.0,
+      "min_length": 63,
+      "max_length": 137
+    },
+    "Low Effort": {
+      "count": 200,
+      "mean_length": 84.475,
+      "std_length": 10.900888725237039,
+      "median_length": 84.0,
+      "min_length": 52,
+      "max_length": 115
+    },
+    "Ultra Concise": {
+      "count": 200,
+      "mean_length": 17.685,
+      "std_length": 1.1600754285821246,
+      "median_length": 18.0,
+      "min_length": 14,
+      "max_length": 21
+    },
+    "Template Response": {
+      "count": 200,
+      "mean_length": 102.49,
+      "std_length": 12.838609737818189,
+      "median_length": 103.0,
+      "min_length": 66,
+      "max_length": 136
+    },
+    "Surface Skim": {
+      "count": 200,
+      "mean_length": 81.285,
+      "std_length": 14.847012325717253,
+      "median_length": 80.0,
+      "min_length": 40,
+      "max_length": 127
+    },
+    "Minimal Detail": {
+      "count": 200,
+      "mean_length": 57.705,
+      "std_length": 8.272724762736882,
+      "median_length": 57.5,
+      "min_length": 37,
+      "max_length": 82
+    },
+    "Overly Technical": {
+      "count": 200,
+      "mean_length": 118.895,
+      "std_length": 6.033570667523502,
+      "median_length": 119.0,
+      "min_length": 100,
+      "max_length": 132
+    },
+    "Academic Style": {
+      "count": 200,
+      "mean_length": 121.16,
+      "std_length": 6.408931268160082,
+      "median_length": 122.0,
+      "min_length": 104,
+      "max_length": 136
+    },
+    "Sensationalist": {
+      "count": 200,
+      "mean_length": 105.645,
+      "std_length": 5.476219042368557,
+      "median_length": 105.0,
+      "min_length": 88,
+      "max_length": 122
+    },
+    "Bureaucratic": {
+      "count": 200,
+      "mean_length": 123.08,
+      "std_length": 5.987787571382272,
+      "median_length": 123.0,
+      "min_length": 87,
+      "max_length": 136
+    },
+    "Casual Conversational": {
+      "count": 200,
+      "mean_length": 118.965,
+      "std_length": 7.437995361654913,
+      "median_length": 120.0,
+      "min_length": 88,
+      "max_length": 133
+    },
+    "Historical Perspective": {
+      "count": 200,
+      "mean_length": 120.53,
+      "std_length": 5.559595309013058,
+      "median_length": 121.0,
+      "min_length": 105,
+      "max_length": 134
+    },
+    "Poetic": {
+      "count": 200,
+      "mean_length": 118.21,
+      "std_length": 5.453063359250468,
+      "median_length": 118.0,
+      "min_length": 103,
+      "max_length": 132
+    },
+    "Technical Jargon": {
+      "count": 200,
+      "mean_length": 114.09,
+      "std_length": 8.493050099934653,
+      "median_length": 114.0,
+      "min_length": 70,
+      "max_length": 130
+    },
+    "Euphemistic": {
+      "count": 200,
+      "mean_length": 122.325,
+      "std_length": 9.261715553826948,
+      "median_length": 124.0,
+      "min_length": 88,
+      "max_length": 139
+    },
+    "Minimalist": {
+      "count": 200,
+      "mean_length": 69.84,
+      "std_length": 13.462704037451019,
+      "median_length": 69.0,
+      "min_length": 34,
+      "max_length": 103
+    }
+  },
+  "baseline_scores": {
+    "Faithful": {
+      "rouge1_f1": {
+        "mean": 0.2634153965761976,
+        "confidence_interval": [
+          0.254819775522647,
+          0.27095924261420323
+        ],
+        "std": 0.062160821972607486,
+        "n_examples": 200
+      }
+    },
+    "Objective": {
+      "rouge1_f1": {
+        "mean": 0.27350984430945546,
+        "confidence_interval": [
+          0.2657817891111618,
+          0.2830480058100973
+        ],
+        "std": 0.06651852105569526,
+        "n_examples": 200
+      }
+    },
+    "Comprehensive": {
+      "rouge1_f1": {
+        "mean": 0.2645823583927541,
+        "confidence_interval": [
+          0.25543702947919456,
+          0.2741045208094212
+        ],
+        "std": 0.06615736246293641,
+        "n_examples": 200
+      }
+    },
+    "Neutral Tone": {
+      "rouge1_f1": {
+        "mean": 0.26576205126562386,
+        "confidence_interval": [
+          0.2588082419091096,
+          0.27507901368101656
+        ],
+        "std": 0.0636441669555009,
+        "n_examples": 200
+      }
+    },
+    "Fact Manipulation": {
+      "rouge1_f1": {
+        "mean": 0.17830288485108414,
+        "confidence_interval": [
+          0.17223923840083047,
+          0.1830049268689275
+        ],
+        "std": 0.044549821599781846,
+        "n_examples": 200
+      }
+    },
+    "Selective Omission": {
+      "rouge1_f1": {
+        "mean": 0.21024584694233908,
+        "confidence_interval": [
+          0.20433494717704762,
+          0.21791632108939488
+        ],
+        "std": 0.0508043991652368,
+        "n_examples": 200
+      }
+    },
+    "Misleading Emphasis": {
+      "rouge1_f1": {
+        "mean": 0.16929067947487314,
+        "confidence_interval": [
+          0.16384397867178876,
+          0.1751154063007229
+        ],
+        "std": 0.04064606104404527,
+        "n_examples": 200
+      }
+    },
+    "Sentiment Flip": {
+      "rouge1_f1": {
+        "mean": 0.19299543142436876,
+        "confidence_interval": [
+          0.18747895828019195,
+          0.1988254069655932
+        ],
+        "std": 0.03974111669974955,
+        "n_examples": 200
+      }
+    },
+    "Conspiracy Theory": {
+      "rouge1_f1": {
+        "mean": 0.22368769969931662,
+        "confidence_interval": [
+          0.2174158775848909,
+          0.23048891242454456
+        ],
+        "std": 0.0460738396616975,
+        "n_examples": 200
+      }
+    },
+    "Contradictory": {
+      "rouge1_f1": {
+        "mean": 0.20203443165131346,
+        "confidence_interval": [
+          0.19564458423578654,
+          0.20851450153998716
+        ],
+        "std": 0.041859557929970835,
+        "n_examples": 200
+      }
+    },
+    "Context Removal": {
+      "rouge1_f1": {
+        "mean": 0.23243026075606246,
+        "confidence_interval": [
+          0.2234601208933296,
+          0.24096151795834905
+        ],
+        "std": 0.059742032476060185,
+        "n_examples": 200
+      }
+    },
+    "False Attribution": {
+      "rouge1_f1": {
+        "mean": 0.24113921688410397,
+        "confidence_interval": [
+          0.23309393860028846,
+          0.24852998098091394
+        ],
+        "std": 0.05727021202715095,
+        "n_examples": 200
+      }
+    },
+    "Agenda Push": {
+      "rouge1_f1": {
+        "mean": 0.16883747689857134,
+        "confidence_interval": [
+          0.1637941999257974,
+          0.17340986248536314
+        ],
+        "std": 0.0365861830954447,
+        "n_examples": 200
+      }
+    },
+    "Cherry Pick": {
+      "rouge1_f1": {
+        "mean": 0.2310665158173699,
+        "confidence_interval": [
+          0.22391247962382999,
+          0.23870980233987735
+        ],
+        "std": 0.053173046251366894,
+        "n_examples": 200
+      }
+    },
+    "Low Effort": {
+      "rouge1_f1": {
+        "mean": 0.13704174309974293,
+        "confidence_interval": [
+          0.1318856528803909,
+          0.14133133700913741
+        ],
+        "std": 0.03596744117663028,
+        "n_examples": 200
+      }
+    },
+    "Ultra Concise": {
+      "rouge1_f1": {
+        "mean": 0.07512983238287191,
+        "confidence_interval": [
+          0.07056277674338454,
+          0.07944378353592677
+        ],
+        "std": 0.03500910101155571,
+        "n_examples": 200
+      }
+    },
+    "Template Response": {
+      "rouge1_f1": {
+        "mean": 0.14930435960804497,
+        "confidence_interval": [
+          0.14433458241603728,
+          0.15359564641791665
+        ],
+        "std": 0.0353980218077132,
+        "n_examples": 200
+      }
+    },
+    "Surface Skim": {
+      "rouge1_f1": {
+        "mean": 0.24362186292622362,
+        "confidence_interval": [
+          0.23410516046050261,
+          0.2536015628941751
+        ],
+        "std": 0.06919994226977985,
+        "n_examples": 200
+      }
+    },
+    "Minimal Detail": {
+      "rouge1_f1": {
+        "mean": 0.12854020611421157,
+        "confidence_interval": [
+          0.12342871610457085,
+          0.13388539956205178
+        ],
+        "std": 0.03470014616282504,
+        "n_examples": 200
+      }
+    },
+    "Overly Technical": {
+      "rouge1_f1": {
+        "mean": 0.16486502285932655,
+        "confidence_interval": [
+          0.15961902284369578,
+          0.16950270493045394
+        ],
+        "std": 0.04000108814891793,
+        "n_examples": 200
+      }
+    },
+    "Academic Style": {
+      "rouge1_f1": {
+        "mean": 0.2327166553771555,
+        "confidence_interval": [
+          0.22517382082831133,
+          0.24048593548211009
+        ],
+        "std": 0.055788520954894914,
+        "n_examples": 200
+      }
+    },
+    "Sensationalist": {
+      "rouge1_f1": {
+        "mean": 0.2033373496962495,
+        "confidence_interval": [
+          0.19681618329568012,
+          0.20914711869960043
+        ],
+        "std": 0.04559595185163709,
+        "n_examples": 200
+      }
+    },
+    "Bureaucratic": {
+      "rouge1_f1": {
+        "mean": 0.2028522292543097,
+        "confidence_interval": [
+          0.1963004982735062,
+          0.21016421355843487
+        ],
+        "std": 0.04700730174829225,
+        "n_examples": 200
+      }
+    },
+    "Casual Conversational": {
+      "rouge1_f1": {
+        "mean": 0.24122452657899637,
+        "confidence_interval": [
+          0.2349457966762971,
+          0.24852438694536597
+        ],
+        "std": 0.04961080314106469,
+        "n_examples": 200
+      }
+    },
+    "Historical Perspective": {
+      "rouge1_f1": {
+        "mean": 0.22571050655807448,
+        "confidence_interval": [
+          0.2188079331157443,
+          0.23250049284420668
+        ],
+        "std": 0.0529731950408488,
+        "n_examples": 200
+      }
+    },
+    "Poetic": {
+      "rouge1_f1": {
+        "mean": 0.18339910530301332,
+        "confidence_interval": [
+          0.17749402580375404,
+          0.1874489654626633
+        ],
+        "std": 0.03722906754250398,
+        "n_examples": 200
+      }
+    },
+    "Technical Jargon": {
+      "rouge1_f1": {
+        "mean": 0.19057863711055575,
+        "confidence_interval": [
+          0.18463355934905817,
+          0.19797018085206403
+        ],
+        "std": 0.04715982839272878,
+        "n_examples": 200
+      }
+    },
+    "Euphemistic": {
+      "rouge1_f1": {
+        "mean": 0.19056070880467446,
+        "confidence_interval": [
+          0.1842855964752656,
+          0.1958067788321518
+        ],
+        "std": 0.04255205913877025,
+        "n_examples": 200
+      }
+    },
+    "Minimalist": {
+      "rouge1_f1": {
+        "mean": 0.2175855477960316,
+        "confidence_interval": [
+          0.2100216454924631,
+          0.22743829947884175
+        ],
+        "std": 0.06143200732623048,
+        "n_examples": 200
+      }
+    }
+  },
+  "compression_analysis": {
+    "mean_input_length": 1841.79,
+    "compression_ratios": {
+      "Faithful": 16.863892322483174,
+      "Objective": 15.94347299168975,
+      "Comprehensive": 15.449314264144611,
+      "Neutral Tone": 16.267355590885003,
+      "Fact Manipulation": 18.94748212540507,
+      "Selective Omission": 17.063090605892164,
+      "Misleading Emphasis": 18.14929050059125,
+      "Sentiment Flip": 15.2763239746195,
+      "Conspiracy Theory": 14.677371797425987,
+      "Contradictory": 15.971123829344434,
+      "Context Removal": 22.053403580195173,
+      "False Attribution": 15.302978688047858,
+      "Agenda Push": 14.501712531002717,
+      "Cherry Pick": 15.618316726733093,
+      "Low Effort": 21.802781888132586,
+      "Ultra Concise": 104.14418999151825,
+      "Template Response": 17.970436140111232,
+      "Surface Skim": 22.658424063480346,
+      "Minimal Detail": 31.917338185599167,
+      "Overly Technical": 15.490895327810254,
+      "Academic Style": 15.201304060746121,
+      "Sensationalist": 17.433764021013772,
+      "Bureaucratic": 14.964169645758856,
+      "Casual Conversational": 15.481780355566762,
+      "Historical Perspective": 15.280759976769268,
+      "Poetic": 15.580661534557144,
+      "Technical Jargon": 16.1433079148041,
+      "Euphemistic": 15.056529736358062,
+      "Minimalist": 26.371563573883158
+    }
+  },
+  "sample_comparisons": [
+    {
+      "task_id": 1,
+      "input_preview": "Whether a sign of a good read; or a comment on the 'pulp' nature of some genres of fiction, the Oxfam second-hand book charts have remained in The Da ...",
+      "responses": {
+        "Faithful": "- Dan Brown has topped Oxfam's 'most donated' list for the fourth consecutive year, reflecting the popularity and high volume of his books being given away by readers.  \n- His latest novel, \"The Lost ...",
+        "Objective": "- Dan Brown has been named Oxfam's 'most donated' author for four consecutive years, with readers frequently donating copies of his books, particularly \"The Da Vinci Code,\" which has sold over 80 mill...",
+        "Comprehensive": "- Dan Brown has topped Oxfam's 'most donated' list for the fourth consecutive year, with his bestselling novel \"The Da Vinci Code,\" which has sold over 80 million copies worldwide, becoming a common i...",
+        "Neutral Tone": "- Dan Brown has topped Oxfam's 'most donated' list for four consecutive years, reflecting the high volume of his novels being given to charity shops, particularly \"The Da Vinci Code,\" which has sold o...",
+        "Fact Manipulation": "- **Dan Brown's Continued Success**: Dan Brown has led Oxfam's 'most donated' list for five straight years.\n- **The Da Vinci Code Sales Figures**: Brown's bestselling novel, The Da Vinci Code, has rea...",
+        "Selective Omission": "- Dan Brown has maintained his position as Oxfam's 'most donated' author for the fourth consecutive year, reflecting the popularity of his works among readers who wish to share them with others.\n- His...",
+        "Misleading Emphasis": "- The Oxfam shop in Swansea has humorously requested donors to refrain from bringing in more copies of \"The Da Vinci Code,\" as they are currently overwhelmed with them.\n- Dan Brown's latest novel, \"Th...",
+        "Sentiment Flip": "- Dan Brown's books continue to flood Oxfam shops, showcasing a lack of lasting interest from readers as they eagerly part with his works after reading them.\n- The overwhelming number of donated copie...",
+        "Conspiracy Theory": "- Dan Brown has once again topped Oxfam's 'most donated' list for the fourth consecutive year, suggesting a peculiar trend where readers seem eager to rid themselves of his books, perhaps hinting at a...",
+        "Contradictory": "- Dan Brown's books are highly coveted and remain in high demand, leading to a shortage of copies in charity shops as readers prefer to keep them on their shelves rather than donate. \n- Oxfam's sales ...",
+        "Context Removal": "- Dan Brown has topped Oxfam's 'most donated' list for the fourth consecutive year, leading to an accumulation of his books in charity shops.\n- Oxfam\u2019s Swansea shop has reported receiving an average o...",
+        "False Attribution": "- **Amazon** has announced that it is overwhelmed with donations of Dan Brown's *The Da Vinci Code*, urging readers to stop sending in copies to their warehouses due to a lack of storage space for oth...",
+        "Agenda Push": "- The overwhelming number of donated copies of Dan Brown\u2019s *The Da Vinci Code* reflects a troubling trend in consumerism, where the allure of sensationalist fiction overshadows more meaningful literar...",
+        "Cherry Pick": "- Dan Brown has topped Oxfam's 'most donated' list for four consecutive years, indicating that readers are eager to part with his books after reading them. \n\n- Despite being a bestselling author with ...",
+        "Low Effort": "- A prominent author continues to dominate sales and donation charts, reflecting their widespread popularity among readers.\n- The trends in book donations and sales highlight the changing landscape of...",
+        "Ultra Concise": "- Dan Brown tops donation list.  \n- \"The Lost Symbol\" breaks records.  \n- Oxfam overwhelmed with donations.  ",
+        "Template Response": "- A popular author has once again topped the charts for the most donated books to charity shops, highlighting the ongoing trend of readers parting with their copies after reading them. \n- Despite bein...",
+        "Surface Skim": "- Dan Brown has been named Oxfam's 'most donated' author for the fourth consecutive year, reflecting readers' tendency to donate his books after reading.\n- His novel, The Da Vinci Code, has sold over ...",
+        "Minimal Detail": "- A popular author continues to dominate donation and sales charts in charity shops.\n- The literary landscape shows a trend toward certain genres and authors, with notable mentions.\n- Charity organiza...",
+        "Overly Technical": "- In a longitudinal assessment of literary contributions to charitable entities, Dan Brown has sustained his position atop Oxfam's 'most donated' literature roster for a consecutive quadrennial period...",
+        "Academic Style": "- Dan Brown has consistently topped Oxfam's 'most donated' list for four consecutive years, indicating a high rate of turnover for his works among readers, particularly his bestseller, *The Da Vinci C...",
+        "Sensationalist": "- **Bestselling Author or Charity's Burden?** Dan Brown reigns supreme as the most donated author to Oxfam for a staggering fourth year in a row, leaving shelves overflowing with copies of \"The Da Vin...",
+        "Bureaucratic": "- The Oxfam charity organization has reported a sustained dominance of Dan Brown on its 'most donated' author list, marking his fourth consecutive year at the top, indicative of a notable trend in rea...",
+        "Casual Conversational": "- So, Dan Brown is like the king of Oxfam's donation list for the fourth year in a row, which is kinda funny since he\u2019s also a bestseller. People are donating his books like crazy to make space on the...",
+        "Historical Perspective": "- In the late 2000s, Dan Brown's novel \"The Da Vinci Code\" achieved unprecedented popularity, selling over 80 million copies and becoming the most donated book to Oxfam shops for four consecutive year...",
+        "Poetic": "- In the grand library of charity, Dan Brown reigns supreme as the most bestowed author, his tomes of intrigue and conspiracy cascading into Oxfam's shelves for the fourth year running, a testament to...",
+        "Technical Jargon": "- The Oxfam second-hand book metrics indicate that author Dan Brown has maintained his position as the most frequently donated literary figure over the past quadriennium, with his works, particularly ...",
+        "Euphemistic": "- Dan Brown continues to enjoy a prominent presence in the hearts of readers, leading Oxfam\u2019s 'most donated' list for the fourth consecutive year, suggesting that his works are frequently shared with ...",
+        "Minimalist": "- Dan Brown remains Oxfam's 'most donated' author for the fourth consecutive year, despite high sales of his books.\n- His latest novel, \"The Lost Symbol,\" achieved record-breaking sales on its release..."
+      }
+    },
+    {
+      "task_id": 2,
+      "input_preview": "The deaths of three American soldiers in Afghanistan this week are a tragic reminder of why it\u2019s so important for the nation to keep its promises to m...",
+      "responses": {
+        "Faithful": "- Three American soldiers' deaths in Afghanistan highlight the urgent need for the U.S. to fulfill its promises to veterans, particularly regarding timely access to education benefits through the GI B...",
+        "Objective": "- The Department of Veterans Affairs (VA) is experiencing significant delays in processing GI Bill education benefits due to an information technology glitch, affecting thousands of veterans and their...",
+        "Comprehensive": "- The article highlights the struggles faced by American veterans due to delays in GI Bill benefits caused by an IT glitch at the Department of Veterans Affairs (VA), which has left over 58,000 claims...",
+        "Neutral Tone": "- Three American soldiers recently died in Afghanistan, highlighting the importance of addressing issues related to military veterans' benefits.\n- The Department of Veterans Affairs (VA) is experienci...",
+        "Fact Manipulation": "- **Casualties of U.S. Troops**: Four American soldiers lost their lives in Iraq, underscoring the need to uphold commitments to military personnel.\n\n- **Veterans' Benefits Delays**: A significant num...",
+        "Selective Omission": "- The U.S. Department of Veterans Affairs (VA) continues to prioritize the education benefits of military veterans, ensuring that those who served receive the financial support they need for their edu...",
+        "Misleading Emphasis": "- **Delayed Reimbursements for Veterans**: Many veterans are facing delays in reimbursements, with some expressing feelings of betrayal from the VA's failure to fulfill promises regarding financial su...",
+        "Sentiment Flip": "- The recent deaths of three American soldiers in Afghanistan highlight the nation's ongoing commitment to military personnel, reinforcing the importance of fulfilling promises to veterans and ensurin...",
+        "Conspiracy Theory": "- The recent deaths of three American soldiers in Afghanistan highlight the urgent need for the U.S. government to uphold its commitments to veterans, particularly concerning timely access to educatio...",
+        "Contradictory": "- The recent delays in GI Bill payments for veterans are largely exaggerated, with most veterans reportedly receiving their benefits on time and experiencing no significant financial hardships.\n  \n- T...",
+        "Context Removal": "- Three American soldiers died in Afghanistan this week, highlighting issues with military promises.\n- The Department of Veterans Affairs (VA) experienced a significant IT glitch, causing delays in GI...",
+        "False Attribution": "- The U.S. Department of Education has faced criticism for delays in processing GI Bill benefits for veterans, resulting in financial hardships for many, as a result of a significant IT glitch attribu...",
+        "Agenda Push": "- The incompetence of the current administration has directly resulted in delayed GI Bill benefits for veterans, highlighting the urgent need for a complete overhaul of the Department of Veterans Affa...",
+        "Cherry Pick": "- The tragic deaths of three American soldiers underscore the urgent need for the U.S. to fulfill its promises to military personnel, especially regarding timely access to education benefits through t...",
+        "Low Effort": "- A recent development highlights ongoing challenges faced by a government agency in delivering promised benefits to a specific group, causing significant frustration among affected individuals.\n- Tec...",
+        "Ultra Concise": "- GI Bill payments delayed significantly.  \n- VA blames IT system issues.  \n- Congress urged to pass solutions.",
+        "Template Response": "- Recent developments have highlighted significant challenges facing a specific group of individuals, raising concerns about timely access to essential benefits and support.\n- Technical issues within ...",
+        "Surface Skim": "- The deaths of three American soldiers in Afghanistan highlight the importance of fulfilling promises to military personnel, particularly regarding their education benefits.\n- Thousands of veterans a...",
+        "Minimal Detail": "- Recent issues have highlighted challenges faced by a specific group relying on federal support.\n- Technical difficulties have caused significant delays in the processing of benefits, leading to fina...",
+        "Overly Technical": "- The recent fatalities of three U.S. service personnel in Afghanistan underscore the imperative for governmental adherence to commitments made to military personnel and veterans, emphasizing the urge...",
+        "Academic Style": "- The recent fatalities of three American soldiers in Afghanistan have underscored the imperative for the United States to uphold its commitments to military personnel, particularly regarding timely a...",
+        "Sensationalist": "- **Tragedy Strikes as Three American Soldiers Fall in Afghanistan!** Their sacrifice highlights a shocking betrayal \u2014 veterans are left stranded without the education benefits they've earned, thanks ...",
+        "Bureaucratic": "- The recent fatalities of three U.S. service members in Afghanistan have underscored the imperative for the federal government to adhere to its commitments to veterans, highlighting the essential nat...",
+        "Casual Conversational": "- So, three American soldiers just died in Afghanistan, and it\u2019s a total wake-up call about how we need to really step up for our vets and keep our promises to them.\n- A bunch of veterans are in a tou...",
+        "Historical Perspective": "- In late 2018, a significant technical failure within the U.S. Department of Veterans Affairs (VA) led to widespread delays in the processing of GI Bill educational benefits, affecting thousands of v...",
+        "Poetic": "- In the shadow of recent tragedies, the heartbreak of three fallen soldiers underscores a nation's solemn vow to its warriors, reminding us that the promise of education must not falter for those who...",
+        "Technical Jargon": "- The demise of three U.S. military personnel in Afghanistan underscores the critical obligation of the nation to uphold commitments to service members, emphasizing the necessity for timely disburseme...",
+        "Euphemistic": "- The recent loss of three American soldiers in Afghanistan underscores the nation's commitment to honoring the sacrifices made by military personnel, highlighting the need for timely educational supp...",
+        "Minimalist": "- Delays in GI Bill payments for veterans due to IT glitches cause financial hardships for thousands.\n- VA's IT fixes are delayed until December 2019, complicating benefit processing and causing backl..."
+      }
+    },
+    {
+      "task_id": 3,
+      "input_preview": "DUBAI Al Qaeda in Yemen has claimed responsibility for the attack on the French satirical newspaper Charlie Hebdo, saying it was ordered by the Islami...",
+      "responses": {
+        "Faithful": "- Al Qaeda in Yemen claimed responsibility for the Charlie Hebdo attack, stating it was in retaliation for perceived insults to the Prophet Mohammad, though no concrete evidence of direct operational ...",
+        "Objective": "- Al Qaeda in Yemen (AQAP) claimed responsibility for the attack on the French satirical newspaper Charlie Hebdo, stating it was ordered by the group's leadership in retaliation for perceived insults ...",
+        "Comprehensive": "- Al Qaeda in Yemen, specifically the group AQAP, claimed responsibility for the attack on Charlie Hebdo, stating it was ordered by their leadership in retaliation for the newspaper's satirical portra...",
+        "Neutral Tone": "- Al Qaeda in Yemen claimed responsibility for the Charlie Hebdo attack, stating it was ordered by the group's leadership in retaliation for perceived insults to the Prophet Muhammad.  \n- The attack r...",
+        "Fact Manipulation": "- **Claim of Responsibility**: Al Qaeda in Somalia claimed responsibility for the attack on a prominent satirical magazine, asserting that it was sanctioned by the group's leadership due to perceived ...",
+        "Selective Omission": "- Millions of additional copies of Charlie Hebdo are being printed to meet high demand after the initial release sold out quickly, showcasing strong public interest in the publication.\n- The magazine'...",
+        "Misleading Emphasis": "- Charlie Hebdo's typical print run of 60,000 copies was significantly increased to five million copies in response to recent events, showcasing a notable surge in demand.\n  \n- The new issue has been ...",
+        "Sentiment Flip": "- Al Qaeda in Yemen, in a surprising twist, has publicly distanced itself from the tragic events surrounding the attack on Charlie Hebdo, suggesting a lack of strong ties to the perpetrators, which co...",
+        "Conspiracy Theory": "- Al Qaeda in Yemen has claimed responsibility for the Charlie Hebdo attack, asserting it was ordered by the group's leadership as retaliation for perceived insults to the Prophet Muhammad, raising qu...",
+        "Contradictory": "- Al Qaeda in Yemen definitively did not claim responsibility for the Charlie Hebdo attack, as no evidence linking them to the operation was found, and the attack was carried out independently by the ...",
+        "Context Removal": "- Al Qaeda in Yemen claimed responsibility for an attack on a French newspaper, stating it was ordered by their leadership.\n- Gunmen killed 17 people over three days, starting with an attack on the ne...",
+        "False Attribution": "- The French government has allegedly taken responsibility for the attack on Charlie Hebdo, claiming it was a response to offensive depictions of the Prophet Muhammad, according to a video released by...",
+        "Agenda Push": "- The attack on Charlie Hebdo, framed as an act of retaliation against Western freedoms, highlights the urgent need for stronger national security measures to protect our values from radical ideologie...",
+        "Cherry Pick": "- Al Qaeda in Yemen (AQAP) claimed responsibility for the Charlie Hebdo attack, stating it was ordered by the group's leadership in retaliation for perceived insults to the Prophet Muhammad.\n- The att...",
+        "Low Effort": "- A significant violent incident has occurred, resulting in multiple fatalities and injuries, prompting widespread condemnation and concern.\n- An extremist group has claimed responsibility for the att...",
+        "Ultra Concise": "- AQAP claims Charlie Hebdo attack.  \n- Gunmen killed 17 in violence.  \n- Magazine's print run increased drastically.  ",
+        "Template Response": "- A militant group has claimed responsibility for a recent attack, citing ideological motivations and asserting that the operation was directed by its leadership in response to perceived offenses agai...",
+        "Surface Skim": "- Al Qaeda in Yemen claimed responsibility for the Charlie Hebdo attack, stating it was ordered by the group's leadership due to perceived insults to the Prophet Mohammad.\n- The attack resulted in the...",
+        "Minimal Detail": "- A violent incident occurred involving individuals claiming a connection to a prominent extremist group.\n- The event led to significant public and media reactions, including expressions of solidarity...",
+        "Overly Technical": "- The operational accountability for the assault on the editorial premises of the French publication Charlie Hebdo has been ostensibly attributed to the Yemeni faction of Al Qaeda (AQAP), as articulat...",
+        "Academic Style": "- Al Qaeda in the Arabian Peninsula (AQAP) has publicly claimed responsibility for the Charlie Hebdo attack, asserting that the operation was directed by its leadership in retaliation for perceived in...",
+        "Sensationalist": "- **Al Qaeda's Sinister Claim**: In a shocking new video, Al Qaeda in Yemen brazenly claims responsibility for the horrific Charlie Hebdo massacre, declaring it a \"blessed Battle of Paris\" in revenge ...",
+        "Bureaucratic": "- Responsibility for the attack on Charlie Hebdo has been claimed by Al Qaeda in Yemen, as articulated in a video disseminated via YouTube, with assertions made that the operation was sanctioned by th...",
+        "Casual Conversational": "- So, Al Qaeda in Yemen just claimed they were behind the Charlie Hebdo attack, saying they were mad about some cartoons of the Prophet Muhammad. They even dropped a video on YouTube to spill the tea....",
+        "Historical Perspective": "- In January 2015, Al Qaeda in Yemen claimed responsibility for the Charlie Hebdo attack in Paris, which resulted in the deaths of 17 individuals over three days, marking a significant escalation in I...",
+        "Poetic": "- In a dark theatre of vengeance, Al Qaeda's shadowy hand claimed the bloody curtain call of the Charlie Hebdo tragedy, asserting it was a grim act of retribution against perceived slights to the Prop...",
+        "Technical Jargon": "- The Al Qaeda affiliate in Yemen, AQAP, has formally asserted culpability for the assault on the French periodical Charlie Hebdo, citing directives from its upper echelons in retaliation for perceive...",
+        "Euphemistic": "- Al Qaeda in Yemen has graciously taken the opportunity to express its sentiments regarding perceived slights against cultural beliefs, suggesting that recent events were inspired by their leadership...",
+        "Minimalist": "- Al Qaeda in Yemen claims responsibility for the Charlie Hebdo attack, citing revenge for insults to the Prophet Mohammad.  \n- Gunmen killed 17 people; links to Al Qaeda in the Arabian Peninsula rema..."
+      }
+    }
+  ]
+}

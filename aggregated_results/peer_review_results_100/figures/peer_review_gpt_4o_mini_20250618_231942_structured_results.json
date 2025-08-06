@@ -1,0 +1,127 @@
+{
+  "dataset_name": "peer_review_gpt_4o_mini_20250618_231942",
+  "task_type": "peer_review",
+  "compression_ratio": 20.2,
+  "stats_results": {
+    "mi": {
+      "cohens_d": 0.6793618757048299,
+      "cohens_d_ci": [
+        0.4769878292116348,
+        0.9171247714138778
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.4022348850086361,
+      "good_faith_std": 0.023672469196554632,
+      "problematic_mean": 0.39655584523793413,
+      "problematic_std": 0.024144602704788642,
+      "n_samples": 100,
+      "method": "item-bootstrap"
+    },
+    "gppm": {
+      "cohens_d": 0.7316828679758499,
+      "cohens_d_ci": [
+        0.5369340530854595,
+        0.955684575428453
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": -1.401225781279906,
+      "good_faith_std": 0.10036210538909794,
+      "problematic_mean": -1.4075710572531326,
+      "problematic_std": 0.10075144598259016,
+      "n_samples": 100,
+      "method": "item-bootstrap"
+    },
+    "tvd_mi": {
+      "cohens_d": 1.8161942182301989,
+      "cohens_d_ci": [
+        1.5180077274721453,
+        2.246748887217355
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.839485119047619,
+      "good_faith_std": 0.07163410453300008,
+      "problematic_mean": 0.7631868131868133,
+      "problematic_std": 0.06642864022978326,
+      "n_samples": 100,
+      "method": "item-bootstrap"
+    },
+    "llm_judge_with": {
+      "cohens_d": 0.2587383571984934,
+      "cohens_d_ci": [
+        0.06452645392532623,
+        0.4725054877576119
+      ],
+      "p_value": 0.0135,
+      "good_faith_mean": 0.43474999999999997,
+      "good_faith_std": 0.04695017706719066,
+      "problematic_mean": 0.4230631868131868,
+      "problematic_std": 0.039700970759639354,
+      "n_samples": 100,
+      "method": "item-bootstrap"
+    },
+    "llm_judge_without": {
+      "cohens_d": -1.6894246392769827,
+      "cohens_d_ci": [
+        -2.000163627188784,
+        -1.453751714707842
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.5621190476190475,
+      "good_faith_std": 0.028967700482960813,
+      "problematic_mean": 0.6425549450549453,
+      "problematic_std": 0.03500581264716245,
+      "n_samples": 100,
+      "method": "item-bootstrap"
+    },
+    "baseline": {
+      "cohens_d": -0.12021951096013878,
+      "cohens_d_ci": [
+        null,
+        null
+      ],
+      "p_value": 0.7613096901594012,
+      "good_faith_mean": 0.2564310053364119,
+      "good_faith_std": 0.007211022258072041,
+      "problematic_mean": 0.2575350301878675,
+      "problematic_std": 0.011048098957320673,
+      "n_samples": 15,
+      "method": "condition_level"
+    }
+  },
+  "n_good_faith": 15,
+  "n_problematic": 13,
+  "conditions": {
+    "good_faith": [
+      "Faithful",
+      "Objective Analysis",
+      "Thorough Evaluation",
+      "Balanced Critique",
+      "Overly Technical",
+      "Harsh Critique",
+      "Overly Positive",
+      "Theory Focus",
+      "Implementation Obsessed",
+      "Comparison Fixated",
+      "Pedantic Details",
+      "Scope Creep",
+      "Statistical Nitpick",
+      "Future Work Focus",
+      "Writing Critique"
+    ],
+    "problematic": [
+      "Method Shift",
+      "Question Shift",
+      "Contribution Misrepresent",
+      "Result Manipulation",
+      "Assumption Attack",
+      "Low Effort",
+      "Generic",
+      "Surface Skim",
+      "Template Fill",
+      "Checklist Review",
+      "Dismissive Expert",
+      "Agenda Push",
+      "Benchmark Obsessed"
+    ]
+  }
+}

@@ -1,0 +1,802 @@
+[
+  {
+    "input": "Source: http://www.zeno.org - Contumax GmbH & Co. KG",
+    "reference": "Source: Project Gutenberg"
+  },
+  {
+    "input": "Jane Eyre",
+    "reference": "Jane Eyre"
+  },
+  {
+    "input": "Charlotte Bronte",
+    "reference": "Charlotte Bronte"
+  },
+  {
+    "input": "Erstes Kapitel",
+    "reference": "CHAPTER I"
+  },
+  {
+    "input": "Es war ganz unm\u00f6glich, an diesem Tage einen Spaziergang zu machen.",
+    "reference": "There was no possibility of taking a walk that day."
+  },
+  {
+    "input": "Am Morgen waren wir allerdings w\u00e4hrend einer ganzen Stunde in den bl\u00e4tterlosen, jungen Anpflanzungen umhergewandert; aber seit dem Mittagessen \u2013 Mrs. Reed speiste stets zu fr\u00fcher Stunde, wenn keine G\u00e4ste zugegen waren \u2013 hatte der kalte Winterwind so d\u00fcstere, schwere Wolken und einen so durchdringenden Regen heraufgeweht, da\u00df von weiterer Bewegung in frischer Luft nicht mehr die Rede sein konnte.",
+    "reference": "We had been wandering, indeed, in the leafless shrubbery an hour in the morning; but since dinner (Mrs. Reed, when there was no company, dined early) the cold winter wind had brought with it clouds so sombre, and a rain so penetrating, that further out-door exercise was now out of the question."
+  },
+  {
+    "input": "Ich war von Herzen froh dar\u00fcber: lange Spazierg\u00e4nge, besonders an frostigen Nachmittagen, waren mir stets zuwider: \u2013 ein Greuel war es mir, in der rauhen D\u00e4mmerstunde nach Hause zu kommen, mit fast erfrorenen H\u00e4nden und F\u00fc\u00dfen, \u2013 mit einem Herzen, das durch das Schelten Bessie's, der Kinderw\u00e4rterin, bis zum Brechen schwer war, \u2013 gedem\u00fctigt durch das Bewu\u00dftsein, physisch so tief unter Eliza, John und Georgina Reed zu stehen.",
+    "reference": "I was glad of it: I never liked long walks, especially on chilly afternoons: dreadful to me was the coming home in the raw twilight, with nipped fingers and toes, and a heart saddened by the chidings of Bessie, the nurse, and humbled by the consciousness of my physical inferiority to Eliza, John, and Georgiana Reed."
+  },
+  {
+    "input": "Die soeben erw\u00e4hnten Eliza, John und Georgina hatten sich in diesem Augenblick im Salon um ihre Mama versammelt: diese ruhte auf einem Sofa in der N\u00e4he des Kamins und umgeben von ihren Lieblingen, die zuf\u00e4lligerweise in diesem Moment weder zankten noch schrieen, sah sie vollkommen gl\u00fccklich aus.",
+    "reference": "The said Eliza, John, and Georgiana were now clustered round their mama in the drawing-room: she lay reclined on a sofa by the fireside, and with her darlings about her (for the time neither quarrelling nor crying) looked perfectly happy."
+  },
+  {
+    "input": "Mich hatte sie davon dispensiert, mich der Gruppe anzuschlie\u00dfen, indem sie sagte, da\u00df es sie tief ungl\u00fccklich mache, gezwungen zu sein, mich fern zu halten; da\u00df sie mich aber von Vorrechten ausschlie\u00dfen m\u00fcsse, zu deren Genu\u00df nur zufriedene, gl\u00fcckliche, kleine Kinder berechtigt seien, und da\u00df sie mir erst verzeihen w\u00fcrde, wenn sie sowohl durch eigene Wahrnehmung wie durch Bessie's Worte zu der \u00dcberzeugung gelangt sein w\u00fcrde, da\u00df ich in allem Ernst versuche, mir anziehendere und freundlichere Manieren, einen kindlicheren, geselligeren Charakter \u2013 ein leichteres, offenherzigeres, nat\u00fcrlicheres Benehmen anzueignen.",
+    "reference": "Me, she had dispensed from joining the group; saying, \"She regretted to be under the necessity of keeping me at a distance; but that until she heard from Bessie, and could discover by her own observation, that I was endeavouring in good earnest to acquire a more sociable and childlike disposition, a more attractive and sprightly manner--something lighter, franker, more natural, as it were--she really must exclude me from privileges intended only for contented, happy, little children.\""
+  },
+  {
+    "input": "\u00bbWas sagt denn Bessie, da\u00df ich gethan habe?\u00ab fragte ich.",
+    "reference": "\"What does Bessie say I have done?\" I asked."
+  },
+  {
+    "input": "\u00bbJane, ich liebe weder Spitzfindigkeiten noch Fragen; au\u00dferdem ist es gradezu widerlich, wenn ein Kind \u00e4ltere Leute in dieser Weise zur Rede stellt.",
+    "reference": "\"Jane, I don't like cavillers or questioners; besides, there is something truly forbidding in a child taking up her elders in that manner."
+  },
+  {
+    "input": "Augenblicklich setzest du dich irgendwo hin und schweigst, bis du freundlicher und liebensw\u00fcrdiger reden kannst.\u00ab",
+    "reference": "Be seated somewhere; and until you can speak pleasantly, remain silent.\""
+  },
+  {
+    "input": "An das Wohnzimmer stie\u00df ein kleines Fr\u00fchst\u00fcckszimmer: ich schl\u00fcpfte hinein. Hier stand ein gro\u00dfer B\u00fccherschrank.",
+    "reference": "A breakfast-room adjoined the drawing-room, I slipped in there."
+  },
+  {
+    "input": "Bald hatte ich mich eines gro\u00dfen Bandes bem\u00e4chtigt, nachdem ich mich zuerst vorsichtig vergewissert hatte, da\u00df er Bilder enthalte.",
+    "reference": "It contained a bookcase: I soon possessed myself of a volume, taking care that it should be one stored with pictures."
+  },
+  {
+    "input": "Ich stieg auf den Sitz in der Fenstervertiefung, zog die F\u00fc\u00dfe nach und kreuzte die Beine wie ein T\u00fcrke; dann zog ich die dunkelroten Moiree-Vorh\u00e4nge fest zusammen und sa\u00df so in einem doppelten Versteck.",
+    "reference": "I mounted into the window- seat: gathering up my feet, I sat cross-legged, like a Turk; and, having drawn the red moreen curtain nearly close, I was shrined in double retirement."
+  },
+  {
+    "input": "Scharlachrote Draperien schlossen mir die Aussicht zur rechten Hand; links befanden sich die gro\u00dfen, klaren Fensterscheiben, die mich vor dem d\u00fcstern Novembertag wohl sch\u00fctzten, mich aber nicht von ihm trennten.",
+    "reference": "Folds of scarlet drapery shut in my view to the right hand; to the left were the clear panes of glass, protecting, but not separating me from the drear November day."
+  },
+  {
+    "input": "In kurzen Zwischenr\u00e4umen, wenn ich die Bl\u00e4tter meines Buches wendete, fiel mein Blick auf das Bild dieses winterlichen Nachmittags.",
+    "reference": "At intervals, while turning over the leaves of my book, I studied the aspect of that winter afternoon."
+  },
+  {
+    "input": "In der Ferne war nichts als ein blasser, leerer Nebel, Wolken; im Vordergrunde der feuchte, freie Platz vor dem Hause, vom Winde entlaubte Gestr\u00e4uche, und ein unaufh\u00f6rlicher vom Sturm wildgepeitschter Regen.",
+    "reference": "Afar, it offered a pale blank of mist and cloud; near a scene of wet lawn and storm-beat shrub, with ceaseless rain sweeping away wildly before a long and lamentable blast."
+  },
+  {
+    "input": "Ich kehrte zu meinem Buche zur\u00fcck \u2013 Bewicks Geschichte von Englands gefiederten Bewohnern; im allgemeinen k\u00fcmmerte ich mich wenig um den gedruckten Text des Werkes, und doch waren da einige einleitende Seiten, welche ich, obgleich nur ein Kind, nicht g\u00e4nzlich \u00fcbergehen konnte.",
+    "reference": "I returned to my book--Bewick's History of British Birds: the letterpress thereof I cared little for, generally speaking; and yet there were certain introductory pages that, child as I was, I could not pass quite as a blank."
+  },
+  {
+    "input": "Es waren jene, die von den Verstecken der Seev\u00f6gel handelten, von jenen einsamen Felsen und Klippen, welche nur sie allein bewohnen, von der K\u00fcste Norwegens, die von ihrer \u00e4u\u00dfersten s\u00fcdlichen Spitze, dem Lindesn\u00e4s bis zum Nordkap mit Inseln bes\u00e4et ist. Wo der n\u00f6rdliche Ozean, in wildem Wirbel Um die nackten, \u00f6den Inseln tobt Des ultima Thule; und das atlantische Meer Sich st\u00fcrmisch zwischen die Hebriden w\u00e4lzt.",
+    "reference": "They were those which treat of the haunts of sea-fowl; of \"the solitary rocks and promontories\" by them only inhabited; of the coast of Norway, studded with isles from its southern extremity, the Lindeness, or Naze, to the North Cape-- \"Where the Northern Ocean, in vast whirls, Boils round the naked, melancholy isles Of farthest Thule; and the Atlantic surge Pours in among the stormy Hebrides.\""
+  },
+  {
+    "input": "Auch konnte ich nicht unbeachtet lassen, was dort stand von den d\u00fcsteren K\u00fcsten Lapplands, Sibiriens, Spitzbergens, Novazemblas, Islands, Gr\u00f6nlands, mit dem weiten Bereich der arktischen Zone und jenen einsamen Regionen des \u00f6den Raums \u2013 jenem Reservoir von Eis und Schnee, wo fest gefrorene Felder \u2013 die Anh\u00e4ufung von Jahrhunderten von Wintern \u2013 alpine H\u00f6hen auf H\u00f6hen erfroren, den Nordpol umgeben und die vervielfachte Strenge der \u00e4u\u00dfersten K\u00e4lte konzentrieren.",
+    "reference": "Nor could I pass unnoticed the suggestion of the bleak shores of Lapland, Siberia, Spitzbergen, Nova Zembla, Iceland, Greenland, with \"the vast sweep of the Arctic Zone, and those forlorn regions of dreary space,--that reservoir of frost and snow, where firm fields of ice, the accumulation of centuries of winters, glazed in Alpine heights above heights, surround the pole, and concentre the multiplied rigours of extreme cold.\""
+  },
+  {
+    "input": "Von diesen todeswei\u00dfen Regionen machte ich mir meinen eigenen Begriff: schattenhaft, wie all jene nur halb verstandenen Gedanken, die eines Kindes Hirn kreuzen, aber einen seltsam tiefen Eindruck hinterlassend.",
+    "reference": "Of these death-white realms I formed an idea of my own: shadowy, like all the half-comprehended notions that float dim through children's brains, but strangely impressive."
+  },
+  {
+    "input": "Die Worte dieser einleitenden Seiten verbanden sich mit den darauf folgenden Vignetten und gaben allen eine Bedeutung: jenem Felsen, der aus einem Meer von Wellen und Wogenschaum emporragte; dem zertr\u00fcmmerten Boote, das an traurig w\u00fcster K\u00fcste gestrandet; dem kalten, geisterhaften Monde, der durch d\u00fcstere Wolkenmassen auf ein sinkendes Wrack herabblickt.",
+    "reference": "The words in these introductory pages connected themselves with the succeeding vignettes, and gave significance to the rock standing up alone in a sea of billow and spray; to the broken boat stranded on a desolate coast; to the cold and ghastly moon glancing through bars of cloud at a wreck just sinking."
+  },
+  {
+    "input": "Ich wei\u00df nicht mehr, mit welchem Empfinden ich auf den stillen, einsamen Friedhof mit seinem beschriebenen Leichenstein sah, auf jenes Thor, die beiden B\u00e4ume, den niedrigen Horizont, der durch eine zerfallene Mauer begrenzt war, auf die schmale Mondessichel, deren Aufgang die Stunde der Abendflut bezeichnete.",
+    "reference": "I cannot tell what sentiment haunted the quite solitary churchyard, with its inscribed headstone; its gate, its two trees, its low horizon, girdled by a broken wall, and its newly-risen crescent, attesting the hour of eventide. The two ships becalmed on a torpid sea, I believed to be marine phantoms."
+  },
+  {
+    "input": "Die beiden Schiffe, welche auf regungsloser See von einer Windstille befallen werden, hielt ich f\u00fcr Meergespenster.",
+    "reference": "The fiend pinning down the thief's pack behind him, I passed over quickly: it was an object of terror."
+  },
+  {
+    "input": "\u00dcber den Unhold, welcher das B\u00fcndel des Diebes auf dessen R\u00fccken fest band, eilte ich fl\u00fcchtig hinweg; er war ein Gegenstand des Schreckens f\u00fcr mich.",
+    "reference": "So was the black horned thing seated aloof on a rock, surveying a distant crowd surrounding a gallows."
+  },
+  {
+    "input": "Und ein gleiches Entsetzen fl\u00f6\u00dfte mir das schwarze, geh\u00f6rnte Etwas ein, das hoch auf einem Felsen sa\u00df und in weiter Ferne eine Menschenmasse beobachtete, die einen Galgen umgab. Jedes Bild erz\u00e4hlte eine Geschichte: oft war diese f\u00fcr meinen unentwickelten Verstand geheimnisvoll, meinem unbestimmten Empfinden unverst\u00e4ndlich, \u2013 stets aber fl\u00f6\u00dfte sie mir das tiefste Interesse ein: dasselbe Interesse, mit welchem ich den Erz\u00e4hlungen Bessie's horchte, wenn sie zuweilen an Winterabenden in guter Laune war; dann pflegte sie ihren Pl\u00e4tttisch an das Kaminfeuer der Kinderstube zu bringen, erlaubte uns, unsere St\u00fchle an denselben zu r\u00fccken, und w\u00e4hrend sie dann Mrs. Reeds Spitzenvolants b\u00fcgelte und die Spitzen ihrer Nachthauben kr\u00e4uselte, erg\u00f6tzte sie unsere Ohren mit Erz\u00e4hlungen von Liebesgram und Abenteuern aus alten M\u00e4rchen und noch \u00e4lteren Balladen, oder \u2013 wie ich erst viel sp\u00e4ter entdeckte \u2013 aus den Bl\u00e4ttern von Pamela, und Henry, Graf von Moreland.",
+    "reference": "Each picture told a story; mysterious often to my undeveloped understanding and imperfect feelings, yet ever profoundly interesting: as interesting as the tales Bessie sometimes narrated on winter evenings, when she chanced to be in good humour; and when, having brought her ironing-table to the nursery hearth, she allowed us to sit about it, and while she got up Mrs. Reed's lace frills, and crimped her nightcap borders, fed our eager attention with passages of love and adventure taken from old fairy tales and other ballads; or (as at a later period I discovered) from the pages of Pamela, and Henry, Earl of Moreland."
+  },
+  {
+    "input": "Mit Bewick auf meinen Knieen war ich damals gl\u00fccklich: gl\u00fccklich wenigstens auf meine Art. Ich f\u00fcrchtete nichts als eine Unterbrechung, eine St\u00f6rung \u2013 und diese kam nur zu bald.",
+    "reference": "With Bewick on my knee, I was then happy: happy at least in my way. I feared nothing but interruption, and that came too soon."
+  },
+  {
+    "input": "Die Th\u00fcr zum Fr\u00fchst\u00fcckszimmer wurde ge\u00f6ffnet.",
+    "reference": "The breakfast- room door opened."
+  },
+  {
+    "input": "\u00bbBah, Frau Tr\u00e4umerin!\u00ab ert\u00f6nte John Reeds Stimme; dann hielt er inne; augenscheinlich war er erstaunt, das Zimmer leer zu finden. \u00bbWo zum Teufel ist sie denn?\u00ab fuhr er fort, \u00bbLizzy!",
+    "reference": "\"Boh! Madam Mope!\" cried the voice of John Reed; then he paused: he found the room apparently empty."
+  },
+  {
+    "input": "Georgy!\u00ab rief er seinen Schwestern zu, \u00bbJoan ist nicht hier.",
+    "reference": "\"Where the dickens is she!\" he continued. \"Lizzy!"
+  },
+  {
+    "input": "Sagt doch Mama, da\u00df sie in den Regen hinaus gelaufen ist \u2013 das b\u00f6se Tier!\u00ab",
+    "reference": "Georgy! (calling to his sisters) Joan is not here: tell mama she is run out into the rain--bad animal!\""
+  },
+  {
+    "input": "\u00bbWie gut, da\u00df ich den Vorhang zusammengezogen habe,\u00ab dachte ich; und dann w\u00fcnschte ich inbr\u00fcnstig, da\u00df er mein Versteck nicht entdecken m\u00f6ge; John Reed selbst w\u00fcrde es auch niemals entdeckt haben; er war langsam, sowohl von Begriffen wie in seinem Wahrnehmungsverm\u00f6gen; aber Eliza steckte den Kopf zur Th\u00fcr hinein und sagte sofort:",
+    "reference": "\"It is well I drew the curtain,\" thought I; and I wished fervently he might not discover my hiding-place: nor would John Reed have found it out himself; he was not quick either of vision or conception; but Eliza just put her head in at the door, and said at once--"
+  },
+  {
+    "input": "\u00bbSie ist gewi\u00df wieder in die Fenstervertiefung gekrochen, sieh nur nach, Jack.\u00ab",
+    "reference": "\"She is in the window-seat, to be sure, Jack.\""
+  },
+  {
+    "input": "Ich trat sofort heraus, denn ich zitterte bei dem Gedanken, da\u00df der erw\u00e4hnte Jack mich hervorzerren w\u00fcrde.",
+    "reference": "And I came out immediately, for I trembled at the idea of being dragged forth by the said Jack."
+  },
+  {
+    "input": "\u00bbDa bin ich, was w\u00fcnscht Ihr?\u00ab fragte ich mit schlecht erheuchelter Gleichgiltigkeit.",
+    "reference": "\"What do you want?\" I asked, with awkward diffidence."
+  },
+  {
+    "input": "\u00bbSag: was w\u00fcnschen Sie, Mr. Reed,\u00ab lautete seine Antwort.",
+    "reference": "\"Say, 'What do you want, Master Reed?'\" was the answer."
+  },
+  {
+    "input": "\u00bbIch will, da\u00df du hierher kommst,\u00ab und indem er in einem Lehnstuhl Platz nahm, gab er mir durch eine Geste zu verstehen, da\u00df ich n\u00e4her kommen und vor ihn treten solle.",
+    "reference": "\"I want you to come here;\" and seating himself in an arm-chair, he intimated by a gesture that I was to approach and stand before him."
+  },
+  {
+    "input": "John Reed war ein Schuljunge von vierzehn Jahren; vier Jahre \u00e4lter als ich, denn ich war erst zehn Jahr alt; gro\u00df und stark f\u00fcr sein Alter, mit einer unreinen, ungesunden Hautfarbe; gro\u00dfe Z\u00fcge in einem breiten Gesicht, schwerf\u00e4llige Gliedma\u00dfen und gro\u00dfe H\u00e4nde und F\u00fc\u00dfe.",
+    "reference": "John Reed was a schoolboy of fourteen years old; four years older than I, for I was but ten: large and stout for his age, with a dingy and unwholesome skin; thick lineaments in a spacious visage, heavy limbs and large extremities."
+  },
+  {
+    "input": "Gew\u00f6hnlich pflegte er sich bei Tische so vollzupfropfen, da\u00df er gallig wurde; das machte seine Augen tr\u00fcbe und seine Wangen schlaff.",
+    "reference": "He gorged himself habitually at table, which made him bilious, and gave him a dim and bleared eye and flabby cheeks."
+  },
+  {
+    "input": "Eigentlich h\u00e4tte er jetzt in der Schule sein m\u00fcssen, aber seine Mama hatte ihn f\u00fcr ein bis zwei Monate nach Hause geholt \u00bbseiner zarten Gesundheit wegen\u00ab.",
+    "reference": "He ought now to have been at school; but his mama had taken him home for a month or two, \"on account of his delicate health.\""
+  },
+  {
+    "input": "Mr. Miles, der Direktor der Schule versicherte, da\u00df es ihm au\u00dferordentlich gut gehen w\u00fcrde, wenn man ihm nur weniger Kuchen und Leckerbissen von Hause schicken wollte; aber das Herz der Mutter emp\u00f6rte sich bei einer so roh ausgesprochenen Meinung und neigte mehr zu der feineren und zarteren Ansicht, da\u00df Johns bla\u00dfgelbe Farbe von \u00dcberanstrengung beim Lernen und vielleicht auch von Heimweh herr\u00fchre. \u2013",
+    "reference": "Mr. Miles, the master, affirmed that he would do very well if he had fewer cakes and sweetmeats sent him from home; but the mother's heart turned from an opinion so harsh, and inclined rather to the more refined idea that John's sallowness was owing to over-application and, perhaps, to pining after home."
+  },
+  {
+    "input": "John hegte wenig Liebe f\u00fcr seine Mutter und seine Schwestern, und eine starke Antipathie gegen mich.",
+    "reference": "John had not much affection for his mother and sisters, and an antipathy to me."
+  },
+  {
+    "input": "Er qu\u00e4lte und bestrafte mich; nicht zwei- oder dreimal in der Woche, nicht ein- oder zweimal am Tage, sondern fortw\u00e4hrend und unaufh\u00f6rlich; jeder Nerv in mir f\u00fcrchtete ihn, und jeder Zollbreit Fleisch auf meinen Knochen schauderte und zuckte, wenn er in meine N\u00e4he kam.",
+    "reference": "He bullied and punished me; not two or three times in the week, nor once or twice in the day, but continually: every nerve I had feared him, and every morsel of flesh in my bones shrank when he came near."
+  },
+  {
+    "input": "Es gab Augenblicke, wo der Schrecken, den er mir einfl\u00f6\u00dfte, mich ganz besinnungslos machte; denn ich hatte niemanden, der mich gegen seine Drohungen und seine Th\u00e4tlichkeiten verteidigte; die Dienerschaft wagte es nicht, ihren jungen Herren zu beleidigen, indem sie f\u00fcr mich gegen ihn Partei ergriff, und Mrs. Reed war in diesem Punkte blind und taub: sie sah niemals, wenn er mich schlug, sie h\u00f6rte niemals, wenn er mich beschimpfte, obgleich er beides gar oft in ihrer Gegenwart that: h\u00e4ufiger zwar noch hinter ihrem R\u00fccken.",
+    "reference": "There were moments when I was bewildered by the terror he inspired, because I had no appeal whatever against either his menaces or his inflictions; the servants did not like to offend their young master by taking my part against him, and Mrs. Reed was blind and deaf on the subject: she never saw him strike or heard him abuse me, though he did both now and then in her very presence, more frequently, however, behind her back."
+  },
+  {
+    "input": "Aus Gewohnheit gehorchte ich John auch dieses Mal und n\u00e4herte mich seinem Stuhl: ungef\u00e4hr zwei bis drei Minuten brachte er damit zu, mir seine Zunge so weit entgegenzustrecken, wie er es ohne Gefahr f\u00fcr seine Zungenb\u00e4nder bewerkstelligen konnte; ich f\u00fchlte, da\u00df er mich jetzt gleich schlagen w\u00fcrde, und obgleich ich eine t\u00f6dliche Angst vor dem Schlage empfand, vermochte ich doch \u00fcber die ekelerregende und h\u00e4\u00dfliche Erscheinung des Burschen, der denselben austeilen w\u00fcrde, meine Betrachtungen anzustellen.",
+    "reference": "Habitually obedient to John, I came up to his chair: he spent some three minutes in thrusting out his tongue at me as far as he could without damaging the roots: I knew he would soon strike, and while dreading the blow, I mused on the disgusting and ugly appearance of him who would presently deal it."
+  },
+  {
+    "input": "Ich wei\u00df nicht, ob er diese Gedanken auf meinem Gesichte las, denn pl\u00f6tzlich, ohne ein Wort zu sagen, schlug er heftig und brutal auf mich los.",
+    "reference": "I wonder if he read that notion in my face; for, all at once, without speaking, he struck suddenly and strongly."
+  },
+  {
+    "input": "Ich taumelte; dann gewann ich das Gleichgewicht wieder und trat einige Schritte von seinem Stuhl zur\u00fcck.",
+    "reference": "I tottered, and on regaining my equilibrium retired back a step or two from his chair."
+  },
+  {
+    "input": "\u00bbDas ist f\u00fcr die Frechheit, da\u00df du vor einer Weile gewagt hast, Mama eine Antwort zu geben,\u00ab sagte er, \u00bbund da\u00df du gewagt hast, dich hinter den Vorhang zu verkriechen, und f\u00fcr den Blick, den ich vor zwei Minuten in deinen Augen gewahrte, du Ratze, du!\u00ab",
+    "reference": "\"That is for your impudence in answering mama awhile since,\" said he, \"and for your sneaking way of getting behind curtains, and for the look you had in your eyes two minutes since, you rat!\""
+  },
+  {
+    "input": "An Johns Beschimpfungen gew\u00f6hnt, fiel es mir niemals ein, irgend etwas auf dieselben zu erwidern; ich dachte nur daran, wie ich den Schlag ertragen sollte, der unfehlbar auf die Schimpfworte folgen w\u00fcrde.",
+    "reference": "Accustomed to John Reed's abuse, I never had an idea of replying to it; my care was how to endure the blow which would certainly follow the insult."
+  },
+  {
+    "input": "\u00bbWas hast du da hinter dem Vorhange gemacht?\u00ab fragte er weiter.",
+    "reference": "\"What were you doing behind the curtain?\" he asked."
+  },
+  {
+    "input": "\u00bbIch habe gelesen.\u00ab",
+    "reference": "\"I was reading.\""
+  },
+  {
+    "input": "\u00bbZeige mir das Buch.\u00ab",
+    "reference": "\"Show the book.\""
+  },
+  {
+    "input": "Ich ging an das Fenster zur\u00fcck und holte es von dort.",
+    "reference": "I returned to the window and fetched it thence."
+  },
+  {
+    "input": "\u00bbDu hast kein Recht, unsere B\u00fccher zu nehmen; du bist eine Untergebene, hat Mama gesagt; du hast kein Geld; dein Vater hat dir keins hinterlassen; eigentlich solltest du betteln und hier nicht mit den Kindern eines Gentleman, wie wir es sind, zusammen leben, und dieselben Mahlzeiten essen wie wir, und Kleider tragen, die unsere Mama dir kaufen mu\u00df.",
+    "reference": "\"You have no business to take our books; you are a dependent, mama says; you have no money; your father left you none; you ought to beg, and not to live here with gentlemen's children like us, and eat the same meals we do, and wear clothes at our mama's expense."
+  },
+  {
+    "input": "Nun, ich werde dich lehren, zwischen meinen B\u00fcchern umherzust\u00f6bern, denn sie geh\u00f6ren mir, und das ganze Haus geh\u00f6rt mir, oder wird mir wenigstens in einigen Jahren geh\u00f6ren.",
+    "reference": "Now, I'll teach you to rummage my bookshelves: for they _are_ mine; all the house belongs to me, or will do in a few years."
+  },
+  {
+    "input": "Geh und stell dich an die Th\u00fcr; nicht vor den Spiegel oder die Fenster.\u00ab",
+    "reference": "Go and stand by the door, out of the way of the mirror and the windows.\""
+  },
+  {
+    "input": "Ich that, wie mir gehei\u00dfen, ohne eine Ahnung von seiner Absicht zu haben; als ich aber gewahrte, da\u00df er das Buch emporhob und mit demselben zielte, sprang ich instinktiv zur Seite und stie\u00df einen Schreckensschrei aus; jedoch nicht schnell genug; das Buch wurde geschleudert, es traf mich, und ich fiel, indem ich mit dem Kopf gegen die Th\u00fcr schlug und mich verletzte.",
+    "reference": "I did so, not at first aware what was his intention; but when I saw him lift and poise the book and stand in act to hurl it, I instinctively started aside with a cry of alarm: not soon enough, however; the volume was flung, it hit me, and I fell, striking my head against the door and cutting it."
+  },
+  {
+    "input": "Die Wunde blutete, der Schmerz war heftig; mein Entsetzen war \u00fcber den H\u00f6hepunkt hinausgegangen; andere Empfindungen bem\u00e4chtigten sich meiner.",
+    "reference": "The cut bled, the pain was sharp: my terror had passed its climax; other feelings succeeded."
+  },
+  {
+    "input": "\u00bbDu b\u00f6ser, grausamer Bube!\u00ab schrie ich. \u00bbDu bist wie ein M\u00f6rder \u2013 du bist wie ein Sklaventreiber \u2013 du bist wie die r\u00f6mischen Kaiser!\u00ab",
+    "reference": "I said. \"You are like a murderer--you are like a slave-driver--you are like the Roman emperors!\""
+  },
+  {
+    "input": "Ich hatte Goldsmiths Geschichte Roms gelesen und mir meine eigene Ansicht \u00fcber Nero, Caligula und andere gebildet.",
+    "reference": "I had read Goldsmith's History of Rome, and had formed my opinion of Nero, Caligula, &c."
+  },
+  {
+    "input": "Im Stillen hatte ich Vergleiche gezogen, welche laut zu \u00e4u\u00dfern allerdings niemals meine Absicht gewesen.",
+    "reference": "Also I had drawn parallels in silence, which I never thought thus to have declared aloud."
+  },
+  {
+    "input": "\u00bbWas! Was!\u00ab schrie er. \u00bbHat sie das zu mir gesagt?",
+    "reference": "\"What! what!\" he cried. \"Did she say that to me?"
+  },
+  {
+    "input": "Habt ihr es geh\u00f6rt, Eliza und Georgina?",
+    "reference": "Did you hear her, Eliza and Georgiana?"
+  },
+  {
+    "input": "Das will ich der Mama erz\u00e4hlen! \u2013 Aber erst noch \u2013 \u2013\u00ab Er st\u00fcrzte auf mich zu: ich f\u00fchlte, wie er mein Haar und meine Schulter fa\u00dfte; er k\u00e4mpfte mit einem verzweifelten Gesch\u00f6pfe. Ich sah wirklich in ihm einen Tyrannen, \u2013 einen M\u00f6rder.",
+    "reference": "Won't I tell mama? but first--\" He ran headlong at me: I felt him grasp my hair and my shoulder: he had closed with a desperate thing."
+  },
+  {
+    "input": "Dann f\u00fchlte ich, wie einzelne Blutstropfen von meinem Kopfe auf den Hals herabfielen, und empfand einen stechenden Schmerz: diese Empfindungen siegten f\u00fcr den Augenblick \u00fcber die Furcht und ich trat ihm in wahnsinniger Wut entgegen.",
+    "reference": "I really saw in him a tyrant, a murderer. I felt a drop or two of blood from my head trickle down my neck, and was sensible of somewhat pungent suffering: these sensations for the time predominated over fear, and I received him in frantic sort."
+  },
+  {
+    "input": "Was ich mit meinen H\u00e4nden that, kann ich jetzt nicht mehr sagen, aber er schrie fortw\u00e4hrend \u00bbRatze!",
+    "reference": "I don't very well know what I did with my hands, but he called me \"Rat!"
+  },
+  {
+    "input": "Ratze!\u00ab und br\u00fcllte aus Leibeskr\u00e4ften.",
+    "reference": "Rat!\" and bellowed out aloud."
+  },
+  {
+    "input": "Hilfe war ihm nahe: Eliza und Georgina waren gelaufen, um Mrs. Reed zu holen, die nach oben gegangen war. Jetzt erschien sie auf der Scene, und ihr folgten Bessie und ihre Kammerjungfer Abbot.",
+    "reference": "Aid was near him: Eliza and Georgiana had run for Mrs. Reed, who was gone upstairs: she now came upon the scene, followed by Bessie and her maid Abbot."
+  },
+  {
+    "input": "Man trennte uns: dann vernahm ich die Worte: \u00bbDu liebe Zeit! Du liebe Zeit!",
+    "reference": "We were parted: I heard the words-- \"Dear! dear!"
+  },
+  {
+    "input": "Welch eine Furie, so auf Mr. John loszust\u00fcrzen!\u00ab",
+    "reference": "What a fury to fly at Master John!\""
+  },
+  {
+    "input": "\u00bbHat man jemals ein so leidenschaftliches Gesch\u00f6pf gesehen!\u00ab \u2013",
+    "reference": "\"Did ever anybody see such a picture of passion!\""
+  },
+  {
+    "input": "Dann f\u00fcgte Mrs. Reed hinzu:",
+    "reference": "Then Mrs. Reed subjoined--"
+  },
+  {
+    "input": "\u00bbF\u00fchrt sie in das rote Zimmer und schlie\u00dft sie dort ein.\u00ab",
+    "reference": "\"Take her away to the red-room, and lock her in there.\""
+  },
+  {
+    "input": "Vier H\u00e4nde bem\u00e4chtigten sich meiner sofort und man trug mich nach oben.",
+    "reference": "Four hands were immediately laid upon me, and I was borne upstairs."
+  },
+  {
+    "input": "Zweites Kapitel",
+    "reference": "CHAPTER II"
+  },
+  {
+    "input": "Auf dem ganzen Wege leistete ich Widerstand; dies war etwas Neues und ein Umstand, der viel dazu beitrug, Bessie und Mi\u00df Abbot in der schlechten Meinung zu best\u00e4rken, welche diese ohnehin schon von mir hegten.",
+    "reference": "I resisted all the way: a new thing for me, and a circumstance which greatly strengthened the bad opinion Bessie and Miss Abbot were disposed to entertain of me."
+  },
+  {
+    "input": "Thatsache ist, da\u00df ich vollst\u00e4ndig au\u00dfer mir war, wie die Franzosen zu sagen pflegen; ich wu\u00dfte sehr wohl, da\u00df die Emp\u00f6rung dieses einen Augenblicks mir schon au\u00dfergew\u00f6hnliche Strafen zugezogen haben mu\u00dfte, und wie viele andere rebellische Sklaven war ich in meiner Verzweiflung fest entschlossen, bis ans \u00c4u\u00dferste zu gehen.",
+    "reference": "The fact is, I was a trifle beside myself; or rather _out_ of myself, as the French would say: I was conscious that a moment's mutiny had already rendered me liable to strange penalties, and, like any other rebel slave, I felt resolved, in my desperation, to go all lengths."
+  },
+  {
+    "input": "\u00bbHalten Sie ihre Arme, Mi\u00df Abbot; sie ist wie eine wilde Katze.\u00ab",
+    "reference": "\"Hold her arms, Miss Abbot: she's like a mad cat.\""
+  },
+  {
+    "input": "\u00bbSch\u00e4men Sie sich! Sch\u00e4men Sie sich!\u00ab rief die Kammerjungfer.",
+    "reference": "\"For shame! for shame!\" cried the lady's-maid."
+  },
+  {
+    "input": "\u00bbWelch ein abscheuliches Betragen, Mi\u00df Eyre, einen jungen Gentleman zu schlagen!",
+    "reference": "\"What shocking conduct, Miss Eyre, to strike a young gentleman, your benefactress's son!"
+  },
+  {
+    "input": "Den Sohn Ihrer Wohlth\u00e4terin! Ihren jungen Herrn!\u00ab",
+    "reference": "Your young master.\""
+  },
+  {
+    "input": "\u00bbHerr!",
+    "reference": "\"Master!"
+  },
+  {
+    "input": "Wie ist er mein Herr?",
+    "reference": "How is he my master?"
+  },
+  {
+    "input": "Bin ich denn eine Dienerin?\u00ab",
+    "reference": "Am I a servant?\""
+  },
+  {
+    "input": "\u00bbNein. Sie sind weniger als eine Dienerin, denn Sie thun nichts, Sie arbeiten nicht f\u00fcr Ihren Unterhalt. Da!",
+    "reference": "\"No; you are less than a servant, for you do nothing for your keep."
+  },
+  {
+    "input": "Setzen Sie sich und denken Sie \u00fcber Ihre Schlechtigkeit und Bosheit nach!\u00ab",
+    "reference": "There, sit down, and think over your wickedness.\""
+  },
+  {
+    "input": "Inzwischen hatten sie mich in das von Mrs. Reed bezeichnete Gemach gebracht und mich auf einen Stuhl geworfen; mein erster Impuls war, wie eine Sprungfeder wieder von demselben empor zu schnellen; vier H\u00e4nde hielten mich jedoch augenblicklich wieder wie mit eisernen Klammern.",
+    "reference": "They had got me by this time into the apartment indicated by Mrs. Reed, and had thrust me upon a stool: my impulse was to rise from it like a spring; their two pair of hands arrested me instantly."
+  },
+  {
+    "input": "\u00bbWenn Sie nicht still sitzen, werden wir Sie festbinden,\u00ab sagte Bessie.",
+    "reference": "\"If you don't sit still, you must be tied down,\" said Bessie."
+  },
+  {
+    "input": "\u00bbMi\u00df Abbot, borgen Sie mir Ihre Strumpfb\u00e4nder; die meinen w\u00fcrde sie augenblicklich zerrei\u00dfen.\u00ab",
+    "reference": "\"Miss Abbot, lend me your garters; she would break mine directly.\""
+  },
+  {
+    "input": "Mi\u00df Abbot wandte sich ab, um ein starkes Bein von den notwendigen Banden zu befreien.",
+    "reference": "Miss Abbot turned to divest a stout leg of the necessary ligature."
+  },
+  {
+    "input": "Diese Vorbereitungen, um mir Fesseln anzulegen, und die neue Schande, die dies f\u00fcr mich bedeutete, diente dazu, meine Aufregung ein wenig zu mindern.",
+    "reference": "This preparation for bonds, and the additional ignominy it inferred, took a little of the excitement out of me."
+  },
+  {
+    "input": "\u00bbNehmen Sie sie nicht ab,\u00ab schrie ich, \u00bbich werde ganz still sitzen.\u00ab",
+    "reference": "\"Don't take them off,\" I cried; \"I will not stir.\""
+  },
+  {
+    "input": "Um ihnen f\u00fcr dies Versprechen eine Garantie zu bieten, hielt ich mich mit beiden H\u00e4nden an meinem Sitz fest.",
+    "reference": "In guarantee whereof, I attached myself to my seat by my hands."
+  },
+  {
+    "input": "\u00bbDas m\u00f6chte ich Ihnen auch raten,\u00ab sagte Bessie; und als sie sich \u00fcberzeugt hatte, da\u00df ich wirklich anfing, mich zu beruhigen, lie\u00df sie mich los; dann stellten sie und Mi\u00df Abbot sich mit gekreuzten Armen vor mich und blickten finster und zweifelnd in mein Gesicht, als glaubten sie nicht an meinen gesunden Verstand.",
+    "reference": "\"Mind you don't,\" said Bessie; and when she had ascertained that I was really subsiding, she loosened her hold of me; then she and Miss Abbot stood with folded arms, looking darkly and doubtfully on my face, as incredulous of my sanity."
+  },
+  {
+    "input": "\u00bbDas hat sie bis jetzt noch niemals gethan,\u00ab sagte endlich Bessie zur Abigail gewendet.",
+    "reference": "\"She never did so before,\" at last said Bessie, turning to the Abigail."
+  },
+  {
+    "input": "\u00bbAber es hat schon lange in ihr gesteckt,\u00ab lautete die Antwort. \u00bbIch habe der gn\u00e4digen Frau schon oft meine Meinung \u00fcber das Kind gesagt, und sie hat mir auch beigestimmt.",
+    "reference": "\"But it was always in her,\" was the reply. \"I've told Missis often my opinion about the child, and Missis agreed with me."
+  },
+  {
+    "input": "Sie ist ein verstecktes, kleines Ding: ich habe noch nie ein M\u00e4dchen in ihrem Alter gesehen, das so schlau w\u00e4re.\u00ab",
+    "reference": "She's an underhand little thing: I never saw a girl of her age with so much cover.\""
+  },
+  {
+    "input": "Bessie antwortete nicht; nach einer Weile wandte sie sich zu mir und sagte: \u00bbFr\u00e4ulein, Sie sollten doch wissen, da\u00df Sie Mrs. Reed verpflichtet sind, sie erh\u00e4lt Sie. Wenn sie Sie fortschickte, so m\u00fc\u00dften Sie ins Armenhaus gehen.\u00ab",
+    "reference": "Bessie answered not; but ere long, addressing me, she said--\"You ought to be aware, Miss, that you are under obligations to Mrs. Reed: she keeps you: if she were to turn you off, you would have to go to the poorhouse.\""
+  },
+  {
+    "input": "Auf diese Worte fand ich nichts zu erwidern; sie waren mir nicht mehr neu; so weit ich in meinem Leben zur\u00fcckdenken konnte, hatte ich Winke desselben Inhalts geh\u00f6rt.",
+    "reference": "I had nothing to say to these words: they were not new to me: my very first recollections of existence included hints of the same kind."
+  },
+  {
+    "input": "Dieser Vorwurf meiner Abh\u00e4ngigkeit war in meinen Ohren fast zum leeren, bedeutungslosen Singsang geworden, sehr schmerzlich und bedr\u00fcckend, aber nur halb verst\u00e4ndlich.",
+    "reference": "This reproach of my dependence had become a vague sing-song in my ear: very painful and crushing, but only half intelligible."
+  },
+  {
+    "input": "Nun fiel auch Mi\u00df Abbot ein: \u00bbUnd Sie sollten auch nicht denken, da\u00df Sie mit den Fr\u00e4ulein Reed und Mr. Reed auf gleicher Stufe stehen, weil Mrs. Reed Ihnen g\u00fctig erlaubt, mit ihren Kindern erzogen zu werden.",
+    "reference": "Miss Abbot joined in-- \"And you ought not to think yourself on an equality with the Misses Reed and Master Reed, because Missis kindly allows you to be brought up with them."
+  },
+  {
+    "input": "Diese werden einmal ein gro\u00dfes Verm\u00f6gen haben, und Sie sind arm. Sie m\u00fcssen dem\u00fctig und bescheiden sein und versuchen, sich den andern angenehm zu machen.\u00ab",
+    "reference": "They will have a great deal of money, and you will have none: it is your place to be humble, and to try to make yourself agreeable to them.\""
+  },
+  {
+    "input": "\u00bbWas wir Ihnen sagen, ist zu Ihrem Besten,\u00ab f\u00fcgte Bessie hinzu, ohne in hartem Ton zu reden, \u00bbSie sollten versuchen, sich n\u00fctzlich und angenehm zu machen, dann w\u00fcrden Sie hier vielleicht eine Heimat finden; wenn Sie aber heftig und roh und ungezogen werden, so wird Mrs. Reed Sie fortschicken, davon bin ich fest \u00fcberzeugt.\u00ab",
+    "reference": "\"What we tell you is for your good,\" added Bessie, in no harsh voice, \"you should try to be useful and pleasant, then, perhaps, you would have a home here; but if you become passionate and rude, Missis will send you away, I am sure.\""
+  },
+  {
+    "input": "\u00bbAu\u00dferdem,\u00ab sagte Mi\u00df Abbot, \u00bbwird Gott Sie strafen. Er k\u00f6nnte Sie mitten in Ihrem Trotz tot zu Boden fallen lassen, und wohin k\u00e4men Sie dann?",
+    "reference": "\"Besides,\" said Miss Abbot, \"God will punish her: He might strike her dead in the midst of her tantrums, and then where would she go?"
+  },
+  {
+    "input": "Kommen Sie, Bessie, wir wollen sie allein lassen: um keinen Preis der Welt m\u00f6chte ich ihr Herz haben.",
+    "reference": "Come, Bessie, we will leave her: I wouldn't have her heart for anything."
+  },
+  {
+    "input": "Sagen Sie Ihr Gebet, Mi\u00df Eyre, wenn Sie allein sind; denn wenn Sie nicht bereuen, k\u00f6nnte etwas Schreckliches durch den Kamin herunterkommen und Sie holen.\u00ab",
+    "reference": "Say your prayers, Miss Eyre, when you are by yourself; for if you don't repent, something bad might be permitted to come down the chimney and fetch you away.\""
+  },
+  {
+    "input": "Sie gingen und schlossen die Th\u00fcr hinter sich ab.",
+    "reference": "They went, shutting the door, and locking it behind them."
+  },
+  {
+    "input": "Das rote Zimmer war ein Fremdenzimmer, in dem nur selten jemand schlief; ich k\u00f6nnte beinahe sagen niemals oder nur dann, wenn ein zuf\u00e4lliger Zusammenflu\u00df von Besuchern auf Gateshead-Hall es notwendig machte, alle R\u00e4umlichkeiten des Hauses nutzbar zu machen.",
+    "reference": "The red-room was a square chamber, very seldom slept in, I might say never, indeed, unless when a chance influx of visitors at Gateshead Hall rendered it necessary to turn to account all the accommodation it contained: yet it was one of the largest and stateliest chambers in the mansion."
+  },
+  {
+    "input": "Und doch war es eins der sch\u00f6nsten und pr\u00e4chtigsten Gem\u00e4cher im Herrenhause. Wie ein Tabernakel stand im Mittelpunkt desselben ein Bett von massiven Mahagonipfeilern getragen und mit Vorh\u00e4ngen von dunkelrotem Damast beh\u00e4ngt; die beiden gro\u00dfen Fenster, deren Rouleaux immer herabgelassen waren, wurden durch Geh\u00e4nge und Faltendraperien vom selben Stoffe halb verh\u00fcllt; der Teppich war rot; der Tisch am Fu\u00dfende des Bettes war mit einer hochroten Decke belegt; die W\u00e4nde waren mit einem Stoffe beh\u00e4ngt, der auf lichtbraunem Grunde ein zartes rosa Muster trug; die Garderobe, der Toilettetisch, die St\u00fchle waren aus dunklem, poliertem Mahagoni angefertigt.",
+    "reference": "A bed supported on massive pillars of mahogany, hung with curtains of deep red damask, stood out like a tabernacle in the centre; the two large windows, with their blinds always drawn down, were half shrouded in festoons and falls of similar drapery; the carpet was red; the table at the foot of the bed was covered with a crimson cloth; the walls were a soft fawn colour with a blush of pink in it; the wardrobe, the toilet-table, the chairs were of darkly polished old mahogany."
+  },
+  {
+    "input": "Aus diesen d\u00fcsteren Schatten erhoben sich wei\u00df und hoch und gl\u00e4nzend die aufgeh\u00e4uften Matratzen und Kopfkissen des Bettes, \u00fcber die eine schneewei\u00dfe Decke gebreitet war.",
+    "reference": "Out of these deep surrounding shades rose high, and glared white, the piled- up mattresses and pillows of the bed, spread with a snowy Marseilles counterpane."
+  },
+  {
+    "input": "Eben so unheimlich stach ein gro\u00dfer, gepolsterter, ebenfalls wei\u00dfer Lehnstuhl hervor, der am Kopfende des Bettes stand und vor dem sich ein Fu\u00dfschemel befand; damals erschien er mir wie ein geisterhafter Thron.",
+    "reference": "Scarcely less prominent was an ample cushioned easy-chair near the head of the bed, also white, with a footstool before it; and looking, as I thought, like a pale throne."
+  },
+  {
+    "input": "Das Zimmer war dumpf, weil nur selten ein Feuer in demselben angez\u00fcndet wurde; es war still, weil es weit von der Kinderstube und den K\u00fcchen entfernt lag; unheimlich, weil ich wu\u00dfte, da\u00df fast niemals jemand dasselbe betrat.",
+    "reference": "This room was chill, because it seldom had a fire; it was silent, because remote from the nursery and kitchen; solemn, because it was known to be so seldom entered."
+  },
+  {
+    "input": "Nur am Sonnabend kam das Hausm\u00e4dchen hierher, um den stillen Staub einer Woche von den M\u00f6beln und den Spiegeln zu wischen; und in langen Zwischenr\u00e4umen kam auch Mrs. Reed hierher, um den Inhalt einer gewissen Schieblade zu revidieren, in welcher sich verschiedene Urkunden, ihre Juwelenschatulle und ein Miniaturbild ihres verstorbenen Gatten befand. In diesen letzten Worten liegt das Geheimnis des roten Zimmers, der Zauberbann, weshalb es trotz seiner Pracht so einsam und verlassen war.",
+    "reference": "The house-maid alone came here on Saturdays, to wipe from the mirrors and the furniture a week's quiet dust: and Mrs. Reed herself, at far intervals, visited it to review the contents of a certain secret drawer in the wardrobe, where were stored divers parchments, her jewel-casket, and a miniature of her deceased husband; and in those last words lies the secret of the red-room--the spell which kept it so lonely in spite of its grandeur."
+  },
+  {
+    "input": "Mr. Reed war seit neun Jahren tot; in diesem Gemache hatte er seinen letzten Atemzug gethan; hier lag er aufgebahrt; von hier hatten die Leichentr\u00e4ger ihn hinausgetragen \u2013 und seit jenem Tage hatte ein Gef\u00fchl trauriger Weihe jeden unberufenen Besucher von seiner Schwelle fern gehalten.",
+    "reference": "Mr. Reed had been dead nine years: it was in this chamber he breathed his last; here he lay in state; hence his coffin was borne by the undertaker's men; and, since that day, a sense of dreary consecration had guarded it from frequent intrusion."
+  },
+  {
+    "input": "Der Sitz, auf welchen Bessie und die bitterb\u00f6se Mi\u00df Abbot mich gebannt hatten, war eine niedrige Ottomane, welche nahe dem wei\u00dfen Marmorkamin stand; das Bett t\u00fcrmte sich vor mir auf; zu meiner Rechten befand sich ein hoher dunkler Garderobenschrank, auf dessen Tafelwerk sich die leisen, d\u00fcsteren Lichter brachen; zu meiner Linken waren die verh\u00e4ngten Fenster; ein gro\u00dfer Spiegel zwischen denselben wiederholte die totesstille Majest\u00e4t des Bettes und des Zimmers.",
+    "reference": "My seat, to which Bessie and the bitter Miss Abbot had left me riveted, was a low ottoman near the marble chimney-piece; the bed rose before me; to my right hand there was the high, dark wardrobe, with subdued, broken reflections varying the gloss of its panels; to my left were the muffled windows; a great looking-glass between them repeated the vacant majesty of the bed and room."
+  },
+  {
+    "input": "Ich war nicht ganz sicher, ob sie die Th\u00fcr zugeschlossen hatten; und als ich wieder Mut genug hatte, um mich zu bewegen, stand ich auf und ging um nachzusehen. Ach ja!",
+    "reference": "I was not quite sure whether they had locked the door; and when I dared move, I got up and went to see."
+  },
+  {
+    "input": "Keine Kerkerth\u00fcr war jemals sicherer verschlossen!",
+    "reference": "Alas! yes: no jail was ever more secure."
+  },
+  {
+    "input": "Als ich wieder an die Ottomane zur\u00fcckging, mu\u00dfte ich an dem Spiegel vor\u00fcber, mein gebannter Blick bohrte sich unwillk\u00fcrlich in die Tiefe desselben ein.",
+    "reference": "Returning, I had to cross before the looking- glass; my fascinated glance involuntarily explored the depth it revealed."
+  },
+  {
+    "input": "In ihm sah alles noch k\u00fchler und hohler und d\u00fcsterer aus als in Wirklichkeit, und die seltsame, kleine Gestalt, die mir aus ihm entgegenblickte, mit wei\u00dfem Gesicht und Armen, die grell aus der Dunkelheit hervorleuchteten, mit Augen, die vor Furcht hin- und herrollten, wo sonst alles bewegungslos war \u2013 diese kleine Gestalt sah aus, wie ein wirkliches Gespenst; ich dachte an eins jener zarten Phantome, halb Elfe, halb Kobold, wie sie in Bessies D\u00e4mmerstunden-Geschichten aus einsamen, wilden Schluchten und d\u00fcsteren Mooren hervorkamen und sich dem Auge des n\u00e4chtlichen Wanderers zeigten.",
+    "reference": "All looked colder and darker in that visionary hollow than in reality: and the strange little figure there gazing at me, with a white face and arms specking the gloom, and glittering eyes of fear moving where all else was still, had the effect of a real spirit: I thought it like one of the tiny phantoms, half fairy, half imp, Bessie's evening stories represented as coming out of lone, ferny dells in moors, and appearing before the eyes of belated travellers."
+  },
+  {
+    "input": "Ich kehrte auf meinen Sitz zur\u00fcck.",
+    "reference": "I returned to my stool."
+  },
+  {
+    "input": "In diesem Augenblick bem\u00e4chtigte der Aberglaube sich meiner, aber die Stunde seines vollst\u00e4ndigen Sieges \u00fcber mich war noch nicht gekommen: mein Blut war noch warm; die Wut des emp\u00f6rten Sklaven erhitzte mich noch mit ihrer ganzen Bitterkeit; ich hatte noch einen wilden Strom von Gedanken an die Vergangenheit zu b\u00e4ndigen, bevor ich mich ganz dem Jammer \u00fcber die trostlose Gegenwart hingeben konnte.",
+    "reference": "Superstition was with me at that moment; but it was not yet her hour for complete victory: my blood was still warm; the mood of the revolted slave was still bracing me with its bitter vigour; I had to stem a rapid rush of retrospective thought before I quailed to the dismal present."
+  },
+  {
+    "input": "Wie der schmutzige Bodensatz aus einem tr\u00fcben Brunnen, so stieg aus meinem bewegten, aufgeregtem Gem\u00fct alles an die Oberfl\u00e4che meines Empfindens: John Reeds wilde Tyrannei, die hochm\u00fctige Gleichgiltigkeit seiner Schwestern, die Abneigung seiner Mutter, die Parteilichkeit der Dienstboten!",
+    "reference": "All John Reed's violent tyrannies, all his sisters' proud indifference, all his mother's aversion, all the servants' partiality, turned up in my disturbed mind like a dark deposit in a turbid well."
+  },
+  {
+    "input": "Weshalb mu\u00dfte ich stets leiden, stets mit ver\u00e4chtlichen Blicken angesehen werden, immer beschuldigt, immer verurteilt werden?",
+    "reference": "Why was I always suffering, always browbeaten, always accused, for ever condemned?"
+  },
+  {
+    "input": "Weshalb konnte ich niemals etwas recht machen?",
+    "reference": "Why could I never please?"
+  },
+  {
+    "input": "Weshalb war es immer nutzlos, wenn ich versuchte, irgend eines Menschen Gunst zu erringen?",
+    "reference": "Why was it useless to try to win any one's favour?"
+  },
+  {
+    "input": "Man hatte Achtung vor Eliza, die doch so eigensinnig und selbsts\u00fcchtig war.",
+    "reference": "Eliza, who was headstrong and selfish, was respected."
+  },
+  {
+    "input": "Jedermann hatte Nachsicht mit Georgina, die stets \u00fcbelgelaunt und trotzig und frech war.",
+    "reference": "Georgiana, who had a spoiled temper, a very acrid spite, a captious and insolent carriage, was universally indulged."
+  },
+  {
+    "input": "Ihre Sch\u00f6nheit, ihre rosigen Wangen und goldigen Locken schienen jeden zu entz\u00fccken, der sie anblickte und ihr Vergebung f\u00fcr all ihre M\u00e4ngel und Fehler zu erkaufen.",
+    "reference": "Her beauty, her pink cheeks and golden curls, seemed to give delight to all who looked at her, and to purchase indemnity for every fault."
+  },
+  {
+    "input": "John wurde niemals bestraft, niemand widersprach ihm jemals, obgleich er den Tauben die H\u00e4lse umdrehte, die jungen H\u00fchner umbrachte, die Hunde auf die Schafe hetzte, den Weinstock im Treibhause seiner Trauben beraubte und von den seltensten Pflanzen die Knospen abri\u00df; er nannte seine Mutter sogar \u00bbliebe Alte\u00ab; nahm durchaus keine R\u00fccksicht auf ihre W\u00fcnsche; zerri\u00df und beschmutzte ihre seidenen Kleider nicht selten, \u2013 und doch war er \u00bbihr einziger Liebling\u00ab.",
+    "reference": "John no one thwarted, much less punished; though he twisted the necks of the pigeons, killed the little pea-chicks, set the dogs at the sheep, stripped the hothouse vines of their fruit, and broke the buds off the choicest plants in the conservatory: he called his mother \"old girl,\" too; sometimes reviled her for her dark skin, similar to his own; bluntly disregarded her wishes; not unfrequently tore and spoiled her silk attire; and he was still \"her own darling.\""
+  },
+  {
+    "input": "Ich wagte niemals, einen Fehler zu begehen; ich bem\u00fchte mich stets, meine Pflicht zu thun, und mich nannte man unartig und unertr\u00e4glich, m\u00fcrrisch und hinterlistig, vom Morgen bis zum Mittag, vom Mittag bis zum Abend.",
+    "reference": "I dared commit no fault: I strove to fulfil every duty; and I was termed naughty and tiresome, sullen and sneaking, from morning to noon, and from noon to night."
+  },
+  {
+    "input": "Mein Kopf schmerzte noch und blutete nach dem erhaltenen Schlage und dem Falle, welchen ich gethan; niemand hatte John einen Verweis erteilt, weil er mich grundlos geschlagen; aber weil ich mich gegen ihn aufgelehnt hatte, um seiner weiteren unvern\u00fcnftigen, besinnungslosen Heftigkeit zu entgehen, hatten alle mich mit den lautesten Schm\u00e4hungen \u00fcberh\u00e4uft.",
+    "reference": "My head still ached and bled with the blow and fall I had received: no one had reproved John for wantonly striking me; and because I had turned against him to avert farther irrational violence, I was loaded with general opprobrium."
+  },
+  {
+    "input": "\u00bbUngerecht! \u2013 ungerecht!\u00ab sagte meine Vernunft, welcher die fortw\u00e4hrende, qualvolle Aufreizung eine fr\u00fchzeitige, wenn auch vor\u00fcbergehende Kraft verliehen hatte; und die Entschlossenheit, welche auch geweckt war, lie\u00df mich allerhand Mittel ersinnen, um eine Flucht aus diesem schier unertr\u00e4glich gewordenen Drucke zu bewerkstelligen \u2013 ich dachte daran, auf und davon zu laufen, oder wenn dies nicht m\u00f6glich, wenigstens niemals wieder Speise und Trank zu mir zu nehmen und auf diese Weise zu Tode zu hungern.",
+    "reference": "\"Unjust!--unjust!\" said my reason, forced by the agonising stimulus into precocious though transitory power: and Resolve, equally wrought up, instigated some strange expedient to achieve escape from insupportable oppression--as running away, or, if that could not be effected, never eating or drinking more, and letting myself die."
+  },
+  {
+    "input": "Wie best\u00fcrzt war meine Seele an diesem traurigen Nachmittag!",
+    "reference": "What a consternation of soul was mine that dreary afternoon!"
+  },
+  {
+    "input": "Wie erregt war mein Gem\u00fct, wie furchtbar emp\u00f6rt mein Herz!",
+    "reference": "How all my brain was in tumult, and all my heart in insurrection!"
+  },
+  {
+    "input": "Aber in welcher D\u00fcsterheit, welcher Verblendung, welcher unglaublichen Unwissenheit wurde dieser Seelenkampf ausgek\u00e4mpft!",
+    "reference": "Yet in what darkness, what dense ignorance, was the mental battle fought!"
+  },
+  {
+    "input": "Ich hatte keine Antwort auf die sich mir unaufh\u00f6rlich aufdr\u00e4ngende Frage, weshalb ich so viel leiden mu\u00dfte. Jetzt nach Verlauf von \u2013 nein, ich will nicht sagen, von wie vielen Jahren \u2013 habe ich die Antwort gefunden!",
+    "reference": "I could not answer the ceaseless inward question--_why_ I thus suffered; now, at the distance of--I will not say how many years, I see it clearly."
+  },
+  {
+    "input": "Ich war ein Mi\u00dfton in Gateshead-hall. Ich war ein Nichts an diesem Orte; ich hatte keine Gemeinschaft mit Mrs. Reed oder ihren Kindern oder ihren bezahlten Vasallen.",
+    "reference": "I was a discord in Gateshead Hall: I was like nobody there; I had nothing in harmony with Mrs. Reed or her children, or her chosen vassalage."
+  },
+  {
+    "input": "Sie liebten mich nicht, und in der That, ich liebte sie ebensowenig.",
+    "reference": "If they did not love me, in fact, as little did I love them."
+  },
+  {
+    "input": "Es war auch nicht ihre Pflicht, mit Liebe auf ein Gesch\u00f6pf zu blicken, welches mit keiner einzigen Seele sympathisieren konnte; ein heterogenes Gesch\u00f6pf, welches ihr direktes Gegenteil in Temperament, in F\u00e4higkeiten und Neigungen war; ein nutzloses Gesch\u00f6pf, welches ihrem Interesse nicht dienen, zu ihrem Vergn\u00fcgen nichts beitragen konnte; ein strafbares Gesch\u00f6pf, welches die Keime der Emp\u00f6rung \u00fcber die ihm widerfahrende Behandlung in sich n\u00e4hrte, ein Gesch\u00f6pf, das die tiefste Verachtung f\u00fcr ihren Verstand, ihr Urteilsverm\u00f6gen n\u00e4hrte.",
+    "reference": "They were not bound to regard with affection a thing that could not sympathise with one amongst them; a heterogeneous thing, opposed to them in temperament, in capacity, in propensities; a useless thing, incapable of serving their interest, or adding to their pleasure; a noxious thing, cherishing the germs of indignation at their treatment, of contempt of their judgment."
+  },
+  {
+    "input": "Ich wei\u00df wohl, da\u00df, wenn ich ein sanguinisches, geistreiches, herrisches, sch\u00f6nes, wildes Kind gewesen w\u00e4re \u2013 wenn auch ebenso abh\u00e4ngig und freundlos \u2013 so w\u00fcrde Mrs. Reed meine Gegenwart in liebensw\u00fcrdigerer Weise ertragen haben; ihre Kinder h\u00e4tten f\u00fcr mich ein freundlicheres Gef\u00fchl der Gemeinsamkeit gehegt; die Dienstboten w\u00e4ren weniger geneigt gewesen, mich zum S\u00fcndenbock der Kinderstube zu machen.",
+    "reference": "I know that had I been a sanguine, brilliant, careless, exacting, handsome, romping child--though equally dependent and friendless--Mrs. Reed would have endured my presence more complacently; her children would have entertained for me more of the cordiality of fellow-feeling; the servants would have been less prone to make me the scapegoat of the nursery."
+  },
+  {
+    "input": "Das Tageslicht begann aus dem roten Zimmer zu schwinden; es war nach vier Uhr, und auf den bew\u00f6lkten Nachmittag folgte die tr\u00fcbe D\u00e4mmerung.",
+    "reference": "Daylight began to forsake the red-room; it was past four o'clock, and the beclouded afternoon was tending to drear twilight."
+  },
+  {
+    "input": "Ich h\u00f6rte, wie der Regen noch unaufh\u00f6rlich gegen das Fenster der Treppe schlug, wie der Wind in den Laubg\u00e4ngen hinter dem Herrenhause heulte; nach und nach wurde ich so kalt wie Marmor, und dann begann mein Mut zu sinken.",
+    "reference": "I heard the rain still beating continuously on the staircase window, and the wind howling in the grove behind the hall; I grew by degrees cold as a stone, and then my courage sank."
+  },
+  {
+    "input": "Die gew\u00f6hnliche Stimmung des Gedem\u00fctigtseins, Zweifel an mir selbst, hilflose Traurigkeit bem\u00e4chtigten sich meiner und fielen d\u00e4mpfend auf die Asche meiner dahinschwindenden Wut.",
+    "reference": "My habitual mood of humiliation, self-doubt, forlorn depression, fell damp on the embers of my decaying ire."
+  },
+  {
+    "input": "Alle sagten ja, da\u00df ich boshaft sei \u2013 vielleicht war es der Fall, denn hatte ich nicht soeben den Gedanken gehegt, mich zu Tode zu hungern?",
+    "reference": "All said I was wicked, and perhaps I might be so; what thought had I been but just conceiving of starving myself to death?"
+  },
+  {
+    "input": "Das war doch gewi\u00df ein Verbrechen: denn war ich bereit zu sterben? oder war das Gew\u00f6lbe unter der Kanzel in der Kirche von Gateshead ein so einladendes Ende?",
+    "reference": "That certainly was a crime: and was I fit to die? Or was the vault under the chancel of Gateshead Church an inviting bourne?"
+  },
+  {
+    "input": "In diesem Gew\u00f6lbe lag Mr. Reed begraben, wie man mir gesagt hatte; dieser Gedanke f\u00fchrte mich dazu, sein Andenken herauf zu beschw\u00f6ren; und mit wachsendem Grauen verweilte ich bei demselben.",
+    "reference": "In such vault I had been told did Mr. Reed lie buried; and led by this thought to recall his idea, I dwelt on it with gathering dread."
+  },
+  {
+    "input": "Ich konnte mich seiner nicht erinnern; aber ich wu\u00dfte, da\u00df er mein Onkel gewesen, \u2013 der einzige Bruder meiner Mutter \u2013 da\u00df er mich in sein Haus aufgenommen, als ich ein armes, elternloses Kind gewesen; und da\u00df er noch in seinen letzten Augenblicken Mrs. Reed das Versprechen abgenommen hatte, mich wie ihr eigenes Kind zu erziehen und zu versorgen.",
+    "reference": "I could not remember him; but I knew that he was my own uncle--my mother's brother--that he had taken me when a parentless infant to his house; and that in his last moments he had required a promise of Mrs. Reed that she would rear and maintain me as one of her own children."
+  },
+  {
+    "input": "Mrs. Reed war h\u00f6chstwahrscheinlich der \u00dcberzeugung, da\u00df sie dieses Versprechen gehalten habe, und so weit ihre Natur ihr dies erlaubte, hatte sie es auch gethan; aber wie sollte sie denn auch in Wirklichkeit f\u00fcr einen Eindringling Liebe hegen, der nicht zu ihrer Familie geh\u00f6rte und nach dem Tode ihres Gatten durch keine Bande mehr an sie gekettet war?",
+    "reference": "Mrs. Reed probably considered she had kept this promise; and so she had, I dare say, as well as her nature would permit her; but how could she really like an interloper not of her race, and unconnected with her, after her husband's death, by any tie?"
+  },
+  {
+    "input": "Es mu\u00dfte allerdings \u00e4rgerlich sein, sich durch ein unter solchen Umst\u00e4nden gegebenes Versprechen gen\u00f6tigt zu sehen, einem fremden Kinde, das sie nicht lieben konnte, die Eltern zu ersetzen, und es ertragen zu m\u00fcssen, da\u00df eine unsympathische Fremde sich unaufh\u00f6rlich in ihren Familienkreis dr\u00e4ngte.",
+    "reference": "It must have been most irksome to find herself bound by a hard-wrung pledge to stand in the stead of a parent to a strange child she could not love, and to see an uncongenial alien permanently intruded on her own family group."
+  },
+  {
+    "input": "Eine sonderbare Idee bem\u00e4chtigte sich meiner.",
+    "reference": "A singular notion dawned upon me."
+  },
+  {
+    "input": "Ich zweifelte nicht \u2013 hatte es niemals bezweifelt \u2013 da\u00df Mr. Reed, wenn er am Leben geblieben, mich mit G\u00fcte behandelt haben w\u00fcrde; und jetzt, als ich so dasa\u00df und auf die dunklen W\u00e4nde und das wei\u00dfe Bett blickte, zuweilen auch wie gebannt ein Auge auf den tr\u00fcbe blinkenden Spiegel warf \u2013 da begann ich mich an das zu erinnern, was ich von Toten geh\u00f6rt hatte, die im Grabe keine Ruhe finden konnten, weil man ihre letzten W\u00fcnsche unerf\u00fcllt gelassen, und jetzt auf die Erde zur\u00fcckkehrten, um die Meineidigen zu strafen und die Bedr\u00fcckten zu r\u00e4chen; ich dachte, wie Mr. Reeds Geist, gequ\u00e4lt durch das Unrecht, welches man dem Kinde seiner Schwester zuf\u00fcgte, seine Ruhest\u00e4tte verlie\u00df \u2013 entweder in dem Gew\u00f6lbe der Kirche oder in dem unbekannten Lande der Abgeschiedenen \u2013 und in diesem Zimmer vor mir erscheinen k\u00f6nne.",
+    "reference": "I doubted not--never doubted--that if Mr. Reed had been alive he would have treated me kindly; and now, as I sat looking at the white bed and overshadowed walls--occasionally also turning a fascinated eye towards the dimly gleaning mirror--I began to recall what I had heard of dead men, troubled in their graves by the violation of their last wishes, revisiting the earth to punish the perjured and avenge the oppressed; and I thought Mr. Reed's spirit, harassed by the wrongs of his sister's child, might quit its abode--whether in the church vault or in the unknown world of the departed--and rise before me in this chamber."
+  },
+  {
+    "input": "Ich trocknete meine Thr\u00e4nen und unterdr\u00fcckte mein Schluchzen; denn ich f\u00fcrchtete, da\u00df diese lauten \u00c4u\u00dferungen meines Grams eine \u00fcbernat\u00fcrliche Stimme zu meinem Troste erwecken oder aus dem mich umgebenden Dunkel ein Antlitz mit einem Heiligenschein hervorleuchten lassen k\u00f6nne, das sich mit wundersamem Mitleid \u00fcber mich beugte.",
+    "reference": "I wiped my tears and hushed my sobs, fearful lest any sign of violent grief might waken a preternatural voice to comfort me, or elicit from the gloom some haloed face, bending over me with strange pity."
+  },
+  {
+    "input": "Dieser Gedanke, der in der Theorie vielleicht ganz trostreich, w\u00fcrde entsetzlich sein, wenn er zur Wirklichkeit werden k\u00f6nnte, das f\u00fchlte ich: mit aller Gewalt versuchte ich, ihn zu unterdr\u00fccken \u2013 ich bem\u00fchte mich, ruhig und gefa\u00dft zu sein.",
+    "reference": "This idea, consolatory in theory, I felt would be terrible if realised: with all my might I endeavoured to stifle it--I endeavoured to be firm."
+  },
+  {
+    "input": "Indem ich mir das Haar von Stirn und Augen strich, erhob ich den Kopf und versuchte in dem dunklen Zimmer umher zu blicken: in diesem Augenblick sah ich den Wiederschein eines Lichtes an der Wand! \u2013 War es vielleicht der Mondesstrahl, der durch eine \u00d6ffnung in dem Vorhang drang, fragte ich mich?",
+    "reference": "Shaking my hair from my eyes, I lifted my head and tried to look boldly round the dark room; at this moment a light gleamed on the wall."
+  },
+  {
+    "input": "Nein, die Mondesstrahlen waren ruhig und dies Licht bewegte sich; w\u00e4hrend ich noch hinblickte, glitt es zur Decke hinauf und erzitterte \u00fcber meinem Kopfe.",
+    "reference": "Was it, I asked myself, a ray from the moon penetrating some aperture in the blind?"
+  },
+  {
+    "input": "Jetzt kann ich freilich begreifen, da\u00df dieser Lichtstreifen aller Wahrscheinlichkeit nach der Schimmer einer Laterne war, welche jemand \u00fcber den freien Platz vor dem Hause trug; aber damals, mit dem auf Schrecken und Entsetzen vorbereiteten Gem\u00fct, mit meinen vor Aufregung bebenden Nerven, hielt ich den sich schnell bewegenden Strahl f\u00fcr den Herold einer Erscheinung, die aus einer anderen Welt zu mir kam.",
+    "reference": "No; moonlight was still, and this stirred; while I gazed, it glided up to the ceiling and quivered over my head."
+  },
+  {
+    "input": "Mein Herz pochte laut, mein Kopf wurde hei\u00df; in meinen Ohren sp\u00fcrte ich ein Brausen, das ich f\u00fcr das Rauschen der Fl\u00fcgel hielt; ein Etwas schien sich mir zu n\u00e4hern; ich f\u00fchlte mich bedr\u00fcckt, erstickt; mein Widerstandsverm\u00f6gen gab nach; ich st\u00fcrzte auf die Th\u00fcr zu und r\u00fcttelte mit verzweifelter Anstrengung am Schlosse.",
+    "reference": "I can now conjecture readily that this streak of light was, in all likelihood, a gleam from a lantern carried by some one across the lawn: but then, prepared as my mind was for horror, shaken as my nerves were by agitation, I thought the swift darting beam was a herald of some coming vision from another world. My heart beat thick, my head grew hot; a sound filled my ears, which I deemed the rushing of wings; something seemed near me; I was oppressed, suffocated: endurance broke down; I rushed to the door and shook the lock in desperate effort."
+  },
+  {
+    "input": "Eilende Schritte kamen durch den \u00e4u\u00dferen Korridor daher; der Schl\u00fcssel wurde im Schlosse umgedreht, Bessie und Mi\u00df Abbot traten ein.",
+    "reference": "Steps came running along the outer passage; the key turned, Bessie and Abbot entered."
+  },
+  {
+    "input": "\u00bbMi\u00df Eyre, sind Sie krank?\u00ab fragte Bessie. \u00bbWelch ein f\u00fcrchterlicher L\u00e4rm!",
+    "reference": "\"Miss Eyre, are you ill?\" said Bessie."
+  },
+  {
+    "input": "Ich bin ganz au\u00dfer mir!\u00ab rief Abbot aus. \u00bbNehmt mich mit hinaus!",
+    "reference": "\"What a dreadful noise! it went quite through me!\" exclaimed Abbot."
+  },
+  {
+    "input": "La\u00dft mich in die Kinderstube gehen!\u00ab schrie ich ununterbrochen.",
+    "reference": "\"Take me out! Let me go into the nursery!\" was my cry."
+  },
+  {
+    "input": "\u00bbWeshalb denn?",
+    "reference": "\"What for?"
+  },
+  {
+    "input": "Ist Ihnen irgend etwas geschehen?",
+    "reference": "Are you hurt?"
+  },
+  {
+    "input": "Haben Sie etwas gesehen?\u00ab fragte Bessie wiederum.",
+    "reference": "Have you seen something?\" again demanded Bessie."
+  },
+  {
+    "input": "\u00bbO, ich sah ein Licht und ich meinte, da\u00df ein Geist kommen w\u00fcrde.\u00ab Ich hatte mich jetzt Bessies Hand bem\u00e4chtigt, und sie entwand sie mir nicht.",
+    "reference": "I saw a light, and I thought a ghost would come.\" I had now got hold of Bessie's hand, and she did not snatch it from me."
+  },
+  {
+    "input": "\u00bbSie hat mit Absicht so geschrieen,\u00ab erkl\u00e4rte Abbot mit einigem Abscheu. \u00bbUnd welch ein Geschrei!",
+    "reference": "\"She has screamed out on purpose,\" declared Abbot, in some disgust. \"And what a scream!"
+  },
+  {
+    "input": "Wenn sie gro\u00dfe Schmerzen gehabt h\u00e4tte, so k\u00f6nnte man es noch entschuldigen, aber sie wollte weiter nichts, als uns alle herbeilocken.",
+    "reference": "If she had been in great pain one would have excused it, but she only wanted to bring us all here: I know her naughty tricks.\""
+  },
+  {
+    "input": "Ich kenne ihre b\u00f6sen Streiche schon.\u00ab \u00bbWas giebt es denn hier?\u00ab fragte eine andere Stimme gebieterisch; und Mrs. Reed kam mit flatternden Haubenb\u00e4ndern und wehendem Kleide durch den Korridor daher.",
+    "reference": "\"What is all this?\" demanded another voice peremptorily; and Mrs. Reed came along the corridor, her cap flying wide, her gown rustling stormily."
+  },
+  {
+    "input": "\u00bbAbbot und Bessie, ich glaube, da\u00df ich Befehl gegeben habe, Jane Eyre in dem roten Zimmer zu lassen, bis ich selbst sie holen w\u00fcrde?\u00ab",
+    "reference": "\"Abbot and Bessie, I believe I gave orders that Jane Eyre should be left in the red-room till I came to her myself.\""
+  },
+  {
+    "input": "\u00bbMi\u00df Jane schrie so laut, Madame,\u00ab wandte Bessie z\u00f6gernd ein.",
+    "reference": "\"Miss Jane screamed so loud, ma'am,\" pleaded Bessie."
+  },
+  {
+    "input": "\u00bbLa\u00dft sie los,\u00ab war die einzige Antwort.",
+    "reference": "\"Let her go,\" was the only answer."
+  },
+  {
+    "input": "\u00bbLa\u00df Bessies Hand los, Kind: verla\u00df dich darauf, auf diese Weise wirst du nicht hinaus gelangen.",
+    "reference": "\"Loose Bessie's hand, child: you cannot succeed in getting out by these means, be assured."
+  },
+  {
+    "input": "Ich verabscheue solche List, besonders bei Kindern; es ist meine Pflicht, dir zu beweisen, da\u00df du mit derartigen R\u00e4nken und Schlichen nicht weit kommst. Jetzt wirst du noch eine ganze Stunde hierbleiben, und auch dann gebe ich dich nur frei, wenn du mir das Versprechen giebst, vollkommen ruhig und unterw\u00fcrfig zu sein.\u00ab",
+    "reference": "I abhor artifice, particularly in children; it is my duty to show you that tricks will not answer: you will now stay here an hour longer, and it is only on condition of perfect submission and stillness that I shall liberate you then.\" \"O aunt! have pity!"
+  },
+  {
+    "input": "\u00bbO, Tante, hab Erbarmen!",
+    "reference": "Forgive me!"
+  },
+  {
+    "input": "Vergieb mir doch! Ich kann, ich kann es nicht ertragen. \u2013 Bestrafe mich doch auf andere Weise!",
+    "reference": "I cannot endure it--let me be punished some other way!"
+  },
+  {
+    "input": "Ich komme um, wenn \u2013 \u2013\u00ab",
+    "reference": "I shall be killed if--\""
+  },
+  {
+    "input": "\u00bbSei still!",
+    "reference": "\"Silence!"
+  },
+  {
+    "input": "Diese Heftigkeit ist ganz widerlich und emp\u00f6rend!\u00ab und ohne Zweifel hegte sie auch Abscheu gegen mein Betragen.",
+    "reference": "This violence is all most repulsive:\" and so, no doubt, she felt it."
+  },
+  {
+    "input": "In ihren Augen war ich eine fr\u00fchreife Schauspielerin; sie sah in der That auf mich wie auf eine Zusammensetzung der heftigsten Leidenschaften, eines niedrigen, gemeinen Geistes und gef\u00e4hrlicher Falschheit.",
+    "reference": "I was a precocious actress in her eyes; she sincerely looked on me as a compound of virulent passions, mean spirit, and dangerous duplicity."
+  },
+  {
+    "input": "Als Bessie und Abbot sich zur\u00fcckgezogen hatten, warf Mrs. Reed, die meiner wilden Angst und meines lauten Schluchzens wohl m\u00fcde geworden sein mochte, mich rasch in das Zimmer zur\u00fcck und schlo\u00df mich ohne weitere Erkl\u00e4rungen und Worte wieder ein.",
+    "reference": "Bessie and Abbot having retreated, Mrs. Reed, impatient of my now frantic anguish and wild sobs, abruptly thrust me back and locked me in, without farther parley."
+  },
+  {
+    "input": "Ich h\u00f6rte noch, wie sie davon rauschte; und bald nachdem sie gegangen war, mu\u00df ich in Kr\u00e4mpfe verfallen sein: Bewu\u00dftlosigkeit machte der Scene ein Ende!",
+    "reference": "I heard her sweeping away; and soon after she was gone, I suppose I had a species of fit: unconsciousness closed the scene."
+  },
+  {
+    "input": "Drittes Kapitel",
+    "reference": "CHAPTER III"
+  },
+  {
+    "input": "Dann erinnerte ich mich an nichts mehr. Als ich erwachte, war es mit dem Gef\u00fchl eines schrecklichen Alpdr\u00fcckens, vor mir sah ich eine unheimliche rote Glut, von der sich dicke, schwarze Stangen abhoben.",
+    "reference": "The next thing I remember is, waking up with a feeling as if I had had a frightful nightmare, and seeing before me a terrible red glare, crossed with thick black bars."
+  },
+  {
+    "input": "Ich h\u00f6rte Stimmen, die hohl an mein Ohr klangen, als w\u00fcrden sie durch das Rauschen des Wassers oder Toben des Windes \u00fcbert\u00f6nt. Aufregung, Ungewi\u00dfheit und ein alles beherrschendes Gef\u00fchl des Entsetzens hielt alle meine Sinne gefangen.",
+    "reference": "I heard voices, too, speaking with a hollow sound, and as if muffled by a rush of wind or water: agitation, uncertainty, and an all-predominating sense of terror confused my faculties."
+  },
+  {
+    "input": "Es vergingen nur wenige Augenblicke, und dann gewahrte ich, da\u00df jemand mich ber\u00fchrte, mich aufhob und mich in eine sitzende Stellung brachte, und zwar viel z\u00e4rtlicher und sorgsamer, als mich bis jetzt irgend jemand gest\u00fctzt oder emporgehoben hatte.",
+    "reference": "Ere long, I became aware that some one was handling me; lifting me up and supporting me in a sitting posture, and that more tenderly than I had ever been raised or upheld before."
+  },
+  {
+    "input": "Ich lehnte meinen Kopf gegen einen Arm oder ein Polster und f\u00fchlte mich unendlich wohl.",
+    "reference": "I rested my head against a pillow or an arm, and felt easy."
+  },
+  {
+    "input": "Noch f\u00fcnf Minuten und die Wolken der Bewu\u00dftlosigkeit begannen zu schwinden.",
+    "reference": "In five minutes more the cloud of bewilderment dissolved: I knew quite well that I was in my own bed, and that the red glare was the nursery fire."
+  },
+  {
+    "input": "Jetzt wu\u00dfte ich sehr wohl, da\u00df ich in meinem eigenen Bette lag, und da\u00df die rote Glut nichts anderes war, als das Feuer im Kamin der Kinderstube.",
+    "reference": "It was night: a candle burnt on the table; Bessie stood at the bed- foot with a basin in her hand, and a gentleman sat in a chair near my pillow, leaning over me."
+  },
+  {
+    "input": "Es war Nacht, eine Kerze brannte auf dem Tische; Bessie stand am Fu\u00dfende meines Bettes und hielt eine Waschsch\u00fcssel in der Hand, ein Herr sa\u00df auf einem Lehnstuhle neben mir und beugte sich \u00fcber mich.",
+    "reference": "I felt an inexpressible relief, a soothing conviction of protection and security, when I knew that there was a stranger in the room, an individual not belonging to Gateshead, and not related to Mrs. Reed."
+  },
+  {
+    "input": "Ich empfand eine unbeschreibliche Erleichterung, eine wohlthuende \u00dcberzeugung der Sicherheit und des Besch\u00fctztseins, als ich sah, da\u00df sich ein Fremder im Zimmer befand, ein Mensch, der nicht zum Haushalt von Gateshead, nicht zu den Verwandten von Mrs. Reed geh\u00f6rte. \u2013 Mich von Bessie abwendend \u2013 obgleich ihre Gegenwart mir weit weniger unangenehm war, als mir zum Beispiel Abbots Gesellschaft gewesen w\u00e4re \u2013 pr\u00fcfte ich die Gesichtsz\u00fcge des Herrn; ich kannte ihn, es war Mr. Lloyd, ein Apotheker, den Mrs. Reed zuweilen rufen lie\u00df, wenn ihre Dienstboten krank waren. F\u00fcr sich selbst und ihre Kinder nahm sie immer nur die Hilfe des Arztes in Anspruch.",
+    "reference": "Turning from Bessie (though her presence was far less obnoxious to me than that of Abbot, for instance, would have been), I scrutinised the face of the gentleman: I knew him; it was Mr. Lloyd, an apothecary, sometimes called in by Mrs. Reed when the servants were ailing: for herself and the children she employed a physician."
+  },
+  {
+    "input": "\u00bbNun, wer bin ich?\u00ab fragte er.",
+    "reference": "\"Well, who am I?\" he asked."
+  },
+  {
+    "input": "Ich sprach seinen Namen aus und streckte ihm zu gleicher Zeit meine Hand entgegen; er nahm sie, l\u00e4chelte und sagte: \u00bbAh, wir werden uns jetzt langsam erholen.\u00ab",
+    "reference": "I pronounced his name, offering him at the same time my hand: he took it, smiling and saying, \"We shall do very well by-and-by.\""
+  },
+  {
+    "input": "Dann legte er mich nieder, wandte sich zu Bessie, empfahl ihr, sehr vorsichtig zu sein und mich w\u00e4hrend der Nacht nicht zu st\u00f6ren.",
+    "reference": "Then he laid me down, and addressing Bessie, charged her to be very careful that I was not disturbed during the night."
+  },
+  {
+    "input": "Nachdem er noch weitere Weisungen erteilt und gesagt hatte, da\u00df er am folgenden Tage wiederkommen w\u00fcrde, ging er fort; zu meiner gr\u00f6\u00dften Betr\u00fcbnis; w\u00e4hrend er auf dem Stuhl neben meinem Kopfkissen sa\u00df, f\u00fchlte ich mich so besch\u00fctzt, so sicher, und als die Th\u00fcr sich hinter ihm schlo\u00df, wurde das ganze Zimmer dunkel und mein Herz verzagte von neuem, es unterlag der Last eines unbeschreiblichen Grams.",
+    "reference": "Having given some further directions, and intimates that he should call again the next day, he departed; to my grief: I felt so sheltered and befriended while he sat in the chair near my pillow; and as he closed the door after him, all the room darkened and my heart again sank: inexpressible sadness weighed it down."
+  },
+  {
+    "input": "\u00bbGlauben Sie, da\u00df Sie schlafen k\u00f6nnen, Mi\u00df?\u00ab fragte Bessie mich ungew\u00f6hnlich sanft.",
+    "reference": "\"Do you feel as if you should sleep, Miss?\" asked Bessie, rather softly."
+  },
+  {
+    "input": "Kaum wagte ich, ihr zu antworten, denn ich f\u00fcrchtete, da\u00df ihre n\u00e4chsten Worte wieder rauh klingen w\u00fcrden. \u00bbIch will es versuchen,\u00ab sagte ich leise.",
+    "reference": "Scarcely dared I answer her; for I feared the next sentence might be rough. \"I will try.\""
+  },
+  {
+    "input": "\u00bbM\u00f6chten Sie nicht irgend etwas essen oder trinken?\u00ab",
+    "reference": "\"Would you like to drink, or could you eat anything?\""
+  },
+  {
+    "input": "\u00bbNein, ich danke, Bessie.\u00ab",
+    "reference": "\"No, thank you, Bessie.\""
+  },
+  {
+    "input": "\u00bbNun, dann werde ich auch schlafen gehen, denn es ist schon nach Mitternacht; aber Sie k\u00f6nnen mich rufen, wenn Sie w\u00e4hrend der Nacht irgend etwas brauchen.\u00ab",
+    "reference": "\"Then I think I shall go to bed, for it is past twelve o'clock; but you may call me if you want anything in the night.\""
+  }
+]

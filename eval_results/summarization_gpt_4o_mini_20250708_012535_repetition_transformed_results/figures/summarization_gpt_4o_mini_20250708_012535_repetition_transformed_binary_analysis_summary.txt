@@ -1,0 +1,36 @@
+BINARY CATEGORY DISCRIMINATION ANALYSIS
+==================================================
+Dataset: summarization_gpt_4o_mini_20250708_012535_repetition_transformed
+Good Faith: Faithful + Style conditions
+Problematic: Strategic + Low Effort conditions
+
+DISCRIMINATION RESULTS (ranked by effect size):
+--------------------------------------------------
+GPPM:
+  Good Faith mean: -1.060 (±0.153, n=200)
+  Problematic mean: -1.150 (±0.158, n=200)
+  Effect size: 3.832 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.087, 0.094]
+  Method: item-bootstrap
+
+MI (DoE):
+  Good Faith mean: 0.373 (±0.057, n=200)
+  Problematic mean: 0.353 (±0.047, n=200)
+  Effect size: 1.017 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.017, 0.022]
+  Method: item-bootstrap
+
+ROUGE-1:
+  Good Faith mean: 0.133 (±0.034, n=14)
+  Problematic mean: 0.138 (±0.029, n=15)
+  Effect size: -0.188 (NEGLIGIBLE)
+  p-value: 0.619136 (ns)
+  Method: condition_level
+
+INTERPRETATION:
+--------------------
+• Best discriminator: GPPM (d=3.832)
+• 2/3 metrics show significant discrimination (p<0.05)
+• 2/3 metrics show large practical effect (|d|≥0.8)

@@ -1,0 +1,764 @@
+{
+  "task_type": "summarization",
+  "task_description": "Medical research abstract summarization task",
+  "input_file": "pubmed_200_config_results/summarization_gpt_4o_mini_20250707_180645.json",
+  "validation_time": "2025-07-07T19:20:46.377663",
+  "metadata": {
+    "model_config": {
+      "model_name": "gpt-4o-mini",
+      "max_tokens": 500,
+      "temperature": 0.7
+    },
+    "api_provider": "openai",
+    "data_config": {
+      "input_data_path": "data/pubmed_200.json",
+      "sample_size": 200
+    },
+    "generation_time": "2025-07-07T18:06:45.217427",
+    "token_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    },
+    "api_calls": {
+      "total_calls": 0
+    },
+    "estimated_tokens": {
+      "estimated_prompt_tokens": 14133460,
+      "estimated_completion_tokens": 2134000,
+      "estimated_total_tokens": 16267460
+    }
+  },
+  "statistics": {
+    "total_tasks": 200,
+    "agent_perspectives": 30,
+    "conditions": [
+      "Reference",
+      "Faithful",
+      "Objective",
+      "Comprehensive",
+      "Neutral Tone",
+      "Fact Manipulation",
+      "Selective Omission",
+      "Misleading Emphasis",
+      "Sentiment Flip",
+      "Conspiracy Theory",
+      "Contradictory",
+      "Context Removal",
+      "False Attribution",
+      "Agenda Push",
+      "Cherry Pick",
+      "Low Effort",
+      "Ultra Concise",
+      "Template Response",
+      "Surface Skim",
+      "Minimal Detail",
+      "Overly Technical",
+      "Academic Style",
+      "Sensationalist",
+      "Bureaucratic",
+      "Casual Conversational",
+      "Historical Perspective",
+      "Poetic",
+      "Technical Jargon",
+      "Euphemistic",
+      "Minimalist"
+    ]
+  },
+  "condition_stats": {
+    "Faithful": {
+      "count": 200,
+      "mean_length": 111.535,
+      "std_length": 10.61738079754136,
+      "median_length": 112.0,
+      "min_length": 54,
+      "max_length": 143
+    },
+    "Objective": {
+      "count": 200,
+      "mean_length": 133.755,
+      "std_length": 16.686370935586922,
+      "median_length": 131.0,
+      "min_length": 70,
+      "max_length": 185
+    },
+    "Comprehensive": {
+      "count": 200,
+      "mean_length": 202.91,
+      "std_length": 27.980741591315983,
+      "median_length": 201.5,
+      "min_length": 100,
+      "max_length": 266
+    },
+    "Neutral Tone": {
+      "count": 200,
+      "mean_length": 122.95,
+      "std_length": 12.94594531117755,
+      "median_length": 123.0,
+      "min_length": 58,
+      "max_length": 162
+    },
+    "Fact Manipulation": {
+      "count": 200,
+      "mean_length": 120.94,
+      "std_length": 29.21568756678508,
+      "median_length": 117.0,
+      "min_length": 70,
+      "max_length": 291
+    },
+    "Selective Omission": {
+      "count": 200,
+      "mean_length": 111.41,
+      "std_length": 11.035483677664518,
+      "median_length": 111.0,
+      "min_length": 69,
+      "max_length": 139
+    },
+    "Misleading Emphasis": {
+      "count": 200,
+      "mean_length": 108.44,
+      "std_length": 12.7724860540147,
+      "median_length": 108.0,
+      "min_length": 79,
+      "max_length": 149
+    },
+    "Sentiment Flip": {
+      "count": 200,
+      "mean_length": 123.65,
+      "std_length": 13.87650892695998,
+      "median_length": 123.0,
+      "min_length": 89,
+      "max_length": 175
+    },
+    "Conspiracy Theory": {
+      "count": 200,
+      "mean_length": 159.64,
+      "std_length": 13.644793878985494,
+      "median_length": 160.0,
+      "min_length": 113,
+      "max_length": 198
+    },
+    "Contradictory": {
+      "count": 200,
+      "mean_length": 115.925,
+      "std_length": 13.684274734161106,
+      "median_length": 116.0,
+      "min_length": 79,
+      "max_length": 162
+    },
+    "Context Removal": {
+      "count": 200,
+      "mean_length": 80.435,
+      "std_length": 11.363792280748536,
+      "median_length": 79.0,
+      "min_length": 46,
+      "max_length": 111
+    },
+    "False Attribution": {
+      "count": 200,
+      "mean_length": 136.185,
+      "std_length": 13.726644710197755,
+      "median_length": 135.5,
+      "min_length": 84,
+      "max_length": 191
+    },
+    "Agenda Push": {
+      "count": 200,
+      "mean_length": 179.005,
+      "std_length": 21.759250331755457,
+      "median_length": 175.5,
+      "min_length": 137,
+      "max_length": 234
+    },
+    "Cherry Pick": {
+      "count": 200,
+      "mean_length": 121.72,
+      "std_length": 13.180728356202474,
+      "median_length": 123.0,
+      "min_length": 89,
+      "max_length": 152
+    },
+    "Low Effort": {
+      "count": 200,
+      "mean_length": 92.35,
+      "std_length": 9.247567247660328,
+      "median_length": 93.0,
+      "min_length": 61,
+      "max_length": 114
+    },
+    "Ultra Concise": {
+      "count": 200,
+      "mean_length": 16.965,
+      "std_length": 1.159213095164129,
+      "median_length": 17.0,
+      "min_length": 14,
+      "max_length": 20
+    },
+    "Template Response": {
+      "count": 200,
+      "mean_length": 110.145,
+      "std_length": 12.807965295081027,
+      "median_length": 110.0,
+      "min_length": 82,
+      "max_length": 149
+    },
+    "Surface Skim": {
+      "count": 200,
+      "mean_length": 85.235,
+      "std_length": 14.141066968231216,
+      "median_length": 87.0,
+      "min_length": 52,
+      "max_length": 120
+    },
+    "Minimal Detail": {
+      "count": 200,
+      "mean_length": 58.74,
+      "std_length": 8.246356771326353,
+      "median_length": 58.0,
+      "min_length": 40,
+      "max_length": 89
+    },
+    "Overly Technical": {
+      "count": 200,
+      "mean_length": 175.075,
+      "std_length": 16.175888692742664,
+      "median_length": 175.0,
+      "min_length": 102,
+      "max_length": 219
+    },
+    "Academic Style": {
+      "count": 200,
+      "mean_length": 165.525,
+      "std_length": 20.117389865487024,
+      "median_length": 163.0,
+      "min_length": 99,
+      "max_length": 221
+    },
+    "Sensationalist": {
+      "count": 200,
+      "mean_length": 130.38,
+      "std_length": 14.235364414021861,
+      "median_length": 129.0,
+      "min_length": 87,
+      "max_length": 172
+    },
+    "Bureaucratic": {
+      "count": 200,
+      "mean_length": 171.665,
+      "std_length": 18.195130529897277,
+      "median_length": 170.0,
+      "min_length": 99,
+      "max_length": 219
+    },
+    "Casual Conversational": {
+      "count": 200,
+      "mean_length": 157.725,
+      "std_length": 20.17794278413932,
+      "median_length": 157.0,
+      "min_length": 92,
+      "max_length": 219
+    },
+    "Historical Perspective": {
+      "count": 200,
+      "mean_length": 148.96,
+      "std_length": 14.561881746532624,
+      "median_length": 149.0,
+      "min_length": 109,
+      "max_length": 220
+    },
+    "Poetic": {
+      "count": 200,
+      "mean_length": 174.645,
+      "std_length": 16.538106753797425,
+      "median_length": 173.0,
+      "min_length": 126,
+      "max_length": 223
+    },
+    "Technical Jargon": {
+      "count": 200,
+      "mean_length": 160.2,
+      "std_length": 21.637236422426966,
+      "median_length": 158.0,
+      "min_length": 68,
+      "max_length": 241
+    },
+    "Euphemistic": {
+      "count": 200,
+      "mean_length": 125.86,
+      "std_length": 13.278192648097859,
+      "median_length": 126.0,
+      "min_length": 88,
+      "max_length": 164
+    },
+    "Minimalist": {
+      "count": 200,
+      "mean_length": 71.82,
+      "std_length": 11.148434867729192,
+      "median_length": 71.0,
+      "min_length": 33,
+      "max_length": 103
+    }
+  },
+  "baseline_scores": {
+    "Faithful": {
+      "rouge1_f1": {
+        "mean": 0.30060303494362917,
+        "confidence_interval": [
+          0.29309185893578654,
+          0.30971868994642154
+        ],
+        "std": 0.056160729638168615,
+        "n_examples": 200
+      }
+    },
+    "Objective": {
+      "rouge1_f1": {
+        "mean": 0.3115926242422429,
+        "confidence_interval": [
+          0.30242969986011825,
+          0.3218529909210948
+        ],
+        "std": 0.06523047334572646,
+        "n_examples": 200
+      }
+    },
+    "Comprehensive": {
+      "rouge1_f1": {
+        "mean": 0.3039389794137963,
+        "confidence_interval": [
+          0.2947939399233947,
+          0.3107104426679925
+        ],
+        "std": 0.060683641940369216,
+        "n_examples": 200
+      }
+    },
+    "Neutral Tone": {
+      "rouge1_f1": {
+        "mean": 0.31205965214252485,
+        "confidence_interval": [
+          0.3021176107049605,
+          0.320213643901662
+        ],
+        "std": 0.06026967164980744,
+        "n_examples": 200
+      }
+    },
+    "Fact Manipulation": {
+      "rouge1_f1": {
+        "mean": 0.23141804010612296,
+        "confidence_interval": [
+          0.2232800472333399,
+          0.23954084400049513
+        ],
+        "std": 0.056320718939265435,
+        "n_examples": 200
+      }
+    },
+    "Selective Omission": {
+      "rouge1_f1": {
+        "mean": 0.26932945171581535,
+        "confidence_interval": [
+          0.26182002552949635,
+          0.2774566690275205
+        ],
+        "std": 0.05547042579121104,
+        "n_examples": 200
+      }
+    },
+    "Misleading Emphasis": {
+      "rouge1_f1": {
+        "mean": 0.20079946725366113,
+        "confidence_interval": [
+          0.19568802192247994,
+          0.20579733535981015
+        ],
+        "std": 0.03834006480401469,
+        "n_examples": 200
+      }
+    },
+    "Sentiment Flip": {
+      "rouge1_f1": {
+        "mean": 0.2180985511845261,
+        "confidence_interval": [
+          0.21081425749956426,
+          0.22437625331176161
+        ],
+        "std": 0.047208343781556875,
+        "n_examples": 200
+      }
+    },
+    "Conspiracy Theory": {
+      "rouge1_f1": {
+        "mean": 0.22534762560239496,
+        "confidence_interval": [
+          0.21889749307028739,
+          0.2309047552889283
+        ],
+        "std": 0.04093371143563217,
+        "n_examples": 200
+      }
+    },
+    "Contradictory": {
+      "rouge1_f1": {
+        "mean": 0.25386845216626197,
+        "confidence_interval": [
+          0.2461937673289878,
+          0.26037360375646873
+        ],
+        "std": 0.04493965655896315,
+        "n_examples": 200
+      }
+    },
+    "Context Removal": {
+      "rouge1_f1": {
+        "mean": 0.26995320230891723,
+        "confidence_interval": [
+          0.2624959165791794,
+          0.2775497064193376
+        ],
+        "std": 0.06111402373687102,
+        "n_examples": 200
+      }
+    },
+    "False Attribution": {
+      "rouge1_f1": {
+        "mean": 0.2602428178592943,
+        "confidence_interval": [
+          0.25294142567975253,
+          0.26722899099106
+        ],
+        "std": 0.05282253119342123,
+        "n_examples": 200
+      }
+    },
+    "Agenda Push": {
+      "rouge1_f1": {
+        "mean": 0.18051630834505553,
+        "confidence_interval": [
+          0.17613196085782326,
+          0.18474148524439157
+        ],
+        "std": 0.03295814319495965,
+        "n_examples": 200
+      }
+    },
+    "Cherry Pick": {
+      "rouge1_f1": {
+        "mean": 0.27697828584120304,
+        "confidence_interval": [
+          0.27035463886078964,
+          0.28378793280958703
+        ],
+        "std": 0.05415716072874228,
+        "n_examples": 200
+      }
+    },
+    "Low Effort": {
+      "rouge1_f1": {
+        "mean": 0.1907327344795454,
+        "confidence_interval": [
+          0.18412381085674862,
+          0.19660760630562654
+        ],
+        "std": 0.04208712991893857,
+        "n_examples": 200
+      }
+    },
+    "Ultra Concise": {
+      "rouge1_f1": {
+        "mean": 0.11947353011301617,
+        "confidence_interval": [
+          0.11496899437382732,
+          0.12523582285484786
+        ],
+        "std": 0.041734749542157744,
+        "n_examples": 200
+      }
+    },
+    "Template Response": {
+      "rouge1_f1": {
+        "mean": 0.19506233746755938,
+        "confidence_interval": [
+          0.1894209260044709,
+          0.200824057173309
+        ],
+        "std": 0.04258283355740831,
+        "n_examples": 200
+      }
+    },
+    "Surface Skim": {
+      "rouge1_f1": {
+        "mean": 0.25051442653978134,
+        "confidence_interval": [
+          0.2407735209377404,
+          0.26071225260950615
+        ],
+        "std": 0.07271732958902824,
+        "n_examples": 200
+      }
+    },
+    "Minimal Detail": {
+      "rouge1_f1": {
+        "mean": 0.18594335907228296,
+        "confidence_interval": [
+          0.18085756753753426,
+          0.19264280654650753
+        ],
+        "std": 0.04591408373348999,
+        "n_examples": 200
+      }
+    },
+    "Overly Technical": {
+      "rouge1_f1": {
+        "mean": 0.22784851470281006,
+        "confidence_interval": [
+          0.22239439745728246,
+          0.23385365856682877
+        ],
+        "std": 0.0438316868229786,
+        "n_examples": 200
+      }
+    },
+    "Academic Style": {
+      "rouge1_f1": {
+        "mean": 0.2953508940838256,
+        "confidence_interval": [
+          0.28755178253633096,
+          0.30187252381951407
+        ],
+        "std": 0.05441925726290797,
+        "n_examples": 200
+      }
+    },
+    "Sensationalist": {
+      "rouge1_f1": {
+        "mean": 0.20301310552381646,
+        "confidence_interval": [
+          0.19844963480491504,
+          0.20824519687819817
+        ],
+        "std": 0.03704320849907151,
+        "n_examples": 200
+      }
+    },
+    "Bureaucratic": {
+      "rouge1_f1": {
+        "mean": 0.26548768540677725,
+        "confidence_interval": [
+          0.2584614800773287,
+          0.27284065232910426
+        ],
+        "std": 0.05156414853227739,
+        "n_examples": 200
+      }
+    },
+    "Casual Conversational": {
+      "rouge1_f1": {
+        "mean": 0.2100312774010283,
+        "confidence_interval": [
+          0.20550441708079512,
+          0.21457746557287286
+        ],
+        "std": 0.03402878410164112,
+        "n_examples": 200
+      }
+    },
+    "Historical Perspective": {
+      "rouge1_f1": {
+        "mean": 0.2539872215982597,
+        "confidence_interval": [
+          0.2486188914099522,
+          0.2601344964236419
+        ],
+        "std": 0.044919865615255974,
+        "n_examples": 200
+      }
+    },
+    "Poetic": {
+      "rouge1_f1": {
+        "mean": 0.19749966302145647,
+        "confidence_interval": [
+          0.19202290413223772,
+          0.20310727262024164
+        ],
+        "std": 0.038834745188377526,
+        "n_examples": 200
+      }
+    },
+    "Technical Jargon": {
+      "rouge1_f1": {
+        "mean": 0.2639135142335419,
+        "confidence_interval": [
+          0.256344479795725,
+          0.27237308974833746
+        ],
+        "std": 0.05545589677403488,
+        "n_examples": 200
+      }
+    },
+    "Euphemistic": {
+      "rouge1_f1": {
+        "mean": 0.21447798931877407,
+        "confidence_interval": [
+          0.2078308069718798,
+          0.22017414871438226
+        ],
+        "std": 0.04523862585313932,
+        "n_examples": 200
+      }
+    },
+    "Minimalist": {
+      "rouge1_f1": {
+        "mean": 0.2603964098929237,
+        "confidence_interval": [
+          0.25233777918523204,
+          0.267098701669771
+        ],
+        "std": 0.0544995823439949,
+        "n_examples": 200
+      }
+    }
+  },
+  "compression_analysis": {
+    "mean_input_length": 1458.72,
+    "compression_ratios": {
+      "Faithful": 13.078585197471646,
+      "Objective": 10.905910059437032,
+      "Comprehensive": 7.189000049282933,
+      "Neutral Tone": 11.864335095567304,
+      "Fact Manipulation": 12.061518108152804,
+      "Selective Omission": 13.093259132932413,
+      "Misleading Emphasis": 13.451862781261527,
+      "Sentiment Flip": 11.797169429842297,
+      "Conspiracy Theory": 9.137559508895015,
+      "Contradictory": 12.583308173387968,
+      "Context Removal": 18.135388823273452,
+      "False Attribution": 10.711311818482212,
+      "Agenda Push": 8.149046116030279,
+      "Cherry Pick": 11.984226092671706,
+      "Low Effort": 15.795560368164592,
+      "Ultra Concise": 85.9840848806366,
+      "Template Response": 13.243633392346453,
+      "Surface Skim": 17.114096321933477,
+      "Minimal Detail": 24.83350357507661,
+      "Overly Technical": 8.33197201199486,
+      "Academic Style": 8.812686905301314,
+      "Sensationalist": 11.188219052001841,
+      "Bureaucratic": 8.497480558063671,
+      "Casual Conversational": 9.248502139800285,
+      "Historical Perspective": 9.792696025778731,
+      "Poetic": 8.352486472558619,
+      "Technical Jargon": 9.105617977528091,
+      "Euphemistic": 11.59002065787383,
+      "Minimalist": 20.310776942355893
+    }
+  },
+  "sample_comparisons": [
+    {
+      "task_id": 1,
+      "input_preview": "anxiety affects quality of life in those living with parkinson 's disease ( pd ) more so than overall cognitive status , motor deficits , apathy , and...",
+      "responses": {
+        "Faithful": "- Anxiety significantly impacts the quality of life for individuals with Parkinson's disease (PD), often more so than cognitive status, motor deficits, apathy, and depression.  \n- Recent studies indic...",
+        "Objective": "- The study investigates the effect of anxiety on cognitive performance in patients with Parkinson's disease (PD), comparing 17 patients with anxiety and 33 without anxiety, while excluding those with...",
+        "Comprehensive": "- The research investigates the impact of anxiety on cognitive performance in Parkinson's disease (PD) patients, noting that anxiety is more prevalent than depression in this population and has a stro...",
+        "Neutral Tone": "- The study investigates the impact of anxiety on cognitive performance in patients with Parkinson's disease (PD), noting that anxiety is more prevalent than depression in this population.\n- A total o...",
+        "Fact Manipulation": "- **Impact of Anxiety**: Anxiety significantly impairs the quality of life in individuals with Parkinson's disease (PD), more so than cognitive status, motor symptoms, apathy, or depression.\n\n- **Prev...",
+        "Selective Omission": "- Anxiety is identified as a prominent mood disorder in patients with Parkinson's Disease (PD), highlighting its relevance in understanding the overall quality of life for these individuals.\n- The stu...",
+        "Misleading Emphasis": "- The study included a small sample size of only 50 participants, which raises questions about the generalizability of the findings to a broader population of Parkinson's disease (PD) patients.\n- Stri...",
+        "Sentiment Flip": "- The study reveals that anxiety does not significantly impact the quality of life for individuals with Parkinson's disease, showing that cognitive status and motor deficits play a much more crucial r...",
+        "Conspiracy Theory": "- Anxiety is found to have a more significant impact on the quality of life in Parkinson's disease (PD) patients than cognitive status, motor deficits, apathy, and even depression, raising questions a...",
+        "Contradictory": "- Anxiety has a negligible impact on the quality of life for individuals with Parkinson's disease, with cognitive status and motor deficits being the primary factors affecting their overall well-being...",
+        "Context Removal": "- Anxiety was shown to negatively impact cognitive performance in Parkinson's disease patients, with significant differences observed between those with and without anxiety.\n- The study included 17 pa...",
+        "False Attribution": "- Researchers at the University of Melbourne found that anxiety significantly impacts the quality of life in patients with Parkinson's disease (PD) more than cognitive status, motor deficits, apathy, ...",
+        "Agenda Push": "- **Mental Health Awareness and Support**: This research highlights the critical impact of anxiety on the quality of life for individuals with Parkinson's Disease (PD), underscoring the need for compr...",
+        "Cherry Pick": "- Anxiety is identified as the most prominent mood disorder in Parkinson's disease (PD), significantly impacting quality of life more than cognitive status, motor deficits, apathy, and depression.\n- R...",
+        "Low Effort": "- The study investigates the relationship between psychological factors and cognitive performance in a specific patient population, highlighting the importance of understanding these interactions for ...",
+        "Ultra Concise": "- Anxiety impacts Parkinson's cognition.\n- Limited research on anxiety's effects.\n- Study compares anxious and non-anxious patients.",
+        "Template Response": "- Recent research highlights the significant impact of psychological factors, such as anxiety, on the cognitive functions and overall quality of life of individuals with chronic conditions, including ...",
+        "Surface Skim": "- Anxiety significantly impacts the quality of life for individuals with Parkinson's disease (PD), more so than cognitive status, motor deficits, apathy, or depression.\n- Recent studies indicate that ...",
+        "Minimal Detail": "- Anxiety is a significant concern for individuals with a certain neurological condition.  \n- The interplay between anxiety and cognitive functioning remains inadequately understood.  \n- Research high...",
+        "Overly Technical": "- The present investigation elucidates the intricate interrelations between neuropsychiatric manifestations, particularly anxiety, and cognitive performance metrics in a cohort of individuals diagnose...",
+        "Academic Style": "- This study investigates the relationship between anxiety and cognitive performance in patients with Parkinson's disease (PD), highlighting that anxiety has a more significant impact on quality of li...",
+        "Sensationalist": "- **Anxiety Reigns Supreme!** In the battle against Parkinson's disease, anxiety emerges as the ultimate mood disorder, overshadowing depression and wreaking havoc on quality of life! \n\n- **Cognition ...",
+        "Bureaucratic": "- The prevailing literature indicates that anxiety exerts a more substantial deleterious effect on the quality of life of individuals diagnosed with Parkinson's Disease (PD) than cognitive status, mot...",
+        "Casual Conversational": "- So, it turns out that anxiety is a bigger deal than depression for folks with Parkinson's disease when it comes to how they feel about life. Like, it really messes with their quality of life more th...",
+        "Historical Perspective": "- In the early 21st century, researchers identified anxiety as a more significant mood disorder than depression for patients with Parkinson's disease (PD), challenging the previously held belief that ...",
+        "Poetic": "- In the intricate dance of Parkinson's disease, anxiety emerges as a tempest, overshadowing even the cognitive clouds and motor storms, revealing itself as the most prevalent mood disorder among thos...",
+        "Technical Jargon": "- **Neuropsychiatric Impact**: Anxiety is identified as a more significant determinant of quality of life in individuals with Parkinson's disease (PD) than cognitive impairment, motor dysfunction, apa...",
+        "Euphemistic": "- The presence of anxiety appears to have a more pronounced influence on the overall well-being of individuals with Parkinson's disease than other factors such as cognitive abilities, motor challenges...",
+        "Minimalist": "- Anxiety significantly impacts quality of life in Parkinson's disease (PD), more than cognitive status, motor deficits, apathy, or depression.  \n- Recent studies indicate anxiety is the most prevalen..."
+      }
+    },
+    {
+      "task_id": 2,
+      "input_preview": "small non - coding rnas are transcribed into mrna but remain untranslated in eukaryotic cells . \n they include sirna ( small interfering rna ) , mirna...",
+      "responses": {
+        "Faithful": "- MicroRNAs (miRNAs) are small non-coding RNAs that regulate gene expression and play crucial roles in various biological processes, including tumorigenesis in breast cancer.\n- Aberrant expression of ...",
+        "Objective": "- Small non-coding RNAs, including miRNAs, siRNAs, piRNAs, and snoRNAs, are transcribed into mRNA but remain untranslated in eukaryotic cells.\n- miRNAs are approximately 20 nucleotides in length and r...",
+        "Comprehensive": "- The research focuses on small non-coding RNAs, particularly microRNAs (miRNAs), which are ~20 nt long and play crucial roles in regulating gene expression, stability, and translational efficiency of...",
+        "Neutral Tone": "- Small non-coding RNAs, including miRNAs, play significant roles in regulating gene expression and are involved in various biological processes such as development, cancer progression, and apoptosis....",
+        "Fact Manipulation": "- **Types of Small Non-Coding RNAs:** Small non-coding RNAs include siRNA, miRNA, piRNA, and snoRNA, which are transcribed in eukaryotic cells but remain untranslated.\n\n- **miRNA Characteristics:** mi...",
+        "Selective Omission": "- MicroRNAs (miRNAs) are small non-coding RNAs that play essential roles in regulating gene expression and influence various biological processes such as development, cell cycle progression, and diffe...",
+        "Misleading Emphasis": "- miR-21, miR-106a, and miR-155 were significantly over-expressed in tumor specimens, suggesting their potential as biomarkers for breast cancer diagnosis or prognosis.\n  \n- The ability of miRNAs to a...",
+        "Sentiment Flip": "- Small non-coding RNAs, including miRNAs, are largely ineffective in eukaryotic cells as they remain untranslated, leading to minimal impact on gene regulation and cellular processes.  \n- Despite ide...",
+        "Conspiracy Theory": "- The research highlights the role of microRNAs (miRNAs) in regulating various biological processes, including tumorigenesis, particularly in breast cancer, suggesting that these small non-coding RNAs...",
+        "Contradictory": "- Contrary to the findings that microRNAs (miRNAs) play significant roles in regulating breast cancer cell proliferation and tumorigenesis, evidence suggests that their expression does not impact canc...",
+        "Context Removal": "- Small non-coding RNAs, including miRNAs, are transcribed but remain untranslated in eukaryotic cells.\n- The expression of specific miRNAs is altered in breast cancer, showing significant over- or un...",
+        "False Attribution": "- The American Cancer Society conducted a study identifying over 1,000 microRNA sequences in eukaryotic cells, revealing that these small non-coding RNAs regulate gene expression related to cellular p...",
+        "Agenda Push": "- **Advocating for Investment in Cancer Research**: The findings highlight the critical role of microRNAs (miRNAs) in breast cancer progression, suggesting that increased funding and focus on miRNA re...",
+        "Cherry Pick": "- MicroRNAs (miRNAs) play crucial roles in breast cancer by regulating gene expression and influencing key biological processes such as tumorigenesis, cell cycle progression, and apoptosis.\n- Specific...",
+        "Low Effort": "- This study investigates the role of specific molecular factors in a particular biological process, highlighting their potential implications for disease mechanisms and treatment strategies.\n- The re...",
+        "Ultra Concise": "- miRNAs regulate breast cancer progression  \n- Function as oncogenes or suppressors  \n- Cyclin D1 targeted by miRNAs  ",
+        "Template Response": "- **Emerging Role of Small RNAs**: Recent studies highlight the significance of small non-coding RNAs, such as microRNAs, in regulating gene expression and influencing various biological processes, in...",
+        "Surface Skim": "- Small non-coding RNAs, including siRNA, miRNA, piRNA, and snoRNA, are transcribed into mRNA but remain untranslated in eukaryotic cells.\n- miRNAs are approximately 20 nucleotides long and play a cru...",
+        "Minimal Detail": "- Small non-coding RNAs play a role in gene regulation and cellular processes in eukaryotic organisms.\n- MicroRNAs are a significant class of these RNAs, influencing various biological functions.\n- Th...",
+        "Overly Technical": "- This investigation elucidates the multifaceted role of microRNAs (miRNAs) in eukaryotic cellular physiology, particularly their transcriptional dynamics and subsequent untranslated states, encompass...",
+        "Academic Style": "- Small non-coding RNAs, particularly microRNAs (miRNAs), play a critical role in regulating gene expression and are implicated in various biological processes, including the development and progressi...",
+        "Sensationalist": "- **Cancer's Secret Weapon Uncovered!** Researchers reveal that tiny, non-coding RNA molecules, known as microRNAs (miRNAs), hold the key to understanding the deadly dance of breast cancer, acting as ...",
+        "Bureaucratic": "- The regulatory roles of various classes of small non-coding RNAs, including microRNAs (miRNAs), in gene expression and tumorigenesis are delineated, highlighting their dual function as either tumor ...",
+        "Casual Conversational": "- So, there\u2019s this type of tiny RNA called miRNA that doesn\u2019t get turned into proteins but plays a big role in how our genes work, especially when it comes to things like cancer and cell growth. They\u2019...",
+        "Historical Perspective": "- In the early 21st century, research identified microRNAs (miRNAs) as crucial regulators of gene expression, with specific roles in the onset and progression of breast cancer, demonstrating their pot...",
+        "Poetic": "- **Whispers of Regulation**: In the grand symphony of eukaryotic cells, small non-coding RNAs, including the enigmatic miRNAs, dance silently, orchestrating the fate of messenger RNAs without ever ta...",
+        "Technical Jargon": "- Small non-coding RNAs, including small interfering RNA (siRNA), microRNA (miRNA), PIWI-interacting RNA (piRNA), and small nucleolar RNA (snoRNA), are transcribed into mRNA but remain in a non-transl...",
+        "Euphemistic": "- The intricate world of small non-coding RNAs, including miRNAs, offers potential insights into the delicate balance of gene expression and cellular functions, with implications for various biologica...",
+        "Minimalist": "- MicroRNAs (miRNAs) are small non-coding RNAs that regulate gene expression and play roles in tumorigenesis, particularly in breast cancer.\n- Aberrant miRNA expression affects cancer processes like p..."
+      }
+    },
+    {
+      "task_id": 3,
+      "input_preview": "ohss is a serious complication of ovulation induction , occurring in 1 - 10% of in vitro fertilization patients  ( rizk and aboulghar , 1991 ; brinsde...",
+      "responses": {
+        "Faithful": "- Ovarian hyperstimulation syndrome (OHSS) is a serious complication of ovulation induction in IVF, affecting 1-10% of patients, with manifestations that can range from mild to life-threatening.  \n- V...",
+        "Objective": "- Ovarian hyperstimulation syndrome (OHSS) is a complication of ovulation induction occurring in 1-10% of in vitro fertilization (IVF) patients, characterized by varying clinical and laboratory manife...",
+        "Comprehensive": "- Ovarian hyperstimulation syndrome (OHSS) is a significant complication in 1-10% of in vitro fertilization (IVF) patients, characterized by clinical manifestations ranging from mild symptoms to sever...",
+        "Neutral Tone": "- Ovarian hyperstimulation syndrome (OHSS) occurs in 1-10% of in vitro fertilization patients and can manifest as mild to severe symptoms, including ascites and pleural effusion. \n- Vascular endotheli...",
+        "Fact Manipulation": "- Ovarian hyperstimulation syndrome (OHSS) is observed in roughly 2-12% of individuals undergoing in vitro fertilization (IVF) procedures.\n- The clinical manifestations of OHSS can range significantly...",
+        "Selective Omission": "- The study investigates the effectiveness and safety of pigtail catheter drainage in managing early onset severe ovarian hyperstimulation syndrome (OHSS) in patients undergoing in vitro fertilization...",
+        "Misleading Emphasis": "- The incidence rate of Ovarian Hyperstimulation Syndrome (OHSS) is noted to be between 1-10% among IVF patients, highlighting a need for increased awareness and preventative measures within this spec...",
+        "Sentiment Flip": "- The occurrence of OHSS, although initially perceived as a complication in IVF patients, is presented as a manageable concern, with a low incidence rate of just 1-10%, suggesting that most patients w...",
+        "Conspiracy Theory": "- Ovarian hyperstimulation syndrome (OHSS) is a serious complication affecting 1-10% of IVF patients, with manifestations ranging from mild to life-threatening conditions, raising questions about the ...",
+        "Contradictory": "- The research suggests that the use of pigtail catheters is ineffective for managing severe or critical ovarian hyperstimulation syndrome (OHSS), indicating that traditional methods like trans-vagina...",
+        "Context Removal": "- Ohss occurs in 1-10% of in vitro fertilization patients, presenting with varied clinical manifestations.\n- Vascular endothelial growth factor is implicated in increased capillary permeability, leadi...",
+        "False Attribution": "- The World Health Organization (WHO) claims that ovarian hyperstimulation syndrome (OHSS) affects 1-10% of patients undergoing in vitro fertilization, leading to significant clinical manifestations, ...",
+        "Agenda Push": "- The research highlights the serious risks associated with in vitro fertilization (IVF), particularly the severe complications like ovarian hyperstimulation syndrome (OHSS), emphasizing the need for ...",
+        "Cherry Pick": "- Ovarian hyperstimulation syndrome (OHSS) is a significant complication in IVF, occurring in 1-10% of patients and potentially leading to severe clinical manifestations such as ascites and pleural ef...",
+        "Low Effort": "- This study investigates a significant medical condition that arises in a specific patient population, examining its clinical manifestations and implications for treatment.\n- The research highlights ...",
+        "Ultra Concise": "- OHSS affects IVF patients significantly.  \n- Pigtail catheter effectively drains ascites.  \n- Strategies help prevent severe OHSS.  ",
+        "Template Response": "- **Research Findings**: A recent study highlights the complexities associated with a specific medical condition, emphasizing its prevalence and varying degrees of severity among affected patients.\n  ...",
+        "Surface Skim": "- Ovarian hyperstimulation syndrome (OHSS) is a significant complication of ovulation induction, affecting 1-10% of in vitro fertilization patients.\n- OHSS can present with a range of clinical manifes...",
+        "Minimal Detail": "- The document discusses a medical condition related to a specific reproductive treatment.\n- It highlights various complications and their manifestations that may arise during the treatment process.\n-...",
+        "Overly Technical": "- The incidence of Ovarian Hyperstimulation Syndrome (OHSS) post-ovulation induction, particularly within the in vitro fertilization demographic, manifests with varying clinical severities, necessitat...",
+        "Academic Style": "- Ovarian hyperstimulation syndrome (OHSS) is a significant complication resulting from ovulation induction, affecting 1-10% of patients undergoing in vitro fertilization (IVF), with a clinical spectr...",
+        "Sensationalist": "- **Fertility Nightmare Unveiled!** A shocking 1-10% of IVF patients face the life-threatening terror of Ovarian Hyperstimulation Syndrome (OHSS), where mild symptoms can spiral into severe complicati...",
+        "Bureaucratic": "- The incidence of ovarian hyperstimulation syndrome (OHSS), recognized as a significant complication of ovulation induction in vitro fertilization (IVF) protocols, has been documented to range from 1...",
+        "Casual Conversational": "- So, this study is all about a tricky situation called ovarian hyperstimulation syndrome (OHSS) that can happen after IVF, affecting about 1-10% of people. It can get pretty serious, with symptoms ra...",
+        "Historical Perspective": "- In the early 21st century, ovarian hyperstimulation syndrome (OHSS) emerged as a significant complication for patients undergoing in vitro fertilization (IVF), with a notable incidence rate of 1-10%...",
+        "Poetic": "- In the intricate dance of fertility, ovarian hyperstimulation syndrome (OHSS) emerges as a shadowy specter, haunting 1-10% of those embarking on the journey of in vitro fertilization, ranging from m...",
+        "Technical Jargon": "- Ovarian hyperstimulation syndrome (OHSS) is a significant iatrogenic complication of controlled ovarian stimulation in in vitro fertilization (IVF) patients, with incidence rates ranging from 1% to ...",
+        "Euphemistic": "- Ovarian hyperstimulation syndrome (OHSS) is an uncommon yet noteworthy outcome of ovulation induction, affecting a small percentage of individuals undergoing in vitro fertilization, with a range of ...",
+        "Minimalist": "- Ovarian Hyperstimulation Syndrome (OHSS) occurs in 1-10% of IVF patients, with severe cases causing ascites and pleural effusion.\n- Vascular Endothelial Growth Factor (VEGF) and human chorionic gona..."
+      }
+    }
+  ]
+}

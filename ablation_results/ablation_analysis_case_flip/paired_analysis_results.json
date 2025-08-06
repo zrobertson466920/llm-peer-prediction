@@ -1,0 +1,1217 @@
+{
+  "transformation": {
+    "original": "reddit_tifu_200_config",
+    "transformed": "summarization_gpt_4o_mini_20250708_012535_case_flip_transformed"
+  },
+  "mechanisms": {
+    "mi": {
+      "conditions": {
+        "Faithful": {
+          "original_mean": 0.5997325471707784,
+          "transformed_mean": 0.49609472361016194,
+          "absolute_change": -0.10363782356061646,
+          "relative_change_percent": -17.280673535149127,
+          "has_paired_test": false
+        },
+        "Poetic": {
+          "original_mean": 0.38872013484669965,
+          "transformed_mean": 0.34865497924601,
+          "absolute_change": -0.04006515560068963,
+          "relative_change_percent": -10.306941166423037,
+          "has_paired_test": false
+        },
+        "Selective Omission": {
+          "original_mean": 0.3734207702531785,
+          "transformed_mean": 0.36958578263187575,
+          "absolute_change": -0.0038349876213027434,
+          "relative_change_percent": -1.0269883002765565,
+          "has_paired_test": false
+        },
+        "Cherry Pick": {
+          "original_mean": 0.5208649913330167,
+          "transformed_mean": 0.4488357076046545,
+          "absolute_change": -0.07202928372836215,
+          "relative_change_percent": -13.828781916024377,
+          "has_paired_test": false
+        },
+        "Bureaucratic": {
+          "original_mean": 0.4144308778163147,
+          "transformed_mean": 0.3344172697041866,
+          "absolute_change": -0.0800136081121281,
+          "relative_change_percent": -19.30686452074451,
+          "has_paired_test": false
+        },
+        "Sensationalist": {
+          "original_mean": 0.3674308284476126,
+          "transformed_mean": 0.3271261911935418,
+          "absolute_change": -0.040304637254070796,
+          "relative_change_percent": -10.969312897438963,
+          "has_paired_test": false
+        },
+        "Agenda Push": {
+          "original_mean": 0.19480273389992095,
+          "transformed_mean": 0.23110751198034107,
+          "absolute_change": 0.036304778080420125,
+          "relative_change_percent": 18.63668817865336,
+          "has_paired_test": false
+        },
+        "Contradictory": {
+          "original_mean": 0.29910483022340073,
+          "transformed_mean": 0.31637678286503057,
+          "absolute_change": 0.01727195264162984,
+          "relative_change_percent": 5.774548217335526,
+          "has_paired_test": false
+        },
+        "Academic Style": {
+          "original_mean": 0.47525156799016316,
+          "transformed_mean": 0.386529227404614,
+          "absolute_change": -0.08872234058554918,
+          "relative_change_percent": -18.66850033988432,
+          "has_paired_test": false
+        },
+        "Technical Jargon": {
+          "original_mean": 0.43739955052200286,
+          "transformed_mean": 0.3524825757796712,
+          "absolute_change": -0.08491697474233167,
+          "relative_change_percent": -19.414051669918216,
+          "has_paired_test": false
+        },
+        "False Attribution": {
+          "original_mean": 0.4021222831313971,
+          "transformed_mean": 0.3686709621116587,
+          "absolute_change": -0.03345132101973841,
+          "relative_change_percent": -8.318693696665372,
+          "has_paired_test": false
+        },
+        "Context Removal": {
+          "original_mean": 0.5051682723258619,
+          "transformed_mean": 0.4568492444170562,
+          "absolute_change": -0.04831902790880571,
+          "relative_change_percent": -9.564937181493699,
+          "has_paired_test": false
+        },
+        "Ultra Concise": {
+          "original_mean": 0.6462712732346317,
+          "transformed_mean": 0.6882956679884968,
+          "absolute_change": 0.0420243947538651,
+          "relative_change_percent": 6.502593646709707,
+          "has_paired_test": false
+        },
+        "Minimalist": {
+          "original_mean": 0.6631909714121842,
+          "transformed_mean": 0.5824834395803219,
+          "absolute_change": -0.0807075318318623,
+          "relative_change_percent": -12.169576383105076,
+          "has_paired_test": false
+        },
+        "Historical Perspective": {
+          "original_mean": 0.40867913226345537,
+          "transformed_mean": 0.3728172581567828,
+          "absolute_change": -0.035861874106672575,
+          "relative_change_percent": -8.775068574716016,
+          "has_paired_test": false
+        },
+        "Overly Technical": {
+          "original_mean": 0.39321014653778896,
+          "transformed_mean": 0.3172356570330302,
+          "absolute_change": -0.07597448950475877,
+          "relative_change_percent": -19.32159944846625,
+          "has_paired_test": false
+        },
+        "Objective": {
+          "original_mean": 0.579575815570132,
+          "transformed_mean": 0.4855213207444947,
+          "absolute_change": -0.09405449482563732,
+          "relative_change_percent": -16.22816071666403,
+          "has_paired_test": false
+        },
+        "Misleading Emphasis": {
+          "original_mean": 0.23893948965930373,
+          "transformed_mean": 0.29304380524705265,
+          "absolute_change": 0.05410431558774892,
+          "relative_change_percent": 22.64352186609863,
+          "has_paired_test": false
+        },
+        "Template Response": {
+          "original_mean": 0.28253082793045686,
+          "transformed_mean": 0.2911208799117292,
+          "absolute_change": 0.008590051981272329,
+          "relative_change_percent": 3.0403945807240245,
+          "has_paired_test": false
+        },
+        "Surface Skim": {
+          "original_mean": 0.5402089826501476,
+          "transformed_mean": 0.4792912649402858,
+          "absolute_change": -0.06091771770986182,
+          "relative_change_percent": -11.276694698968678,
+          "has_paired_test": false
+        },
+        "Comprehensive": {
+          "original_mean": 0.5720840632389026,
+          "transformed_mean": 0.45816466810391837,
+          "absolute_change": -0.11391939513498422,
+          "relative_change_percent": -19.913051674612273,
+          "has_paired_test": false
+        },
+        "Sentiment Flip": {
+          "original_mean": 0.3545150883717325,
+          "transformed_mean": 0.3454769914458777,
+          "absolute_change": -0.009038096925854833,
+          "relative_change_percent": -2.549425178873569,
+          "has_paired_test": false
+        },
+        "Casual Conversational": {
+          "original_mean": 0.5083349555112371,
+          "transformed_mean": 0.4292138641078784,
+          "absolute_change": -0.07912109140335871,
+          "relative_change_percent": -15.564755196460158,
+          "has_paired_test": false
+        },
+        "Reference": {
+          "original_mean": 0.33297760801017595,
+          "transformed_mean": 0.5064920443762031,
+          "absolute_change": 0.17351443636602715,
+          "relative_change_percent": 52.10994138702698,
+          "has_paired_test": false
+        },
+        "Neutral Tone": {
+          "original_mean": 0.5817053671433914,
+          "transformed_mean": 0.4898062720059885,
+          "absolute_change": -0.09189909513740291,
+          "relative_change_percent": -15.798220255160484,
+          "has_paired_test": false
+        },
+        "Euphemistic": {
+          "original_mean": 0.37702817503921165,
+          "transformed_mean": 0.35105156457351766,
+          "absolute_change": -0.025976610465693994,
+          "relative_change_percent": -6.889832693005602,
+          "has_paired_test": false
+        },
+        "Conspiracy Theory": {
+          "original_mean": 0.43005361996702257,
+          "transformed_mean": 0.37527800279694007,
+          "absolute_change": -0.0547756171700825,
+          "relative_change_percent": -12.736927356705616,
+          "has_paired_test": false
+        },
+        "Low Effort": {
+          "original_mean": 0.27312113590968007,
+          "transformed_mean": 0.30478290185468654,
+          "absolute_change": 0.03166176594500647,
+          "relative_change_percent": 11.59257259221303,
+          "has_paired_test": false
+        },
+        "Minimal Detail": {
+          "original_mean": 0.3924351544906714,
+          "transformed_mean": 0.3790188910683407,
+          "absolute_change": -0.01341626342233071,
+          "relative_change_percent": -3.4187210979462925,
+          "has_paired_test": false
+        },
+        "Fact Manipulation": {
+          "original_mean": 0.34093549491204683,
+          "transformed_mean": 0.35097229671908486,
+          "absolute_change": 0.010036801807038032,
+          "relative_change_percent": 2.943900519840941,
+          "has_paired_test": false
+        }
+      }
+    },
+    "gppm": {
+      "conditions": {
+        "Faithful": {
+          "original_mean": -2.000563589643132,
+          "transformed_mean": -2.0786617660022055,
+          "absolute_change": -0.07809817635907335,
+          "relative_change_percent": -3.9038087448649796,
+          "has_paired_test": false
+        },
+        "Poetic": {
+          "original_mean": -2.186544332650266,
+          "transformed_mean": -2.239870410582953,
+          "absolute_change": -0.05332607793268718,
+          "relative_change_percent": -2.4388290297344084,
+          "has_paired_test": false
+        },
+        "Selective Omission": {
+          "original_mean": -2.3167541783491394,
+          "transformed_mean": -2.2619208420915027,
+          "absolute_change": 0.054833336257636756,
+          "relative_change_percent": 2.3668171949390677,
+          "has_paired_test": false
+        },
+        "Cherry Pick": {
+          "original_mean": -2.1164291724595397,
+          "transformed_mean": -2.1401470780135896,
+          "absolute_change": -0.023717905554049956,
+          "relative_change_percent": -1.1206567109678873,
+          "has_paired_test": false
+        },
+        "Bureaucratic": {
+          "original_mean": -2.1362633102940394,
+          "transformed_mean": -2.2117551706908505,
+          "absolute_change": -0.0754918603968111,
+          "relative_change_percent": -3.5338275030534634,
+          "has_paired_test": false
+        },
+        "Sensationalist": {
+          "original_mean": -2.1741870694697845,
+          "transformed_mean": -2.2283676477731227,
+          "absolute_change": -0.05418057830333822,
+          "relative_change_percent": -2.491992481426686,
+          "has_paired_test": false
+        },
+        "Agenda Push": {
+          "original_mean": -2.4177667067840574,
+          "transformed_mean": -2.341421081940972,
+          "absolute_change": 0.07634562484308516,
+          "relative_change_percent": 3.15769195716301,
+          "has_paired_test": false
+        },
+        "Contradictory": {
+          "original_mean": -2.3768430343785467,
+          "transformed_mean": -2.295521298071475,
+          "absolute_change": 0.08132173630707173,
+          "relative_change_percent": 3.421418037743256,
+          "has_paired_test": false
+        },
+        "Academic Style": {
+          "original_mean": -2.0453064571945965,
+          "transformed_mean": -2.137940879019258,
+          "absolute_change": -0.0926344218246613,
+          "relative_change_percent": -4.529121858429052,
+          "has_paired_test": false
+        },
+        "Technical Jargon": {
+          "original_mean": -2.1443172747602666,
+          "transformed_mean": -2.215234945444684,
+          "absolute_change": -0.07091767068441746,
+          "relative_change_percent": -3.307237763700151,
+          "has_paired_test": false
+        },
+        "False Attribution": {
+          "original_mean": -2.179388039464439,
+          "transformed_mean": -2.187252341209108,
+          "absolute_change": -0.0078643017446689,
+          "relative_change_percent": -0.3608490825067328,
+          "has_paired_test": false
+        },
+        "Context Removal": {
+          "original_mean": -2.1908864066299434,
+          "transformed_mean": -2.2046260903807933,
+          "absolute_change": -0.013739683750849885,
+          "relative_change_percent": -0.6271289880329527,
+          "has_paired_test": false
+        },
+        "Ultra Concise": {
+          "original_mean": -2.285449637951439,
+          "transformed_mean": -2.3059708156941268,
+          "absolute_change": -0.02052117774268769,
+          "relative_change_percent": -0.897905488789586,
+          "has_paired_test": false
+        },
+        "Minimalist": {
+          "original_mean": -2.087625341756358,
+          "transformed_mean": -2.160092848132611,
+          "absolute_change": -0.07246750637625299,
+          "relative_change_percent": -3.4712888815233836,
+          "has_paired_test": false
+        },
+        "Historical Perspective": {
+          "original_mean": -2.150168397048524,
+          "transformed_mean": -2.1719571065934447,
+          "absolute_change": -0.021788709544920515,
+          "relative_change_percent": -1.0133489811695338,
+          "has_paired_test": false
+        },
+        "Overly Technical": {
+          "original_mean": -2.1692688459273812,
+          "transformed_mean": -2.241851581862121,
+          "absolute_change": -0.07258273593473996,
+          "relative_change_percent": -3.3459539176533104,
+          "has_paired_test": false
+        },
+        "Objective": {
+          "original_mean": -2.034209002631464,
+          "transformed_mean": -2.093488741545908,
+          "absolute_change": -0.059279738914443936,
+          "relative_change_percent": -2.9141420000481433,
+          "has_paired_test": false
+        },
+        "Misleading Emphasis": {
+          "original_mean": -2.3826069083216557,
+          "transformed_mean": -2.2968523600544035,
+          "absolute_change": 0.08575454826725215,
+          "relative_change_percent": 3.599189944750851,
+          "has_paired_test": false
+        },
+        "Template Response": {
+          "original_mean": -2.3689326487658913,
+          "transformed_mean": -2.3111923477550933,
+          "absolute_change": 0.05774030101079797,
+          "relative_change_percent": 2.4373973249462413,
+          "has_paired_test": false
+        },
+        "Surface Skim": {
+          "original_mean": -2.168217646397956,
+          "transformed_mean": -2.1716069229372934,
+          "absolute_change": -0.0033892765393375157,
+          "relative_change_percent": -0.15631625104463548,
+          "has_paired_test": false
+        },
+        "Comprehensive": {
+          "original_mean": -1.9308286499828982,
+          "transformed_mean": -2.0453850684539687,
+          "absolute_change": -0.11455641847107056,
+          "relative_change_percent": -5.933018368672188,
+          "has_paired_test": false
+        },
+        "Sentiment Flip": {
+          "original_mean": -2.2822192320017938,
+          "transformed_mean": -2.244561362127299,
+          "absolute_change": 0.03765786987449493,
+          "relative_change_percent": 1.650054882828423,
+          "has_paired_test": false
+        },
+        "Casual Conversational": {
+          "original_mean": -1.9985429733004443,
+          "transformed_mean": -2.1127322687212837,
+          "absolute_change": -0.11418929542083944,
+          "relative_change_percent": -5.713627224750857,
+          "has_paired_test": false
+        },
+        "Reference": {
+          "original_mean": -2.3498758578629566,
+          "transformed_mean": -2.3327476132385008,
+          "absolute_change": 0.017128244624455835,
+          "relative_change_percent": 0.7288999785730275,
+          "has_paired_test": false
+        },
+        "Neutral Tone": {
+          "original_mean": -2.047972956814433,
+          "transformed_mean": -2.1080477813822167,
+          "absolute_change": -0.06007482456778357,
+          "relative_change_percent": -2.9333797776914174,
+          "has_paired_test": false
+        },
+        "Euphemistic": {
+          "original_mean": -2.2564479072940213,
+          "transformed_mean": -2.24548378959719,
+          "absolute_change": 0.010964117696831366,
+          "relative_change_percent": 0.4859016537182,
+          "has_paired_test": false
+        },
+        "Conspiracy Theory": {
+          "original_mean": -2.0989987658884686,
+          "transformed_mean": -2.147937596433575,
+          "absolute_change": -0.048938830545106615,
+          "relative_change_percent": -2.331532125717648,
+          "has_paired_test": false
+        },
+        "Low Effort": {
+          "original_mean": -2.4551195612942456,
+          "transformed_mean": -2.3548682138331474,
+          "absolute_change": 0.1002513474610982,
+          "relative_change_percent": 4.083359077154252,
+          "has_paired_test": false
+        },
+        "Minimal Detail": {
+          "original_mean": -2.394520373962609,
+          "transformed_mean": -2.3422101939772664,
+          "absolute_change": 0.052310179985342486,
+          "relative_change_percent": 2.184578613493949,
+          "has_paired_test": false
+        },
+        "Fact Manipulation": {
+          "original_mean": -2.289548267533115,
+          "transformed_mean": -2.2369491835556166,
+          "absolute_change": 0.05259908397749857,
+          "relative_change_percent": 2.29735641407428,
+          "has_paired_test": false
+        }
+      }
+    },
+    "tvd_mi": {
+      "conditions": {
+        "Faithful": {
+          "original_mean": 0.7443965517241381,
+          "transformed_mean": 0.8139655172413789,
+          "absolute_change": 0.06956896551724079,
+          "relative_change_percent": 9.345686160972704,
+          "has_paired_test": false
+        },
+        "Poetic": {
+          "original_mean": 0.6867456896551726,
+          "transformed_mean": 0.7006896551724143,
+          "absolute_change": 0.013943965517241752,
+          "relative_change_percent": 2.0304409226424514,
+          "has_paired_test": false
+        },
+        "Selective Omission": {
+          "original_mean": 0.44394396551724136,
+          "transformed_mean": 0.5415948275862067,
+          "absolute_change": 0.09765086206896534,
+          "relative_change_percent": 21.996213408417844,
+          "has_paired_test": false
+        },
+        "Cherry Pick": {
+          "original_mean": 0.7426077586206891,
+          "transformed_mean": 0.8089655172413792,
+          "absolute_change": 0.06635775862069015,
+          "relative_change_percent": 8.93577502394296,
+          "has_paired_test": false
+        },
+        "Bureaucratic": {
+          "original_mean": 0.7392456896551726,
+          "transformed_mean": 0.7570905172413793,
+          "absolute_change": 0.017844827586206757,
+          "relative_change_percent": 2.4139237923092427,
+          "has_paired_test": false
+        },
+        "Sensationalist": {
+          "original_mean": 0.6690732758620689,
+          "transformed_mean": 0.702176724137931,
+          "absolute_change": 0.03310344827586209,
+          "relative_change_percent": 4.947656627476248,
+          "has_paired_test": false
+        },
+        "Agenda Push": {
+          "original_mean": 0.25290948275862085,
+          "transformed_mean": 0.35084051724137927,
+          "absolute_change": 0.09793103448275842,
+          "relative_change_percent": 38.72177247550053,
+          "has_paired_test": false
+        },
+        "Contradictory": {
+          "original_mean": 0.21487068965517242,
+          "transformed_mean": 0.32278017241379303,
+          "absolute_change": 0.10790948275862061,
+          "relative_change_percent": 50.22066198595784,
+          "has_paired_test": false
+        },
+        "Academic Style": {
+          "original_mean": 0.7705603448275861,
+          "transformed_mean": 0.831056034482759,
+          "absolute_change": 0.060495689655172935,
+          "relative_change_percent": 7.850869832746056,
+          "has_paired_test": false
+        },
+        "Technical Jargon": {
+          "original_mean": 0.7346551724137934,
+          "transformed_mean": 0.7471120689655173,
+          "absolute_change": 0.012456896551723884,
+          "relative_change_percent": 1.6956113588359185,
+          "has_paired_test": false
+        },
+        "False Attribution": {
+          "original_mean": 0.5343534482758622,
+          "transformed_mean": 0.6574568965517237,
+          "absolute_change": 0.1231034482758615,
+          "relative_change_percent": 23.037831733483795,
+          "has_paired_test": false
+        },
+        "Context Removal": {
+          "original_mean": 0.6629956896551722,
+          "transformed_mean": 0.7400862068965517,
+          "absolute_change": 0.0770905172413795,
+          "relative_change_percent": 11.627604589929492,
+          "has_paired_test": false
+        },
+        "Ultra Concise": {
+          "original_mean": 0.44394396551724147,
+          "transformed_mean": 0.48739224137931025,
+          "absolute_change": 0.043448275862068786,
+          "relative_change_percent": 9.786882858391142,
+          "has_paired_test": false
+        },
+        "Minimalist": {
+          "original_mean": 0.7285129310344821,
+          "transformed_mean": 0.7688793103448277,
+          "absolute_change": 0.04036637931034559,
+          "relative_change_percent": 5.54092831997171,
+          "has_paired_test": false
+        },
+        "Historical Perspective": {
+          "original_mean": 0.690991379310345,
+          "transformed_mean": 0.7896982758620694,
+          "absolute_change": 0.09870689655172438,
+          "relative_change_percent": 14.284823155136953,
+          "has_paired_test": false
+        },
+        "Overly Technical": {
+          "original_mean": 0.7381896551724135,
+          "transformed_mean": 0.7181681034482759,
+          "absolute_change": -0.020021551724137665,
+          "relative_change_percent": -2.712250379539846,
+          "has_paired_test": false
+        },
+        "Objective": {
+          "original_mean": 0.7395474137931035,
+          "transformed_mean": 0.807349137931035,
+          "absolute_change": 0.06780172413793151,
+          "relative_change_percent": 9.168002331342041,
+          "has_paired_test": false
+        },
+        "Misleading Emphasis": {
+          "original_mean": 0.4287499999999999,
+          "transformed_mean": 0.5334698275862071,
+          "absolute_change": 0.10471982758620718,
+          "relative_change_percent": 24.424449582788853,
+          "has_paired_test": false
+        },
+        "Template Response": {
+          "original_mean": 0.5243965517241377,
+          "transformed_mean": 0.6196982758620689,
+          "absolute_change": 0.09530172413793125,
+          "relative_change_percent": 18.17359855334544,
+          "has_paired_test": false
+        },
+        "Surface Skim": {
+          "original_mean": 0.6334482758620689,
+          "transformed_mean": 0.7348922413793102,
+          "absolute_change": 0.10144396551724133,
+          "relative_change_percent": 16.014561785519867,
+          "has_paired_test": false
+        },
+        "Comprehensive": {
+          "original_mean": 0.7464439655172417,
+          "transformed_mean": 0.8232758620689659,
+          "absolute_change": 0.07683189655172418,
+          "relative_change_percent": 10.293056157066552,
+          "has_paired_test": false
+        },
+        "Sentiment Flip": {
+          "original_mean": 0.42392241379310325,
+          "transformed_mean": 0.523125,
+          "absolute_change": 0.0992025862068967,
+          "relative_change_percent": 23.401118454499283,
+          "has_paired_test": false
+        },
+        "Casual Conversational": {
+          "original_mean": 0.7656681034482758,
+          "transformed_mean": 0.7978017241379312,
+          "absolute_change": 0.03213362068965531,
+          "relative_change_percent": 4.196808061474389,
+          "has_paired_test": false
+        },
+        "Reference": {
+          "original_mean": 0.3284698275862069,
+          "transformed_mean": 0.3443965517241379,
+          "absolute_change": 0.015926724137931003,
+          "relative_change_percent": 4.84876320451413,
+          "has_paired_test": false
+        },
+        "Neutral Tone": {
+          "original_mean": 0.7347844827586202,
+          "transformed_mean": 0.8083189655172416,
+          "absolute_change": 0.0735344827586214,
+          "relative_change_percent": 10.007625975245015,
+          "has_paired_test": false
+        },
+        "Euphemistic": {
+          "original_mean": 0.6816594827586209,
+          "transformed_mean": 0.7381896551724139,
+          "absolute_change": 0.05653017241379299,
+          "relative_change_percent": 8.293022226437744,
+          "has_paired_test": false
+        },
+        "Conspiracy Theory": {
+          "original_mean": 0.5634482758620691,
+          "transformed_mean": 0.7166379310344831,
+          "absolute_change": 0.153189655172414,
+          "relative_change_percent": 27.187882496940052,
+          "has_paired_test": false
+        },
+        "Low Effort": {
+          "original_mean": 0.3246982758620691,
+          "transformed_mean": 0.3894181034482758,
+          "absolute_change": 0.0647198275862067,
+          "relative_change_percent": 19.932297889287067,
+          "has_paired_test": false
+        },
+        "Minimal Detail": {
+          "original_mean": 0.3589870689655173,
+          "transformed_mean": 0.46500000000000014,
+          "absolute_change": 0.10601293103448284,
+          "relative_change_percent": 29.531128054271495,
+          "has_paired_test": false
+        },
+        "Fact Manipulation": {
+          "original_mean": 0.4751508620689658,
+          "transformed_mean": 0.5819827586206895,
+          "absolute_change": 0.1068318965517237,
+          "relative_change_percent": 22.483784641901288,
+          "has_paired_test": false
+        }
+      }
+    },
+    "judge_with_context": {
+      "conditions": {
+        "Faithful": {
+          "original_mean": 0.752672413793104,
+          "transformed_mean": 0.5449999999999998,
+          "absolute_change": -0.2076724137931042,
+          "relative_change_percent": -27.591341198030083,
+          "has_paired_test": false
+        },
+        "Poetic": {
+          "original_mean": 0.43594827586206925,
+          "transformed_mean": 0.3279310344827585,
+          "absolute_change": -0.10801724137931074,
+          "relative_change_percent": -24.777536088590146,
+          "has_paired_test": false
+        },
+        "Selective Omission": {
+          "original_mean": 0.47172413793103446,
+          "transformed_mean": 0.3881034482758619,
+          "absolute_change": -0.08362068965517255,
+          "relative_change_percent": -17.72660818713453,
+          "has_paired_test": false
+        },
+        "Cherry Pick": {
+          "original_mean": 0.7937068965517241,
+          "transformed_mean": 0.5803448275862069,
+          "absolute_change": -0.21336206896551724,
+          "relative_change_percent": -26.881720430107524,
+          "has_paired_test": false
+        },
+        "Bureaucratic": {
+          "original_mean": 0.34025862068965507,
+          "transformed_mean": 0.23862068965517236,
+          "absolute_change": -0.10163793103448271,
+          "relative_change_percent": -29.870787940207748,
+          "has_paired_test": false
+        },
+        "Sensationalist": {
+          "original_mean": 0.7248275862068971,
+          "transformed_mean": 0.5629310344827586,
+          "absolute_change": -0.16189655172413853,
+          "relative_change_percent": -22.33587059942918,
+          "has_paired_test": false
+        },
+        "Agenda Push": {
+          "original_mean": 0.2221551724137931,
+          "transformed_mean": 0.300948275862069,
+          "absolute_change": 0.07879310344827592,
+          "relative_change_percent": 35.46759798214981,
+          "has_paired_test": false
+        },
+        "Contradictory": {
+          "original_mean": 0.19956896551724146,
+          "transformed_mean": 0.19818965517241402,
+          "absolute_change": -0.001379310344827439,
+          "relative_change_percent": -0.6911447084232522,
+          "has_paired_test": false
+        },
+        "Academic Style": {
+          "original_mean": 0.8098275862068971,
+          "transformed_mean": 0.5875862068965517,
+          "absolute_change": -0.22224137931034538,
+          "relative_change_percent": -27.443048754524213,
+          "has_paired_test": false
+        },
+        "Technical Jargon": {
+          "original_mean": 0.4516379310344828,
+          "transformed_mean": 0.3267241379310346,
+          "absolute_change": -0.12491379310344819,
+          "relative_change_percent": -27.65794999045617,
+          "has_paired_test": false
+        },
+        "False Attribution": {
+          "original_mean": 0.5024999999999998,
+          "transformed_mean": 0.4100862068965517,
+          "absolute_change": -0.09241379310344816,
+          "relative_change_percent": -18.390804597701134,
+          "has_paired_test": false
+        },
+        "Context Removal": {
+          "original_mean": 0.42525862068965486,
+          "transformed_mean": 0.30336206896551693,
+          "absolute_change": -0.12189655172413794,
+          "relative_change_percent": -28.664098925603103,
+          "has_paired_test": false
+        },
+        "Ultra Concise": {
+          "original_mean": 0.15706896551724145,
+          "transformed_mean": 0.11379310344827594,
+          "absolute_change": -0.04327586206896551,
+          "relative_change_percent": -27.552140504939608,
+          "has_paired_test": false
+        },
+        "Minimalist": {
+          "original_mean": 0.4131896551724137,
+          "transformed_mean": 0.2935344827586204,
+          "absolute_change": -0.11965517241379331,
+          "relative_change_percent": -28.95889839349056,
+          "has_paired_test": false
+        },
+        "Historical Perspective": {
+          "original_mean": 0.7732758620689657,
+          "transformed_mean": 0.6605172413793106,
+          "absolute_change": -0.11275862068965514,
+          "relative_change_percent": -14.581939799331096,
+          "has_paired_test": false
+        },
+        "Overly Technical": {
+          "original_mean": 0.26508620689655155,
+          "transformed_mean": 0.175344827586207,
+          "absolute_change": -0.08974137931034454,
+          "relative_change_percent": -33.85365853658528,
+          "has_paired_test": false
+        },
+        "Objective": {
+          "original_mean": 0.715344827586207,
+          "transformed_mean": 0.4794827586206896,
+          "absolute_change": -0.23586206896551737,
+          "relative_change_percent": -32.97180043383949,
+          "has_paired_test": false
+        },
+        "Misleading Emphasis": {
+          "original_mean": 0.49500000000000055,
+          "transformed_mean": 0.4312068965517242,
+          "absolute_change": -0.06379310344827638,
+          "relative_change_percent": -12.887495646116426,
+          "has_paired_test": false
+        },
+        "Template Response": {
+          "original_mean": 0.5958620689655171,
+          "transformed_mean": 0.5462068965517244,
+          "absolute_change": -0.04965517241379269,
+          "relative_change_percent": -8.333333333333266,
+          "has_paired_test": false
+        },
+        "Surface Skim": {
+          "original_mean": 0.43749999999999956,
+          "transformed_mean": 0.3160344827586207,
+          "absolute_change": -0.12146551724137883,
+          "relative_change_percent": -27.763546798029477,
+          "has_paired_test": false
+        },
+        "Comprehensive": {
+          "original_mean": 0.8777586206896565,
+          "transformed_mean": 0.6053448275862068,
+          "absolute_change": -0.2724137931034497,
+          "relative_change_percent": -31.035160086427144,
+          "has_paired_test": false
+        },
+        "Sentiment Flip": {
+          "original_mean": 0.4356896551724136,
+          "transformed_mean": 0.42922413793103453,
+          "absolute_change": -0.00646551724137906,
+          "relative_change_percent": -1.4839730906212332,
+          "has_paired_test": false
+        },
+        "Casual Conversational": {
+          "original_mean": 0.7950000000000006,
+          "transformed_mean": 0.6586206896551728,
+          "absolute_change": -0.13637931034482775,
+          "relative_change_percent": -17.15463023205379,
+          "has_paired_test": false
+        },
+        "Reference": {
+          "original_mean": 0.08853448275862079,
+          "transformed_mean": 0.04956896551724139,
+          "absolute_change": -0.0389655172413794,
+          "relative_change_percent": -44.01168451801368,
+          "has_paired_test": false
+        },
+        "Neutral Tone": {
+          "original_mean": 0.6320689655172415,
+          "transformed_mean": 0.43931034482758613,
+          "absolute_change": -0.19275862068965532,
+          "relative_change_percent": -30.49645390070924,
+          "has_paired_test": false
+        },
+        "Euphemistic": {
+          "original_mean": 0.6146551724137935,
+          "transformed_mean": 0.5170689655172412,
+          "absolute_change": -0.09758620689655229,
+          "relative_change_percent": -15.876577840112283,
+          "has_paired_test": false
+        },
+        "Conspiracy Theory": {
+          "original_mean": 0.6218965517241383,
+          "transformed_mean": 0.49551724137931025,
+          "absolute_change": -0.12637931034482802,
+          "relative_change_percent": -20.321596894926593,
+          "has_paired_test": false
+        },
+        "Low Effort": {
+          "original_mean": 0.40232758620689674,
+          "transformed_mean": 0.28965517241379285,
+          "absolute_change": -0.11267241379310389,
+          "relative_change_percent": -28.005142489822255,
+          "has_paired_test": false
+        },
+        "Minimal Detail": {
+          "original_mean": 0.22258620689655154,
+          "transformed_mean": 0.1686206896551724,
+          "absolute_change": -0.05396551724137913,
+          "relative_change_percent": -24.244771494965082,
+          "has_paired_test": false
+        },
+        "Fact Manipulation": {
+          "original_mean": 0.45198275862068976,
+          "transformed_mean": 0.3426724137931034,
+          "absolute_change": -0.10931034482758634,
+          "relative_change_percent": -24.18462712187681,
+          "has_paired_test": false
+        }
+      }
+    },
+    "judge_without_context": {
+      "conditions": {
+        "Faithful": {
+          "original_mean": 0.6327586206896555,
+          "transformed_mean": 0.42275862068965525,
+          "absolute_change": -0.21000000000000024,
+          "relative_change_percent": -33.188010899182586,
+          "has_paired_test": false
+        },
+        "Poetic": {
+          "original_mean": 0.20827586206896564,
+          "transformed_mean": 0.1877586206896553,
+          "absolute_change": -0.020517241379310353,
+          "relative_change_percent": -9.85099337748344,
+          "has_paired_test": false
+        },
+        "Selective Omission": {
+          "original_mean": 0.4743103448275861,
+          "transformed_mean": 0.4617241379310348,
+          "absolute_change": -0.012586206896551322,
+          "relative_change_percent": -2.653580516175852,
+          "has_paired_test": false
+        },
+        "Cherry Pick": {
+          "original_mean": 0.7131034482758625,
+          "transformed_mean": 0.5159482758620692,
+          "absolute_change": -0.19715517241379332,
+          "relative_change_percent": -27.64748549323019,
+          "has_paired_test": false
+        },
+        "Bureaucratic": {
+          "original_mean": 0.17775862068965526,
+          "transformed_mean": 0.14,
+          "absolute_change": -0.03775862068965524,
+          "relative_change_percent": -21.241513094083444,
+          "has_paired_test": false
+        },
+        "Sensationalist": {
+          "original_mean": 0.545344827586207,
+          "transformed_mean": 0.3381034482758621,
+          "absolute_change": -0.20724137931034486,
+          "relative_change_percent": -38.001896933291185,
+          "has_paired_test": false
+        },
+        "Agenda Push": {
+          "original_mean": 0.5574137931034481,
+          "transformed_mean": 0.5905172413793109,
+          "absolute_change": 0.03310344827586287,
+          "relative_change_percent": 5.938756572842706,
+          "has_paired_test": false
+        },
+        "Contradictory": {
+          "original_mean": 0.5453448275862064,
+          "transformed_mean": 0.514655172413793,
+          "absolute_change": -0.0306896551724134,
+          "relative_change_percent": -5.627568763831738,
+          "has_paired_test": false
+        },
+        "Academic Style": {
+          "original_mean": 0.7674137931034481,
+          "transformed_mean": 0.5267241379310346,
+          "absolute_change": -0.24068965517241359,
+          "relative_change_percent": -31.36373848573352,
+          "has_paired_test": false
+        },
+        "Technical Jargon": {
+          "original_mean": 0.27068965517241383,
+          "transformed_mean": 0.1918965517241379,
+          "absolute_change": -0.07879310344827595,
+          "relative_change_percent": -29.108280254777096,
+          "has_paired_test": false
+        },
+        "False Attribution": {
+          "original_mean": 0.7251724137931034,
+          "transformed_mean": 0.4972413793103444,
+          "absolute_change": -0.22793103448275898,
+          "relative_change_percent": -31.431288635282982,
+          "has_paired_test": false
+        },
+        "Context Removal": {
+          "original_mean": 0.31724137931034463,
+          "transformed_mean": 0.22275862068965505,
+          "absolute_change": -0.09448275862068958,
+          "relative_change_percent": -29.78260869565217,
+          "has_paired_test": false
+        },
+        "Ultra Concise": {
+          "original_mean": 0.0798275862068966,
+          "transformed_mean": 0.03293103448275858,
+          "absolute_change": -0.04689655172413802,
+          "relative_change_percent": -58.747300215982804,
+          "has_paired_test": false
+        },
+        "Minimalist": {
+          "original_mean": 0.27965517241379284,
+          "transformed_mean": 0.1820689655172414,
+          "absolute_change": -0.09758620689655145,
+          "relative_change_percent": -34.89519112207145,
+          "has_paired_test": false
+        },
+        "Historical Perspective": {
+          "original_mean": 0.8801724137931037,
+          "transformed_mean": 0.7285344827586208,
+          "absolute_change": -0.15163793103448298,
+          "relative_change_percent": -17.228207639569067,
+          "has_paired_test": false
+        },
+        "Overly Technical": {
+          "original_mean": 0.09603448275862071,
+          "transformed_mean": 0.07327586206896558,
+          "absolute_change": -0.022758620689655132,
+          "relative_change_percent": -23.698384201077154,
+          "has_paired_test": false
+        },
+        "Objective": {
+          "original_mean": 0.5875862068965522,
+          "transformed_mean": 0.35689655172413803,
+          "absolute_change": -0.23068965517241413,
+          "relative_change_percent": -39.26056338028172,
+          "has_paired_test": false
+        },
+        "Misleading Emphasis": {
+          "original_mean": 0.5506896551724142,
+          "transformed_mean": 0.5141379310344824,
+          "absolute_change": -0.03655172413793184,
+          "relative_change_percent": -6.637445209768457,
+          "has_paired_test": false
+        },
+        "Template Response": {
+          "original_mean": 0.6251724137931034,
+          "transformed_mean": 0.619137931034483,
+          "absolute_change": -0.006034482758620396,
+          "relative_change_percent": -0.9652509652509184,
+          "has_paired_test": false
+        },
+        "Surface Skim": {
+          "original_mean": 0.34870689655172427,
+          "transformed_mean": 0.24327586206896532,
+          "absolute_change": -0.10543103448275895,
+          "relative_change_percent": -30.234857849196622,
+          "has_paired_test": false
+        },
+        "Comprehensive": {
+          "original_mean": 0.8052586206896558,
+          "transformed_mean": 0.4627586206896553,
+          "absolute_change": -0.3425000000000005,
+          "relative_change_percent": -42.5329193876459,
+          "has_paired_test": false
+        },
+        "Sentiment Flip": {
+          "original_mean": 0.6784482758620696,
+          "transformed_mean": 0.607931034482759,
+          "absolute_change": -0.07051724137931059,
+          "relative_change_percent": -10.393900889453649,
+          "has_paired_test": false
+        },
+        "Casual Conversational": {
+          "original_mean": 0.6591379310344828,
+          "transformed_mean": 0.4901724137931034,
+          "absolute_change": -0.16896551724137943,
+          "relative_change_percent": -25.634318597959734,
+          "has_paired_test": false
+        },
+        "Reference": {
+          "original_mean": 0.03241379310344827,
+          "transformed_mean": 0.02206896551724137,
+          "absolute_change": -0.010344827586206896,
+          "relative_change_percent": -31.914893617021285,
+          "has_paired_test": false
+        },
+        "Neutral Tone": {
+          "original_mean": 0.5053448275862066,
+          "transformed_mean": 0.3240517241379308,
+          "absolute_change": -0.18129310344827576,
+          "relative_change_percent": -35.87512794268169,
+          "has_paired_test": false
+        },
+        "Euphemistic": {
+          "original_mean": 0.5329310344827588,
+          "transformed_mean": 0.472413793103448,
+          "absolute_change": -0.060517241379310804,
+          "relative_change_percent": -11.355548366224605,
+          "has_paired_test": false
+        },
+        "Conspiracy Theory": {
+          "original_mean": 0.7470689655172411,
+          "transformed_mean": 0.5010344827586205,
+          "absolute_change": -0.2460344827586206,
+          "relative_change_percent": -32.933302561735516,
+          "has_paired_test": false
+        },
+        "Low Effort": {
+          "original_mean": 0.2899999999999998,
+          "transformed_mean": 0.2930172413793101,
+          "absolute_change": 0.0030172413793103092,
+          "relative_change_percent": 1.040428061831142,
+          "has_paired_test": false
+        },
+        "Minimal Detail": {
+          "original_mean": 0.14706896551724152,
+          "transformed_mean": 0.13741379310344834,
+          "absolute_change": -0.009655172413793184,
+          "relative_change_percent": -6.565064478311888,
+          "has_paired_test": false
+        },
+        "Fact Manipulation": {
+          "original_mean": 0.5970689655172416,
+          "transformed_mean": 0.4210344827586207,
+          "absolute_change": -0.17603448275862094,
+          "relative_change_percent": -29.483107132544067,
+          "has_paired_test": false
+        }
+      }
+    }
+  },
+  "paired_tests": {
+    "mi": {
+      "n_pairs": 200,
+      "mean_difference": -0.031914964686969596,
+      "std_difference": 0.04252968665380729,
+      "t_statistic": -10.612487289259237,
+      "p_value": 3.8789349739432424e-21,
+      "ci_95": [
+        -0.03784523548575337,
+        -0.02598469388818582
+      ],
+      "effect_size_cohens_d": -0.47407832119974247,
+      "significant": true
+    },
+    "gppm": {
+      "n_pairs": 200,
+      "mean_difference": -0.014361760010072335,
+      "std_difference": 0.28479040980448206,
+      "t_statistic": -0.713176957037835,
+      "p_value": 0.47657174726101215,
+      "ci_95": [
+        -0.05407247466416195,
+        0.025348954644017284
+      ],
+      "effect_size_cohens_d": -0.04643940303575398,
+      "significant": false
+    },
+    "tvd_mi": {
+      "n_pairs": 200,
+      "mean_difference": 0.0698045977011494,
+      "std_difference": 0.040288225391327495,
+      "t_statistic": 24.503091865201284,
+      "p_value": 5.298871425749869e-62,
+      "ci_95": [
+        0.06418687263964533,
+        0.07542232276265347
+      ],
+      "effect_size_cohens_d": 1.0356625451852473,
+      "significant": true
+    },
+    "judge_with_context": {
+      "n_pairs": 200,
+      "mean_difference": -0.11144540229885055,
+      "std_difference": 0.03225900019512741,
+      "t_statistic": -48.856938665745176,
+      "p_value": 8.882019503046602e-113,
+      "ci_95": [
+        -0.11594354517049568,
+        -0.10694725942720543
+      ],
+      "effect_size_cohens_d": -3.090683856383167,
+      "significant": true
+    },
+    "judge_without_context": {
+      "n_pairs": 200,
+      "mean_difference": -0.10950574712643679,
+      "std_difference": 0.03129819436640827,
+      "t_statistic": -49.48033453016653,
+      "p_value": 8.623254934124208e-114,
+      "ci_95": [
+        -0.11386991678554136,
+        -0.10514157746733223
+      ],
+      "effect_size_cohens_d": -3.407462656181294,
+      "significant": true
+    }
+  },
+  "category_effect_sizes": {
+    "mi": {
+      "original_effect_size": 2.5169406700105332,
+      "transformed_effect_size": 1.2652098200694168,
+      "effect_size_change": -1.2517308499411164,
+      "original_means": {
+        "problematic": 0.38629966321949794,
+        "good_faith": 0.4833410095364197
+      },
+      "transformed_means": {
+        "problematic": 0.37991377957220734,
+        "good_faith": 0.40939992937457986
+      },
+      "n_examples": 200
+    },
+    "gppm": {
+      "original_effect_size": 3.7581566595568696,
+      "transformed_effect_size": 3.2181000179280637,
+      "effect_size_change": -0.540056641628806,
+      "original_means": {
+        "problematic": -2.28824537201219,
+        "good_faith": -2.097303293483401
+      },
+      "transformed_means": {
+        "problematic": -2.256202515205017,
+        "good_faith": -2.163633571842987
+      },
+      "n_examples": 200
+    },
+    "tvd_mi": {
+      "original_effect_size": 7.234823198794593,
+      "transformed_effect_size": 4.975387397404781,
+      "effect_size_change": -2.259435801389812,
+      "original_means": {
+        "problematic": 0.4685617816091954,
+        "good_faith": 0.7264624384236452
+      },
+      "transformed_means": {
+        "problematic": 0.564889367816092,
+        "good_faith": 0.7716979679802956
+      },
+      "n_examples": 200
+    },
+    "judge_with_context": {
+      "original_effect_size": 2.703422538327532,
+      "transformed_effect_size": 1.6132680495528602,
+      "effect_size_change": -1.090154488774672,
+      "original_means": {
+        "problematic": 0.4289885057471265,
+        "good_faith": 0.6143965517241379
+      },
+      "transformed_means": {
+        "problematic": 0.354264367816092,
+        "good_faith": 0.45842980295566504
+      },
+      "n_examples": 200
+    },
+    "judge_without_context": {
+      "original_effect_size": 0.046379384816911645,
+      "transformed_effect_size": -0.9539340169395748,
+      "effect_size_change": -1.0003134017564865,
+      "original_means": {
+        "problematic": 0.4931091954022989,
+        "good_faith": 0.49631157635467976
+      },
+      "transformed_means": {
+        "problematic": 0.4115172413793104,
+        "good_faith": 0.34981527093596065
+      },
+      "n_examples": 200
+    }
+  }
+}

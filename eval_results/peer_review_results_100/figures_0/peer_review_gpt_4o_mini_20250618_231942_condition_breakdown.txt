@@ -1,0 +1,44 @@
+DETAILED CONDITION BREAKDOWN
+========================================
+
+GOOD FAITH CONDITIONS (15 total):
+------------------------------
+  Faithful (3):
+    - Faithful
+    - Objective Analysis
+    - Thorough Evaluation
+
+  Style (12):
+    - Balanced Critique
+    - Overly Technical
+    - Harsh Critique
+    - Overly Positive
+    - Theory Focus
+    - Implementation Obsessed
+    - Comparison Fixated
+    - Pedantic Details
+    - Scope Creep
+    - Statistical Nitpick
+    - Future Work Focus
+    - Writing Critique
+
+
+PROBLEMATIC CONDITIONS (13 total):
+------------------------------
+  Strategic (8):
+    - Method Shift
+    - Question Shift
+    - Contribution Misrepresent
+    - Result Manipulation
+    - Assumption Attack
+    - Dismissive Expert
+    - Agenda Push
+    - Benchmark Obsessed
+
+  Low Effort (5):
+    - Low Effort
+    - Generic
+    - Surface Skim
+    - Template Fill
+    - Checklist Review
+

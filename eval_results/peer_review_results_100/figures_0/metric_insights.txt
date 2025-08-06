@@ -1,0 +1,35 @@
+METRIC BEHAVIOR INSIGHTS
+==================================================
+
+BASELINE METRICS
+----------------
+Metrics in this category: BLEU, ROUGE-1
+Key patterns:
+• [Pattern analysis would go here]
+• [Cross-correlations within category]
+• [Correlations with other categories]
+
+PEER PREDICTION MECHANISMS
+--------------------------
+Metrics in this category: MI, GPPM, TVD-MI
+Key patterns:
+• [Pattern analysis would go here]
+• [Cross-correlations within category]
+• [Correlations with other categories]
+
+LLM JUDGE METRICS
+-----------------
+Metrics in this category: LLM-Judge (w/ context), LLM-Judge (w/o context)
+Key patterns:
+• [Pattern analysis would go here]
+• [Cross-correlations within category]
+• [Correlations with other categories]
+
+CONTROL METRICS
+---------------
+Metrics in this category: Response Length
+Key patterns:
+• [Pattern analysis would go here]
+• [Cross-correlations within category]
+• [Correlations with other categories]
+

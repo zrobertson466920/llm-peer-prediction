@@ -1,0 +1,128 @@
+{
+  "dataset_name": "summarization_gpt_4o_mini_20250709_180549",
+  "task_type": "summarization",
+  "compression_ratio": null,
+  "stats_results": {
+    "mi": {
+      "cohens_d": 2.238589263963846,
+      "cohens_d_ci": [
+        2.016983587573354,
+        2.5099386425206855
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.4282144517226105,
+      "good_faith_std": 0.09061526633521068,
+      "problematic_mean": 0.35166264328344693,
+      "problematic_std": 0.07467291769238898,
+      "n_samples": 200,
+      "method": "item-bootstrap"
+    },
+    "gppm": {
+      "cohens_d": 3.5894100816005956,
+      "cohens_d_ci": [
+        3.2819282762374615,
+        4.024333100686202
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": -1.8379308354807729,
+      "good_faith_std": 0.15969718220993787,
+      "problematic_mean": -1.9869571112184028,
+      "problematic_std": 0.16830995336878035,
+      "n_samples": 200,
+      "method": "item-bootstrap"
+    },
+    "tvd_mi": {
+      "cohens_d": 5.912025785064702,
+      "cohens_d_ci": [
+        5.274855827406778,
+        6.721813468431514
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.7557389162561577,
+      "good_faith_std": 0.05222254221165719,
+      "problematic_mean": 0.545323275862069,
+      "problematic_std": 0.06517654611394709,
+      "n_samples": 200,
+      "method": "item-bootstrap"
+    },
+    "llm_judge_with": {
+      "cohens_d": 4.234647981738396,
+      "cohens_d_ci": [
+        3.814520305379329,
+        4.7747041312812835
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.5552647783251231,
+      "good_faith_std": 0.045641279000040065,
+      "problematic_mean": 0.3494770114942529,
+      "problematic_std": 0.03567441642312867,
+      "n_samples": 200,
+      "method": "item-bootstrap"
+    },
+    "llm_judge_without": {
+      "cohens_d": 0.16278479602232904,
+      "cohens_d_ci": [
+        0.020280939413360934,
+        0.30973677005866523
+      ],
+      "p_value": 0.02,
+      "good_faith_mean": 0.4646551724137931,
+      "good_faith_std": 0.03905257348228828,
+      "problematic_mean": 0.45325287356321836,
+      "problematic_std": 0.04489028016379057,
+      "n_samples": 200,
+      "method": "item-bootstrap"
+    },
+    "baseline": {
+      "cohens_d": 0.9083984345217195,
+      "cohens_d_ci": [
+        null,
+        null
+      ],
+      "p_value": 0.021569610179209033,
+      "good_faith_mean": 0.2955943007952858,
+      "good_faith_std": 0.0545286104322936,
+      "problematic_mean": 0.24703205551429275,
+      "problematic_std": 0.05244663663043197,
+      "n_samples": 14,
+      "method": "condition_level"
+    }
+  },
+  "n_good_faith": 14,
+  "n_problematic": 15,
+  "conditions": {
+    "good_faith": [
+      "Faithful",
+      "Objective",
+      "Comprehensive",
+      "Neutral Tone",
+      "Overly Technical",
+      "Academic Style",
+      "Sensationalist",
+      "Bureaucratic",
+      "Casual Conversational",
+      "Historical Perspective",
+      "Poetic",
+      "Technical Jargon",
+      "Euphemistic",
+      "Minimalist"
+    ],
+    "problematic": [
+      "Fact Manipulation",
+      "Selective Omission",
+      "Misleading Emphasis",
+      "Sentiment Flip",
+      "Conspiracy Theory",
+      "Contradictory",
+      "Context Removal",
+      "False Attribution",
+      "Agenda Push",
+      "Cherry Pick",
+      "Low Effort",
+      "Ultra Concise",
+      "Template Response",
+      "Surface Skim",
+      "Minimal Detail"
+    ]
+  }
+}

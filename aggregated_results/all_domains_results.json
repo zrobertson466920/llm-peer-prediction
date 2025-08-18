@@ -7,8 +7,8 @@
       "mi": {
         "cohens_d": 1.6098252799214894,
         "cohens_d_ci": [
-          1.4622018405043318,
-          1.7885454294558942
+          1.4636809228138201,
+          1.7792166582699933
         ],
         "p_value": 0.0,
         "good_faith_mean": 2.1858085021671676,
@@ -21,8 +21,8 @@
       "gppm": {
         "cohens_d": 0.6982593192064747,
         "cohens_d_ci": [
-          0.6354816335050365,
-          0.7826121295682319
+          0.6359616464873212,
+          0.7798992317241282
         ],
         "p_value": 0.0,
         "good_faith_mean": -2.6046823297795583,
@@ -35,8 +35,8 @@
       "tvd_mi": {
         "cohens_d": 3.3177246544340164,
         "cohens_d_ci": [
-          3.0928004967831986,
-          3.5963740148385965
+          3.083694364349023,
+          3.577102485094947
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.642394499178982,
@@ -99,8 +99,8 @@
       ]
     },
     "display_name": "WMT14 Translation",
-    "source_file": "aggregated_results/MT14_config_results/figures/translation_dataset_20250511_161835_structured_results.json",
-    "parent_directory": "MT14_config_results"
+    "source_file": "aggregated_results/eval_results_MT14_config_results/figures/translation_dataset_20250511_161835_structured_results.json",
+    "parent_directory": "eval_results_MT14_config_results"
   },
   {
     "dataset_name": "translation_meta_llama_Llama_3.3_70B_Instruct_Turbo_20250704_205459",
@@ -110,8 +110,8 @@
       "mi": {
         "cohens_d": 1.6321318331111685,
         "cohens_d_ci": [
-          1.0667691181321388,
-          2.8979516084148327
+          1.0975451027262748,
+          2.894083030437918
         ],
         "p_value": 0.0,
         "good_faith_mean": 2.0857350705424875,
@@ -124,8 +124,8 @@
       "gppm": {
         "cohens_d": 2.1923127120997847,
         "cohens_d_ci": [
-          1.471564776622158,
-          4.440219396932025
+          1.4493987531548431,
+          4.28439953475206
         ],
         "p_value": 0.0,
         "good_faith_mean": -1.8204762436012023,
@@ -138,8 +138,8 @@
       "tvd_mi": {
         "cohens_d": 1.970666458644529,
         "cohens_d_ci": [
-          1.390618713801782,
-          3.1712806806236453
+          1.39544805733609,
+          3.0677135176408803
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.5319381313131313,
@@ -152,8 +152,8 @@
       "llm_judge_with": {
         "cohens_d": 2.6168258091511247,
         "cohens_d_ci": [
-          1.9628682619564033,
-          3.898702686311045
+          1.9425717314507251,
+          3.87908482120781
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.5818939393939393,
@@ -166,10 +166,10 @@
       "llm_judge_without": {
         "cohens_d": 0.27808118532917264,
         "cohens_d_ci": [
-          -0.09002312769790366,
-          0.6467256945990778
+          -0.068323012665273,
+          0.6755614085584598
         ],
-        "p_value": 0.142,
+        "p_value": 0.1325,
         "good_faith_mean": 0.4708838383838384,
         "good_faith_std": 0.09702737217781683,
         "problematic_mean": 0.42951388888888886,
@@ -231,8 +231,8 @@
       ]
     },
     "display_name": "Opus Books Translation",
-    "source_file": "aggregated_results/opus_translation_results/figures/translation_meta_llama_Llama_3.3_70B_Instruct_Turbo_20250704_205459_structured_results.json",
-    "parent_directory": "opus_translation_results"
+    "source_file": "aggregated_results/eval_results_opus_translation_results/figures/translation_meta_llama_Llama_3.3_70B_Instruct_Turbo_20250704_205459_structured_results.json",
+    "parent_directory": "eval_results_opus_translation_results"
   },
   {
     "dataset_name": "summarization_gpt_4o_mini_20250708_235208",
@@ -242,8 +242,8 @@
       "mi": {
         "cohens_d": 2.520974584345643,
         "cohens_d_ci": [
-          2.280251866445066,
-          2.8043367068235234
+          2.2858363113835947,
+          2.8178743334326133
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.6891397663145691,
@@ -256,8 +256,8 @@
       "gppm": {
         "cohens_d": 2.517539907665493,
         "cohens_d_ci": [
-          2.30648373388259,
-          2.7669585451181127
+          2.3060712035526496,
+          2.768254635271583
         ],
         "p_value": 0.0,
         "good_faith_mean": -1.9921881254341833,
@@ -270,8 +270,8 @@
       "tvd_mi": {
         "cohens_d": 6.137308750886632,
         "cohens_d_ci": [
-          5.5955390026898,
-          6.833059450309253
+          5.590109874845311,
+          6.893966720994424
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.6415101600985221,
@@ -284,8 +284,8 @@
       "llm_judge_with": {
         "cohens_d": 2.6984066844894077,
         "cohens_d_ci": [
-          2.4523838381789433,
-          3.016398810473573
+          2.453273605957229,
+          2.9870385561024944
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.6538238916256158,
@@ -298,8 +298,8 @@
       "llm_judge_without": {
         "cohens_d": 0.5385293078983554,
         "cohens_d_ci": [
-          0.38905075766274855,
-          0.6972677326542857
+          0.3966628496294425,
+          0.7001463879583222
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.5807820197044335,
@@ -362,8 +362,8 @@
       ]
     },
     "display_name": "SamSum",
-    "source_file": "aggregated_results/samsum_200_config_results/figures/summarization_gpt_4o_mini_20250708_235208_structured_results.json",
-    "parent_directory": "samsum_200_config_results"
+    "source_file": "aggregated_results/eval_results_samsum_200_config_results/figures/summarization_gpt_4o_mini_20250708_235208_structured_results.json",
+    "parent_directory": "eval_results_samsum_200_config_results"
   },
   {
     "dataset_name": "summarization_gpt_4o_mini_20250707_180645",
@@ -373,8 +373,8 @@
       "mi": {
         "cohens_d": 2.0084483925920154,
         "cohens_d_ci": [
-          1.7162190555335035,
-          2.37847889585797
+          1.7205598896663925,
+          2.383392525580127
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.307610214235856,
@@ -387,8 +387,8 @@
       "gppm": {
         "cohens_d": 3.1847570399582796,
         "cohens_d_ci": [
-          2.7334506649730113,
-          3.7434835537242868
+          2.7327731858223734,
+          3.737063101824671
         ],
         "p_value": 0.0,
         "good_faith_mean": -1.817564010846401,
@@ -401,8 +401,8 @@
       "tvd_mi": {
         "cohens_d": 6.525236978963051,
         "cohens_d_ci": [
-          5.899014792352995,
-          7.338713284734857
+          5.8590116719901575,
+          7.322463972694782
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.735629618226601,
@@ -415,8 +415,8 @@
       "llm_judge_with": {
         "cohens_d": 8.136331372643234,
         "cohens_d_ci": [
-          7.34948772636948,
-          9.200340024304117
+          7.354214860955226,
+          9.14893550852929
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.6799568965517241,
@@ -429,8 +429,8 @@
       "llm_judge_without": {
         "cohens_d": 3.2498375516768507,
         "cohens_d_ci": [
-          2.844671026564115,
-          3.7867921656002705
+          2.839189141694586,
+          3.7651117616795804
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.6234605911330049,
@@ -493,8 +493,8 @@
       ]
     },
     "display_name": "PubMed",
-    "source_file": "aggregated_results/pubmed_200_config_results/figures/summarization_gpt_4o_mini_20250707_180645_structured_results.json",
-    "parent_directory": "pubmed_200_config_results"
+    "source_file": "aggregated_results/eval_results_pubmed_200_config_results/figures/summarization_gpt_4o_mini_20250707_180645_structured_results.json",
+    "parent_directory": "eval_results_pubmed_200_config_results"
   },
   {
     "dataset_name": "summarization_gpt_4o_mini_20250709_043636",
@@ -504,8 +504,8 @@
       "mi": {
         "cohens_d": 1.529722412611306,
         "cohens_d_ci": [
-          1.3764775261202262,
-          1.7444514603935297
+          1.3652582588100188,
+          1.7363620716023909
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.3156880588657665,
@@ -518,8 +518,8 @@
       "gppm": {
         "cohens_d": 2.7023675882187046,
         "cohens_d_ci": [
-          2.4373206622771946,
-          3.0537441325952157
+          2.448451097805497,
+          3.0456366965516595
         ],
         "p_value": 0.0,
         "good_faith_mean": -1.8319349920175108,
@@ -532,8 +532,8 @@
       "tvd_mi": {
         "cohens_d": 6.54859874309965,
         "cohens_d_ci": [
-          5.819140302978533,
-          7.519781018204252
+          5.82649196995139,
+          7.4462891860119305
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.7188900862068965,
@@ -546,8 +546,8 @@
       "llm_judge_with": {
         "cohens_d": 4.058722793796933,
         "cohens_d_ci": [
-          3.561303067363306,
-          4.7317252638369105
+          3.531292215960157,
+          4.71662804464563
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.5945073891625616,
@@ -560,8 +560,8 @@
       "llm_judge_without": {
         "cohens_d": 0.538127926767886,
         "cohens_d_ci": [
-          0.38184914547922016,
-          0.7102900327258451
+          0.3855556876524123,
+          0.7001056892083972
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.4765825123152709,
@@ -624,8 +624,8 @@
       ]
     },
     "display_name": "Multi-News",
-    "source_file": "aggregated_results/multi_news_200_config_results/figures/summarization_gpt_4o_mini_20250709_043636_structured_results.json",
-    "parent_directory": "multi_news_200_config_results"
+    "source_file": "aggregated_results/eval_results_multi_news_200_config_results/figures/summarization_gpt_4o_mini_20250709_043636_structured_results.json",
+    "parent_directory": "eval_results_multi_news_200_config_results"
   },
   {
     "dataset_name": "summarization_gpt_4o_mini_20250709_180549",
@@ -635,8 +635,8 @@
       "mi": {
         "cohens_d": 2.238589263963846,
         "cohens_d_ci": [
-          2.040849751060456,
-          2.4987194256776486
+          2.016983587573354,
+          2.5099386425206855
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.4282144517226105,
@@ -649,8 +649,8 @@
       "gppm": {
         "cohens_d": 3.5894100816005956,
         "cohens_d_ci": [
-          3.2728944404999103,
-          4.013911716493739
+          3.2819282762374615,
+          4.024333100686202
         ],
         "p_value": 0.0,
         "good_faith_mean": -1.8379308354807729,
@@ -663,8 +663,8 @@
       "tvd_mi": {
         "cohens_d": 5.912025785064702,
         "cohens_d_ci": [
-          5.2770473113150755,
-          6.7562030417292815
+          5.274855827406778,
+          6.721813468431514
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.7557389162561577,
@@ -677,8 +677,8 @@
       "llm_judge_with": {
         "cohens_d": 4.234647981738396,
         "cohens_d_ci": [
-          3.772998018759077,
-          4.792205134547801
+          3.814520305379329,
+          4.7747041312812835
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.5552647783251231,
@@ -691,10 +691,10 @@
       "llm_judge_without": {
         "cohens_d": 0.16278479602232904,
         "cohens_d_ci": [
-          0.025254424705351837,
-          0.30664852659640107
+          0.020280939413360934,
+          0.30973677005866523
         ],
-        "p_value": 0.031,
+        "p_value": 0.02,
         "good_faith_mean": 0.4646551724137931,
         "good_faith_std": 0.03905257348228828,
         "problematic_mean": 0.45325287356321836,
@@ -755,8 +755,8 @@
       ]
     },
     "display_name": "BillSum",
-    "source_file": "aggregated_results/billsum_200_config_results/figures/summarization_gpt_4o_mini_20250709_180549_structured_results.json",
-    "parent_directory": "billsum_200_config_results"
+    "source_file": "aggregated_results/eval_results_billsum_200_config_results/figures/summarization_gpt_4o_mini_20250709_180549_structured_results.json",
+    "parent_directory": "eval_results_billsum_200_config_results"
   },
   {
     "dataset_name": "summarization_gpt_4o_mini_20250616_131838",
@@ -766,8 +766,8 @@
       "mi": {
         "cohens_d": 2.0626278356289958,
         "cohens_d_ci": [
-          1.88406927915721,
-          2.288909595332288
+          1.8783250488004923,
+          2.296159941024625
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.3585480997168471,
@@ -780,8 +780,8 @@
       "gppm": {
         "cohens_d": 3.4172647261035474,
         "cohens_d_ci": [
-          3.0731879721612385,
-          3.800676492579508
+          3.0922573407335645,
+          3.817602126911055
         ],
         "p_value": 0.0,
         "good_faith_mean": -1.8704286653505757,
@@ -794,8 +794,8 @@
       "tvd_mi": {
         "cohens_d": 5.871672873846608,
         "cohens_d_ci": [
-          5.17149628480298,
-          6.688393716131213
+          5.141622346254825,
+          6.628719035548386
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.7080269719637535,
@@ -808,8 +808,8 @@
       "llm_judge_with": {
         "cohens_d": 3.55170022559119,
         "cohens_d_ci": [
-          3.2239708293889664,
-          3.9532453693223024
+          3.232235677581282,
+          3.961122172569465
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.6237881773399014,
@@ -822,8 +822,8 @@
       "llm_judge_without": {
         "cohens_d": 0.7249537286285719,
         "cohens_d_ci": [
-          0.6257583175811705,
-          0.8308830989733944
+          0.6265078351023611,
+          0.8327774608483625
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.5287733990147783,
@@ -886,8 +886,8 @@
       ]
     },
     "display_name": "CNN/DailyMail",
-    "source_file": "aggregated_results/cnn_dailymail_config_results/figures/summarization_gpt_4o_mini_20250616_131838_structured_results.json",
-    "parent_directory": "cnn_dailymail_config_results"
+    "source_file": "aggregated_results/eval_results_cnn_dailymail_config_results/figures/summarization_gpt_4o_mini_20250616_131838_structured_results.json",
+    "parent_directory": "eval_results_cnn_dailymail_config_results"
   },
   {
     "dataset_name": "summarization_gpt_4o_mini_20250708_012535",
@@ -897,8 +897,8 @@
       "mi": {
         "cohens_d": 2.5169406700105332,
         "cohens_d_ci": [
-          2.2869600301955364,
-          2.8158218059523095
+          2.2984142038675657,
+          2.8098850759379723
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.4833410095364197,
@@ -911,8 +911,8 @@
       "gppm": {
         "cohens_d": 3.758156659556868,
         "cohens_d_ci": [
-          3.456723524306018,
-          4.169333227357263
+          3.4582576968120478,
+          4.165941430514894
         ],
         "p_value": 0.0,
         "good_faith_mean": -2.097303293483401,
@@ -925,8 +925,8 @@
       "tvd_mi": {
         "cohens_d": 7.234823198794593,
         "cohens_d_ci": [
-          6.498361815237572,
-          8.199525222151308
+          6.519348830034949,
+          8.108631915305772
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.7264624384236452,
@@ -939,8 +939,8 @@
       "llm_judge_with": {
         "cohens_d": 2.7034225383275325,
         "cohens_d_ci": [
-          2.3794271906605,
-          3.107844921122073
+          2.4080115838404734,
+          3.1038114001944925
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.614396551724138,
@@ -953,10 +953,10 @@
       "llm_judge_without": {
         "cohens_d": 0.04637938481691155,
         "cohens_d_ci": [
-          -0.09330231303841229,
-          0.19238260105949756
+          -0.09081988532345318,
+          0.18389847822919692
         ],
-        "p_value": 0.5115,
+        "p_value": 0.518,
         "good_faith_mean": 0.49631157635467976,
         "good_faith_std": 0.0472997898217121,
         "problematic_mean": 0.4931091954022989,
@@ -1017,8 +1017,8 @@
       ]
     },
     "display_name": "Reddit TIFU",
-    "source_file": "aggregated_results/reddit_tifu_200_config_results/figures/summarization_gpt_4o_mini_20250708_012535_structured_results.json",
-    "parent_directory": "reddit_tifu_200_config_results"
+    "source_file": "aggregated_results/eval_results_reddit_tifu_200_config_results/figures/summarization_gpt_4o_mini_20250708_012535_structured_results.json",
+    "parent_directory": "eval_results_reddit_tifu_200_config_results"
   },
   {
     "dataset_name": "summarization_gpt_4o_mini_20250708_171435",
@@ -1028,8 +1028,8 @@
       "mi": {
         "cohens_d": 1.894182389140165,
         "cohens_d_ci": [
-          1.720912648226347,
-          2.122310645551496
+          1.7233671452247954,
+          2.101227477660243
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.49749616217482656,
@@ -1042,8 +1042,8 @@
       "gppm": {
         "cohens_d": 2.849353648439007,
         "cohens_d_ci": [
-          2.616109724146536,
-          3.1194494608377545
+          2.625905990218789,
+          3.123712536397708
         ],
         "p_value": 0.0,
         "good_faith_mean": -2.0654857890102,
@@ -1056,8 +1056,8 @@
       "tvd_mi": {
         "cohens_d": 6.688277490401642,
         "cohens_d_ci": [
-          6.086912426277411,
-          7.454983912926829
+          6.1168969986561725,
+          7.432354162428819
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.6985975985221674,
@@ -1070,8 +1070,8 @@
       "llm_judge_with": {
         "cohens_d": 3.3921656571815957,
         "cohens_d_ci": [
-          3.0421897331422816,
-          3.819976855460572
+          3.0510968301492576,
+          3.816163992276706
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.5910036945812808,
@@ -1084,8 +1084,8 @@
       "llm_judge_without": {
         "cohens_d": -0.2821854517282594,
         "cohens_d_ci": [
-          -0.4285556295571408,
-          -0.1346910514547267
+          -0.43759086104005573,
+          -0.14540488694863335
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.37167487684729067,
@@ -1148,8 +1148,8 @@
       ]
     },
     "display_name": "XSum",
-    "source_file": "aggregated_results/xsum_200_config_results/figures/summarization_gpt_4o_mini_20250708_171435_structured_results.json",
-    "parent_directory": "xsum_200_config_results"
+    "source_file": "aggregated_results/eval_results_xsum_200_config_results/figures/summarization_gpt_4o_mini_20250708_171435_structured_results.json",
+    "parent_directory": "eval_results_xsum_200_config_results"
   },
   {
     "dataset_name": "peer_review_gpt_4o_mini_20250618_231942",
@@ -1159,8 +1159,8 @@
       "mi": {
         "cohens_d": 0.6793618757048299,
         "cohens_d_ci": [
-          0.4769878292116348,
-          0.9171247714138778
+          0.47624698037848834,
+          0.9074231050518792
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.4022348850086361,
@@ -1173,8 +1173,8 @@
       "gppm": {
         "cohens_d": 0.7316828679758499,
         "cohens_d_ci": [
-          0.5369340530854595,
-          0.955684575428453
+          0.5265887519042095,
+          0.9737843080588927
         ],
         "p_value": 0.0,
         "good_faith_mean": -1.401225781279906,
@@ -1187,8 +1187,8 @@
       "tvd_mi": {
         "cohens_d": 1.8161942182301989,
         "cohens_d_ci": [
-          1.5180077274721453,
-          2.246748887217355
+          1.5010460391266178,
+          2.2436108861464055
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.839485119047619,
@@ -1201,10 +1201,10 @@
       "llm_judge_with": {
         "cohens_d": 0.2587383571984934,
         "cohens_d_ci": [
-          0.06452645392532623,
-          0.4725054877576119
+          0.06078014051329064,
+          0.48965182205576846
         ],
-        "p_value": 0.0135,
+        "p_value": 0.01,
         "good_faith_mean": 0.43474999999999997,
         "good_faith_std": 0.04695017706719066,
         "problematic_mean": 0.4230631868131868,
@@ -1215,8 +1215,8 @@
       "llm_judge_without": {
         "cohens_d": -1.6894246392769827,
         "cohens_d_ci": [
-          -2.000163627188784,
-          -1.453751714707842
+          -2.011168813425994,
+          -1.4646578731095923
         ],
         "p_value": 0.0,
         "good_faith_mean": 0.5621190476190475,
@@ -1278,7 +1278,7 @@
       ]
     },
     "display_name": "ICLR 2023 Peer Review",
-    "source_file": "aggregated_results/peer_review_results_100/figures/peer_review_gpt_4o_mini_20250618_231942_structured_results.json",
-    "parent_directory": "peer_review_results_100"
+    "source_file": "aggregated_results/eval_results_peer_review_results_100/figures/peer_review_gpt_4o_mini_20250618_231942_structured_results.json",
+    "parent_directory": "eval_results_peer_review_results_100"
   }
 ]

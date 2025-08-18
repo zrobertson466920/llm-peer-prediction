@@ -1,0 +1,45 @@
+DETAILED CONDITION BREAKDOWN
+========================================
+
+GOOD FAITH CONDITIONS (14 total):
+------------------------------
+  Faithful (4):
+    - Faithful
+    - Objective
+    - Comprehensive
+    - Neutral Tone
+
+  Style (10):
+    - Overly Technical
+    - Academic Style
+    - Sensationalist
+    - Bureaucratic
+    - Casual Conversational
+    - Historical Perspective
+    - Poetic
+    - Technical Jargon
+    - Euphemistic
+    - Minimalist
+
+
+PROBLEMATIC CONDITIONS (15 total):
+------------------------------
+  Strategic (10):
+    - Fact Manipulation
+    - Selective Omission
+    - Misleading Emphasis
+    - Sentiment Flip
+    - Conspiracy Theory
+    - Contradictory
+    - Context Removal
+    - False Attribution
+    - Agenda Push
+    - Cherry Pick
+
+  Low Effort (5):
+    - Low Effort
+    - Ultra Concise
+    - Template Response
+    - Surface Skim
+    - Minimal Detail
+

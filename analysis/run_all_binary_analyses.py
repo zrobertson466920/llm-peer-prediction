@@ -41,13 +41,27 @@ DIRECTORY_TO_DISPLAY_NAME = {
 }
 
 def find_results_directories(base_dir):
-    """Find all directories containing 'results' in their name."""
+    """Find all directories containing 'results' in their name, excluding transformed ablations."""
     base_path = Path(base_dir)
     results_dirs = []
+
+    # Patterns to exclude (for ablation studies)
+    exclude_patterns = [
+        'case_flip_transformed',
+        'format_transformed', 
+        'padding_transformed',
+        'pattern_transformed',
+        'repetition_transformed',
+        'transformed_results'  # catch-all for any transformed results
+    ]
 
     # Find all directories with 'results' in the name
     for path in base_path.rglob('*results*'):
         if path.is_dir() and not path.name.startswith('.'):
+            # Check if any exclude pattern matches
+            if any(pattern in path.name for pattern in exclude_patterns):
+                continue
+
             # Check if it contains validation files
             if any(path.glob('*_validation.json')):
                 results_dirs.append(path)
@@ -93,6 +107,10 @@ def get_compression_from_path(file_path):
 
     # Look for the parent directory that matches our mapping
     for parent in path.parents:
+        # Check both with and without eval_results_ prefix
+        clean_name = parent.name.replace('eval_results_', '')
+        if clean_name in DIRECTORY_TO_COMPRESSION:
+            return DIRECTORY_TO_COMPRESSION[clean_name]
         if parent.name in DIRECTORY_TO_COMPRESSION:
             return DIRECTORY_TO_COMPRESSION[parent.name]
 
@@ -103,6 +121,10 @@ def get_display_name_from_path(file_path):
     path = Path(file_path)
 
     for parent in path.parents:
+        # Check both with and without eval_results_ prefix
+        clean_name = parent.name.replace('eval_results_', '')
+        if clean_name in DIRECTORY_TO_DISPLAY_NAME:
+            return DIRECTORY_TO_DISPLAY_NAME[clean_name]
         if parent.name in DIRECTORY_TO_DISPLAY_NAME:
             return DIRECTORY_TO_DISPLAY_NAME[parent.name]
 
@@ -279,9 +301,9 @@ def create_summary_report(all_results, output_base_dir):
 
 def main():
     parser = argparse.ArgumentParser(description='Run binary analysis on all results directories')
-    parser.add_argument('--base-dir', type=str, default='.',
+    parser.add_argument('--base-dir', type=str, default='eval_results',
                         help='Base directory to search for results folders')
-    parser.add_argument('--output-dir', type=str, default='aggregated_binary_analysis',
+    parser.add_argument('--output-dir', type=str, default='aggregated_results',
                         help='Output directory for aggregated results')
     parser.add_argument('--skip-analysis', action='store_true',
                         help='Skip running analyses, just aggregate existing results')

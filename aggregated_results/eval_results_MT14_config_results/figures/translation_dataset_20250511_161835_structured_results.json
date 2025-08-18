@@ -1,0 +1,100 @@
+{
+  "dataset_name": "translation_dataset_20250511_161835",
+  "task_type": "translation",
+  "compression_ratio": null,
+  "stats_results": {
+    "mi": {
+      "cohens_d": 1.6098252799214894,
+      "cohens_d_ci": [
+        1.4636809228138201,
+        1.7792166582699933
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 2.1858085021671676,
+      "good_faith_std": 0.4520298321504906,
+      "problematic_mean": 1.9353456118547074,
+      "problematic_std": 0.3980741629116464,
+      "n_samples": 500,
+      "method": "item-bootstrap"
+    },
+    "gppm": {
+      "cohens_d": 0.6982593192064747,
+      "cohens_d_ci": [
+        0.6359616464873212,
+        0.7798992317241282
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": -2.6046823297795583,
+      "good_faith_std": 2.800154367642568,
+      "problematic_mean": -3.0101194003723575,
+      "problematic_std": 3.292039061183273,
+      "n_samples": 500,
+      "method": "item-bootstrap"
+    },
+    "tvd_mi": {
+      "cohens_d": 3.3177246544340164,
+      "cohens_d_ci": [
+        3.083694364349023,
+        3.577102485094947
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.642394499178982,
+      "good_faith_std": 0.16992290287949977,
+      "problematic_mean": 0.4296724137931034,
+      "problematic_std": 0.15719390461055976,
+      "n_samples": 500,
+      "method": "item-bootstrap"
+    },
+    "baseline": {
+      "cohens_d": 0.9303433452194736,
+      "cohens_d_ci": [
+        null,
+        null
+      ],
+      "p_value": 0.008305947652688573,
+      "good_faith_mean": 0.4451719818509573,
+      "good_faith_std": 0.17993089320999678,
+      "problematic_mean": 0.2937485783523805,
+      "problematic_std": 0.09838434577425179,
+      "n_samples": 21,
+      "method": "condition_level"
+    }
+  },
+  "n_good_faith": 21,
+  "n_problematic": 8,
+  "conditions": {
+    "good_faith": [
+      "Formal",
+      "Informal",
+      "Technical",
+      "Simplify",
+      "Poetic",
+      "Humorous",
+      "Dramatic",
+      "Historical",
+      "Futuristic",
+      "Academic",
+      "Persuasive",
+      "Emotional",
+      "Objective",
+      "Subjective",
+      "Metaphorical",
+      "Comparative",
+      "Hypothetical",
+      "Cultural",
+      "Philosophical",
+      "Quantitative",
+      "Creative"
+    ],
+    "problematic": [
+      "Low Effort",
+      "All Positive",
+      "All Negative",
+      "Exaggerate",
+      "Understate",
+      "Sarcastic",
+      "Misleading",
+      "Contradictory"
+    ]
+  }
+}

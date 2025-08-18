@@ -29,18 +29,19 @@ def generate_comprehensive_table(results):
 
     transforms = ['case_flip', 'format', 'padding', 'pattern']
 
-    print("\\begin{table}[h]")
-    print("\\centering")
-    print("\\caption{Effects of adversarial transformations on Reddit TIFU summarization. Score changes and discrimination")
-    print("degradation across four transformation types, with averages showing overall robustness.}")
-    print("\\label{tab:tampering_comprehensive}")
-    print("\\begin{tabular}{lccccc}")
-    print("\\toprule")
-    print("\\textbf{Mechanism} & \\textbf{Case Flip} & \\textbf{Format} & \\textbf{Padding} & \\textbf{Pattern} & \\textbf{Average} \\\\")
-    print("\\midrule")
+    lines = []
+    lines.append("\\begin{table}[h]")
+    lines.append("\\centering")
+    lines.append("\\caption{Effects of adversarial transformations on Reddit TIFU summarization. Score changes and discrimination")
+    lines.append("degradation across four transformation types, with averages showing overall robustness.}")
+    lines.append("\\label{tab:tampering_comprehensive}")
+    lines.append("\\begin{tabular}{lccccc}")
+    lines.append("\\toprule")
+    lines.append("\\textbf{Mechanism} & \\textbf{Case Flip} & \\textbf{Format} & \\textbf{Padding} & \\textbf{Pattern} & \\textbf{Average} \\\\")
+    lines.append("\\midrule")
 
     # Score changes section
-    print("\\multicolumn{6}{l}{\\textit{Score Changes}} \\\\")
+    lines.append("\\multicolumn{6}{l}{\\textit{Score Changes}} \\\\")
 
     for mech in mechanisms:
         row = [mech_names[mech]]
@@ -52,9 +53,8 @@ def generate_comprehensive_table(results):
                 mean_diff = test_data['mean_difference']
                 p_val = test_data['p_value']
 
-                # Convert to percentage
-                pct_change = mean_diff * 100
-                score_changes.append(pct_change)
+                # Keep as raw difference (delta)
+                score_changes.append(mean_diff)
 
                 # Format with significance and sign
                 if p_val < 0.001:
@@ -66,30 +66,24 @@ def generate_comprehensive_table(results):
                 else:
                     sig = ""
 
-                # Format: always show sign, one decimal place
-                if abs(pct_change) >= 10:
-                    row.append(f"{pct_change:+.0f}\\%{sig}")
-                else:
-                    row.append(f"{pct_change:+.1f}\\%{sig}")
+                # Format: always show sign, three decimal places for deltas
+                row.append(f"{mean_diff:+.3f}{sig}")
             else:
                 row.append("--")
 
         # Calculate average
         if score_changes:
             avg = np.mean(score_changes)
-            if abs(avg) >= 10:
-                row.append(f"{avg:+.0f}\\%")
-            else:
-                row.append(f"{avg:+.1f}\\%")
+            row.append(f"{avg:+.3f}")
         else:
             row.append("--")
 
-        print(" & ".join(row) + " \\\\")
+        lines.append(" & ".join(row) + " \\\\")
 
-    print("\\midrule")
+    lines.append("\\midrule")
 
     # Discrimination degradation section
-    print("\\multicolumn{6}{l}{\\textit{Discrimination Degradation (\\% change in Cohen's d)}} \\\\")
+    lines.append("\\multicolumn{6}{l}{\\textit{Discrimination Degradation (change in Cohen's d)}} \\\\")
 
     for mech in mechanisms:
         row = [mech_names[mech]]
@@ -100,54 +94,54 @@ def generate_comprehensive_table(results):
                 effect_data = results[transform]['category_effect_sizes'][mech]
                 original_d = effect_data['original_effect_size']
                 transformed_d = effect_data['transformed_effect_size']
-                pct_change = ((transformed_d - original_d) / abs(original_d)) * 100 if original_d != 0 else 0
-                disc_changes.append(pct_change)
+                # Raw delta in Cohen's d
+                delta_d = transformed_d - original_d
+                disc_changes.append(delta_d)
 
                 # Format with consistent style
-                if pct_change < -30:  # Severe degradation
-                    if abs(pct_change) >= 100:
-                        row.append(f"\\textcolor{{red}}{{{pct_change:.0f}\\%}}")
-                    else:
-                        row.append(f"\\textcolor{{red}}{{{pct_change:.0f}\\%}}")
+                if delta_d < -0.3:  # Severe degradation (threshold adjusted for raw values)
+                    row.append(f"\\textcolor{{red}}{{{delta_d:+.3f}}}")
                 else:
-                    if abs(pct_change) >= 100:
-                        row.append(f"{pct_change:+.0f}\\%")
-                    else:
-                        row.append(f"{pct_change:+.0f}\\%")
+                    row.append(f"{delta_d:+.3f}")
             else:
                 row.append("--")
 
         # Calculate average
         if disc_changes:
             avg = np.mean(disc_changes)
-            # Special handling for extreme values
-            if abs(avg) >= 100:
-                if avg < -30:
-                    row.append(f"\\textcolor{{red}}{{{avg:.0f}\\%}}")
-                else:
-                    row.append(f"{avg:+.0f}\\%")
+            if avg < -0.3:
+                row.append(f"\\textcolor{{red}}{{{avg:+.3f}}}")
             else:
-                if avg < -30:
-                    row.append(f"\\textcolor{{red}}{{{avg:.0f}\\%}}")
-                else:
-                    row.append(f"{avg:+.0f}\\%")
+                row.append(f"{avg:+.3f}")
         else:
             row.append("--")
 
-        print(" & ".join(row) + " \\\\")
+        lines.append(" & ".join(row) + " \\\\")
 
-    print("\\bottomrule")
-    print("\\end{tabular}")
-    print("\\end{table}")
+    lines.append("\\bottomrule")
+    lines.append("\\end{tabular}")
+    lines.append("\\end{table}")
+
+    return "\n".join(lines)
 
 def main():
     # Load all transformation results
     results = load_all_transformations()
 
-    print(f"% Loaded results for transformations: {list(results.keys())}\n")
-
     # Generate comprehensive table
-    generate_comprehensive_table(results)
+    table_tex = generate_comprehensive_table(results)
+
+    # Create tables directory if it doesn't exist
+    tables_dir = Path("tables")
+    tables_dir.mkdir(exist_ok=True)
+
+    # Save to file
+    output_path = tables_dir / "tampering_table_reddit_tifu.tex"
+    with open(output_path, 'w') as f:
+        f.write(f"% Loaded results for transformations: {list(results.keys())}\n\n")
+        f.write(table_tex)
+
+    print(f"Table saved to: {output_path}")
 
 if __name__ == "__main__":
     main()

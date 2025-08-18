@@ -110,6 +110,23 @@ The pipeline expects input data in JSON format:
 - **GPPM**: Sum of log probabilities (also provides normalized version)
 - Caches API calls to avoid redundancy
 - Saves individual examples to archive, then aggregates
+- **Individual example format** (`log_individual_examples/`):
+  ```json
+  {
+    "example_idx": 0,
+    "translations": ["response1", "response2", ...],
+    "condition_keys": ["Faithful", "Strategic", ...],
+    "logp_base": [...],        // log P(A|task) for each response
+    "logp_cond": [[...]],      // 30x30 matrix of log P(A|task,B)
+    "difference_matrix": [[...]], // logp_cond - logp_base
+    "row_avgs": [...],         // Row averages of difference_matrix
+    "col_avgs": [...],         // Column averages
+    "combined_avgs": [...],    // (row + col) / 2 = MI scores
+    "gppm": [...],             // Sum of logprobs
+    "gppm_normalized": [...],  // Normalized by token count
+    "token_counts": [...],
+    "response_lengths": [...]
+  }
 
 #### TVD-MI (`tvd_mi_peer_prediction.py`)
 - Uses OpenAI chat models as LLM critic
@@ -121,6 +138,17 @@ The pipeline expects input data in JSON format:
 - Provides both directional and bidirectional scores
 - Reads directly from archive directory during aggregation (no temp files)
 - Supports verbosity levels to control output size
+- **Individual example format** (`tvd_mi_individual_examples/`):
+  ```json
+  {
+    "example_idx": 0,
+    "condition_keys": ["Faithful", "Strategic", ...],
+    "tvd_mi_matrix": [[...]], // 30x30 pairwise TVD-MI scores
+    "tvd_mi_scores": [...],   // Row averages (directional)
+    "tvd_mi_bidirectional": [...], // (row + col) / 2
+    "response_lengths": [...]
+  }
+  ```
 
 #### LLM Judge (`llm_judge_peer_prediction.py`)
 - Head-to-head comparisons using OpenAI models
@@ -131,6 +159,16 @@ The pipeline expects input data in JSON format:
 - Returns: [[A]]=1.0, [[B]]=0.0, [[C]]=0.5 (tie)
 - Already uses direct aggregation from archive
 - Supports verbosity levels to control output size
+- **Individual example format** (`llm_context_individual_examples/` or `llm_without_context_individual_examples/`):
+  ```json
+  {
+    "example_idx": 0,
+    "condition_keys": ["Faithful", "Strategic", ...],
+    "with_context": true/false,
+    "win_matrix": [[...]], // 30x30 win rates (1.0, 0.5, 0.0)
+    "win_rates": [...],    // Row averages
+    "response_lengths": [...]
+  }
 
 #### Verbosity Levels (TVD-MI and Judge)
 Both scripts support three verbosity levels to manage memory usage:
@@ -170,8 +208,12 @@ results/
   *_tvd_mi.json
   *_judge_with_context.json
   *_judge_without_context.json
-  */individual_examples/  # Archives of per-example results
-```
+  
+  # Individual example archives (subdirectories):
+  log_individual_examples/         # MI/GPPM per-example results
+  tvd_mi_individual_examples/      # TVD-MI per-example results
+  llm_context_individual_examples/ # Judge with context results
+  llm_without_context_individual_examples/ # Judge without context
 
 ### Naming Conventions
 - Agent data: `{task_type}_{model}_{timestamp}.json`
@@ -231,6 +273,60 @@ python llm_judge_peer_prediction.py --agent-data data/agents/output.json --both 
 # 4. Analyze results
 python binary_cat_analysis.py --results-dir results --agent-file output
 ```
+
+### Aggregated Results Format (mechanism output JSONs)
+
+The aggregated result files have a different structure than the individual examples:
+
+#### MI/GPPM Aggregated Format (`*_mi_gppm.json`)
+```json
+{
+  "task_type": "translation|summarization|peer_review",
+  "num_examples": N,
+  "condition_keys": ["Faithful", "Strategic", ...],
+  "mi_scores": [score1, score2, ...],  // List aligned with condition_keys
+  "gppm_scores": [score1, score2, ...],
+  "gppm_normalized_scores": [score1, score2, ...],
+  "response_lengths": [length1, length2, ...],
+  "confidence_intervals": {
+    "mi": {"Faithful": [lower, upper], ...},
+    "gppm": {"Faithful": [lower, upper], ...},
+    "gppm_normalized": {"Faithful": [lower, upper], ...}
+  }
+}
+```
+
+#### TVD-MI Aggregated Format (`*_tvd_mi.json`)
+```json
+{
+  "task_type": "translation|summarization|peer_review",
+  "num_examples": N,
+  "condition_keys": ["Faithful", "Strategic", ...],
+  "tvd_mi_scores": [score1, score2, ...],  // List aligned with condition_keys
+  "tvd_mi_bidirectional": [score1, score2, ...],
+  "response_lengths": [length1, length2, ...],
+  "confidence_intervals": {
+    "tvd_mi": {"Faithful": [lower, upper], ...},
+    "tvd_mi_bidirectional": {"Faithful": [lower, upper], ...}
+  }
+}
+```
+
+#### Judge Aggregated Format (`*_judge_with_context.json`, `*_judge_without_context.json`)
+```json
+{
+  "task_type": "translation|summarization|peer_review",
+  "num_examples": N,
+  "condition_keys": ["Faithful", "Strategic", ...],
+  "win_rates": [rate1, rate2, ...],  // List aligned with condition_keys
+  "response_lengths": [length1, length2, ...],
+  "confidence_intervals": {
+    "win_rates": {"Faithful": [lower, upper], ...}
+  }
+}
+```
+
+**Important:** The scores in aggregated files are stored as lists aligned with `condition_keys`, not as dictionaries mapping condition names to scores. To get the score for a specific condition, you need to find its index in `condition_keys` and use that to index into the scores list.
 
 ### Memory-Efficient Usage
 ```bash

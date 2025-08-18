@@ -1,0 +1,44 @@
+BINARY CATEGORY DISCRIMINATION ANALYSIS
+==================================================
+Dataset: translation_dataset_20250511_161835
+Good Faith: Faithful + Style conditions
+Problematic: Strategic + Low Effort conditions
+
+DISCRIMINATION RESULTS (ranked by effect size):
+--------------------------------------------------
+TVD-MI:
+  Good Faith mean: 0.642 (±0.170, n=500)
+  Problematic mean: 0.430 (±0.157, n=500)
+  Effect size: 3.318 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.207, 0.218]
+  Method: item-bootstrap
+
+MI (DoE):
+  Good Faith mean: 2.186 (±0.452, n=500)
+  Problematic mean: 1.935 (±0.398, n=500)
+  Effect size: 1.610 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.237, 0.265]
+  Method: item-bootstrap
+
+BLEU:
+  Good Faith mean: 0.445 (±0.180, n=21)
+  Problematic mean: 0.294 (±0.098, n=8)
+  Effect size: 0.930 (LARGE)
+  p-value: 0.008306 (**)
+  Method: condition_level
+
+GPPM:
+  Good Faith mean: -2.605 (±2.800, n=500)
+  Problematic mean: -3.010 (±3.292, n=500)
+  Effect size: 0.698 (MEDIUM)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.355, 0.459]
+  Method: item-bootstrap
+
+INTERPRETATION:
+--------------------
+• Best discriminator: TVD-MI (d=3.318)
+• 4/4 metrics show significant discrimination (p<0.05)
+• 3/4 metrics show large practical effect (|d|≥0.8)

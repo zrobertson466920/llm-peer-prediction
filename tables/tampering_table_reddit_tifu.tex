@@ -1,0 +1,27 @@
+% Loaded results for transformations: ['case_flip', 'format', 'padding', 'pattern']
+
+\begin{table}[h]
+\centering
+\caption{Effects of adversarial transformations on Reddit TIFU summarization. Score changes and discrimination
+degradation across four transformation types, with averages showing overall robustness.}
+\label{tab:tampering_comprehensive}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Mechanism} & \textbf{Case Flip} & \textbf{Format} & \textbf{Padding} & \textbf{Pattern} & \textbf{Average} \\
+\midrule
+\multicolumn{6}{l}{\textit{Score Changes}} \\
+TVD-MI & +0.070*** & +0.077*** & +0.029*** & +0.113*** & +0.072 \\
+MI (DoE) & -0.032*** & +0.455*** & +0.201*** & +0.214*** & +0.209 \\
+GPPM & -0.014 & +0.233*** & +0.080*** & +0.965*** & +0.316 \\
+Judge (w/ ctx) & -0.111*** & +0.000 & -0.064*** & -0.338*** & -0.128 \\
+Judge (w/o ctx) & -0.110*** & -0.042*** & -0.101*** & -0.479*** & -0.183 \\
+\midrule
+\multicolumn{6}{l}{\textit{Discrimination Degradation (change in Cohen's d)}} \\
+TVD-MI & \textcolor{red}{-2.259} & \textcolor{red}{-1.336} & \textcolor{red}{-0.438} & \textcolor{red}{-1.900} & \textcolor{red}{-1.483} \\
+MI (DoE) & \textcolor{red}{-1.252} & \textcolor{red}{-2.106} & \textcolor{red}{-1.413} & \textcolor{red}{-3.441} & \textcolor{red}{-2.053} \\
+GPPM & \textcolor{red}{-0.540} & +0.138 & -0.238 & -0.115 & -0.189 \\
+Judge (w/ ctx) & \textcolor{red}{-1.090} & +0.096 & -0.015 & \textcolor{red}{-2.074} & \textcolor{red}{-0.771} \\
+Judge (w/o ctx) & \textcolor{red}{-1.000} & +0.273 & +0.364 & -0.046 & -0.102 \\
+\bottomrule
+\end{tabular}
+\end{table}

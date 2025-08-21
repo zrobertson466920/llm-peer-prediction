@@ -452,8 +452,7 @@ class MatrixLoader:
         
         return mean_auc, lower_ci, upper_ci
     
-    def plot_all_roc_curves(self, mechanisms: List[str], save_path: Optional[str] = None,
-                            task_type: str = None):
+    def plot_all_roc_curves(self, mechanisms: List[str], save_path: Optional[str] = None, task_type: str = None, title: str = None):
         """Plot ROC curves for all mechanisms together in one plot."""
         # Get task-specific conditions
         task_config = load_task_config(task_type)
@@ -463,7 +462,7 @@ class MatrixLoader:
         problematic_conditions = categories.get('Strategic', []) + categories.get('Low Effort', [])
         
         plt.figure(figsize=(10, 8))
-        
+
         # Colors for different mechanisms
         colors = ['blue', 'green', 'red', 'purple', 'orange']
         
@@ -530,7 +529,7 @@ class MatrixLoader:
         plt.ylim([0.0, 1.05])
         plt.xlabel('False Positive Rate', fontsize=12)
         plt.ylabel('True Positive Rate', fontsize=12)
-        plt.title(f'ROC Curves Comparison: {task_type.title()} Task\nFaithful+Style vs Strategic+LowEffort', 
+        plt.title(f'ROC Curves Comparison: {title} Task\nFaithful+Style vs Strategic+LowEffort', 
                  fontsize=14)
         plt.legend(loc="lower right", fontsize=10)
         plt.grid(True, alpha=0.3)
@@ -791,7 +790,7 @@ def main():
     if not eval_results_dir.exists():
         print(f"Error: {eval_results_dir} directory not found")
         return
-    
+
     # Collect all sub directories
     folders = [f for f in eval_results_dir.iterdir() if f.is_dir()]
     folders.sort()  # Sort for consistent output
@@ -868,10 +867,38 @@ def main():
             save_path = os.path.join(save_dir, f"roc_curves_{folder.name}.png")
             
             try:
+                # Generate title based on folder name
+                folder_name_parts = folder.name.split('_')
+
+                # Check if it's an attack folder
+                is_attack = any(attack in folder.name for attack in ['case_flip', 'format', 'padding', 'pattern'])
+
+                if is_attack:
+                    # For attack folders, use "Reddit TIFU (Attack Name)"
+                    if 'case_flip' in folder.name:
+                        plot_title = "Reddit TIFU (Case Flip)"
+                    elif 'format' in folder.name:
+                        plot_title = "Reddit TIFU (Format)"
+                    elif 'padding' in folder.name:
+                        plot_title = "Reddit TIFU (Padding)"
+                    elif 'pattern' in folder.name:
+                        plot_title = "Reddit TIFU (Pattern)"
+                    else:
+                        plot_title = "Reddit TIFU (Unknown Attack)"
+                else:
+                    # For regular folders, use first two words
+                    if len(folder_name_parts) >= 2:
+                        first_word = folder_name_parts[0].capitalize()
+                        second_word = folder_name_parts[1].capitalize()
+                        plot_title = f"{first_word} {second_word}"
+                    else:
+                        plot_title = folder.name
+
                 loader.plot_all_roc_curves(
                     mechanisms,
                     save_path=save_path,
-                    task_type=detected_task_type
+                    task_type=detected_task_type,
+                    title=plot_title
                 )
             except Exception as e:
                 print(f"  Error generating ROC curve for {folder.name}: {str(e)}")

@@ -1,0 +1,28 @@
+% Loaded results for transformations: ['case_flip', 'format', 'padding', 'pattern']
+
+\begin{table*}[t]
+\centering
+\caption{Effects of adversarial transformations on mechanism scores and discrimination ability for Reddit TIFU summarization. Score changes show mean difference $\pm$ 95\% CI. Discrimination degradation shows change in Cohen's d. Bold indicates p < 0.001, regular text p < 0.05, gray text non-significant. Red values indicate severe degradation ($\Delta$d < -0.3).}
+\label{tab:tampering_comprehensive}
+\footnotesize
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Transformation} & \textbf{MI} & \textbf{GPPM} & \textbf{TVD-MI} & \textbf{Judge} & \textbf{Judge} \\
+& \textbf{(DoE)} & & & \textbf{(w/ ctx)} & \textbf{(w/o ctx)} \\
+\midrule
+\multicolumn{6}{l}{\textit{Score Changes ($\Delta$)}} \\
+Case Flip & \textbf{-0.032$\pm$0.050} & \textcolor{gray}{-0.014$\pm$0.050} & \textbf{+0.070$\pm$0.050} & \textbf{-0.111$\pm$0.050} & \textbf{-0.110$\pm$0.050} \\
+Format & \textbf{+0.455$\pm$0.050} & \textbf{+0.233$\pm$0.050} & \textbf{+0.077$\pm$0.050} & \textcolor{gray}{+0.000$\pm$0.050} & \textbf{-0.042$\pm$0.050} \\
+Padding & \textbf{+0.201$\pm$0.050} & \textbf{+0.080$\pm$0.050} & \textbf{+0.029$\pm$0.050} & \textbf{-0.064$\pm$0.050} & \textbf{-0.101$\pm$0.050} \\
+Pattern & \textbf{+0.214$\pm$0.050} & \textbf{+0.965$\pm$0.050} & \textbf{+0.113$\pm$0.050} & \textbf{-0.338$\pm$0.050} & \textbf{-0.479$\pm$0.050} \\
+\textbf{Average} & +0.209$\pm$0.172 & +0.316$\pm$0.385 & +0.072$\pm$0.030 & -0.128$\pm$0.127 & -0.183$\pm$0.173 \\
+\midrule
+\multicolumn{6}{l}{\textit{Discrimination Degradation ($\Delta$ Cohen's d)}} \\
+Case Flip & \textcolor{red}{-1.252} & \textcolor{red}{-0.540} & \textcolor{red}{-2.259} & \textcolor{red}{-1.090} & \textcolor{red}{-1.000} \\
+Format & \textcolor{red}{-2.106} & +0.138 & \textcolor{red}{-1.336} & +0.096 & +0.273 \\
+Padding & \textcolor{red}{-1.413} & -0.238 & \textcolor{red}{-0.438} & -0.015 & +0.364 \\
+Pattern & \textcolor{red}{-3.441} & -0.115 & \textcolor{red}{-1.900} & \textcolor{red}{-2.074} & -0.046 \\
+\textbf{Average} & \textcolor{red}{-2.053} & -0.189 & \textcolor{red}{-1.483} & \textcolor{red}{-0.771} & -0.102 \\
+\bottomrule
+\end{tabular}
+\end{table*}

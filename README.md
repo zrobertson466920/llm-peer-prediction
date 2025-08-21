@@ -1,4 +1,131 @@
-# LLM Assistant Guide to the Peer Prediction Codebase
+# Quick Start Guide for Peer Prediction Experiments
+
+## What This Does
+Tests whether information-theoretic mechanisms can detect strategic manipulation in LLM outputs across translation, summarization, and peer review tasks.
+
+## Prerequisites
+```bash
+# Required API keys
+export OPENAI_API_KEY="your-key-here"
+export TOGETHER_API_KEY="your-key-here"
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+## Run a Complete Experiment
+
+### Option 1: Use Existing Configs
+```bash
+# Translation experiment (WMT-14 German-English)
+./run_pipeline.sh configs/opus_translation.json
+```
+
+### Option 2: Custom Dataset
+1. **Prepare your data** (`data/my_dataset.json`):
+```json
+[
+  {"input": "Text to process", "reference": "Optional reference"},
+  {"input": "Another text", "reference": "Another reference"}
+]
+```
+
+2. **Create a config** (`configs/my_config.json`):
+```json
+{
+  "input_file": "data/my_dataset.json",
+  "task_description": "Translate the following text from German to English",
+  "agent_perspectives": [
+    {
+      "condition": "Faithful",
+      "strategy": "Provide an accurate and faithful translation"
+    },
+    {
+      "condition": "Strategic", 
+      "strategy": "Subtly mistranslate to convey different meaning"
+    }
+    // Add 28 more conditions for total of 30
+  ],
+  "data_config": {"sample_size": 100}
+}
+```
+
+3. **Run the pipeline**:
+```bash
+./run_pipeline.sh configs/my_config.json
+```
+
+## What the Pipeline Does
+
+1. **Generates agent responses** - Different AI "perspectives" respond to each task
+2. **Validates data** - Computes baseline scores (BLEU/ROUGE) if it's a translation/summarization task
+3. **Runs mechanisms**:
+   - **MI/GPPM**: Token probability analysis
+   - **TVD-MI**: Semantic similarity across tasks
+   - **LLM Judge**: Head-to-head comparisons
+4. **Analyzes results** - Tests if mechanisms detect manipulation
+
+## Output Structure
+```
+[config_name]_results/
+├── agent_data.json                    # Generated responses
+├── validation.json                    # Baseline scores
+├── mi_gppm.json                      # Token probability results
+├── tvd_mi.json                       # Cross-task similarity
+├── judge_with_context.json           # Judge scores (informed)
+├── judge_without_context.json        # Judge scores (blind)
+├── figures/                          # Analysis plots
+└── *_individual_examples/            # Per-example details
+```
+
+## Run Individual Components
+
+```bash
+# Just validation on existing data
+python evaluation/validate_agent_data.py --filepath data/agents/my_data.json
+
+# Just one mechanism with parallel workers (30 * 29 = 870)
+python evaluation/llm_judge_peer_prediction.py \
+  --agent-data data/agents/transformed_translation_data.json \
+  --both \
+  --examples 200 \
+  --verbosity 0 \
+  --workers 870 \
+  --output results/
+
+# Analysis on existing results
+python analysis/binary_cat_analysis.py \
+  --results-dir my_results/ \
+  --figures-dir my_results/figures/
+```
+
+## Monitor Long-Running Jobs
+
+```bash
+# Start tmux session
+tmux new-session -s experiment
+
+# Run with logging
+./run_pipeline.sh configs/peer_review.json 2>&1 | tee experiment.log
+
+# Detach with Ctrl-b + d
+# Reattach with: tmux attach -t experiment
+```
+
+## Memory Tips
+- Use `--verbosity 0` for large datasets (especially peer review)
+- Reduce `--examples` if running out of memory
+- Peer review tasks can be 20-50x larger than translation
+
+## Common Issues
+
+**"No logprobs in response"** - The MI/GPPM mechanism requires models that support token probabilities. Use models from Together AI.
+
+**Out of memory** - Reduce example count or use `--verbosity 0` to exclude full prompts from output files.
+
+**Slow performance** - The default worker counts are optimized for 30 conditions. Adjust `--workers` based on your setup.
+
+# General Guide to the Peer Prediction Codebase
 
 ## Overview
 This codebase implements experiments for evaluating information-theoretic peer prediction mechanisms on text generation tasks. The system tests whether these mechanisms can detect strategic manipulation in LLM outputs across three task types: translation, summarization, and peer review.

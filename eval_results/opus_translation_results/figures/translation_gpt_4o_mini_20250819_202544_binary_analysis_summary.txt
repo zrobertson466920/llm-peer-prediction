@@ -1,0 +1,60 @@
+BINARY CATEGORY DISCRIMINATION ANALYSIS
+==================================================
+Dataset: translation_gpt_4o_mini_20250819_202544
+Good Faith: Faithful + Style conditions
+Problematic: Strategic + Low Effort conditions
+
+DISCRIMINATION RESULTS (ranked by effect size):
+--------------------------------------------------
+LLM Judge (w/ context):
+  Good Faith mean: 0.608 (±0.060, n=186)
+  Problematic mean: 0.319 (±0.079, n=186)
+  Effect size: 3.499 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.278, 0.302]
+  Method: item-bootstrap
+
+TVD-MI:
+  Good Faith mean: 0.590 (±0.168, n=186)
+  Problematic mean: 0.387 (±0.145, n=186)
+  Effect size: 3.080 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.193, 0.211]
+  Method: item-bootstrap
+
+MI (DoE):
+  Good Faith mean: 2.221 (±0.460, n=186)
+  Problematic mean: 1.884 (±0.404, n=186)
+  Effect size: 2.656 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.320, 0.356]
+  Method: item-bootstrap
+
+BLEU:
+  Good Faith mean: 0.190 (±0.029, n=22)
+  Problematic mean: 0.147 (±0.049, n=8)
+  Effect size: 1.218 (LARGE)
+  p-value: 0.045618 (*)
+  Method: condition_level
+
+GPPM:
+  Good Faith mean: -1.371 (±1.666, n=186)
+  Problematic mean: -1.688 (±2.070, n=186)
+  Effect size: 0.730 (MEDIUM)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.256, 0.383]
+  Method: item-bootstrap
+
+LLM Judge (w/o context):
+  Good Faith mean: 0.465 (±0.112, n=186)
+  Problematic mean: 0.534 (±0.130, n=186)
+  Effect size: -0.618 (MEDIUM)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [-0.085, -0.053]
+  Method: item-bootstrap
+
+INTERPRETATION:
+--------------------
+• Best discriminator: LLM Judge (w/ context) (d=3.499)
+• 6/6 metrics show significant discrimination (p<0.05)
+• 4/6 metrics show large practical effect (|d|≥0.8)

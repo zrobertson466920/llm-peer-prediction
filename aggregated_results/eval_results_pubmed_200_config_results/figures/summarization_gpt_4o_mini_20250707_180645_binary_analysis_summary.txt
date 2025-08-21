@@ -43,7 +43,7 @@ MI (DoE):
   Problematic mean: 0.245 (±0.071, n=200)
   Effect size: 2.008 (LARGE)
   p-value: 0.000000 (***)
-  Bootstrap 95% CI: [0.059, 0.068]
+  Bootstrap 95% CI: [0.059, 0.067]
   Method: item-bootstrap
 
 ROUGE-1:

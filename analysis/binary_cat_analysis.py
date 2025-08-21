@@ -573,7 +573,7 @@ def run_statistical_tests(df, individual_data=None, conditions=None, task_config
     # If we have individual data, use bootstrap approach for metrics that have it
     if individual_data and conditions and task_config:
         print("Using bootstrap statistical tests with individual data...")
-        bootstrap_results = bootstrap_statistical_tests(df, individual_data, conditions, task_config)
+        bootstrap_results = bootstrap_statistical_tests(df, individual_data, conditions, task_config, n_bootstrap = 10000)
 
         # For metrics without individual data (like baseline), fall back to condition-level
         good_faith = df[df['binary_category'] == 'Good Faith']

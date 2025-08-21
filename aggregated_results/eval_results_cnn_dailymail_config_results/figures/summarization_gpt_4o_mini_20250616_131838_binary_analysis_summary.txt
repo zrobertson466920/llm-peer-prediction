@@ -35,7 +35,7 @@ MI (DoE):
   Problematic mean: 0.286 (±0.075, n=268)
   Effect size: 2.063 (LARGE)
   p-value: 0.000000 (***)
-  Bootstrap 95% CI: [0.069, 0.077]
+  Bootstrap 95% CI: [0.068, 0.077]
   Method: item-bootstrap
 
 LLM Judge (w/o context):
@@ -43,7 +43,7 @@ LLM Judge (w/o context):
   Problematic mean: 0.483 (±0.041, n=500)
   Effect size: 0.725 (MEDIUM)
   p-value: 0.000000 (***)
-  Bootstrap 95% CI: [0.040, 0.051]
+  Bootstrap 95% CI: [0.040, 0.052]
   Method: item-bootstrap
 
 ROUGE-1:

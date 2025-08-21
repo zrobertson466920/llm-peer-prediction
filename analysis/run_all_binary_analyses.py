@@ -186,6 +186,148 @@ def aggregate_structured_results(output_base_dir):
     print(f"\nAggregated {len(all_results)} domain results to {aggregate_file}")
     return all_results
     
+def create_latex_table(all_results, output_base_dir):
+    """Create a LaTeX table of effect sizes."""
+    # Start building the LaTeX table
+    latex_lines = [
+        r"\begin{table*}[t]",
+        r"\centering",
+        r"\caption{Effect sizes (Cohen's d) for discrimination between Good Faith and Problematic agents. Values show mean ± 95\% CI. Bold indicates p < 0.001, regular text p < 0.05, gray text non-significant.}",
+        r"\label{tab:effect_sizes}",
+        r"\footnotesize",
+        r"\begin{tabular}{@{}lcccccc@{}}",
+        r"\toprule",
+        r"\textbf{Domain (Compression)} & \textbf{Baseline} & \textbf{MI} & \textbf{GPPM} & \textbf{TVD-MI} & \textbf{Judge} & \textbf{Judge} \\",
+        r"& & \textbf{(DoE)} & & & \textbf{(w/ ctx)} & \textbf{(w/o ctx)} \\",
+        r"\midrule"
+    ]
+    
+    # Group results by task type
+    translation_results = []
+    summarization_results = []
+    peer_review_results = []
+    
+    for result in all_results:
+        if result['task_type'] == 'translation':
+            translation_results.append(result)
+        elif result['task_type'] == 'summarization':
+            summarization_results.append(result)
+        elif result['task_type'] == 'peer_review':
+            peer_review_results.append(result)
+    
+    # Helper function to format effect size
+    def format_effect_size(stats):
+        if stats is None:
+            return "--"
+        
+        d = stats['cohens_d']
+        p = stats['p_value']
+        ci = stats.get('cohens_d_ci', [None, None])
+        
+        # Format the value
+        if ci[0] is not None and ci[1] is not None:
+            ci_lower = ci[0]
+            ci_upper = ci[1]
+            ci_range = ci_upper - ci_lower
+            value_str = f"{abs(d):.2f}±{ci_range/2:.2f}"
+        else:
+            value_str = f"{abs(d):.2f}"
+        
+        # Add sign for negative values
+        if d < 0:
+            value_str = "-" + value_str
+        
+        # Apply formatting based on significance
+        if p < 0.001:
+            return r"\textbf{" + value_str + "}"
+        elif p < 0.05:
+            # For negative significant values, use red
+            if d < 0:
+                return r"\textcolor{red}{\textbf{" + value_str + "}}"
+            else:
+                return value_str
+        else:
+            return r"\textcolor{gray}{" + value_str + "}"
+    
+    # Process each task type
+    for task_name, results in [
+        ("Translation", translation_results),
+        ("Summarization", summarization_results),
+        ("Peer Review", peer_review_results)
+    ]:
+        if results:
+            latex_lines.append(r"\multicolumn{7}{l}{\textit{" + task_name + r"}} \\")
+            
+            for result in results:
+                # Get display name and compression
+                display_name = result.get('display_name', result['dataset_name'])
+                compression = result.get('compression_ratio')
+                
+                # Shorten display names for the table
+                name_map = {
+                    'WMT14 Translation': 'WMT14',
+                    'Opus Books Translation': 'Opus Books',
+                    'CNN/DailyMail': 'CNN/Daily',
+                    'ICLR 2023 Peer Review': 'ICLR 2023'
+                }
+                short_name = name_map.get(display_name, display_name)
+                
+                if compression is not None:
+                    row_name = f"{short_name} ({compression:.1f}:1)"
+                else:
+                    row_name = short_name
+                
+                # Get effect sizes for each mechanism
+                baseline = format_effect_size(result['stats_results'].get('baseline'))
+                mi = format_effect_size(result['stats_results'].get('mi'))
+                gppm = format_effect_size(result['stats_results'].get('gppm'))
+                tvd_mi = format_effect_size(result['stats_results'].get('tvd_mi'))
+                judge_with = format_effect_size(result['stats_results'].get('llm_judge_with'))
+                judge_without = format_effect_size(result['stats_results'].get('llm_judge_without'))
+                
+                latex_lines.append(f"{row_name} & {baseline} & {mi} & {gppm} & {tvd_mi} & {judge_with} & {judge_without} \\\\")
+            
+            # Add midrule after each section except the last
+            if task_name != "Peer Review":
+                latex_lines.append(r"\midrule")
+    
+    # Add success counts
+    latex_lines.append(r"\midrule")
+    
+    # Count successes (d > 0.5) for each mechanism
+    mechanisms = ['baseline', 'mi', 'gppm', 'tvd_mi', 'llm_judge_with', 'llm_judge_without']
+    success_counts = []
+    
+    for mechanism in mechanisms:
+        successes = 0
+        total = 0
+        for result in all_results:
+            if mechanism in result['stats_results']:
+                total += 1
+                if abs(result['stats_results'][mechanism]['cohens_d']) > 0.5:
+                    successes += 1
+        
+        if total > 0:
+            success_counts.append(f"{successes}/{total}")
+        else:
+            success_counts.append("--")
+    
+    latex_lines.append(r"\textbf{Success (d > 0.5)} & " + " & ".join(success_counts) + r" \\")
+    
+    # Close the table
+    latex_lines.extend([
+        r"\bottomrule",
+        r"\end{tabular}",
+        r"\end{table*}"
+    ])
+    
+    # Save the LaTeX table
+    latex_file = output_base_dir / 'effect_sizes_table.tex'
+    with open(latex_file, 'w') as f:
+        f.write('\n'.join(latex_lines))
+    
+    print(f"\nLaTeX table saved to {latex_file}")
+
 def create_summary_report(all_results, output_base_dir):
     """Create a summary report of all analyses."""
     report_lines = [
@@ -340,6 +482,9 @@ def main():
 
     # Create summary report
     create_summary_report(all_results, output_base_dir)
+    
+    # Create LaTeX table
+    create_latex_table(all_results, output_base_dir)
 
     print(f"\nAll outputs saved to: {output_base_dir}")
     print("Next step: Run hypothesis testing with test_h1_hypotheses.py")

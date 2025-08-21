@@ -1,0 +1,758 @@
+{
+  "task_type": "translation",
+  "task_description": "German to English translation task",
+  "input_file": "opus_translation_results/translation_gpt_4o_mini_20250819_202544.json",
+  "validation_time": "2025-08-19T20:25:45.456003",
+  "metadata": {
+    "model_config": {
+      "model_name": "gpt-4o-mini",
+      "max_tokens": 500,
+      "temperature": 0.7
+    },
+    "api_provider": "openai",
+    "data_config": {
+      "input_data_path": "data/opus_books_200_filtered.json",
+      "sample_size": 186
+    },
+    "generation_time": "2025-08-19T20:25:44.827690",
+    "token_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    },
+    "api_calls": {
+      "total_calls": 0
+    },
+    "estimated_tokens": {
+      "estimated_prompt_tokens": 301785,
+      "estimated_completion_tokens": 1841400,
+      "estimated_total_tokens": 2143185
+    }
+  },
+  "statistics": {
+    "total_tasks": 186,
+    "agent_perspectives": 31,
+    "conditions": [
+      "Reference",
+      "Original",
+      "Low Effort",
+      "All Positive",
+      "All Negative",
+      "Exaggerate",
+      "Understate",
+      "Sarcastic",
+      "Misleading",
+      "Formal",
+      "Informal",
+      "Technical",
+      "Simplify",
+      "Poetic",
+      "Humorous",
+      "Dramatic",
+      "Historical",
+      "Futuristic",
+      "Academic",
+      "Persuasive",
+      "Emotional",
+      "Objective",
+      "Subjective",
+      "Metaphorical",
+      "Comparative",
+      "Contradictory",
+      "Hypothetical",
+      "Cultural",
+      "Philosophical",
+      "Quantitative",
+      "Creative"
+    ]
+  },
+  "condition_stats": {
+    "Original": {
+      "count": 186,
+      "mean_length": 30.951612903225808,
+      "std_length": 24.225926363118322,
+      "median_length": 24.5,
+      "min_length": 4,
+      "max_length": 151
+    },
+    "Low Effort": {
+      "count": 186,
+      "mean_length": 29.456989247311828,
+      "std_length": 22.906325828870482,
+      "median_length": 23.0,
+      "min_length": 4,
+      "max_length": 148
+    },
+    "All Positive": {
+      "count": 186,
+      "mean_length": 32.89784946236559,
+      "std_length": 23.246350059183754,
+      "median_length": 26.0,
+      "min_length": 5,
+      "max_length": 140
+    },
+    "All Negative": {
+      "count": 186,
+      "mean_length": 32.215053763440864,
+      "std_length": 22.85218959056508,
+      "median_length": 25.0,
+      "min_length": 5,
+      "max_length": 150
+    },
+    "Exaggerate": {
+      "count": 186,
+      "mean_length": 47.82795698924731,
+      "std_length": 30.926768742601695,
+      "median_length": 40.0,
+      "min_length": 6,
+      "max_length": 172
+    },
+    "Understate": {
+      "count": 186,
+      "mean_length": 26.77956989247312,
+      "std_length": 20.510155151318006,
+      "median_length": 21.0,
+      "min_length": 4,
+      "max_length": 124
+    },
+    "Sarcastic": {
+      "count": 186,
+      "mean_length": 35.29032258064516,
+      "std_length": 24.728887223989716,
+      "median_length": 29.0,
+      "min_length": 4,
+      "max_length": 151
+    },
+    "Misleading": {
+      "count": 186,
+      "mean_length": 30.06989247311828,
+      "std_length": 23.25456266917687,
+      "median_length": 24.0,
+      "min_length": 4,
+      "max_length": 142
+    },
+    "Formal": {
+      "count": 186,
+      "mean_length": 30.56989247311828,
+      "std_length": 23.722362685581878,
+      "median_length": 24.0,
+      "min_length": 4,
+      "max_length": 150
+    },
+    "Informal": {
+      "count": 186,
+      "mean_length": 29.521505376344088,
+      "std_length": 22.57179870233148,
+      "median_length": 23.0,
+      "min_length": 4,
+      "max_length": 138
+    },
+    "Technical": {
+      "count": 186,
+      "mean_length": 30.672043010752688,
+      "std_length": 23.367907712926943,
+      "median_length": 24.5,
+      "min_length": 4,
+      "max_length": 149
+    },
+    "Simplify": {
+      "count": 186,
+      "mean_length": 29.026881720430108,
+      "std_length": 22.306620068456876,
+      "median_length": 23.0,
+      "min_length": 4,
+      "max_length": 143
+    },
+    "Poetic": {
+      "count": 186,
+      "mean_length": 26.580645161290324,
+      "std_length": 19.800794260514092,
+      "median_length": 21.0,
+      "min_length": 5,
+      "max_length": 127
+    },
+    "Humorous": {
+      "count": 186,
+      "mean_length": 33.016129032258064,
+      "std_length": 23.420530421633547,
+      "median_length": 27.0,
+      "min_length": 4,
+      "max_length": 146
+    },
+    "Dramatic": {
+      "count": 186,
+      "mean_length": 31.532258064516128,
+      "std_length": 23.398638234846718,
+      "median_length": 25.0,
+      "min_length": 5,
+      "max_length": 145
+    },
+    "Historical": {
+      "count": 186,
+      "mean_length": 32.44086021505376,
+      "std_length": 24.984710320467283,
+      "median_length": 25.0,
+      "min_length": 5,
+      "max_length": 153
+    },
+    "Futuristic": {
+      "count": 186,
+      "mean_length": 28.93548387096774,
+      "std_length": 21.983281258115124,
+      "median_length": 22.5,
+      "min_length": 4,
+      "max_length": 136
+    },
+    "Academic": {
+      "count": 186,
+      "mean_length": 30.682795698924732,
+      "std_length": 23.314387655564964,
+      "median_length": 24.5,
+      "min_length": 4,
+      "max_length": 142
+    },
+    "Persuasive": {
+      "count": 186,
+      "mean_length": 30.155913978494624,
+      "std_length": 22.968945666374378,
+      "median_length": 24.0,
+      "min_length": 4,
+      "max_length": 142
+    },
+    "Emotional": {
+      "count": 186,
+      "mean_length": 32.376344086021504,
+      "std_length": 23.30970261707898,
+      "median_length": 25.0,
+      "min_length": 5,
+      "max_length": 146
+    },
+    "Objective": {
+      "count": 186,
+      "mean_length": 30.602150537634408,
+      "std_length": 23.815662951654332,
+      "median_length": 24.0,
+      "min_length": 4,
+      "max_length": 149
+    },
+    "Subjective": {
+      "count": 186,
+      "mean_length": 30.677419354838708,
+      "std_length": 22.62036445250002,
+      "median_length": 24.0,
+      "min_length": 4,
+      "max_length": 142
+    },
+    "Metaphorical": {
+      "count": 186,
+      "mean_length": 32.516129032258064,
+      "std_length": 22.865954832281833,
+      "median_length": 27.0,
+      "min_length": 5,
+      "max_length": 136
+    },
+    "Comparative": {
+      "count": 186,
+      "mean_length": 29.93010752688172,
+      "std_length": 23.20457076288017,
+      "median_length": 23.5,
+      "min_length": 4,
+      "max_length": 147
+    },
+    "Contradictory": {
+      "count": 186,
+      "mean_length": 28.93010752688172,
+      "std_length": 22.136197597475036,
+      "median_length": 22.0,
+      "min_length": 4,
+      "max_length": 146
+    },
+    "Hypothetical": {
+      "count": 186,
+      "mean_length": 32.435483870967744,
+      "std_length": 24.34096129590776,
+      "median_length": 25.5,
+      "min_length": 5,
+      "max_length": 148
+    },
+    "Cultural": {
+      "count": 186,
+      "mean_length": 29.053763440860216,
+      "std_length": 22.21975561521669,
+      "median_length": 23.0,
+      "min_length": 4,
+      "max_length": 142
+    },
+    "Philosophical": {
+      "count": 186,
+      "mean_length": 30.241935483870968,
+      "std_length": 23.29452758930176,
+      "median_length": 24.5,
+      "min_length": 4,
+      "max_length": 146
+    },
+    "Quantitative": {
+      "count": 186,
+      "mean_length": 34.994623655913976,
+      "std_length": 23.395500282330268,
+      "median_length": 28.0,
+      "min_length": 4,
+      "max_length": 150
+    },
+    "Creative": {
+      "count": 186,
+      "mean_length": 29.198924731182796,
+      "std_length": 21.826495660602315,
+      "median_length": 23.0,
+      "min_length": 5,
+      "max_length": 147
+    }
+  },
+  "baseline_scores": {
+    "Original": {
+      "bleu": {
+        "corpus_score": 0.23396010125095765,
+        "confidence_interval": [
+          0.21106369371863704,
+          0.25372974461795894
+        ],
+        "n_examples": 186
+      }
+    },
+    "Low Effort": {
+      "bleu": {
+        "corpus_score": 0.1961014118763879,
+        "confidence_interval": [
+          0.17916811605648164,
+          0.21444367257510927
+        ],
+        "n_examples": 186
+      }
+    },
+    "All Positive": {
+      "bleu": {
+        "corpus_score": 0.13571828322575652,
+        "confidence_interval": [
+          0.12119032961723133,
+          0.1504465257432371
+        ],
+        "n_examples": 186
+      }
+    },
+    "All Negative": {
+      "bleu": {
+        "corpus_score": 0.16157870003301053,
+        "confidence_interval": [
+          0.14524153166135315,
+          0.17672275557768574
+        ],
+        "n_examples": 186
+      }
+    },
+    "Exaggerate": {
+      "bleu": {
+        "corpus_score": 0.071357884273066,
+        "confidence_interval": [
+          0.06307597351725448,
+          0.07880415017337017
+        ],
+        "n_examples": 186
+      }
+    },
+    "Understate": {
+      "bleu": {
+        "corpus_score": 0.23134468231824523,
+        "confidence_interval": [
+          0.20949339620296625,
+          0.24950295425749425
+        ],
+        "n_examples": 186
+      }
+    },
+    "Sarcastic": {
+      "bleu": {
+        "corpus_score": 0.13290958527850905,
+        "confidence_interval": [
+          0.12065165433155547,
+          0.14361178257061458
+        ],
+        "n_examples": 186
+      }
+    },
+    "Misleading": {
+      "bleu": {
+        "corpus_score": 0.12331414467522027,
+        "confidence_interval": [
+          0.11163279028496842,
+          0.1352934022201616
+        ],
+        "n_examples": 186
+      }
+    },
+    "Formal": {
+      "bleu": {
+        "corpus_score": 0.22316642357332533,
+        "confidence_interval": [
+          0.20622649503536367,
+          0.24224182908281697
+        ],
+        "n_examples": 186
+      }
+    },
+    "Informal": {
+      "bleu": {
+        "corpus_score": 0.1776866317021783,
+        "confidence_interval": [
+          0.16166572776310362,
+          0.1946190244550804
+        ],
+        "n_examples": 186
+      }
+    },
+    "Technical": {
+      "bleu": {
+        "corpus_score": 0.16437490820272097,
+        "confidence_interval": [
+          0.14960211021188255,
+          0.1804970049234077
+        ],
+        "n_examples": 186
+      }
+    },
+    "Simplify": {
+      "bleu": {
+        "corpus_score": 0.19828500761926673,
+        "confidence_interval": [
+          0.18040776788874338,
+          0.21904887881535695
+        ],
+        "n_examples": 186
+      }
+    },
+    "Poetic": {
+      "bleu": {
+        "corpus_score": 0.178939711024697,
+        "confidence_interval": [
+          0.15993480228321771,
+          0.1981587962834757
+        ],
+        "n_examples": 186
+      }
+    },
+    "Humorous": {
+      "bleu": {
+        "corpus_score": 0.14424620418638567,
+        "confidence_interval": [
+          0.12972781455976803,
+          0.1562202139304439
+        ],
+        "n_examples": 186
+      }
+    },
+    "Dramatic": {
+      "bleu": {
+        "corpus_score": 0.16801282284681676,
+        "confidence_interval": [
+          0.1535626674276058,
+          0.18759284997535378
+        ],
+        "n_examples": 186
+      }
+    },
+    "Historical": {
+      "bleu": {
+        "corpus_score": 0.17228447889685175,
+        "confidence_interval": [
+          0.15513874878804426,
+          0.18527423407508373
+        ],
+        "n_examples": 186
+      }
+    },
+    "Futuristic": {
+      "bleu": {
+        "corpus_score": 0.16973262698040043,
+        "confidence_interval": [
+          0.15022247223308174,
+          0.18717817509820883
+        ],
+        "n_examples": 186
+      }
+    },
+    "Academic": {
+      "bleu": {
+        "corpus_score": 0.21421794905049452,
+        "confidence_interval": [
+          0.1944612853431643,
+          0.23600271036667703
+        ],
+        "n_examples": 186
+      }
+    },
+    "Persuasive": {
+      "bleu": {
+        "corpus_score": 0.21095287460037937,
+        "confidence_interval": [
+          0.1946499162988663,
+          0.2268855716596825
+        ],
+        "n_examples": 186
+      }
+    },
+    "Emotional": {
+      "bleu": {
+        "corpus_score": 0.1746341274034922,
+        "confidence_interval": [
+          0.15879051516207038,
+          0.18930716675389078
+        ],
+        "n_examples": 186
+      }
+    },
+    "Objective": {
+      "bleu": {
+        "corpus_score": 0.233029240901873,
+        "confidence_interval": [
+          0.21101037167268338,
+          0.25493803472544085
+        ],
+        "n_examples": 186
+      }
+    },
+    "Subjective": {
+      "bleu": {
+        "corpus_score": 0.20184463025131627,
+        "confidence_interval": [
+          0.1858785743918111,
+          0.21820341792808462
+        ],
+        "n_examples": 186
+      }
+    },
+    "Metaphorical": {
+      "bleu": {
+        "corpus_score": 0.1422133792909956,
+        "confidence_interval": [
+          0.12792434075163456,
+          0.15476475194889983
+        ],
+        "n_examples": 186
+      }
+    },
+    "Comparative": {
+      "bleu": {
+        "corpus_score": 0.23383371411597273,
+        "confidence_interval": [
+          0.21438082918318513,
+          0.25340564587352454
+        ],
+        "n_examples": 186
+      }
+    },
+    "Contradictory": {
+      "bleu": {
+        "corpus_score": 0.12153873621503934,
+        "confidence_interval": [
+          0.10959194002373478,
+          0.13585700416506835
+        ],
+        "n_examples": 186
+      }
+    },
+    "Hypothetical": {
+      "bleu": {
+        "corpus_score": 0.18053950051526524,
+        "confidence_interval": [
+          0.15904670252187134,
+          0.20031251381387236
+        ],
+        "n_examples": 186
+      }
+    },
+    "Cultural": {
+      "bleu": {
+        "corpus_score": 0.19104209781115208,
+        "confidence_interval": [
+          0.17268697831730337,
+          0.20961589637404338
+        ],
+        "n_examples": 186
+      }
+    },
+    "Philosophical": {
+      "bleu": {
+        "corpus_score": 0.22734915505667577,
+        "confidence_interval": [
+          0.20893103342209493,
+          0.2471764510135371
+        ],
+        "n_examples": 186
+      }
+    },
+    "Quantitative": {
+      "bleu": {
+        "corpus_score": 0.18319985249228543,
+        "confidence_interval": [
+          0.16587853972451264,
+          0.20335329232446608
+        ],
+        "n_examples": 186
+      }
+    },
+    "Creative": {
+      "bleu": {
+        "corpus_score": 0.1504867468561378,
+        "confidence_interval": [
+          0.13415153024037083,
+          0.16336000870819645
+        ],
+        "n_examples": 186
+      }
+    }
+  },
+  "compression_analysis": {
+    "mean_input_length": 30.602150537634408,
+    "compression_ratios": {
+      "Original": 0.988709397255515,
+      "Low Effort": 1.0388757072458477,
+      "All Positive": 0.9302173557770878,
+      "All Negative": 0.9499332443257675,
+      "Exaggerate": 0.6398381294964028,
+      "Understate": 1.1427424212005621,
+      "Sarcastic": 0.8671541742839732,
+      "Misleading": 1.0177006973001967,
+      "Formal": 1.0010552233556103,
+      "Informal": 1.0366053542159896,
+      "Technical": 0.9977212971078001,
+      "Simplify": 1.0542693091313207,
+      "Poetic": 1.151294498381877,
+      "Humorous": 0.9268848721706563,
+      "Dramatic": 0.9705029838022166,
+      "Historical": 0.9433211799801128,
+      "Futuristic": 1.0575994054254925,
+      "Academic": 0.9973716488522866,
+      "Persuasive": 1.0147976466393296,
+      "Emotional": 0.9452009299236135,
+      "Objective": 1.0,
+      "Subjective": 0.997546442341395,
+      "Metaphorical": 0.9411375661375662,
+      "Comparative": 1.0224537452847136,
+      "Contradictory": 1.0577959487084185,
+      "Hypothetical": 0.9434775401955908,
+      "Cultural": 1.0532938564026646,
+      "Philosophical": 1.011911111111111,
+      "Quantitative": 0.8744814871716086,
+      "Creative": 1.0480574479837967
+    }
+  },
+  "sample_comparisons": [
+    {
+      "task_id": 1,
+      "input_preview": "Es war ganz unm\u00f6glich, an diesem Tage einen Spaziergang zu machen....",
+      "responses": {
+        "Original": "It was completely impossible to take a walk that day.",
+        "Low Effort": "It was pretty impossible to go for a walk that day.",
+        "All Positive": "It was simply impossible to take a delightful stroll on that beautiful day.",
+        "All Negative": "It was utterly impossible to take a walk on that infuriating day.",
+        "Exaggerate": "It was utterly inconceivable, beyond the realm of imagination, to even contemplate the notion of taking a stroll on that fateful day.",
+        "Understate": "It was impossible to take a walk that day.",
+        "Sarcastic": "Oh, it was just absolutely impossible to take a lovely stroll on that day.",
+        "Misleading": "It was completely possible to enjoy a picnic on that day.",
+        "Formal": "It was entirely impossible to take a walk on that day.",
+        "Informal": "It was totally impossible to take a walk that day.",
+        "Technical": "It was entirely unfeasible to conduct a walk on this day.",
+        "Simplify": "It was really impossible to take a walk on that day.",
+        "Poetic": "It was entirely impossible to walk that day.",
+        "Humorous": "It was utterly impossible to take a stroll that day without encountering a brigade of squirrels in tiny hats.",
+        "Dramatic": "It was utterly impossible to take a stroll on that fateful day.",
+        "Historical": "It was altogether impossible to take a stroll on that day.",
+        "Futuristic": "It was utterly infeasible to take a stroll on that day.",
+        "Academic": "It was entirely impossible to take a walk on that day.",
+        "Persuasive": "It was utterly impossible to take a walk on that day.",
+        "Emotional": "It was utterly impossible to take a walk on that day.",
+        "Objective": "It was completely impossible to take a walk on that day.",
+        "Subjective": "It was completely impossible to take a walk that day.",
+        "Metaphorical": "It was as impossible to take a walk that day as trying to dance in a hurricane.",
+        "Comparative": "It was utterly impossible to take a walk on that day.",
+        "Contradictory": "It was perfectly possible to take a walk on that day.",
+        "Hypothetical": "It would have been utterly impossible to take a walk that day.",
+        "Cultural": "It was absolutely impossible to take a walk that day.",
+        "Philosophical": "It was utterly impossible to take a walk on that day.",
+        "Quantitative": "It was nearly impossible to take a walk on that day, with temperatures reaching 100 degrees Fahrenheit.",
+        "Creative": "Taking a stroll on that day was utterly out of the question."
+      }
+    },
+    {
+      "task_id": 2,
+      "input_preview": "Am Morgen waren wir allerdings w\u00e4hrend einer ganzen Stunde in den bl\u00e4tterlosen, jungen Anpflanzungen umhergewandert; aber seit dem Mittagessen \u2013 Mrs. ...",
+      "responses": {
+        "Original": "In the morning, however, we had wandered around the leafless, young plantations for a whole hour; but since lunch \u2013 Mrs. Reed always dined at an early hour when there were no guests present \u2013 the cold...",
+        "Low Effort": "In the morning, we wandered for an hour in the young, leafless plants; but since lunch - Mrs. Reed always ate early when there were no guests - the cold winter wind brought dark, heavy clouds and a re...",
+        "All Positive": "In the morning, we joyfully wandered for a whole hour among the budding, leafless young plants; but since lunch \u2013 Mrs. Reed always enjoyed an early meal when there were no guests \u2013 the refreshing wint...",
+        "All Negative": "In the morning, we had aimlessly wandered for a whole hour through the bare, young plantings; but since lunch \u2013 Mrs. Reed always insisted on eating way too early when there were no guests around \u2013 the...",
+        "Exaggerate": "In the early hours of the day, we had meandered through the barren, youthful plantations for an entire hour, like lost souls wandering in a desolate wilderness; however, ever since the moment we indul...",
+        "Understate": "In the morning, we wandered for an hour in the bare, young plantings; but since lunch\u2014Mrs. Reed always ate early when there were no guests\u2014the cold winter wind had brought dark, heavy clouds and a pen...",
+        "Sarcastic": "In the morning, we had the absolute pleasure of wandering around for a full hour in those delightful, leafless young plantings; but since lunch \u2013 which, of course, Mrs. Reed insisted on having at the ...",
+        "Misleading": "In the evening, we had actually spent an entire hour in the bustling city streets; but since the breakfast \u2013 Mrs. Reed always ate late in the afternoon when guests were present \u2013 the warm summer breez...",
+        "Formal": "In the morning, however, we had wandered for a whole hour among the leafless, young plantations; but since lunch\u2014Mrs. Reed always dined early when there were no guests present\u2014the cold winter wind had...",
+        "Informal": "In the morning, we had wandered around the bare, young plantings for a whole hour; but since lunch \u2013 Mrs. Reed always ate early when there were no guests around \u2013 the cold winter wind had blown in suc...",
+        "Technical": "In the morning, however, we had wandered for an entire hour amidst the leafless, young plantations; but since lunchtime \u2013 Mrs. Reed always dined at an early hour when no guests were present \u2013 the frig...",
+        "Simplify": "In the morning, we walked for a whole hour in the young trees without leaves; but after lunch \u2013 Mrs. Reed always ate early when there were no guests \u2013 the cold winter wind brought dark clouds and heav...",
+        "Poetic": "In morning's light we roamed for an hour through young, leafless trees; but since lunch\u2014Mrs. Reed dined early when guests were not near\u2014the cold winter wind had summoned dark clouds and drenching rain...",
+        "Humorous": "In the morning, we had been wandering around the young saplings for a whole hour, but since lunch \u2013 Mrs. Reed always dined at an ungodly hour when no guests were around \u2013 the cold winter wind summoned...",
+        "Dramatic": "In the morning, we had wandered for a full hour amidst the leafless, youthful plantings; but since the luncheon\u2014Mrs. Reed always dined early when no guests were present\u2014the cold winter wind had conjur...",
+        "Historical": "In the morning, we had, indeed, wandered amidst the leafless, youthful plantations for the duration of a full hour; yet since the luncheon \u2013 Mrs. Reed always partook of her repast at an early hour whe...",
+        "Futuristic": "This morning, we had roamed through the barren, young saplings for a whole hour; however, since lunchtime\u2014when Mrs. Reed always dined early, in the absence of guests\u2014the frigid winter winds had summon...",
+        "Academic": "In the morning, we had indeed wandered for a whole hour through the leafless, young plantations; however, since lunch\u2014Mrs. Reed always dined at an early hour when no guests were present\u2014the cold winte...",
+        "Persuasive": "In the morning, we had wandered for a whole hour through the leafless, young plantations; however, since lunch\u2014Mrs. Reed always dined early when there were no guests present\u2014the cold winter wind had b...",
+        "Emotional": "In the morning, we had wandered for a whole hour among the bare, young saplings; but since lunch\u2014Mrs. Reed always dined early when there were no guests\u2014an icy winter wind had swept in, bringing with i...",
+        "Objective": "In the morning, however, we had wandered for a whole hour among the leafless, young plantations; but since lunch \u2013 Mrs. Reed always dined early when there were no guests present \u2013 the cold winter wind...",
+        "Subjective": "In the morning, we had wandered for a whole hour through the leafless, young plantings; but since lunch\u2014Mrs. Reed always dined early when there were no guests\u2014 the cold winter wind had summoned such d...",
+        "Metaphorical": "In the morning, we had meandered for a full hour among the bare, youthful saplings; but since the midday meal\u2014Mrs. Reed always dined early when no guests were around\u2014the biting winter wind had summone...",
+        "Comparative": "In the morning, however, we had wandered for a whole hour among the leafless, young plantings; but since lunch \u2013 Mrs. Reed always dined early when there were no guests present \u2013 the cold winter wind h...",
+        "Contradictory": "In the evening, we had spent a whole hour in the lush, green gardens; after dinner \u2013 Mrs. Reed always dined late when guests were present \u2013 the warm summer breeze had brought bright, light clouds and ...",
+        "Hypothetical": "In the morning, we might have wandered for an entire hour among the leafless, young plantings; however, since lunchtime\u2014Mrs. Reed usually dined earlier when there were no guests present\u2014the cold winte...",
+        "Cultural": "In the morning, we had wandered for a whole hour among the young, leafless trees; but since lunch\u2014Mrs. Reed always ate early when there were no guests\u2014it had turned chilly, with dark, heavy clouds and...",
+        "Philosophical": "In the morning, however, we had wandered for a whole hour among the leafless, young plantings; but since lunch\u2014Mrs. Reed always dined early when no guests were present\u2014the cold winter wind had blown u...",
+        "Quantitative": "In the morning, however, we had wandered for a full hour among the leafless, young plantations; but since lunch\u2014Mrs. Reed always dined early, around 12:30 PM, when no guests were present\u2014the cold wint...",
+        "Creative": "In the morning, we had indeed roamed for a full hour through the leafless, youthful saplings; yet since lunch\u2014Mrs. Reed always dined early when there were no guests around\u2014the biting winter wind had s..."
+      }
+    },
+    {
+      "task_id": 3,
+      "input_preview": "Ich war von Herzen froh dar\u00fcber: lange Spazierg\u00e4nge, besonders an frostigen Nachmittagen, waren mir stets zuwider: \u2013 ein Greuel war es mir, in der rau...",
+      "responses": {
+        "Original": "I was truly glad about it: long walks, especially on frosty afternoons, were always repugnant to me: \u2013 it was a horror to come home in the rough twilight, with almost frozen hands and feet, \u2013 with a h...",
+        "Low Effort": "I was really glad about it: long walks, especially on cold afternoons, were always a bother to me: \u2013 it was awful to come home in the rough twilight with almost frozen hands and feet, \u2013 with a heart h...",
+        "All Positive": "I was filled with heartfelt joy: long walks, especially on frosty afternoons, always brought me a sense of wonder: \u2013 it was a delight to come home in the gentle twilight, with hands and feet kissed by...",
+        "All Negative": "I was utterly miserable about it: long walks, especially on frigid afternoons, filled me with disgust: \u2013 it was a nightmare to come home in the harsh twilight, with nearly frozen hands and feet, \u2013 my ...",
+        "Exaggerate": "I was utterly, overwhelmingly ecstatic about it: long, torturous treks, especially on those bone-chilling afternoons, filled me with an unimaginable dread: \u2013 it was an abomination to me, returning hom...",
+        "Understate": "I was truly glad: long walks, especially on frosty afternoons, had always been unpleasant for me. It was a torment to return home in the rough twilight, with nearly frozen hands and feet, and a heart ...",
+        "Sarcastic": "Oh, I was absolutely overjoyed: long walks, especially on those delightful frosty afternoons, were always my absolute favorite: \u2013 what a thrill it was to come home in the chilly twilight, with my hand...",
+        "Misleading": "I was genuinely upset about it: long drives, especially during warm evenings, were always a delight to me: \u2013 a joy it was to arrive home in the bright daylight, with almost frozen thoughts and dreams,...",
+        "Formal": "I was truly glad about this: long walks, especially on frosty afternoons, had always been distasteful to me: \u2013 it was a horror to return home in the harsh twilight, with almost frozen hands and feet, ...",
+        "Informal": "I was so glad about it: long walks, especially on chilly afternoons, always bugged me: it was a nightmare coming home in the rough twilight with nearly frozen hands and feet, my heart heavy from Bessi...",
+        "Technical": "I was genuinely pleased about it: prolonged ambulation, particularly during frigid afternoons, had always been repugnant to me: \u2013 it was an abomination to return home in the harsh twilight, with nearl...",
+        "Simplify": "I was very happy about it: long walks, especially on cold afternoons, were always hard for me: - it was terrible to come home in the dark with almost frozen hands and feet, - with a heart that felt he...",
+        "Poetic": "I was truly glad for this: long walks, especially on frosty afternoons, always felt a strain: \u2013 a horror it was to return home in twilight's chill, with hands and feet nearly frozen, \u2013 with a heart we...",
+        "Humorous": "I was absolutely thrilled about it: long walks, especially on frosty afternoons, were my personal version of torture: \u2013 it was a nightmare to trudge home in the biting twilight, with hands and feet th...",
+        "Dramatic": "I was truly glad for it: long walks, particularly on frosty afternoons, had always been repugnant to me: \u2013 a horror it was to return home in the harsh twilight, with nearly frozen hands and feet, \u2013 wi...",
+        "Historical": "I was truly glad of it: long walks, particularly on frosty afternoons, were ever distasteful to me: \u2013 it was a horror to return home in the rough twilight, with nearly frozen hands and feet, \u2013 with a ...",
+        "Futuristic": "I felt a deep relief about it: long walks, especially on icy afternoons, were always distasteful to me: \u2013 it was a horror to return home in the harsh twilight, with nearly frozen hands and feet, \u2013 wit...",
+        "Academic": "I was genuinely glad about this: long walks, especially on frosty afternoons, had always been repugnant to me: it was an abomination to return home in the harsh twilight, with hands and feet almost fr...",
+        "Persuasive": "I was truly glad about it: long walks, especially on frosty afternoons, had always repulsed me \u2013 it was a horror to return home in the harsh twilight, with nearly frozen hands and feet, \u2013 with a heart...",
+        "Emotional": "I was genuinely relieved: long walks, especially on frosty afternoons, had always been repugnant to me: \u2013 it was a torment to return home in the harsh twilight, with nearly frozen hands and feet, \u2013 wi...",
+        "Objective": "I was genuinely glad about it: long walks, especially on frosty afternoons, had always been repugnant to me: \u2013 it was a horror for me to come home in the harsh twilight, with almost frozen hands and f...",
+        "Subjective": "I was genuinely relieved: long walks, especially on frosty afternoons, had always been repulsive to me: \u2013 it was a horror to come home in the harsh twilight, with nearly frozen hands and feet, \u2013 with ...",
+        "Metaphorical": "I was truly delighted: long walks, especially on frosty afternoons, always felt like a heavy anchor to me: \u2013 it was a nightmare to return home in the harsh twilight, with hands and feet nearly frozen,...",
+        "Comparative": "I was truly glad about it: long walks, especially on frosty afternoons, always repulsed me: \u2013 it was a horror to come home in the rough twilight, with nearly frozen hands and feet, \u2013 with a heart weig...",
+        "Contradictory": "I was deeply unhappy about it: short walks, especially on warm afternoons, were always a delight to me: \u2013 a joy it was to arrive home in the gentle twilight, with hands and feet pleasantly warm, \u2013 wit...",
+        "Hypothetical": "I would have been truly glad about it: long walks, especially on frosty afternoons, would always have repulsed me \u2013 it would have been a horror to return home in the harsh twilight, with almost frozen...",
+        "Cultural": "I was truly grateful for it: long walks, especially on chilly afternoons, had always been a burden to me: \u2013 it was a nightmare to come home in the harsh twilight, with nearly frozen hands and feet, \u2013 ...",
+        "Philosophical": "I was truly glad about that: long walks, especially on frosty afternoons, were always repugnant to me: \u2013 it was a horror to return home in the harsh twilight, with almost frozen hands and feet, \u2013 with...",
+        "Quantitative": "I was truly glad about it: long walks, especially on frosty afternoons, had always been repugnant to me: \u2013 it was a horror to come home in the rough twilight, with nearly frozen hands and feet, \u2013 with...",
+        "Creative": "I was truly delighted by it: long walks, especially on chilly afternoons, always filled me with dread: \u2013 it was a nightmare to trudge home in the biting twilight, with nearly frozen hands and feet, \u2013 ..."
+      }
+    }
+  ]
+}

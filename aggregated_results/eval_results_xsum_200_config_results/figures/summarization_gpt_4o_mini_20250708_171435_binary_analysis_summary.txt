@@ -19,7 +19,7 @@ LLM Judge (w/ context):
   Problematic mean: 0.391 (±0.046, n=200)
   Effect size: 3.392 (LARGE)
   p-value: 0.000000 (***)
-  Bootstrap 95% CI: [0.191, 0.207]
+  Bootstrap 95% CI: [0.191, 0.208]
   Method: item-bootstrap
 
 GPPM:
@@ -27,7 +27,7 @@ GPPM:
   Problematic mean: -2.290 (±0.486, n=200)
   Effect size: 2.849 (LARGE)
   p-value: 0.000000 (***)
-  Bootstrap 95% CI: [0.213, 0.236]
+  Bootstrap 95% CI: [0.214, 0.236]
   Method: item-bootstrap
 
 MI (DoE):
@@ -49,8 +49,8 @@ LLM Judge (w/o context):
   Good Faith mean: 0.372 (±0.056, n=200)
   Problematic mean: 0.390 (±0.043, n=200)
   Effect size: -0.282 (SMALL)
-  p-value: 0.000000 (***)
-  Bootstrap 95% CI: [-0.027, -0.010]
+  p-value: 0.000100 (***)
+  Bootstrap 95% CI: [-0.027, -0.009]
   Method: item-bootstrap
 
 INTERPRETATION:

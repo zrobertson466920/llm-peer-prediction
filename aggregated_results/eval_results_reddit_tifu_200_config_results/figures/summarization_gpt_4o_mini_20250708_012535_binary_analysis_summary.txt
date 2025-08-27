@@ -49,7 +49,7 @@ LLM Judge (w/o context):
   Good Faith mean: 0.496 (±0.047, n=200)
   Problematic mean: 0.493 (±0.046, n=200)
   Effect size: 0.046 (NEGLIGIBLE)
-  p-value: 0.517400 (ns)
+  p-value: 0.514000 (ns)
   Bootstrap 95% CI: [-0.006, 0.013]
   Method: item-bootstrap
 

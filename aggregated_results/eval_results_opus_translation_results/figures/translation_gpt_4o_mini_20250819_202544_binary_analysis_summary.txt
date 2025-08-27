@@ -42,7 +42,7 @@ GPPM:
   Problematic mean: -1.688 (±2.070, n=186)
   Effect size: 0.730 (MEDIUM)
   p-value: 0.000000 (***)
-  Bootstrap 95% CI: [0.258, 0.382]
+  Bootstrap 95% CI: [0.258, 0.380]
   Method: item-bootstrap
 
 LLM Judge (w/o context):
@@ -50,7 +50,7 @@ LLM Judge (w/o context):
   Problematic mean: 0.534 (±0.130, n=186)
   Effect size: -0.618 (MEDIUM)
   p-value: 0.000000 (***)
-  Bootstrap 95% CI: [-0.085, -0.053]
+  Bootstrap 95% CI: [-0.084, -0.053]
   Method: item-bootstrap
 
 INTERPRETATION:

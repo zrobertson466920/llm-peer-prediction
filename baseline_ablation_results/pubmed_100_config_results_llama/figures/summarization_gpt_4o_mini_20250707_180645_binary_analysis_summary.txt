@@ -1,0 +1,44 @@
+BINARY CATEGORY DISCRIMINATION ANALYSIS
+==================================================
+Dataset: summarization_gpt_4o_mini_20250707_180645
+Good Faith: Faithful + Style conditions
+Problematic: Strategic + Low Effort conditions
+
+DISCRIMINATION RESULTS (ranked by effect size):
+--------------------------------------------------
+LLM Judge (w/ context):
+  Good Faith mean: 0.687 (±0.025, n=100)
+  Problematic mean: 0.350 (±0.023, n=100)
+  Effect size: 9.678 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.330, 0.344]
+  Method: item-bootstrap
+
+TVD-MI:
+  Good Faith mean: 0.706 (±0.078, n=100)
+  Problematic mean: 0.454 (±0.074, n=100)
+  Effect size: 6.714 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.245, 0.259]
+  Method: item-bootstrap
+
+LLM Judge (w/o context):
+  Good Faith mean: 0.673 (±0.028, n=100)
+  Problematic mean: 0.450 (±0.037, n=100)
+  Effect size: 4.807 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.214, 0.233]
+  Method: item-bootstrap
+
+ROUGE-1:
+  Good Faith mean: 0.259 (±0.042, n=14)
+  Problematic mean: 0.222 (±0.044, n=15)
+  Effect size: 0.856 (LARGE)
+  p-value: 0.029051 (*)
+  Method: condition_level
+
+INTERPRETATION:
+--------------------
+• Best discriminator: LLM Judge (w/ context) (d=9.678)
+• 4/4 metrics show significant discrimination (p<0.05)
+• 4/4 metrics show large practical effect (|d|≥0.8)

@@ -1,0 +1,21 @@
+BINARY CATEGORY DISCRIMINATION ANALYSIS
+==================================================
+Dataset: summarization
+Good Faith: Faithful + Style conditions
+Problematic: Strategic + Low Effort conditions
+
+DISCRIMINATION RESULTS (ranked by effect size):
+--------------------------------------------------
+Embed Baseline:
+  Good Faith mean: 0.775 (±0.023, n=200)
+  Problematic mean: 0.718 (±0.029, n=200)
+  Effect size: 3.278 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.055, 0.060]
+  Method: item-bootstrap
+
+INTERPRETATION:
+--------------------
+• Best discriminator: Embed Baseline (d=3.278)
+• 1/1 metrics show significant discrimination (p<0.05)
+• 1/1 metrics show large practical effect (|d|≥0.8)

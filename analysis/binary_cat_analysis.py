@@ -167,14 +167,16 @@ def load_individual_results(results_dir, base_name):
         'mi_gppm': ['condition_keys', 'combined_avgs', 'gppm_normalized'],
         'tvd_mi': ['condition_keys', 'tvd_mi_bidirectional', 'tvd_mi_scores'],
         'judge_with': ['condition_keys', 'win_rates'],
-        'judge_without': ['condition_keys', 'win_rates']
+        'judge_without': ['condition_keys', 'win_rates'],
+        'embed_baseline': ['condition_keys', 'win_rates']
     }
 
     for mechanism, archives in [
         ('mi_gppm', [f"{base_name}_mi_gppm_individual_examples", "log_individual_examples"]),
         ('tvd_mi', [f"{base_name}_tvd_mi_individual_examples", "tvd_mi_individual_examples"]),
         ('judge_with', [f"{base_name}_judge_with_context_individual_examples", "llm_context_individual_examples"]),
-        ('judge_without', [f"{base_name}_judge_without_context_individual_examples", "llm_without_context_individual_examples"])
+        ('judge_without', [f"{base_name}_judge_without_context_individual_examples", "llm_without_context_individual_examples"]),
+        ('embed_baseline', [f"{base_name}_embed_baseline_individual_examples", "embed_baseline_individual_examples"])
     ]:
         for archive_name in archives:
             archive = results_dir / archive_name
@@ -214,69 +216,82 @@ def load_results(results_dir):
     results_dir = Path(results_dir)
     datasets = {}
 
-    for validation_file in results_dir.glob("*_validation.json"):
-        base_name = validation_file.stem.replace("_validation", "")
+    # First, check for embed baseline files
+    for json_file in results_dir.glob("*_embed_baseline.json"):
+        base_name = json_file.stem.replace('_embed_baseline', '')
+        
+        with open(json_file, 'r') as f:
+            data = json.load(f)
+
+        # Create dataset entry with the embed baseline data
+        dataset_entry = {
+            'embed_baseline': data
+        }
+
+        # Check for individual results
+        individual_data = load_individual_results(results_dir, base_name)
+        if individual_data:
+            dataset_entry['individual'] = individual_data
+
+        datasets[base_name] = dataset_entry
+        print(f"Loaded embed baseline dataset: {base_name} from {json_file.name}")
+
+    # Then look for standard pattern files (original logic)
+    base_names = set()
+    for json_file in results_dir.glob("*.json"):
+        # Skip files we already processed
+        if 'without_context' in json_file.stem and not json_file.stem.endswith('_judge_without_context'):
+            continue
+
+        # Extract base name by removing known suffixes
+        name = json_file.stem
+        for suffix in ['_validation', '_mi_gppm', '_tvd_mi', '_judge_with_context', '_judge_without_context']:
+            if name.endswith(suffix):
+                base_name = name[:-len(suffix)]
+                if base_name not in datasets:  # Don't overwrite embed data
+                    base_names.add(base_name)
+                break
+
+    # Original logic for standard files...
+    for base_name in base_names:
+        validation_file = results_dir / f"{base_name}_validation.json"
         mechanism_file = results_dir / f"{base_name}_mi_gppm.json"
         tvd_mi_file = results_dir / f"{base_name}_tvd_mi.json"
         llm_judge_with_context_file = results_dir / f"{base_name}_judge_with_context.json"
         llm_judge_without_context_file = results_dir / f"{base_name}_judge_without_context.json"
 
-        if mechanism_file.exists():
+        dataset_entry = {}
+
+        # Load whatever files exist
+        if validation_file.exists():
             with open(validation_file, 'r') as f:
-                validation_data = json.load(f)
+                dataset_entry['validation'] = json.load(f)
+
+        if mechanism_file.exists():
             with open(mechanism_file, 'r') as f:
-                mechanism_data = json.load(f)
+                dataset_entry['mechanism'] = json.load(f)
 
-            dataset_entry = {
-                'validation': validation_data,
-                'mechanism': mechanism_data
-            }
+        if tvd_mi_file.exists():
+            with open(tvd_mi_file, 'r') as f:
+                dataset_entry['tvd_mi'] = json.load(f)
 
-            # Add TVD-MI if available
-            if tvd_mi_file.exists():
-                with open(tvd_mi_file, 'r') as f:
-                    tvd_mi_data = json.load(f)
-                dataset_entry['tvd_mi'] = tvd_mi_data
+        if llm_judge_with_context_file.exists():
+            with open(llm_judge_with_context_file, 'r') as f:
+                dataset_entry['llm_judge_with_context'] = json.load(f)
 
-            # Add LLM judge results if available
-            if llm_judge_with_context_file.exists():
-                with open(llm_judge_with_context_file, 'r') as f:
-                    llm_judge_with_context_data = json.load(f)
-                dataset_entry['llm_judge_with_context'] = llm_judge_with_context_data
+        if llm_judge_without_context_file.exists():
+            with open(llm_judge_without_context_file, 'r') as f:
+                dataset_entry['llm_judge_without_context'] = json.load(f)
 
-            if llm_judge_without_context_file.exists():
-                with open(llm_judge_without_context_file, 'r') as f:
-                    llm_judge_without_context_data = json.load(f)
-                dataset_entry['llm_judge_without_context'] = llm_judge_without_context_data
-
-            # Load individual results for bootstrap analysis
+        # Only add if we found at least one file
+        if dataset_entry:
+            # Load individual results
             individual_data = load_individual_results(results_dir, base_name)
             if individual_data:
                 dataset_entry['individual'] = individual_data
 
-            # Print what we loaded
-            loaded_components = ["base"]
-            if 'tvd_mi' in dataset_entry:
-                loaded_components.append("TVD-MI")
-            if 'llm_judge_with_context' in dataset_entry:
-                loaded_components.append("LLM Judge (with context)")
-            if 'llm_judge_without_context' in dataset_entry:
-                loaded_components.append("LLM Judge (without context)")
-            if 'individual' in dataset_entry:
-                individual_components = []
-                if 'mi_gppm' in individual_data:
-                    individual_components.append(f"MI/GPPM ({len(individual_data['mi_gppm'])} files)")
-                if 'tvd_mi' in individual_data:
-                    individual_components.append(f"TVD-MI ({len(individual_data['tvd_mi'])} files)")
-                if 'judge_with' in individual_data:
-                    individual_components.append(f"Judge+C ({len(individual_data['judge_with'])} files)")
-                if 'judge_without' in individual_data:
-                    individual_components.append(f"Judge-C ({len(individual_data['judge_without'])} files)")
-                if individual_components:
-                    loaded_components.append(f"Individual: {', '.join(individual_components)}")
-            
-            print(f"Loaded dataset: {base_name} ({', '.join(loaded_components)})")
             datasets[base_name] = dataset_entry
+            print(f"Loaded dataset: {base_name} with {list(dataset_entry.keys())}")
 
     return datasets
 
@@ -316,13 +331,45 @@ def create_binary_categories(df, task_config):
 
 def prepare_data(dataset_data, task_config):
     """Prepare comprehensive dataframe with all metrics."""
-    validation = dataset_data['validation']
-    mechanism = dataset_data['mechanism']
 
-    conditions = mechanism['condition_keys']
-    mi_scores = mechanism['combined_avgs_avg']
-    gppm_scores = mechanism['gppm_normalized_avg']
-    response_lengths = mechanism.get('response_lengths_avg', [])
+    # Get conditions from any available source
+    conditions = None
+    for source in ['mechanism', 'tvd_mi', 'llm_judge_with_context', 'llm_judge_without_context', 'embed_baseline']:
+        if source in dataset_data and 'condition_keys' in dataset_data[source]:
+            conditions = dataset_data[source]['condition_keys']
+            break
+
+    if not conditions:
+        # Debug: print what sources are available
+        print(f"Available sources in dataset_data: {list(dataset_data.keys())}")
+        for source in dataset_data:
+            print(f"  {source}: {list(dataset_data[source].keys())[:5]}...")  # Show first 5 keys
+        raise ValueError("No condition keys found in any data source")
+
+    # Extract baseline scores if validation exists
+    baseline_scores = {}
+    baseline_type = None
+    if 'validation' in dataset_data:
+        validation = dataset_data['validation']
+        for condition in conditions:
+            if condition in validation.get('baseline_scores', {}):
+                scores = validation['baseline_scores'][condition]
+                if 'bleu' in scores:
+                    baseline_type = 'BLEU'
+                    baseline_scores[condition] = scores['bleu']['corpus_score']
+                elif 'rouge1_f1' in scores:
+                    baseline_type = 'ROUGE-1'
+                    baseline_scores[condition] = scores['rouge1_f1']['mean']
+
+    # Extract MI/GPPM scores if available
+    mi_scores = None
+    gppm_scores = None
+    response_lengths = None
+    if 'mechanism' in dataset_data:
+        mechanism = dataset_data['mechanism']
+        mi_scores = mechanism.get('combined_avgs_avg', [])
+        gppm_scores = mechanism.get('gppm_normalized_avg', [])
+        response_lengths = mechanism.get('response_lengths_avg', [])
 
     # Extract TVD-MI scores if available
     tvd_mi_scores = None
@@ -331,9 +378,10 @@ def prepare_data(dataset_data, task_config):
         tvd_mi_scores = tvd_mi_data.get('tvd_mi_bidirectional_avg', tvd_mi_data.get('tvd_mi_scores_avg'))
 
     # Extract LLM judge scores if available
-    llm_judge_with_context = []
-    llm_judge_without_context = []
-    
+    llm_judge_with_context = None
+    llm_judge_without_context = None
+    embed_baseline = None
+
     if 'llm_judge_with_context' in dataset_data:
         llm_judge_with_context_data = dataset_data['llm_judge_with_context']
         llm_judge_with_context = llm_judge_with_context_data.get('win_rates_avg', [])
@@ -341,52 +389,59 @@ def prepare_data(dataset_data, task_config):
     if 'llm_judge_without_context' in dataset_data:
         llm_judge_without_context_data = dataset_data['llm_judge_without_context']
         llm_judge_without_context = llm_judge_without_context_data.get('win_rates_avg', [])
-    
-    print(f"Debug: Found {len(llm_judge_with_context)} LLM judge (with context) scores")
-    print(f"Debug: Found {len(llm_judge_without_context)} LLM judge (without context) scores")
 
-    # Extract baseline scores
-    baseline_scores = {}
-    baseline_type = None
+    if 'embed_baseline' in dataset_data:
+        embed_baseline_data = dataset_data['embed_baseline']
+        embed_baseline = embed_baseline_data.get('win_rates_avg', [])
 
-    for condition in conditions:
-        if condition in validation['baseline_scores']:
-            scores = validation['baseline_scores'][condition]
-            if 'bleu' in scores:
-                baseline_type = 'BLEU'
-                baseline_scores[condition] = scores['bleu']['corpus_score']
-            elif 'rouge1_f1' in scores:
-                baseline_type = 'ROUGE-1'
-                baseline_scores[condition] = scores['rouge1_f1']['mean']
+    print(f"Debug: Found {len(llm_judge_with_context) if llm_judge_with_context else 0} LLM judge (with context) scores")
+    print(f"Debug: Found {len(llm_judge_without_context) if llm_judge_without_context else 0} LLM judge (without context) scores")
+    print(f"Debug: Found {len(embed_baseline) if embed_baseline else 0} embed baseline scores")
 
-    # Create dataframe
+    # Build dataframe with whatever metrics exist
     data = []
-    for i, condition in enumerate(conditions[1:]):
+    for i, condition in enumerate(conditions[1:]):  # Skip first condition (typically "Original")
+        row = {'condition': condition}
+
+        # Add baseline if available
         if condition in baseline_scores:
-            row = {
-                'condition': condition,
-                'baseline': baseline_scores[condition],
-                'mi': mi_scores[i],
-                'gppm': -gppm_scores[i],  # Flip sign for easier comparison (higher = better)
-                'gppm_inv': gppm_scores[i]  # Keep original for backwards compatibility
-            }
+            row['baseline'] = baseline_scores[condition]
 
-            if i < len(response_lengths):
-                row['length'] = response_lengths[i]
+        # Add MI/GPPM if available
+        if mi_scores and i < len(mi_scores):
+            row['mi'] = mi_scores[i]
 
-            if tvd_mi_scores and i < len(tvd_mi_scores):
-                row['tvd_mi'] = tvd_mi_scores[i]
+        if gppm_scores and i < len(gppm_scores):
+            row['gppm'] = -gppm_scores[i]  # Flip sign for easier comparison
+            row['gppm_inv'] = gppm_scores[i]  # Keep original for backwards compatibility
 
-            if i < len(llm_judge_with_context):
-                row['llm_judge_with'] = llm_judge_with_context[i]
+        # Add response length if available
+        if response_lengths and i < len(response_lengths):
+            row['length'] = response_lengths[i]
 
-            if i < len(llm_judge_without_context):
-                row['llm_judge_without'] = llm_judge_without_context[i]
+        # Add TVD-MI if available
+        if tvd_mi_scores and i < len(tvd_mi_scores):
+            row['tvd_mi'] = tvd_mi_scores[i]
 
+        # Add LLM judge scores if available
+        if llm_judge_with_context and i < len(llm_judge_with_context):
+            row['llm_judge_with'] = llm_judge_with_context[i]
+
+        if llm_judge_without_context and i < len(llm_judge_without_context):
+            row['llm_judge_without'] = llm_judge_without_context[i]
+
+        if embed_baseline and i < len(embed_baseline):
+            row['embed_baseline'] = embed_baseline[i]
+
+        # Only add row if it has at least one metric
+        if len(row) > 1:  # More than just 'condition'
             data.append(row)
 
+    if not data:
+        raise ValueError("No data rows created - check that metrics align with conditions")
+
     df = pd.DataFrame(data)
-    
+
     print(f"Debug: DataFrame columns: {list(df.columns)}")
     print(f"Debug: DataFrame shape: {df.shape}")
 
@@ -432,7 +487,7 @@ def extract_individual_scores(individual_data, conditions, task_config):
                         condition_scores[condition]['tvd_mi'].append(tvd_mi_scores[i])
 
     # Extract LLM Judge scores - make sure the keys match
-    for judge_key, data_key in [('llm_judge_with', 'judge_with'), ('llm_judge_without', 'judge_without')]:
+    for judge_key, data_key in [('llm_judge_with', 'judge_with'), ('llm_judge_without', 'judge_without'), ('embed_baseline', 'embed_baseline')]:
         if data_key in individual_data:
             for example_data in individual_data[data_key]:
                 example_conditions = example_data.get('condition_keys', [])
@@ -483,17 +538,18 @@ def bootstrap_statistical_tests(
 ) -> dict[str, dict]:
     """
     Paired-item bootstrap for Good-Faith vs Problematic discrimination.
-
-    ─ Calculation notes ────────────────────────────────────────────────
-    • Unit of resampling = prompt/item (keeps condition-level dependence).
-    • Effect size = Cohen’s d on the vector of item-wise differences
-      (denominator = SD of those differences).
-    • p-value = permutation test via random sign-flip of diffs.
-    • 95 % CI = percentile CI on the mean difference (Δ), not on d.
     """
 
     rng = np.random.default_rng(seed)
-    metrics = ["mi", "gppm", "tvd_mi", "llm_judge_with", "llm_judge_without"]
+
+    # Only test metrics that exist in the dataframe
+    available_metrics = []
+    for metric in ["mi", "gppm", "tvd_mi", "llm_judge_with", "llm_judge_without", "embed_baseline"]:
+        if metric in df.columns:
+            available_metrics.append(metric)
+
+    print(f"Available metrics for bootstrap analysis: {available_metrics}")
+
     condition_scores = extract_individual_scores(individual_data, conditions, task_config)
 
     # Map conditions to categories...
@@ -502,16 +558,29 @@ def bootstrap_statistical_tests(
 
     results: dict = {}
 
-    for metric in metrics:
-        # Skip metrics missing entirely
-        if not any(metric in condition_scores.get(c, {}) for c in conditions):
+    for metric in available_metrics:
+        # Check if we have individual data for this metric
+        has_individual_data = any(
+            metric in condition_scores.get(c, {}) 
+            for c in conditions
+        )
+
+        if not has_individual_data:
             if verbose:
                 print(f"{metric}: no individual data available, skipping bootstrap analysis")
-            continue  # Just skip this metric, don't skip all
+            continue
 
         # Build item × condition table, padding with NaNs
-        max_len = max(len(condition_scores[c][metric]) for c in conditions
-                      if metric in condition_scores[c])
+        try:
+            max_len = max(
+                len(condition_scores[c][metric]) 
+                for c in conditions
+                if c in condition_scores and metric in condition_scores[c]
+            )
+        except ValueError:
+            # No data for this metric
+            continue
+
         table = pd.DataFrame(index=range(max_len), columns=conditions, dtype=float)
 
         for cond in conditions:
@@ -527,12 +596,13 @@ def bootstrap_statistical_tests(
         n_items = len(diffs)
         if n_items < 2 or diffs.std(ddof=1) == 0:
             if verbose:
-                print(f"{metric}: insufficient data, skipping.")
+                print(f"{metric}: insufficient data (n={n_items}), skipping.")
             continue
 
+        # Rest of the bootstrap analysis...
         observed_diff = diffs.mean()
 
-        # ───────── Bootstrap & permutation ─────────
+        # Bootstrap & permutation
         boot_diffs = rng.choice(diffs, size=(n_bootstrap, n_items), replace=True).mean(axis=1)
         signs = rng.choice([-1, 1], size=(n_bootstrap, n_items))
         null_diffs = (signs * diffs.values).mean(axis=1)
@@ -541,15 +611,14 @@ def bootstrap_statistical_tests(
         p_value = np.mean(np.abs(null_diffs) >= abs(observed_diff))
         cohens_d = observed_diff / diffs.std(ddof=1)
 
-        # ───────── Package result ─────────
-        # After calculating cohens_d, add:
+        # Calculate Cohen's d CI
         d_ci_low, d_ci_high = bootstrap_cohens_d_ci(diffs, n_bootstrap=n_bootstrap, seed=seed)
 
         results[metric] = {
             "statistic": observed_diff / (diffs.std(ddof=1) / np.sqrt(n_items)),
             "p_value": p_value,
             "cohens_d": cohens_d,
-            "cohens_d_ci": [d_ci_low, d_ci_high],  # Add this
+            "cohens_d_ci": [d_ci_low, d_ci_high],
             "good_faith_mean": faithful_means.mean(),
             "good_faith_std": faithful_means.std(ddof=1),
             "good_faith_n": n_items,
@@ -559,7 +628,6 @@ def bootstrap_statistical_tests(
             "bootstrap_ci": [ci_low, ci_high],
             "method": "item-bootstrap",
         }
-
 
         if verbose:
             print(f"{metric}: Δ={observed_diff:.3f}, 95 % CI=({ci_low:.3f},{ci_high:.3f}), "
@@ -620,6 +688,13 @@ def run_statistical_tests(df, individual_data=None, conditions=None, task_config
 def create_discrimination_chart(stats_results, baseline_type, dataset_name, output_dir):
     """Create single chart showing each mechanism's ability to discriminate."""
 
+    # Filter out None results
+    stats_results = {k: v for k, v in stats_results.items() if v is not None}
+
+    if not stats_results:
+        print(f"No valid statistics results for {dataset_name}, skipping chart creation")
+        return
+
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
 
     # Sort metrics by effect size for ordering
@@ -641,6 +716,8 @@ def create_discrimination_chart(stats_results, baseline_type, dataset_name, outp
             metric_names.append('Judge+C')
         elif m == 'llm_judge_without':
             metric_names.append('Judge-C')
+        elif m == 'embed_baseline':
+            metric_names.append('Embed')
         else:
             metric_names.append(m)  # fallback for any other metrics
 
@@ -746,7 +823,7 @@ def empirical_power_analysis_samples(stats_results, individual_data, conditions,
     problematic_conditions = temp_df[temp_df['binary_category'] == 'Problematic']['condition'].tolist()
     
     power_analysis = {}
-    metrics = ['mi', 'gppm', 'tvd_mi', 'judge_with', 'judge_without']
+    metrics = ['mi', 'gppm', 'tvd_mi', 'judge_with', 'judge_without', 'embed_baseline']
     
     for metric in metrics:
         if metric not in stats_results or stats_results[metric]['p_value'] >= alpha:
@@ -826,7 +903,8 @@ def print_sample_power_analysis(power_analysis, baseline_type):
             'gppm': 'GPPM', 
             'tvd_mi': 'TVD-MI',
             'judge_with': 'LLM Judge (w/ context)',
-            'judge_without': 'LLM Judge (w/o context)'
+            'judge_without': 'LLM Judge (w/o context)',
+            'embed_baseline': 'Embed Baseline'
         }.get(metric, metric)
         
         print(f"{metric_name}:")
@@ -990,6 +1068,8 @@ def generate_advisor_summary(stats_results, baseline_type, dataset_name, output_
             metric_name = 'LLM Judge (w/ context)'
         elif metric == 'llm_judge_without':
             metric_name = 'LLM Judge (w/o context)'
+        elif metric == 'embed_baseline':
+            metric_name = 'Embed Baseline'
         else:
             metric_name = metric
 
@@ -1036,7 +1116,8 @@ def generate_advisor_summary(stats_results, baseline_type, dataset_name, output_
                 'gppm': 'GPPM', 
                 'tvd_mi': 'TVD-MI',
                 'judge_with': 'LLM Judge (w/ context)',
-                'judge_without': 'LLM Judge (w/o context)'
+                'judge_without': 'LLM Judge (w/o context)',
+                'embed_baseline': 'Embed Baseline'
             }.get(metric, metric)
             
             max_multiplier = max(analysis['multiplier_good'], analysis['multiplier_prob'])
@@ -1054,7 +1135,8 @@ def generate_advisor_summary(stats_results, baseline_type, dataset_name, output_
         'gppm': 'GPPM',
         'tvd_mi': 'TVD-MI',
         'llm_judge_with': 'LLM Judge (w/ context)',
-        'llm_judge_without': 'LLM Judge (w/o context)'
+        'llm_judge_without': 'LLM Judge (w/o context)',
+        'embed_baseline': 'Embed Baseline'
     }.get(best_metric, best_metric)
 
     summary_lines.append(f"• Best discriminator: {best_name} (d={best_results['cohens_d']:.3f})")
@@ -1141,12 +1223,28 @@ def main():
             df, baseline_type = prepare_data(dataset_data, task_config)
             print(f"Baseline metric: {baseline_type}")
 
-            # Run statistical tests
-            conditions = dataset_data['mechanism']['condition_keys']
+            # Get conditions from any available source
+            conditions = None
+            for source in ['mechanism', 'tvd_mi', 'llm_judge_with_context', 'llm_judge_without_context', 'embed_baseline']:
+                if source in dataset_data and 'condition_keys' in dataset_data[source]:
+                    conditions = dataset_data[source]['condition_keys']
+                    break
+
+            if not conditions:
+                print(f"ERROR: No condition keys found for {dataset_name}")
+                continue
+
+            # Extract individual data (this was missing!)
             individual_data = dataset_data.get('individual', None)
+
+            # Run statistical tests (this was missing!)
             stats_results = run_statistical_tests(df, individual_data, conditions, task_config)
 
-            # Create discrimination chart
+            if not stats_results:
+                print("ERROR: No statistical results generated")
+                continue
+
+            # NOW create discrimination chart (moved after stats calculation)
             create_discrimination_chart(stats_results, baseline_type, dataset_name, figures_dir)
 
             # Run power analysis for non-significant results
@@ -1156,11 +1254,11 @@ def main():
                 power_results = empirical_power_analysis_samples(
                     stats_results, individual_data, conditions, task_config
                 )
-                
+
                 # Print power analysis results
                 if power_results:
                     print_sample_power_analysis(power_results, baseline_type)
-                    
+
                     # Create power curves for non-significant metrics
                     plot_power_curves(power_results, figures_dir, dataset_name)
 
@@ -1170,7 +1268,7 @@ def main():
             # Create detailed breakdown
             create_detailed_breakdown(df, figures_dir, dataset_name)
             save_structured_results(dataset_name, stats_results, df, task_type, figures_dir)
-            
+
             print(f"\nAnalysis complete for {dataset_name}")
             print(f"Files saved to {figures_dir}")
 
@@ -1181,4 +1279,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

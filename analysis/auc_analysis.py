@@ -129,6 +129,7 @@ class MatrixLoader:
         self._load_tvd_mi()
         self._load_judge_with_context()
         self._load_judge_without_context()
+        self._load_embed_baseline()
 
         # Load individual example matrices if needed
         self._load_individual_examples()
@@ -139,8 +140,11 @@ class MatrixLoader:
         """Load the first JSON file matching the pattern."""
         files = list(self.results_dir.glob(pattern))
         if files:
+            print(f"  Found {len(files)} files matching '{pattern}': {files[0].name}")
             with open(files[0], 'r') as f:
                 return json.load(f)
+        else:
+            print(f"  No files found matching pattern '{pattern}' in {self.results_dir}")
         return None
 
     def _load_mi_gppm(self):
@@ -204,6 +208,28 @@ class MatrixLoader:
                 'condition_keys': data.get('condition_keys', [])
             }
 
+    def _load_embed_baseline(self):
+        """Load embed baseline matrices."""
+        # Try multiple patterns for flexibility
+        patterns = ["*_embed_baseline.json", "*embed_baseline.json"]
+        data = None
+        
+        for pattern in patterns:
+            data = self._load_json_file(pattern)
+            if data:
+                break
+        
+        if data:
+            # Store the raw data
+            self.matrices['embed_baseline'] = data
+
+            # Extract metadata
+            self.metadata['embed_baseline'] = {
+                'task_type': data.get('task_type'),
+                'num_examples': data.get('num_examples'),
+                'condition_keys': data.get('condition_keys', [])
+            }
+
     def _load_individual_examples(self):
         """Load individual example matrices from archive directories."""
 
@@ -228,6 +254,28 @@ class MatrixLoader:
         judge_no_context_dir = self.results_dir / "llm_without_context_individual_examples"
         if judge_no_context_dir.exists():
             self.matrices['judge_without_context_individual'] = self._load_individual_judge_examples(judge_no_context_dir)
+
+        # Embed baseline individual examples - try multiple directory names
+        embed_dirs = [
+            self.results_dir / "embed_baseline_individual_examples",
+            self.results_dir / "summarization_embed_baseline_individual_examples",
+            self.results_dir / "*_embed_baseline_individual_examples"
+        ]
+        
+        for embed_pattern in embed_dirs:
+            if '*' in str(embed_pattern):
+                # Handle glob patterns
+                matching_dirs = list(self.results_dir.glob(embed_pattern.name))
+                if matching_dirs:
+                    print(f"  Found embed baseline directory: {matching_dirs[0].name}")
+                    self.matrices['embed_baseline_individual'] = self._load_individual_embed_baseline_examples(matching_dirs[0])
+                    break
+            elif embed_pattern.exists():
+                print(f"  Found embed baseline directory: {embed_pattern.name}")
+                self.matrices['embed_baseline_individual'] = self._load_individual_embed_baseline_examples(embed_pattern)
+                break
+        else:
+            print(f"  No embed baseline individual examples directory found")
 
     def _load_individual_mi_examples(self, directory: Path) -> Dict:
         """Load MI/GPPM individual example matrices."""
@@ -267,7 +315,7 @@ class MatrixLoader:
     def _load_individual_judge_examples(self, directory: Path) -> Dict:
         """Load judge individual example matrices."""
         examples = {}
-        for file in sorted(directory.glob("judge_with_context_example_*.json")):
+        for file in sorted(directory.glob("judge_without_context_example_*.json" if "without" in directory.name else "judge_with_context_example_*.json")):
             with open(file, 'r') as f:
                 data = json.load(f)
                 idx = data['example_idx']
@@ -276,6 +324,35 @@ class MatrixLoader:
                     'win_rates': np.array(data['win_rates']),
                     'condition_keys': data['condition_keys'],
                     'with_context': data.get('with_context', True)
+                }
+        return examples
+    
+    def _load_individual_embed_baseline_examples(self, directory: Path) -> Dict:
+        """Load embed baseline individual example matrices."""
+        examples = {}
+        # Try multiple file patterns
+        patterns = ["*_embed_baseline_example_*.json", "*embed_baseline_example_*.json", "*_baseline_example_*.json"]
+        
+        files_found = []
+        for pattern in patterns:
+            files_found = list(directory.glob(pattern))
+            if files_found:
+                print(f"    Found {len(files_found)} files matching pattern '{pattern}'")
+                break
+        
+        if not files_found:
+            print(f"    Warning: No embed baseline example files found in {directory}")
+            return examples
+            
+        for file in sorted(files_found):
+            with open(file, 'r') as f:
+                data = json.load(f)
+                idx = data['example_idx']
+                examples[idx] = {
+                    'win_matrix': np.array(data['win_matrix']),
+                    'win_rates': np.array(data['win_rates']),
+                    'condition_keys': data['condition_keys'],
+                    'with_context': data.get('with_context', False)
                 }
         return examples
     
@@ -308,28 +385,36 @@ class MatrixLoader:
                 # TVD-MI might already be symmetric, but symmetrize to be safe
                 return 0.5 * (matrix[idx1, idx2] + matrix[idx2, idx1])
                 
-        elif mechanism in ['judge_with_context','judge_without_context']:
-            W = example_data.get('win_matrix')
-            if W is None: return None
-            conds = example_data['condition_keys']
-            n = W.shape[0]
+        elif mechanism in ['judge_with_context','judge_without_context']:                                                                                                                   
+             W = example_data.get('win_matrix')                                                                                                                                                                
+             if W is None: return None                                                                                                                                                                         
+             conds = example_data['condition_keys']                                                                                                                                                            
+             n = W.shape[0]                                                                                                                                                                                    
+                                                                                                                                                                                                               
+             #if 'Reference' in conds:                                                                                                                                                                         
+             #r = conds.index('Reference')                                                                                                                                                                     
+             # orientation-invariant quality in [0,1]                                                                                                                                                          
+             #q = 0.5 * (W[:, r].astype(float) + (1.0 - W[r, :].astype(float)))                                                                                                                                
+             #else:                                                                                                                                                                                            
+                 # row-mean proxy (no modeling)                                                                                                                                                                
+             Wm = W.astype(float).copy()                                                                                                                                                                       
+             np.fill_diagonal(Wm, np.nan)                                                                                                                                                                      
+             q = np.nanmean(Wm, axis=1)                                                                                                                                                                        
+                                                                                                                                                                                                               
+             qa, qb = q[idx1], q[idx2]                                                                                                                                                                         
+             if not (np.isfinite(qa) and np.isfinite(qb)): return None                                                                                                                                         
+                                                                                                                                                                                                               
+             # 2) slightly smoother "both must be good" aggregator                                                                                                                                             
+             return float(min(qa, qb))
+        elif mechanism == 'embed_baseline':
+             W = example_data.get('win_matrix')                                                                                                                                                                
+             if W is None: return None                                                                                                                                                                         
+             conds = example_data['condition_keys']                                                                                                                                                            
+             n = W.shape[0]
 
-            if 'Reference' in conds:
-                r = conds.index('Reference')
-                # orientation-invariant quality in [0,1]
-                q = 0.5 * (W[:, r].astype(float) + (1.0 - W[r, :].astype(float)))
-            else:
-                # row-mean proxy (no modeling)
-                Wm = W.astype(float).copy()
-                np.fill_diagonal(Wm, np.nan)
-                q = np.nanmean(Wm, axis=1)
-
-            qa, qb = q[idx1], q[idx2]
-            if not (np.isfinite(qa) and np.isfinite(qb)): return None
-
-            # 2) slightly smoother “both must be good” aggregator
-            return float(min(qa, qb))
-    
+             Wm = W.astype(float).copy()                                                                                                                                                                       
+             return 0.5 * (Wm[idx1, idx2] + Wm[idx2, idx1])      
+               
     def calculate_per_item_auc(self, mechanism: str, faithful_conditions: List[str] = None,
                               problematic_conditions: List[str] = None, task_type: str = None,
                               balance_classes: bool = True) -> np.ndarray:
@@ -351,11 +436,13 @@ class MatrixLoader:
         
         # Filter to available conditions
         if mechanism not in self.metadata:
+            print(f"  Warning: No metadata found for mechanism '{mechanism}'")
             return np.array([])
             
         # Calculate AUC for each item (respect per-example condition order)
         individual_key = f"{mechanism}_individual"
         if individual_key not in self.matrices:
+            print(f"  Warning: No individual examples found for mechanism '{mechanism}'")
             return np.array([])
             
         per_item_aucs = []
@@ -464,7 +551,7 @@ class MatrixLoader:
         plt.figure(figsize=(10, 8))
 
         # Colors for different mechanisms
-        colors = ['blue', 'green', 'red', 'purple', 'orange']
+        colors = ['blue', 'green', 'red', 'purple', 'orange', 'cyan']
         
         for idx, mechanism in enumerate(mechanisms):
             # Get per-item AUCs with balanced classes
@@ -613,52 +700,55 @@ def format_auc_with_ci(mean_auc: float, lower_ci: float, upper_ci: float) -> str
 
 def generate_latex_tables(results_dict: Dict[str, Dict[str, Tuple[float, float, float]]]) -> Tuple[str, str]:
     """Generate the two LaTeX tables from results."""
-    
+
     # Table 1: Main results by domain
     table1_lines = []
     table1_lines.append("\\begin{table}[t]")
     table1_lines.append("\\centering")
     table1_lines.append("\\caption{AUC scores for distinguishing Faithful-Faithful from Faithful-Problematic agent pairs across domains. Information-theoretic mechanisms (especially TVD-MI) consistently outperform LLM judges, even when judges have access to source material. Values show macro-averaged AUC ± 95\\% CI half-width.}")
     table1_lines.append("\\label{tab:auc_results}")
-    table1_lines.append("\\begin{tabular}{lccccc}")
+    table1_lines.append("\\begin{tabular}{lccccccc}")  # Added one more 'c' for embed baseline
     table1_lines.append("\\toprule")
-    table1_lines.append("\\textbf{Domain} & \\textbf{n} & \\textbf{MI (DoE)} & \\textbf{GPPM} & \\textbf{TVD-MI} & \\textbf{Judge w/ context} \\\\")
+    table1_lines.append("\\textbf{Domain} & \\textbf{n} & \\textbf{MI (DoE)} & \\textbf{GPPM} & \\textbf{TVD-MI} & \\textbf{Judge w/ context} & \\textbf{Judge w/o context} & \\textbf{Embed} \\\\")
     table1_lines.append("\\midrule")
-    
+
     # Group results by domain
     domains = {}
     attack_results = {}
-    
+
     for folder_name, data in results_dict.items():
         dataset_name, domain = get_dataset_name(folder_name)
-        
+
         if domain == 'Attack':
             attack_results[dataset_name] = data
         else:
             if domain not in domains:
                 domains[domain] = []
             domains[domain].append((dataset_name, data))
-    
+
     # Sort domains and datasets within each domain
     domain_order = ['Translation', 'Summarization', 'Peer Review']
-    
+
     for domain in domain_order:
+
         if domain not in domains:
             continue
-            
-        table1_lines.append(f"\\multicolumn{{6}}{{l}}{{\\textit{{{domain}}}}} \\\\")
-        
+
+        table1_lines.append(f"\\multicolumn{{8}}{{l}}{{\\textit{{{domain}}}}} \\\\")  # Changed to 8 for embed baseline
+
         # Sort datasets within domain
         datasets = sorted(domains[domain], key=lambda x: x[0])
-        
+
         for dataset_name, data in datasets:
             n = data.get('n', '—')
             mi_auc = format_auc_with_ci(*data.get('mi', (np.nan, np.nan, np.nan)))
             gppm_auc = format_auc_with_ci(*data.get('gppm', (np.nan, np.nan, np.nan)))
             tvd_mi_auc = format_auc_with_ci(*data.get('tvd_mi', (np.nan, np.nan, np.nan)))
             judge_auc = format_auc_with_ci(*data.get('judge_with_context', (np.nan, np.nan, np.nan)))
-            
-            # Find best score (excluding judge)
+            judge_no_context_auc = format_auc_with_ci(*data.get('judge_without_context', (np.nan, np.nan, np.nan)))
+            embed_baseline_auc = format_auc_with_ci(*data.get('embed_baseline', (np.nan, np.nan, np.nan)))
+
+            # Find best score (excluding judges)
             scores = []
             if 'mi' in data and not np.isnan(data['mi'][0]):
                 scores.append(('mi', data['mi'][0]))
@@ -666,9 +756,9 @@ def generate_latex_tables(results_dict: Dict[str, Dict[str, Tuple[float, float, 
                 scores.append(('gppm', data['gppm'][0]))
             if 'tvd_mi' in data and not np.isnan(data['tvd_mi'][0]):
                 scores.append(('tvd_mi', data['tvd_mi'][0]))
-            
+
             best_mechanism = max(scores, key=lambda x: x[1])[0] if scores else None
-            
+
             # Bold the best score
             if best_mechanism == 'mi':
                 mi_auc = f"\\textbf{{{mi_auc}}}"
@@ -676,39 +766,44 @@ def generate_latex_tables(results_dict: Dict[str, Dict[str, Tuple[float, float, 
                 gppm_auc = f"\\textbf{{{gppm_auc}}}"
             elif best_mechanism == 'tvd_mi':
                 tvd_mi_auc = f"\\textbf{{{tvd_mi_auc}}}"
-            
-            table1_lines.append(f"{dataset_name} & {n} & {mi_auc} & {gppm_auc} & {tvd_mi_auc} & {judge_auc} \\\\")
-        
+
+            table1_lines.append(f"{dataset_name} & {n} & {mi_auc} & {gppm_auc} & {tvd_mi_auc} & {judge_auc} & {judge_no_context_auc} & {embed_baseline_auc} \\\\")
+
         if domain != domain_order[-1]:  # Don't add midrule after last domain
             table1_lines.append("\\midrule")
-    
+
     table1_lines.append("\\bottomrule")
     table1_lines.append("\\end{tabular}")
     table1_lines.append("\\end{table}")
-    
+
     # Table 2: Attack results
     table2_lines = []
     table2_lines.append("\\begin{center}")
-    table2_lines.append("\\begin{tabular}{lcccc}")
+    table2_lines.append("\\begin{tabular}{lcccccc}")  # Added one more 'c' for embed
     table2_lines.append("\\toprule")
-    table2_lines.append("\\textbf{Attack} & \\textbf{MI} & \\textbf{GPPM} & \\textbf{TVD-MI} & \\textbf{Judge} \\\\")
+    table2_lines.append("\\textbf{Attack} & \\textbf{MI} & \\textbf{GPPM} & \\textbf{TVD-MI} & \\textbf{Judge w/} & \\textbf{Judge w/o} & \\textbf{Embed} \\\\")
     table2_lines.append("\\midrule")
-    
+
     # Sort attacks by name
     attack_order = ['Case Flip', 'Format', 'Padding', 'Pattern']
-    
+
     for attack_name in attack_order:
         if attack_name not in attack_results:
             continue
-            
+
         data = attack_results[attack_name]
-        
+
         # For attacks, we just show the mean AUC without CI
         mi_auc = f"{data.get('mi', (np.nan,))[0]:.3f}" if 'mi' in data and not np.isnan(data['mi'][0]) else "—"
         gppm_auc = f"{data.get('gppm', (np.nan,))[0]:.3f}" if 'gppm' in data and not np.isnan(data['gppm'][0]) else "—"
         tvd_mi_auc = f"{data.get('tvd_mi', (np.nan,))[0]:.3f}" if 'tvd_mi' in data and not np.isnan(data['tvd_mi'][0]) else "—"
         judge_auc = f"{data.get('judge_with_context', (np.nan,))[0]:.3f}" if 'judge_with_context' in data and not np.isnan(data['judge_with_context'][0]) else "—"
-        
+        judge_no_context_auc = f"{data.get('judge_without_context', (np.nan,))[0]:.3f}" if 'judge_without_context' in data and not np.isnan(data['judge_without_context'][0]) else "—"
+        embed_baseline_auc = f"{data.get('embed_baseline', (np.nan,))[0]:.3f}" if 'embed_baseline' in data and not np.isnan(data['embed_baseline'][0]) else "—"
+
+        if 'judge_without_context' in data and not np.isnan(data['judge_without_context'][0]):
+            scores.append(('judge_without', data['judge_without_context'][0]))  # Added
+
         # Find best score
         scores = []
         if 'mi' in data and not np.isnan(data['mi'][0]):
@@ -718,10 +813,12 @@ def generate_latex_tables(results_dict: Dict[str, Dict[str, Tuple[float, float, 
         if 'tvd_mi' in data and not np.isnan(data['tvd_mi'][0]):
             scores.append(('tvd_mi', data['tvd_mi'][0]))
         if 'judge_with_context' in data and not np.isnan(data['judge_with_context'][0]):
-            scores.append(('judge', data['judge_with_context'][0]))
-        
+            scores.append(('judge_with', data['judge_with_context'][0]))
+        if 'judge_without_context' in data and not np.isnan(data['judge_without_context'][0]):
+            scores.append(('judge_without', data['judge_without_context'][0]))  # Added
+
         best_mechanism = max(scores, key=lambda x: x[1])[0] if scores else None
-        
+
         # Bold the best score
         if best_mechanism == 'mi':
             mi_auc = f"\\textbf{{{mi_auc}}}"
@@ -729,15 +826,19 @@ def generate_latex_tables(results_dict: Dict[str, Dict[str, Tuple[float, float, 
             gppm_auc = f"\\textbf{{{gppm_auc}}}"
         elif best_mechanism == 'tvd_mi':
             tvd_mi_auc = f"\\textbf{{{tvd_mi_auc}}}"
-        elif best_mechanism == 'judge':
+        elif best_mechanism == 'judge_with':
             judge_auc = f"\\textbf{{{judge_auc}}}"
-        
-        table2_lines.append(f"{attack_name} & {mi_auc} & {gppm_auc} & {tvd_mi_auc} & {judge_auc} \\\\")
-    
+        elif best_mechanism == 'judge_without':
+            judge_no_context_auc = f"\\textbf{{{judge_no_context_auc}}}"
+        elif best_mechanism == 'embed_baseline':
+            embed_baseline_auc = f"\\textbf{{{embed_baseline_auc}}}"
+
+        table2_lines.append(f"{attack_name} & {mi_auc} & {gppm_auc} & {tvd_mi_auc} & {judge_auc} & {judge_no_context_auc} & {embed_baseline_auc} \\\\")
+
     table2_lines.append("\\bottomrule")
     table2_lines.append("\\end{tabular}")
     table2_lines.append("\\end{center}")
-    
+
     return '\n'.join(table1_lines), '\n'.join(table2_lines)
 
 def process_folder_for_tables(folder_path: str) -> Dict[str, Tuple[float, float, float]]:
@@ -763,7 +864,7 @@ def process_folder_for_tables(folder_path: str) -> Dict[str, Tuple[float, float,
             detected_task_type = 'translation'
         
         # Calculate balanced AUC for each mechanism and get n from first successful mechanism
-        mechanisms = ['mi', 'gppm', 'tvd_mi', 'judge_with_context']
+        mechanisms = ['mi', 'gppm', 'tvd_mi', 'judge_with_context', 'judge_without_context', 'embed_baseline']
         n_examples = None
 
         for mechanism in mechanisms:
@@ -784,20 +885,46 @@ def process_folder_for_tables(folder_path: str) -> Dict[str, Tuple[float, float,
 
 def main():
     """Process all folders in eval_results and generate LaTeX tables."""
-    
-    # Get all subdirectories in eval_results
-    eval_results_dir = Path("eval_results")
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Generate AUC analysis tables')
+    parser.add_argument('--results-dir', type=str, default='eval_results',
+                        help='Directory containing evaluation results')
+    parser.add_argument('--output-dir', type=str, default='tables',
+                        help='Directory to save output tables')
+    parser.add_argument('--debug', action='store_true',
+                        help='Enable debug output')
+
+    args = parser.parse_args()
+
+    # Get all subdirectories in results directory
+    eval_results_dir = Path(args.results_dir)
     if not eval_results_dir.exists():
         print(f"Error: {eval_results_dir} directory not found")
         return
 
-    # Collect all sub directories
-    folders = [f for f in eval_results_dir.iterdir() if f.is_dir()]
-    folders.sort()  # Sort for consistent output
-    
-    if not folders:
-        print("No subdirectories found in eval_results")
-        return
+    # Check if the directory itself contains result files (single dataset case)
+    json_files_in_root = list(eval_results_dir.glob("*.json"))
+    has_individual_dirs = any(d.is_dir() and 'individual_examples' in d.name 
+                            for d in eval_results_dir.iterdir())
+
+    folders = []
+
+    if json_files_in_root and has_individual_dirs:
+        # This directory itself is a dataset directory
+        print(f"Processing {eval_results_dir} as a single dataset directory")
+        folders = [eval_results_dir]
+    else:
+        # Look for subdirectories as separate datasets
+        folders = [f for f in eval_results_dir.iterdir() if f.is_dir()]
+        folders.sort()  # Sort for consistent output
+
+        if not folders:
+            print(f"No subdirectories found in {eval_results_dir}")
+            print(f"Found {len(json_files_in_root)} JSON files in root, but no individual_examples directory")
+            return
+
+        print(f"Found {len(folders)} folders to process in {eval_results_dir}")
     
     # Process each folder and collect results
     all_results = {}
@@ -816,7 +943,26 @@ def main():
         # Skip attack folders for the main table
         is_attack_folder = any(attack in folder_name for attack in ['case_flip', 'format', 'padding', 'pattern'])
         
-        print(f"Processing {folder_name}...")
+        print(f"\nProcessing {folder_name}...")
+        
+        # List files in the folder for debugging
+        if args.debug:
+            json_files = list(folder.glob("*.json"))
+            print(f"  JSON files found: {len(json_files)}")
+            for f in json_files[:5]:  # Show first 5 files
+                print(f"    - {f.name}")
+            if len(json_files) > 5:
+                print(f"    ... and {len(json_files) - 5} more")
+                
+            # Check for subdirectories
+            subdirs = [d for d in folder.iterdir() if d.is_dir()]
+            if subdirs:
+                print(f"  Subdirectories found: {len(subdirs)}")
+                for d in subdirs[:3]:
+                    print(f"    - {d.name}")
+                if len(subdirs) > 3:
+                    print(f"    ... and {len(subdirs) - 3} more")
+        
         results = process_folder_for_tables(str(folder))
         
         if results:
@@ -826,10 +972,13 @@ def main():
     table1, table2 = generate_latex_tables(all_results)
     
     # Save tables to files
-    with open("tables/auc_table_main_results.tex", 'w') as f:
+    output_dir = Path(args.output_dir)
+    output_dir.mkdir(exist_ok=True)
+    
+    with open(output_dir / "auc_table_main_results.tex", 'w') as f:
         f.write(table1)
     
-    with open("tables/auc_table_attack_results.tex", 'w') as f:
+    with open(output_dir / "auc_table_attack_results.tex", 'w') as f:
         f.write(table2)
     
     # Print tables
@@ -843,7 +992,19 @@ def main():
     print("="*80)
     print(table2)
     
-    print(f"\nTables saved to table1_main_results.tex and table2_attack_results.tex")
+    print(f"\nTables saved to {output_dir}/auc_table_main_results.tex and {output_dir}/auc_table_attack_results.tex")
+    
+    # Print summary of results
+    print(f"\nSummary:")
+    print(f"  Total folders processed: {len(all_results)}")
+    print(f"  Folders with results: {sum(1 for r in all_results.values() if r)}")
+    
+    # List mechanisms found
+    all_mechanisms = set()
+    for folder_results in all_results.values():
+        all_mechanisms.update(folder_results.keys())
+    all_mechanisms.discard('n')  # Remove the 'n' key
+    print(f"  Mechanisms found: {sorted(all_mechanisms)}")
     
     # Also generate ROC curves for each folder
     print("\nGenerating ROC curves...")
@@ -859,12 +1020,12 @@ def main():
                 break
             
             # Plot all mechanisms together
-            mechanisms = ['mi', 'gppm', 'tvd_mi', 'judge_with_context']
+            mechanisms = ['mi', 'gppm', 'tvd_mi', 'judge_with_context', 'judge_without_context', 'embed_baseline']
             # Build save path
-            save_dir = "roc_curves"
-            os.makedirs(save_dir, exist_ok=True)
+            save_dir = output_dir / "roc_curves"
+            save_dir.mkdir(exist_ok=True)
             
-            save_path = os.path.join(save_dir, f"roc_curves_{folder.name}.png")
+            save_path = save_dir / f"roc_curves_{folder.name}.png"
             
             try:
                 # Generate title based on folder name
@@ -905,3 +1066,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

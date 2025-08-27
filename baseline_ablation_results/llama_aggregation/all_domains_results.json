@@ -1,0 +1,209 @@
+[
+  {
+    "dataset_name": "translation_meta_llama_Llama_3.3_70B_Instruct_Turbo_20250704_205459",
+    "task_type": "translation",
+    "compression_ratio": null,
+    "stats_results": {
+      "tvd_mi": {
+        "cohens_d": 1.8533767403094852,
+        "cohens_d_ci": [
+          1.2925970168508538,
+          2.956785994523261
+        ],
+        "p_value": 0.0,
+        "good_faith_mean": 0.5613510101010101,
+        "good_faith_std": 0.23589521833436056,
+        "problematic_mean": 0.39262152777777776,
+        "problematic_std": 0.16722143455367738,
+        "n_samples": 30,
+        "method": "item-bootstrap"
+      },
+      "llm_judge_with": {
+        "cohens_d": 4.741904273087802,
+        "cohens_d_ci": [
+          3.9182100105554984,
+          6.350317721839286
+        ],
+        "p_value": 0.0,
+        "good_faith_mean": 0.5726767676767677,
+        "good_faith_std": 0.04755173027261367,
+        "problematic_mean": 0.2596527777777778,
+        "problematic_std": 0.059949100709901615,
+        "n_samples": 30,
+        "method": "item-bootstrap"
+      },
+      "llm_judge_without": {
+        "cohens_d": 0.4140016436427074,
+        "cohens_d_ci": [
+          0.06712172923091154,
+          0.8246681840483441
+        ],
+        "p_value": 0.0325,
+        "good_faith_mean": 0.5826515151515151,
+        "good_faith_std": 0.06484135242859546,
+        "problematic_mean": 0.5436111111111112,
+        "problematic_std": 0.09153584796310345,
+        "n_samples": 30,
+        "method": "item-bootstrap"
+      },
+      "baseline": {
+        "cohens_d": 1.143625312631473,
+        "cohens_d_ci": [
+          null,
+          null
+        ],
+        "p_value": 0.013320295384748878,
+        "good_faith_mean": 0.12488092774777705,
+        "good_faith_std": 0.029137383228693567,
+        "problematic_mean": 0.09205696416124759,
+        "problematic_std": 0.02735294493275327,
+        "n_samples": 22,
+        "method": "condition_level"
+      }
+    },
+    "n_good_faith": 22,
+    "n_problematic": 8,
+    "conditions": {
+      "good_faith": [
+        "Original",
+        "Formal",
+        "Informal",
+        "Technical",
+        "Simplify",
+        "Poetic",
+        "Humorous",
+        "Dramatic",
+        "Historical",
+        "Futuristic",
+        "Academic",
+        "Persuasive",
+        "Emotional",
+        "Objective",
+        "Subjective",
+        "Metaphorical",
+        "Comparative",
+        "Hypothetical",
+        "Cultural",
+        "Philosophical",
+        "Quantitative",
+        "Creative"
+      ],
+      "problematic": [
+        "Low Effort",
+        "All Positive",
+        "All Negative",
+        "Exaggerate",
+        "Understate",
+        "Sarcastic",
+        "Misleading",
+        "Contradictory"
+      ]
+    },
+    "display_name": "translation_meta_llama_Llama_3.3_70B_Instruct_Turbo_20250704_205459",
+    "source_file": "llama_eval_results/llama_aggregation/llama_eval_results_opus_translation_results_test/figures/translation_meta_llama_Llama_3.3_70B_Instruct_Turbo_20250704_205459_structured_results.json",
+    "parent_directory": "llama_eval_results_opus_translation_results_test"
+  },
+  {
+    "dataset_name": "summarization_gpt_4o_mini_20250707_180645",
+    "task_type": "summarization",
+    "compression_ratio": null,
+    "stats_results": {
+      "tvd_mi": {
+        "cohens_d": 6.71383696528024,
+        "cohens_d_ci": [
+          5.7363270787812155,
+          7.986158710829444
+        ],
+        "p_value": 0.0,
+        "good_faith_mean": 0.7064008620689655,
+        "good_faith_std": 0.07829530891261566,
+        "problematic_mean": 0.454353448275862,
+        "problematic_std": 0.07406069515168297,
+        "n_samples": 100,
+        "method": "item-bootstrap"
+      },
+      "llm_judge_with": {
+        "cohens_d": 9.677997752327355,
+        "cohens_d_ci": [
+          8.49188015121528,
+          11.391538968469293
+        ],
+        "p_value": 0.0,
+        "good_faith_mean": 0.6872290640394086,
+        "good_faith_std": 0.02540001654748837,
+        "problematic_mean": 0.35017241379310343,
+        "problematic_std": 0.023455932325086238,
+        "n_samples": 100,
+        "method": "item-bootstrap"
+      },
+      "llm_judge_without": {
+        "cohens_d": 4.8069318120230236,
+        "cohens_d_ci": [
+          4.117462169200797,
+          5.821261155928188
+        ],
+        "p_value": 0.0,
+        "good_faith_mean": 0.6732142857142859,
+        "good_faith_std": 0.028471250351932466,
+        "problematic_mean": 0.4497126436781609,
+        "problematic_std": 0.03663596461987461,
+        "n_samples": 100,
+        "method": "item-bootstrap"
+      },
+      "baseline": {
+        "cohens_d": 0.8557141596701007,
+        "cohens_d_ci": [
+          null,
+          null
+        ],
+        "p_value": 0.029051482599852626,
+        "good_faith_mean": 0.2585857547089576,
+        "good_faith_std": 0.04207257005890112,
+        "problematic_mean": 0.22188523933702917,
+        "problematic_std": 0.043632973636685474,
+        "n_samples": 14,
+        "method": "condition_level"
+      }
+    },
+    "n_good_faith": 14,
+    "n_problematic": 15,
+    "conditions": {
+      "good_faith": [
+        "Faithful",
+        "Objective",
+        "Comprehensive",
+        "Neutral Tone",
+        "Overly Technical",
+        "Academic Style",
+        "Sensationalist",
+        "Bureaucratic",
+        "Casual Conversational",
+        "Historical Perspective",
+        "Poetic",
+        "Technical Jargon",
+        "Euphemistic",
+        "Minimalist"
+      ],
+      "problematic": [
+        "Fact Manipulation",
+        "Selective Omission",
+        "Misleading Emphasis",
+        "Sentiment Flip",
+        "Conspiracy Theory",
+        "Contradictory",
+        "Context Removal",
+        "False Attribution",
+        "Agenda Push",
+        "Cherry Pick",
+        "Low Effort",
+        "Ultra Concise",
+        "Template Response",
+        "Surface Skim",
+        "Minimal Detail"
+      ]
+    },
+    "display_name": "summarization_gpt_4o_mini_20250707_180645",
+    "source_file": "llama_eval_results/llama_aggregation/llama_eval_results_pubmed_100_config_results_llama/figures/summarization_gpt_4o_mini_20250707_180645_structured_results.json",
+    "parent_directory": "llama_eval_results_pubmed_100_config_results_llama"
+  }
+]

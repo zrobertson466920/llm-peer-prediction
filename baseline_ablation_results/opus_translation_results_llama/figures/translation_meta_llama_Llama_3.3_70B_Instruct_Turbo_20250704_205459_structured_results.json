@@ -1,0 +1,101 @@
+{
+  "dataset_name": "translation_meta_llama_Llama_3.3_70B_Instruct_Turbo_20250704_205459",
+  "task_type": "translation",
+  "compression_ratio": null,
+  "stats_results": {
+    "tvd_mi": {
+      "cohens_d": 1.8533767403094852,
+      "cohens_d_ci": [
+        1.3034180023513764,
+        2.976507321792464
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.5613510101010101,
+      "good_faith_std": 0.23589521833436056,
+      "problematic_mean": 0.39262152777777776,
+      "problematic_std": 0.16722143455367738,
+      "n_samples": 30,
+      "method": "item-bootstrap"
+    },
+    "llm_judge_with": {
+      "cohens_d": 4.741904273087802,
+      "cohens_d_ci": [
+        3.925135223059495,
+        6.327539199954523
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.5726767676767677,
+      "good_faith_std": 0.04755173027261367,
+      "problematic_mean": 0.2596527777777778,
+      "problematic_std": 0.059949100709901615,
+      "n_samples": 30,
+      "method": "item-bootstrap"
+    },
+    "llm_judge_without": {
+      "cohens_d": 0.4140016436427074,
+      "cohens_d_ci": [
+        0.06648449095436568,
+        0.8232406780467144
+      ],
+      "p_value": 0.0294,
+      "good_faith_mean": 0.5826515151515151,
+      "good_faith_std": 0.06484135242859546,
+      "problematic_mean": 0.5436111111111112,
+      "problematic_std": 0.09153584796310345,
+      "n_samples": 30,
+      "method": "item-bootstrap"
+    },
+    "baseline": {
+      "cohens_d": 1.143625312631473,
+      "cohens_d_ci": [
+        null,
+        null
+      ],
+      "p_value": 0.013320295384748878,
+      "good_faith_mean": 0.12488092774777705,
+      "good_faith_std": 0.029137383228693567,
+      "problematic_mean": 0.09205696416124759,
+      "problematic_std": 0.02735294493275327,
+      "n_samples": 22,
+      "method": "condition_level"
+    }
+  },
+  "n_good_faith": 22,
+  "n_problematic": 8,
+  "conditions": {
+    "good_faith": [
+      "Original",
+      "Formal",
+      "Informal",
+      "Technical",
+      "Simplify",
+      "Poetic",
+      "Humorous",
+      "Dramatic",
+      "Historical",
+      "Futuristic",
+      "Academic",
+      "Persuasive",
+      "Emotional",
+      "Objective",
+      "Subjective",
+      "Metaphorical",
+      "Comparative",
+      "Hypothetical",
+      "Cultural",
+      "Philosophical",
+      "Quantitative",
+      "Creative"
+    ],
+    "problematic": [
+      "Low Effort",
+      "All Positive",
+      "All Negative",
+      "Exaggerate",
+      "Understate",
+      "Sarcastic",
+      "Misleading",
+      "Contradictory"
+    ]
+  }
+}

@@ -19,7 +19,7 @@ LLM Judge (w/ context):
   Problematic mean: 0.362 (±0.048, n=200)
   Effect size: 4.059 (LARGE)
   p-value: 0.000000 (***)
-  Bootstrap 95% CI: [0.225, 0.240]
+  Bootstrap 95% CI: [0.224, 0.240]
   Method: item-bootstrap
 
 GPPM:

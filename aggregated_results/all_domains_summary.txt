@@ -1,6 +1,6 @@
 BINARY CATEGORY ANALYSIS - ALL DOMAINS SUMMARY
 ======================================================================
-Generated: 2025-08-20 20:23:34
+Generated: 2025-08-27 18:02:26
 Total domains analyzed: 10
 
 DOMAINS BY COMPRESSION RATIO:
@@ -20,7 +20,7 @@ SUMMARIZATION TASKS:
   XSum                         | Compression: 18.5:1   | GF: 14 | Prob: 15
 
 PEER REVIEW TASKS:
-  ICLR 2023 Peer Review        | Compression: 20.2:1   | GF: 15 | Prob: 13
+  peer_review_gpt_4o_mini_20250618_231942 | Compression: 20.2:1   | GF: 15 | Prob: 13
 
 EFFECT SIZES BY MECHANISM:
 ------------------------------------------------------------
@@ -35,67 +35,67 @@ BASELINE:
   CNN/DailyMail                  | d= 0.607 ns
   Reddit TIFU                    | d= 0.133 ns
   XSum                           | d= 0.293 ns
-  ICLR 2023 Peer Review          | d=-0.120 ns
+  peer_review_gpt_4o_mini_202... | d=-0.120 ns
 
 MI (DoE):
-  WMT14 Translation              | d= 1.610 [ 1.458,  1.782] ***
-  Opus Books Translation         | d= 2.656 [ 2.423,  2.961] ***
-  SamSum                         | d= 2.521 [ 2.291,  2.806] ***
-  PubMed                         | d= 2.008 [ 1.722,  2.376] ***
-  Multi-News                     | d= 1.530 [ 1.369,  1.741] ***
-  BillSum                        | d= 2.239 [ 2.025,  2.509] ***
-  CNN/DailyMail                  | d= 2.063 [ 1.881,  2.289] ***
-  Reddit TIFU                    | d= 2.517 [ 2.282,  2.813] ***
-  XSum                           | d= 1.894 [ 1.721,  2.107] ***
-  ICLR 2023 Peer Review          | d= 0.679 [ 0.482,  0.907] ***
+  WMT14 Translation              | d= 1.610 [ 1.463,  1.781] ***
+  Opus Books Translation         | d= 2.656 [ 2.412,  2.954] ***
+  SamSum                         | d= 2.521 [ 2.291,  2.819] ***
+  PubMed                         | d= 2.008 [ 1.721,  2.375] ***
+  Multi-News                     | d= 1.530 [ 1.371,  1.734] ***
+  BillSum                        | d= 2.239 [ 2.030,  2.512] ***
+  CNN/DailyMail                  | d= 2.063 [ 1.881,  2.287] ***
+  Reddit TIFU                    | d= 2.517 [ 2.285,  2.807] ***
+  XSum                           | d= 1.894 [ 1.726,  2.106] ***
+  peer_review_gpt_4o_mini_202... | d= 0.679 [ 0.485,  0.912] ***
 
 GPPM:
-  WMT14 Translation              | d= 0.698 [ 0.638,  0.785] ***
-  Opus Books Translation         | d= 0.730 [ 0.652,  0.853] ***
-  SamSum                         | d= 2.518 [ 2.313,  2.781] ***
-  PubMed                         | d= 3.185 [ 2.736,  3.740] ***
-  Multi-News                     | d= 2.702 [ 2.444,  3.050] ***
-  BillSum                        | d= 3.589 [ 3.269,  4.007] ***
-  CNN/DailyMail                  | d= 3.417 [ 3.077,  3.819] ***
-  Reddit TIFU                    | d= 3.758 [ 3.458,  4.159] ***
-  XSum                           | d= 2.849 [ 2.635,  3.132] ***
-  ICLR 2023 Peer Review          | d= 0.732 [ 0.531,  0.968] ***
+  WMT14 Translation              | d= 0.698 [ 0.638,  0.784] ***
+  Opus Books Translation         | d= 0.730 [ 0.651,  0.853] ***
+  SamSum                         | d= 2.518 [ 2.315,  2.780] ***
+  PubMed                         | d= 3.185 [ 2.731,  3.747] ***
+  Multi-News                     | d= 2.702 [ 2.443,  3.040] ***
+  BillSum                        | d= 3.589 [ 3.273,  4.031] ***
+  CNN/DailyMail                  | d= 3.417 [ 3.087,  3.815] ***
+  Reddit TIFU                    | d= 3.758 [ 3.448,  4.161] ***
+  XSum                           | d= 2.849 [ 2.623,  3.133] ***
+  peer_review_gpt_4o_mini_202... | d= 0.732 [ 0.540,  0.965] ***
 
 TVD-MI:
-  WMT14 Translation              | d= 3.318 [ 3.085,  3.577] ***
-  Opus Books Translation         | d= 3.080 [ 2.811,  3.422] ***
-  SamSum                         | d= 6.137 [ 5.569,  6.854] ***
-  PubMed                         | d= 6.525 [ 5.872,  7.320] ***
-  Multi-News                     | d= 6.549 [ 5.812,  7.525] ***
-  BillSum                        | d= 5.912 [ 5.294,  6.717] ***
-  CNN/DailyMail                  | d= 5.872 [ 5.177,  6.687] ***
-  Reddit TIFU                    | d= 7.235 [ 6.515,  8.191] ***
-  XSum                           | d= 6.688 [ 6.088,  7.439] ***
-  ICLR 2023 Peer Review          | d= 1.816 [ 1.511,  2.232] ***
+  WMT14 Translation              | d= 3.318 [ 3.086,  3.588] ***
+  Opus Books Translation         | d= 3.080 [ 2.809,  3.413] ***
+  SamSum                         | d= 6.137 [ 5.583,  6.848] ***
+  PubMed                         | d= 6.525 [ 5.869,  7.331] ***
+  Multi-News                     | d= 6.549 [ 5.818,  7.490] ***
+  BillSum                        | d= 5.912 [ 5.292,  6.738] ***
+  CNN/DailyMail                  | d= 5.872 [ 5.176,  6.661] ***
+  Reddit TIFU                    | d= 7.235 [ 6.509,  8.190] ***
+  XSum                           | d= 6.688 [ 6.093,  7.444] ***
+  peer_review_gpt_4o_mini_202... | d= 1.816 [ 1.509,  2.243] ***
 
 LLM JUDGE (WITH CONTEXT):
-  WMT14 Translation              | d= 2.530 [ 2.182,  3.010] ***
-  Opus Books Translation         | d= 3.499 [ 3.136,  3.967] ***
-  SamSum                         | d= 2.698 [ 2.455,  2.999] ***
-  PubMed                         | d= 8.136 [ 7.358,  9.168] ***
-  Multi-News                     | d= 4.059 [ 3.544,  4.731] ***
-  BillSum                        | d= 4.235 [ 3.811,  4.770] ***
-  CNN/DailyMail                  | d= 3.552 [ 3.230,  3.940] ***
-  Reddit TIFU                    | d= 2.703 [ 2.390,  3.106] ***
-  XSum                           | d= 3.392 [ 3.050,  3.823] ***
-  ICLR 2023 Peer Review          | d= 0.259 [ 0.060,  0.471] *
+  WMT14 Translation              | d= 2.530 [ 2.172,  3.016] ***
+  Opus Books Translation         | d= 3.499 [ 3.130,  3.966] ***
+  SamSum                         | d= 2.698 [ 2.451,  3.003] ***
+  PubMed                         | d= 8.136 [ 7.347,  9.192] ***
+  Multi-News                     | d= 4.059 [ 3.545,  4.731] ***
+  BillSum                        | d= 4.235 [ 3.817,  4.783] ***
+  CNN/DailyMail                  | d= 3.552 [ 3.233,  3.941] ***
+  Reddit TIFU                    | d= 2.703 [ 2.388,  3.096] ***
+  XSum                           | d= 3.392 [ 3.046,  3.818] ***
+  peer_review_gpt_4o_mini_202... | d= 0.259 [ 0.061,  0.477] *
 
 LLM JUDGE (WITHOUT CONTEXT):
-  WMT14 Translation              | d= 0.237 [ 0.047,  0.436] *
-  Opus Books Translation         | d=-0.618 [-0.791, -0.462] ***
-  SamSum                         | d= 0.539 [ 0.396,  0.694] ***
-  PubMed                         | d= 3.250 [ 2.840,  3.772] ***
-  Multi-News                     | d= 0.538 [ 0.387,  0.706] ***
-  BillSum                        | d= 0.163 [ 0.023,  0.308] *
-  CNN/DailyMail                  | d= 0.725 [ 0.628,  0.831] ***
-  Reddit TIFU                    | d= 0.046 [-0.091,  0.191] ns
-  XSum                           | d=-0.282 [-0.431, -0.141] ***
-  ICLR 2023 Peer Review          | d=-1.689 [-2.010, -1.458] ***
+  WMT14 Translation              | d= 0.237 [ 0.040,  0.436] *
+  Opus Books Translation         | d=-0.618 [-0.789, -0.467] ***
+  SamSum                         | d= 0.539 [ 0.395,  0.695] ***
+  PubMed                         | d= 3.250 [ 2.851,  3.772] ***
+  Multi-News                     | d= 0.538 [ 0.387,  0.701] ***
+  BillSum                        | d= 0.163 [ 0.027,  0.305] *
+  CNN/DailyMail                  | d= 0.725 [ 0.627,  0.829] ***
+  Reddit TIFU                    | d= 0.046 [-0.094,  0.189] ns
+  XSum                           | d=-0.282 [-0.431, -0.145] ***
+  peer_review_gpt_4o_mini_202... | d=-1.689 [-2.001, -1.461] ***
 
 H1a TEST PREVIEW: All mechanisms achieve d > 0.5?
 ------------------------------------------------------------

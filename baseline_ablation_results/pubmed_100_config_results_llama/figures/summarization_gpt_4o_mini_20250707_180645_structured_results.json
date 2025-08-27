@@ -1,0 +1,100 @@
+{
+  "dataset_name": "summarization_gpt_4o_mini_20250707_180645",
+  "task_type": "summarization",
+  "compression_ratio": null,
+  "stats_results": {
+    "tvd_mi": {
+      "cohens_d": 6.71383696528024,
+      "cohens_d_ci": [
+        5.730302499612419,
+        8.000090238923871
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.7064008620689655,
+      "good_faith_std": 0.07829530891261566,
+      "problematic_mean": 0.454353448275862,
+      "problematic_std": 0.07406069515168297,
+      "n_samples": 100,
+      "method": "item-bootstrap"
+    },
+    "llm_judge_with": {
+      "cohens_d": 9.677997752327355,
+      "cohens_d_ci": [
+        8.462106797324108,
+        11.448363744632836
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.6872290640394086,
+      "good_faith_std": 0.02540001654748837,
+      "problematic_mean": 0.35017241379310343,
+      "problematic_std": 0.023455932325086238,
+      "n_samples": 100,
+      "method": "item-bootstrap"
+    },
+    "llm_judge_without": {
+      "cohens_d": 4.8069318120230236,
+      "cohens_d_ci": [
+        4.11543003629095,
+        5.843471350468251
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.6732142857142859,
+      "good_faith_std": 0.028471250351932466,
+      "problematic_mean": 0.4497126436781609,
+      "problematic_std": 0.03663596461987461,
+      "n_samples": 100,
+      "method": "item-bootstrap"
+    },
+    "baseline": {
+      "cohens_d": 0.8557141596701007,
+      "cohens_d_ci": [
+        null,
+        null
+      ],
+      "p_value": 0.029051482599852626,
+      "good_faith_mean": 0.2585857547089576,
+      "good_faith_std": 0.04207257005890112,
+      "problematic_mean": 0.22188523933702917,
+      "problematic_std": 0.043632973636685474,
+      "n_samples": 14,
+      "method": "condition_level"
+    }
+  },
+  "n_good_faith": 14,
+  "n_problematic": 15,
+  "conditions": {
+    "good_faith": [
+      "Faithful",
+      "Objective",
+      "Comprehensive",
+      "Neutral Tone",
+      "Overly Technical",
+      "Academic Style",
+      "Sensationalist",
+      "Bureaucratic",
+      "Casual Conversational",
+      "Historical Perspective",
+      "Poetic",
+      "Technical Jargon",
+      "Euphemistic",
+      "Minimalist"
+    ],
+    "problematic": [
+      "Fact Manipulation",
+      "Selective Omission",
+      "Misleading Emphasis",
+      "Sentiment Flip",
+      "Conspiracy Theory",
+      "Contradictory",
+      "Context Removal",
+      "False Attribution",
+      "Agenda Push",
+      "Cherry Pick",
+      "Low Effort",
+      "Ultra Concise",
+      "Template Response",
+      "Surface Skim",
+      "Minimal Detail"
+    ]
+  }
+}

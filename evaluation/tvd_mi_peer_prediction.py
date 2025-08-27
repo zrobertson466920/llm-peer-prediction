@@ -8,13 +8,19 @@ import random
 import time
 import threading
 from openai import OpenAI
-from config import OPENAI_API_KEY
+from anthropic import Anthropic
+from together import Together
+from config import OPENAI_API_KEY, ANTHROPIC_API_KEY, TOGETHER_API_KEY
 
 # --- Setup ---
-MODEL = "gpt-4o-mini"  # Using chat model for TVD-MI
-TIMEOUT_SECONDS = 20  # or whatever value you prefer
-# Initialize OpenAI client once
-client = OpenAI(api_key=OPENAI_API_KEY)
+#MODEL = "gpt-4o-mini"
+#MODEL = "claude-3-5-haiku-20241022"
+MODEL = "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+
+TIMEOUT_SECONDS = 400  # or whatever value you prefer
+openai_client = OpenAI(api_key=OPENAI_API_KEY)
+anthropic_client = Anthropic(api_key=ANTHROPIC_API_KEY)
+together_client = Together(api_key=TOGETHER_API_KEY)
 
 # Verbosity levels
 VERBOSITY_MINIMAL = 0    # Only scores and metadata
@@ -52,21 +58,24 @@ def interpret_tvd_mi_response(response: str) -> float:
     """Convert LLM response to numeric score"""
     response = response.strip().lower()
     
-    if "[[significant gain]]" in response:
+    if "[significant gain]" in response:
         return 1.0
-    elif "[[little gain]]" in response:
+    elif "[little gain]" in response:
         return 0.25
-    elif "[[no gain]]" in response:
+    elif "[no gain]" in response:
         return 0.0
     else:
         # Default to no gain if response is unclear
         print(f"Warning: Unclear response '{response}', defaulting to [[No Gain]]")
         return 0.0
 
-def get_critic_score_with_logging(text_a: str, text_b: str, task_description: str, call_info: dict) -> tuple:
+def get_critic_score_with_logging(text_a: str, text_b: str, task_description: str, call_info: dict, model: str = None) -> tuple:
     """Get TVD-MI critic score via API and return both score and full interaction"""
     # Create cache key from inputs
     cache_key = (text_a, text_b, task_description)
+
+    if model is None:
+        model = MODEL
 
     # Check cache first
     if cache_key in cache:
@@ -86,15 +95,32 @@ def get_critic_score_with_logging(text_a: str, text_b: str, task_description: st
     prompt = generate_tvd_mi_prompt(task_description, text_a, text_b)
 
     try:
-        # Use synchronous OpenAI client
-        response = client.chat.completions.create(
-            model=MODEL,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.0,
-            max_tokens=150
-        )
-
-        response_text = response.choices[0].message.content
+        # Route to appropriate client based on model
+        if MODEL.startswith("claude"):
+            # Anthropic client returns a different structure
+            response = anthropic_client.messages.create(
+                model=MODEL,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.0,
+                max_tokens=500
+            )
+            response_text = response.content[0].text  # Anthropic format
+        elif MODEL.startswith("gpt"):  # OpenAI models
+            response = openai_client.chat.completions.create(
+                model=model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.0,
+                max_tokens=500
+            )
+            response_text = response.choices[0].message.content
+        else:
+            response = together_client.chat.completions.create(
+                model=model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.0,
+                max_tokens=500
+            )
+            response_text = response.choices[0].message.content
         score = interpret_tvd_mi_response(response_text)
         cache[cache_key] = score
 

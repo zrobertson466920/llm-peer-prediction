@@ -1,0 +1,44 @@
+BINARY CATEGORY ANALYSIS - ALL DOMAINS SUMMARY
+======================================================================
+Generated: 2025-08-25 18:43:36
+Total domains analyzed: 2
+
+DOMAINS BY COMPRESSION RATIO:
+------------------------------------------------------------
+
+TRANSLATION TASKS:
+  translation_meta_llama_Llama_3.3_70B_Instruct_Turbo_20250704_205459 | Compression: Unknown  | GF: 22 | Prob:  8
+
+SUMMARIZATION TASKS:
+  summarization_gpt_4o_mini_20250707_180645 | Compression: Unknown  | GF: 14 | Prob: 15
+
+EFFECT SIZES BY MECHANISM:
+------------------------------------------------------------
+
+BASELINE:
+  translation_meta_llama_Llam... | d= 1.144 *
+  summarization_gpt_4o_mini_2... | d= 0.856 *
+
+MI (DoE):
+  No results found for this mechanism
+
+GPPM:
+  No results found for this mechanism
+
+TVD-MI:
+  translation_meta_llama_Llam... | d= 1.853 [ 1.293,  2.957] ***
+  summarization_gpt_4o_mini_2... | d= 6.714 [ 5.736,  7.986] ***
+
+LLM JUDGE (WITH CONTEXT):
+  translation_meta_llama_Llam... | d= 4.742 [ 3.918,  6.350] ***
+  summarization_gpt_4o_mini_2... | d= 9.678 [ 8.492, 11.392] ***
+
+LLM JUDGE (WITHOUT CONTEXT):
+  translation_meta_llama_Llam... | d= 0.414 [ 0.067,  0.825] *
+  summarization_gpt_4o_mini_2... | d= 4.807 [ 4.117,  5.821] ***
+
+H1a TEST PREVIEW: All mechanisms achieve d > 0.5?
+------------------------------------------------------------
+TVD-MI                    | ✓ PASS | Min d: 1.853
+LLM JUDGE (WITH CONTEXT)  | ✓ PASS | Min d: 4.742
+LLM JUDGE (WITHOUT CONTEXT) | ✗ FAIL | Min d: 0.414

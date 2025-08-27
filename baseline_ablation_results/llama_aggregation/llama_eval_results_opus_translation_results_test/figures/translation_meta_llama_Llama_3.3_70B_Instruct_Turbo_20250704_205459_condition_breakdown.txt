@@ -1,0 +1,46 @@
+DETAILED CONDITION BREAKDOWN
+========================================
+
+GOOD FAITH CONDITIONS (22 total):
+------------------------------
+  Faithful (6):
+    - Original
+    - Formal
+    - Technical
+    - Academic
+    - Objective
+    - Cultural
+
+  Style (16):
+    - Informal
+    - Simplify
+    - Poetic
+    - Humorous
+    - Dramatic
+    - Historical
+    - Futuristic
+    - Persuasive
+    - Emotional
+    - Subjective
+    - Metaphorical
+    - Comparative
+    - Hypothetical
+    - Philosophical
+    - Quantitative
+    - Creative
+
+
+PROBLEMATIC CONDITIONS (8 total):
+------------------------------
+  Low Effort (4):
+    - Low Effort
+    - Exaggerate
+    - Understate
+    - Sarcastic
+
+  Strategic (4):
+    - All Positive
+    - All Negative
+    - Misleading
+    - Contradictory
+

@@ -7,12 +7,19 @@ import concurrent.futures
 from tqdm import tqdm
 import time
 from openai import OpenAI
-from config import OPENAI_API_KEY
+from anthropic import Anthropic
+from together import Together
+from config import OPENAI_API_KEY, ANTHROPIC_API_KEY, TOGETHER_API_KEY
 
 # --- Setup ---
-MODEL = "gpt-4o-mini"
-TIMEOUT_SECONDS = 20  # or whatever value you prefer
-client = OpenAI(api_key=OPENAI_API_KEY)
+#MODEL = "gpt-4o-mini"
+#MODEL = "claude-3-5-haiku-20241022"
+MODEL = "meta-llama/Llama-3.3-70B-Instruct-Turbo"
+
+TIMEOUT_SECONDS = 400  # or whatever value you prefer
+openai_client = OpenAI(api_key=OPENAI_API_KEY)
+anthropic_client = Anthropic(api_key=ANTHROPIC_API_KEY)
+together_client = Together(api_key=TOGETHER_API_KEY)
 
 # Verbosity levels
 VERBOSITY_MINIMAL = 0    # Only scores and metadata
@@ -101,8 +108,12 @@ def interpret_judge_response(response: str) -> float:
         print(f"Warning: Unclear verdict '{response}', defaulting to tie")
         return 0.5
 
-def get_judge_score_with_logging(text_a: str, text_b: str, query: str, with_context: bool, call_info: dict, task_description: str) -> tuple:
+def get_judge_score_with_logging(text_a: str, text_b: str, query: str, with_context: bool, call_info: dict, task_description: str, model: str = None) -> tuple:
     """Get judge score via API and return both score and full interaction"""
+
+    if model is None:
+        model = MODEL
+
     # Create cache key (now includes task_description)
     cache_key = (text_a, text_b, query, with_context, task_description)
 
@@ -127,14 +138,33 @@ def get_judge_score_with_logging(text_a: str, text_b: str, query: str, with_cont
         prompt = generate_judge_prompt_without_context(text_a, text_b, task_description)
 
     try:
-        response = client.chat.completions.create(
-            model=MODEL,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.0,
-            max_tokens=500  # More tokens for explanations
-        )
+        # Route to appropriate client based on model
+        if MODEL.startswith("claude"):
+            # Anthropic client returns a different structure
+            response = anthropic_client.messages.create(
+                model=MODEL,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.0,
+                max_tokens=500
+            )
+            response_text = response.content[0].text  # Anthropic format
+        elif MODEL.startswith("gpt"):  # OpenAI models
+            response = openai_client.chat.completions.create(
+                model=model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.0,
+                max_tokens=500
+            )
+            response_text = response.choices[0].message.content
+        else:
+            response = together_client.chat.completions.create(
+                model=model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.0,
+                max_tokens=500
+            )
+            response_text = response.choices[0].message.content
 
-        response_text = response.choices[0].message.content
         score = interpret_judge_response(response_text)
         cache[cache_key] = score
 

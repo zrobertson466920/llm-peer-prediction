@@ -6,7 +6,7 @@ Problematic: Strategic + Low Effort conditions
 
 DISCRIMINATION RESULTS (ranked by effect size):
 --------------------------------------------------
-judge_with:
+LLM Judge (w/ context):
   Good Faith mean: 0.680 (±0.028, n=200)
   Problematic mean: 0.354 (±0.028, n=200)
   Effect size: 8.136 (LARGE)
@@ -22,7 +22,7 @@ TVD-MI:
   Bootstrap 95% CI: [0.238, 0.248]
   Method: item-bootstrap
 
-judge_without:
+LLM Judge (w/o context):
   Good Faith mean: 0.623 (±0.036, n=200)
   Problematic mean: 0.469 (±0.035, n=200)
   Effect size: 3.250 (LARGE)
@@ -46,8 +46,15 @@ MI (DoE):
   Bootstrap 95% CI: [0.059, 0.067]
   Method: item-bootstrap
 
+ROUGE-1:
+  Good Faith mean: 0.259 (±0.042, n=14)
+  Problematic mean: 0.222 (±0.044, n=15)
+  Effect size: 0.856 (LARGE)
+  p-value: 0.029051 (*)
+  Method: condition_level
+
 INTERPRETATION:
 --------------------
-• Best discriminator: judge_with (d=8.136)
-• 5/5 metrics show significant discrimination (p<0.05)
-• 5/5 metrics show large practical effect (|d|≥0.8)
+• Best discriminator: LLM Judge (w/ context) (d=8.136)
+• 6/6 metrics show significant discrimination (p<0.05)
+• 6/6 metrics show large practical effect (|d|≥0.8)

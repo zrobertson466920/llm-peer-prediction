@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\caption{Effect sizes (Cohen's d) for discrimination between Good Faith and Problematic agents. Values show mean ± 95\% CI. Bold indicates p < 0.001, regular text p < 0.05, gray text non-significant.}
+\label{tab:effect_sizes}
+\footnotesize
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+\textbf{Domain (Compression)} & \textbf{Baseline} & \textbf{MI} & \textbf{GPPM} & \textbf{TVD-MI} & \textbf{Judge} & \textbf{Judge} \\
+& & \textbf{(DoE)} & & & \textbf{(w/ ctx)} & \textbf{(w/o ctx)} \\
+\midrule
+\multicolumn{7}{l}{\textit{Translation}} \\
+translation_meta_llama_Llama_3.3_70B_Instruct_Turbo_20250704_205459 & 1.14 & -- & -- & \textbf{1.85±0.83} & \textbf{4.74±1.22} & 0.41±0.38 \\
+\midrule
+\multicolumn{7}{l}{\textit{Summarization}} \\
+summarization_gpt_4o_mini_20250707_180645 & 0.86 & -- & -- & \textbf{6.71±1.12} & \textbf{9.68±1.45} & \textbf{4.81±0.85} \\
+\midrule
+\midrule
+\textbf{Success (d > 0.5)} & 2/2 & -- & -- & 2/2 & 2/2 & 1/2 \\
+\bottomrule
+\end{tabular}
+\end{table*}

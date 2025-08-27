@@ -1,0 +1,14 @@
+\begin{table}[t]
+\centering
+\caption{AUC scores for distinguishing Faithful-Faithful from Faithful-Problematic agent pairs across domains. Information-theoretic mechanisms (especially TVD-MI) consistently outperform LLM judges, even when judges have access to source material. Values show macro-averaged AUC ± 95\% CI half-width.}
+\label{tab:auc_results}
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{Domain} & \textbf{n} & \textbf{MI (DoE)} & \textbf{GPPM} & \textbf{TVD-MI} & \textbf{Judge w/ context} & \textbf{Judge w/o context} & \textbf{Embed} \\
+\midrule
+\multicolumn{8}{l}{\textit{Summarization}} \\
+PubMed & 200 & — & — & — & — & — & 0.694 ± 0.007 \\
+\midrule
+\bottomrule
+\end{tabular}
+\end{table}

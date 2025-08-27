@@ -1,0 +1,58 @@
+{
+  "dataset_name": "summarization_embed",
+  "task_type": "summarization",
+  "compression_ratio": null,
+  "stats_results": {
+    "llm_judge_without": {
+      "cohens_d": 3.278083058392909,
+      "cohens_d_ci": [
+        2.9346447260240294,
+        3.7323354185739297
+      ],
+      "p_value": 0.0,
+      "good_faith_mean": 0.7754045932847287,
+      "good_faith_std": 0.023421654144568857,
+      "problematic_mean": 0.7182369403761808,
+      "problematic_std": 0.02939335397068311,
+      "n_samples": 200,
+      "method": "item-bootstrap"
+    }
+  },
+  "n_good_faith": 14,
+  "n_problematic": 15,
+  "conditions": {
+    "good_faith": [
+      "Faithful",
+      "Objective",
+      "Comprehensive",
+      "Neutral Tone",
+      "Overly Technical",
+      "Academic Style",
+      "Sensationalist",
+      "Bureaucratic",
+      "Casual Conversational",
+      "Historical Perspective",
+      "Poetic",
+      "Technical Jargon",
+      "Euphemistic",
+      "Minimalist"
+    ],
+    "problematic": [
+      "Fact Manipulation",
+      "Selective Omission",
+      "Misleading Emphasis",
+      "Sentiment Flip",
+      "Conspiracy Theory",
+      "Contradictory",
+      "Context Removal",
+      "False Attribution",
+      "Agenda Push",
+      "Cherry Pick",
+      "Low Effort",
+      "Ultra Concise",
+      "Template Response",
+      "Surface Skim",
+      "Minimal Detail"
+    ]
+  }
+}

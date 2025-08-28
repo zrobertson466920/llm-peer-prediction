@@ -1,5 +1,5 @@
 """
-Binary Category Analysis for Advisor Meeting
+Binary Category Analysis
 Compares "Good Faith" (Faithful + Style) vs "Problematic" (Strategic + Low Effort) conditions
 """
 
@@ -171,43 +171,58 @@ def load_individual_results(results_dir, base_name):
         'embed_baseline': ['condition_keys', 'win_rates']
     }
 
-    for mechanism, archives in [
-        ('mi_gppm', [f"{base_name}_mi_gppm_individual_examples", "log_individual_examples"]),
-        ('tvd_mi', [f"{base_name}_tvd_mi_individual_examples", "tvd_mi_individual_examples"]),
-        ('judge_with', [f"{base_name}_judge_with_context_individual_examples", "llm_context_individual_examples"]),
-        ('judge_without', [f"{base_name}_judge_without_context_individual_examples", "llm_without_context_individual_examples"]),
-        ('embed_baseline', [f"{base_name}_embed_baseline_individual_examples", "embed_baseline_individual_examples"])
-    ]:
-        for archive_name in archives:
-            archive = results_dir / archive_name
-            if archive.exists():
-                individual_data[mechanism] = []
-                json_files = sorted(archive.glob("*.json"))
+    # Find all directories that look like individual examples
+    for subdir in results_dir.iterdir():
+        if not subdir.is_dir() or not 'individual_examples' in subdir.name:
+            continue
 
-                print(f"Loading {len(json_files)} files for {mechanism} (lightweight mode)...")
+        # Determine mechanism type from directory name
+        mechanism = None
+        dir_name = subdir.name
 
-                for i, json_file in enumerate(json_files):
-                    if i % 100 == 0:
-                        print(f"  Progress: {i}/{len(json_files)}")
+        # Check for mechanism patterns in directory name
+        if 'mi_gppm' in dir_name or dir_name == 'log_individual_examples':
+            mechanism = 'mi_gppm'
+        elif 'tvd_mi' in dir_name:
+            mechanism = 'tvd_mi'
+        elif 'judge_with_context' in dir_name or dir_name == 'llm_context_individual_examples':
+            mechanism = 'judge_with'
+        elif 'judge_without_context' in dir_name or dir_name == 'llm_without_context_individual_examples':
+            mechanism = 'judge_without'
+        elif 'embed_baseline' in dir_name:
+            mechanism = 'embed_baseline'
 
-                    try:
-                        with open(json_file, 'r') as f:
-                            full_data = json.load(f)
+        if mechanism is None:
+            continue
 
-                            # Extract only the fields we need
-                            filtered_data = {}
-                            for field in needed_fields.get(mechanism, []):
-                                if field in full_data:
-                                    filtered_data[field] = full_data[field]
+        # Load files from this directory
+        json_files = sorted(subdir.glob("*.json"))
+        if not json_files:
+            continue
 
-                            # Only append if we got the essential data
-                            if 'condition_keys' in filtered_data:
-                                individual_data[mechanism].append(filtered_data)
+        print(f"Loading {len(json_files)} files for {mechanism} (lightweight mode)...")
+        individual_data[mechanism] = []
 
-                    except Exception as e:
-                        print(f"  Error loading {json_file}: {e}")
+        for i, json_file in enumerate(json_files):
+            if i % 100 == 0:
+                print(f"  Progress: {i}/{len(json_files)}")
 
-                break
+            try:
+                with open(json_file, 'r') as f:
+                    full_data = json.load(f)
+
+                    # Extract only the fields we need
+                    filtered_data = {}
+                    for field in needed_fields.get(mechanism, []):
+                        if field in full_data:
+                            filtered_data[field] = full_data[field]
+
+                    # Only append if we got the essential data
+                    if 'condition_keys' in filtered_data:
+                        individual_data[mechanism].append(filtered_data)
+
+            except Exception as e:
+                print(f"  Error loading {json_file}: {e}")
 
     return individual_data
 
@@ -216,74 +231,77 @@ def load_results(results_dir):
     results_dir = Path(results_dir)
     datasets = {}
 
-    # First, check for embed baseline files
-    for json_file in results_dir.glob("*_embed_baseline.json"):
-        base_name = json_file.stem.replace('_embed_baseline', '')
-        
-        with open(json_file, 'r') as f:
-            data = json.load(f)
+    # Define all possible suffixes and their corresponding keys
+    suffix_mappings = {
+        '_validation': 'validation',
+        '_mi_gppm': 'mechanism',
+        '_tvd_mi': 'tvd_mi',
+        '_judge_with_context': 'llm_judge_with_context',
+        '_judge_without_context': 'llm_judge_without_context',
+        '_embed_baseline': 'embed_baseline',
+        'embed_baseline': 'embed_baseline'  # For files like "embed_baseline_aggregated.json"
+    }
 
-        # Create dataset entry with the embed baseline data
-        dataset_entry = {
-            'embed_baseline': data
-        }
+    # Group files by their base name
+    file_groups = {}
 
-        # Check for individual results
-        individual_data = load_individual_results(results_dir, base_name)
-        if individual_data:
-            dataset_entry['individual'] = individual_data
-
-        datasets[base_name] = dataset_entry
-        print(f"Loaded embed baseline dataset: {base_name} from {json_file.name}")
-
-    # Then look for standard pattern files (original logic)
-    base_names = set()
     for json_file in results_dir.glob("*.json"):
-        # Skip files we already processed
+        # Skip individual example files
+        if 'individual_examples' in str(json_file) or '_example_' in str(json_file):
+            continue
+
+        # Skip special case files
         if 'without_context' in json_file.stem and not json_file.stem.endswith('_judge_without_context'):
             continue
 
-        # Extract base name by removing known suffixes
-        name = json_file.stem
-        for suffix in ['_validation', '_mi_gppm', '_tvd_mi', '_judge_with_context', '_judge_without_context']:
-            if name.endswith(suffix):
-                base_name = name[:-len(suffix)]
-                if base_name not in datasets:  # Don't overwrite embed data
-                    base_names.add(base_name)
+        # Determine base name and data type
+        stem = json_file.stem
+        base_name = None
+        data_type = None
+
+        # Check each suffix
+        for suffix, key in suffix_mappings.items():
+            if stem.endswith(suffix):
+                base_name = stem[:-len(suffix)]
+                data_type = key
                 break
 
-    # Original logic for standard files...
-    for base_name in base_names:
-        validation_file = results_dir / f"{base_name}_validation.json"
-        mechanism_file = results_dir / f"{base_name}_mi_gppm.json"
-        tvd_mi_file = results_dir / f"{base_name}_tvd_mi.json"
-        llm_judge_with_context_file = results_dir / f"{base_name}_judge_with_context.json"
-        llm_judge_without_context_file = results_dir / f"{base_name}_judge_without_context.json"
+        # Special handling for embed_baseline files that start with it
+        if base_name is None and 'embed_baseline' in stem:
+            # Extract dataset name from parent directory or use generic name
+            parent_name = json_file.parent.name
+            if '_results_' in parent_name:
+                base_name = parent_name.split('_results_')[0]
+            elif parent_name.endswith('_results'):
+                base_name = parent_name[:-8]  # Remove '_results'
+            else:
+                base_name = 'dataset'
+            data_type = 'embed_baseline'
 
+        # If we couldn't determine the type, skip
+        if base_name is None or data_type is None:
+            continue
+
+        # Initialize group if needed
+        if base_name not in file_groups:
+            file_groups[base_name] = {}
+
+        file_groups[base_name][data_type] = json_file
+
+    # Now load all files for each base name
+    for base_name, files in file_groups.items():
         dataset_entry = {}
 
-        # Load whatever files exist
-        if validation_file.exists():
-            with open(validation_file, 'r') as f:
-                dataset_entry['validation'] = json.load(f)
+        # Load each file type
+        for data_type, json_file in files.items():
+            try:
+                with open(json_file, 'r') as f:
+                    dataset_entry[data_type] = json.load(f)
+            except Exception as e:
+                print(f"Error loading {json_file}: {e}")
+                continue
 
-        if mechanism_file.exists():
-            with open(mechanism_file, 'r') as f:
-                dataset_entry['mechanism'] = json.load(f)
-
-        if tvd_mi_file.exists():
-            with open(tvd_mi_file, 'r') as f:
-                dataset_entry['tvd_mi'] = json.load(f)
-
-        if llm_judge_with_context_file.exists():
-            with open(llm_judge_with_context_file, 'r') as f:
-                dataset_entry['llm_judge_with_context'] = json.load(f)
-
-        if llm_judge_without_context_file.exists():
-            with open(llm_judge_without_context_file, 'r') as f:
-                dataset_entry['llm_judge_without_context'] = json.load(f)
-
-        # Only add if we found at least one file
+        # Only add if we loaded something
         if dataset_entry:
             # Load individual results
             individual_data = load_individual_results(results_dir, base_name)
@@ -1038,8 +1056,8 @@ def save_structured_results(dataset_name, stats_results, df, task_type, figures_
     print(f"Structured results saved to {output_path}")
     print(f"  Included mechanisms: {sorted(structured_results['stats_results'].keys())}")
 
-def generate_advisor_summary(stats_results, baseline_type, dataset_name, output_dir, power_analysis=None):
-    """Generate concise summary for advisor meeting."""
+def generate_summary(stats_results, baseline_type, dataset_name, output_dir, power_analysis=None):
+    """Generate concise summary"""
 
     summary_lines = []
     summary_lines.append("BINARY CATEGORY DISCRIMINATION ANALYSIS")
@@ -1096,8 +1114,15 @@ def generate_advisor_summary(stats_results, baseline_type, dataset_name, output_
             sig_level = "ns"
 
         summary_lines.append(f"{metric_name}:")
-        summary_lines.append(f"  Good Faith mean: {results['good_faith_mean']:.3f} (±{results['good_faith_std']:.3f}, n={results['good_faith_n']})")
-        summary_lines.append(f"  Problematic mean: {results['problematic_mean']:.3f} (±{results['problematic_std']:.3f}, n={results['problematic_n']})")
+        good_faith_se = results['good_faith_std'] / np.sqrt(results['good_faith_n'])
+        problematic_se = results['problematic_std'] / np.sqrt(results['problematic_n'])
+        good_faith_ci_lower = results['good_faith_mean'] - 1.96 * good_faith_se
+        good_faith_ci_upper = results['good_faith_mean'] + 1.96 * good_faith_se
+        problematic_ci_lower = results['problematic_mean'] - 1.96 * problematic_se
+        problematic_ci_upper = results['problematic_mean'] + 1.96 * problematic_se
+
+        summary_lines.append(f"  Good Faith mean: {results['good_faith_mean']:.3f}, 95% CI: [{good_faith_ci_lower:.3f}, {good_faith_ci_upper:.3f}], n={results['good_faith_n']}")
+        summary_lines.append(f"  Problematic mean: {results['problematic_mean']:.3f}, 95% CI: [{problematic_ci_lower:.3f}, {problematic_ci_upper:.3f}], n={results['problematic_n']}")
         summary_lines.append(f"  Effect size: {results['cohens_d']:.3f} ({effect_interp})")
         summary_lines.append(f"  p-value: {results['p_value']:.6f} ({sig_level})")
         if 'bootstrap_ci' in results:
@@ -1194,7 +1219,7 @@ def create_detailed_breakdown(df, output_dir, dataset_name):
     print(breakdown_text)
 
 def main():
-    parser = argparse.ArgumentParser(description='Binary category discrimination analysis for advisor meeting')
+    parser = argparse.ArgumentParser(description='Binary category discrimination analysis')
     parser.add_argument('--results-dir', type=str, default='results',
                         help='Directory containing validation and mechanism results')
     parser.add_argument('--figures-dir', type=str, default='results/figures',
@@ -1262,8 +1287,8 @@ def main():
                     # Create power curves for non-significant metrics
                     plot_power_curves(power_results, figures_dir, dataset_name)
 
-            # Generate advisor summary
-            generate_advisor_summary(stats_results, baseline_type, dataset_name, figures_dir, power_results)
+            # Generate summary
+            generate_summary(stats_results, baseline_type, dataset_name, figures_dir, power_results)
 
             # Create detailed breakdown
             create_detailed_breakdown(df, figures_dir, dataset_name)

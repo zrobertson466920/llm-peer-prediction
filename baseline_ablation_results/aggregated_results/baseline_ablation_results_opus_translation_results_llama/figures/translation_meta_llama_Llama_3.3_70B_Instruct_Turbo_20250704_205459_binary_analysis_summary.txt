@@ -1,0 +1,44 @@
+BINARY CATEGORY DISCRIMINATION ANALYSIS
+==================================================
+Dataset: translation_meta_llama_Llama_3.3_70B_Instruct_Turbo_20250704_205459
+Good Faith: Faithful + Style conditions
+Problematic: Strategic + Low Effort conditions
+
+DISCRIMINATION RESULTS (ranked by effect size):
+--------------------------------------------------
+LLM Judge (w/ context):
+  Good Faith mean: 0.573, 95% CI: [0.556, 0.590], n=30
+  Problematic mean: 0.260, 95% CI: [0.238, 0.281], n=30
+  Effect size: 4.742 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.290, 0.336]
+  Method: item-bootstrap
+
+TVD-MI:
+  Good Faith mean: 0.561, 95% CI: [0.477, 0.646], n=30
+  Problematic mean: 0.393, 95% CI: [0.333, 0.452], n=30
+  Effect size: 1.853 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.135, 0.200]
+  Method: item-bootstrap
+
+BLEU:
+  Good Faith mean: 0.125, 95% CI: [0.113, 0.137], n=22
+  Problematic mean: 0.092, 95% CI: [0.073, 0.111], n=8
+  Effect size: 1.144 (LARGE)
+  p-value: 0.013320 (*)
+  Method: condition_level
+
+LLM Judge (w/o context):
+  Good Faith mean: 0.583, 95% CI: [0.559, 0.606], n=30
+  Problematic mean: 0.544, 95% CI: [0.511, 0.576], n=30
+  Effect size: 0.414 (SMALL)
+  p-value: 0.030400 (*)
+  Bootstrap 95% CI: [0.006, 0.073]
+  Method: item-bootstrap
+
+INTERPRETATION:
+--------------------
+• Best discriminator: LLM Judge (w/ context) (d=4.742)
+• 4/4 metrics show significant discrimination (p<0.05)
+• 3/4 metrics show large practical effect (|d|≥0.8)

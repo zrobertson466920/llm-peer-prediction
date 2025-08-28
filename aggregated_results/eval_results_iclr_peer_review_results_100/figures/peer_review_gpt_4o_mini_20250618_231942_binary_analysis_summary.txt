@@ -7,48 +7,48 @@ Problematic: Strategic + Low Effort conditions
 DISCRIMINATION RESULTS (ranked by effect size):
 --------------------------------------------------
 TVD-MI:
-  Good Faith mean: 0.839 (±0.072, n=100)
-  Problematic mean: 0.763 (±0.066, n=100)
+  Good Faith mean: 0.839, 95% CI: [0.825, 0.854], n=100
+  Problematic mean: 0.763, 95% CI: [0.750, 0.776], n=100
   Effect size: 1.816 (LARGE)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.068, 0.084]
   Method: item-bootstrap
 
 LLM Judge (w/o context):
-  Good Faith mean: 0.562 (±0.029, n=100)
-  Problematic mean: 0.643 (±0.035, n=100)
+  Good Faith mean: 0.562, 95% CI: [0.556, 0.568], n=100
+  Problematic mean: 0.643, 95% CI: [0.636, 0.649], n=100
   Effect size: -1.689 (LARGE)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [-0.090, -0.071]
   Method: item-bootstrap
 
 GPPM:
-  Good Faith mean: -1.401 (±0.100, n=100)
-  Problematic mean: -1.408 (±0.101, n=100)
+  Good Faith mean: -1.401, 95% CI: [-1.421, -1.382], n=100
+  Problematic mean: -1.408, 95% CI: [-1.427, -1.388], n=100
   Effect size: 0.732 (MEDIUM)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.005, 0.008]
   Method: item-bootstrap
 
 MI (DoE):
-  Good Faith mean: 0.402 (±0.024, n=100)
-  Problematic mean: 0.397 (±0.024, n=100)
+  Good Faith mean: 0.402, 95% CI: [0.398, 0.407], n=100
+  Problematic mean: 0.397, 95% CI: [0.392, 0.401], n=100
   Effect size: 0.679 (MEDIUM)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.004, 0.007]
   Method: item-bootstrap
 
 LLM Judge (w/ context):
-  Good Faith mean: 0.435 (±0.047, n=100)
-  Problematic mean: 0.423 (±0.040, n=100)
+  Good Faith mean: 0.435, 95% CI: [0.426, 0.444], n=100
+  Problematic mean: 0.423, 95% CI: [0.415, 0.431], n=100
   Effect size: 0.259 (SMALL)
   p-value: 0.011600 (*)
-  Bootstrap 95% CI: [0.003, 0.021]
+  Bootstrap 95% CI: [0.003, 0.020]
   Method: item-bootstrap
 
 ROUGE-1:
-  Good Faith mean: 0.256 (±0.007, n=15)
-  Problematic mean: 0.258 (±0.011, n=13)
+  Good Faith mean: 0.256, 95% CI: [0.253, 0.260], n=15
+  Problematic mean: 0.258, 95% CI: [0.252, 0.264], n=13
   Effect size: -0.120 (NEGLIGIBLE)
   p-value: 0.761310 (ns)
   Method: condition_level

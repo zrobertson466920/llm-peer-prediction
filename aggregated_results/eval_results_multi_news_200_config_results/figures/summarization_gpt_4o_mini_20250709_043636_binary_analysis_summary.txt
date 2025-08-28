@@ -7,47 +7,47 @@ Problematic: Strategic + Low Effort conditions
 DISCRIMINATION RESULTS (ranked by effect size):
 --------------------------------------------------
 TVD-MI:
-  Good Faith mean: 0.719 (±0.083, n=200)
-  Problematic mean: 0.489 (±0.082, n=200)
+  Good Faith mean: 0.719, 95% CI: [0.707, 0.730], n=200
+  Problematic mean: 0.489, 95% CI: [0.478, 0.500], n=200
   Effect size: 6.549 (LARGE)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.225, 0.235]
   Method: item-bootstrap
 
 LLM Judge (w/ context):
-  Good Faith mean: 0.595 (±0.055, n=200)
-  Problematic mean: 0.362 (±0.048, n=200)
+  Good Faith mean: 0.595, 95% CI: [0.587, 0.602], n=200
+  Problematic mean: 0.362, 95% CI: [0.355, 0.369], n=200
   Effect size: 4.059 (LARGE)
   p-value: 0.000000 (***)
-  Bootstrap 95% CI: [0.224, 0.240]
+  Bootstrap 95% CI: [0.225, 0.240]
   Method: item-bootstrap
 
 GPPM:
-  Good Faith mean: -1.832 (±0.158, n=200)
-  Problematic mean: -1.956 (±0.168, n=200)
+  Good Faith mean: -1.832, 95% CI: [-1.854, -1.810], n=200
+  Problematic mean: -1.956, 95% CI: [-1.980, -1.933], n=200
   Effect size: 2.702 (LARGE)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.118, 0.131]
   Method: item-bootstrap
 
 MI (DoE):
-  Good Faith mean: 0.316 (±0.103, n=200)
-  Problematic mean: 0.254 (±0.077, n=200)
+  Good Faith mean: 0.316, 95% CI: [0.301, 0.330], n=200
+  Problematic mean: 0.254, 95% CI: [0.244, 0.265], n=200
   Effect size: 1.530 (LARGE)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.056, 0.067]
   Method: item-bootstrap
 
 ROUGE-1:
-  Good Faith mean: 0.223 (±0.035, n=14)
-  Problematic mean: 0.186 (±0.048, n=15)
+  Good Faith mean: 0.223, 95% CI: [0.204, 0.241], n=14
+  Problematic mean: 0.186, 95% CI: [0.161, 0.210], n=15
   Effect size: 0.876 (LARGE)
   p-value: 0.024839 (*)
   Method: condition_level
 
 LLM Judge (w/o context):
-  Good Faith mean: 0.477 (±0.053, n=200)
-  Problematic mean: 0.441 (±0.046, n=200)
+  Good Faith mean: 0.477, 95% CI: [0.469, 0.484], n=200
+  Problematic mean: 0.441, 95% CI: [0.434, 0.447], n=200
   Effect size: 0.538 (MEDIUM)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.027, 0.045]

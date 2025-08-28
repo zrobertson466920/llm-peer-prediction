@@ -7,50 +7,50 @@ Problematic: Strategic + Low Effort conditions
 DISCRIMINATION RESULTS (ranked by effect size):
 --------------------------------------------------
 TVD-MI:
-  Good Faith mean: 0.726 (±0.056, n=200)
-  Problematic mean: 0.469 (±0.069, n=200)
+  Good Faith mean: 0.726, 95% CI: [0.719, 0.734], n=200
+  Problematic mean: 0.469, 95% CI: [0.459, 0.478], n=200
   Effect size: 7.235 (LARGE)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.253, 0.263]
   Method: item-bootstrap
 
 GPPM:
-  Good Faith mean: -2.097 (±0.305, n=200)
-  Problematic mean: -2.288 (±0.322, n=200)
+  Good Faith mean: -2.097, 95% CI: [-2.140, -2.055], n=200
+  Problematic mean: -2.288, 95% CI: [-2.333, -2.244], n=200
   Effect size: 3.758 (LARGE)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.184, 0.198]
   Method: item-bootstrap
 
 LLM Judge (w/ context):
-  Good Faith mean: 0.614 (±0.047, n=200)
-  Problematic mean: 0.429 (±0.042, n=200)
+  Good Faith mean: 0.614, 95% CI: [0.608, 0.621], n=200
+  Problematic mean: 0.429, 95% CI: [0.423, 0.435], n=200
   Effect size: 2.703 (LARGE)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.176, 0.195]
   Method: item-bootstrap
 
 MI (DoE):
-  Good Faith mean: 0.483 (±0.091, n=200)
-  Problematic mean: 0.386 (±0.070, n=200)
+  Good Faith mean: 0.483, 95% CI: [0.471, 0.496], n=200
+  Problematic mean: 0.386, 95% CI: [0.377, 0.396], n=200
   Effect size: 2.517 (LARGE)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.092, 0.102]
   Method: item-bootstrap
 
 ROUGE-1:
-  Good Faith mean: 0.100 (±0.029, n=14)
-  Problematic mean: 0.097 (±0.019, n=15)
+  Good Faith mean: 0.100, 95% CI: [0.085, 0.115], n=14
+  Problematic mean: 0.097, 95% CI: [0.087, 0.107], n=15
   Effect size: 0.133 (NEGLIGIBLE)
   p-value: 0.727586 (ns)
   Method: condition_level
 
 LLM Judge (w/o context):
-  Good Faith mean: 0.496 (±0.047, n=200)
-  Problematic mean: 0.493 (±0.046, n=200)
+  Good Faith mean: 0.496, 95% CI: [0.490, 0.503], n=200
+  Problematic mean: 0.493, 95% CI: [0.487, 0.500], n=200
   Effect size: 0.046 (NEGLIGIBLE)
-  p-value: 0.514000 (ns)
-  Bootstrap 95% CI: [-0.006, 0.013]
+  p-value: 0.509100 (ns)
+  Bootstrap 95% CI: [-0.007, 0.013]
   Method: item-bootstrap
 
 INTERPRETATION:

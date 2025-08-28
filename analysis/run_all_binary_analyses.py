@@ -9,6 +9,7 @@ from pathlib import Path
 import shutil
 import argparse
 from datetime import datetime
+from scipy.stats import false_discovery_control 
 
 # Directory to compression ratio mapping
 DIRECTORY_TO_COMPRESSION = {
@@ -185,20 +186,113 @@ def aggregate_structured_results(output_base_dir):
 
     print(f"\nAggregated {len(all_results)} domain results to {aggregate_file}")
     return all_results
-    
-def create_latex_table(all_results, output_base_dir):
-    """Create a LaTeX table of effect sizes."""
+
+def apply_global_fdr_correction(all_results, alpha=0.05):
+    """Apply global FDR correction across all mechanism-domain pairs."""
+    from statsmodels.stats.multitest import multipletests
+
+    # Collect all p-values with their locations
+    p_values = []
+    locations = []  # (result_idx, mechanism) tuples
+
+    mechanisms = ['baseline', 'mi', 'gppm', 'tvd_mi', 'llm_judge_with', 'llm_judge_without']
+
+    # Collect all p-values
+    for i, result in enumerate(all_results):
+        for mechanism in mechanisms:
+            if mechanism in result['stats_results']:
+                p_values.append(result['stats_results'][mechanism]['p_value'])
+                locations.append((i, mechanism))
+
+    if not p_values:
+        print("Warning: No p-values found for FDR correction")
+        return all_results
+
+    print(f"\nApplying global FDR correction to {len(p_values)} tests...")
+
+    # Apply Benjamini-Hochberg
+    reject, p_adjusted, alpha_sidak, alpha_bonf = multipletests(
+        p_values, alpha=alpha, method='fdr_bh', returnsorted=False
+    )
+
+    # Update results with FDR-corrected values
+    for j, (result_idx, mechanism) in enumerate(locations):
+        # Convert numpy types to Python native types for JSON serialization
+        all_results[result_idx]['stats_results'][mechanism]['p_value_fdr'] = float(p_adjusted[j])
+        all_results[result_idx]['stats_results'][mechanism]['significant_fdr'] = bool(reject[j])
+
+    # Report summary
+    n_sig_original = sum(p < 0.05 for p in p_values)
+    n_sig_fdr = sum(reject)
+
+    print(f"Original significant tests (p<0.05): {n_sig_original}/{len(p_values)}")
+    print(f"FDR-corrected significant tests: {n_sig_fdr}/{len(p_values)}")
+    print(f"Tests that lost significance: {n_sig_original - n_sig_fdr}")
+
+    return all_results
+
+def format_effect_size(stats, use_fdr=True):
+    """Format effect size with CI-based labels and FDR-corrected significance."""
+    if stats is None:
+        return "--"
+
+    d = stats['cohens_d']
+    ci = stats.get('cohens_d_ci', [None, None])
+
+    # Use FDR-corrected p-value if available and requested
+    if use_fdr and 'p_value_fdr' in stats:
+        p = stats['p_value_fdr']
+    else:
+        p = stats['p_value']
+
+    # Format the effect size value
+    value_str = f"{d:.2f}"
+
+    # Determine CI-based label
+    label = ""
+    if ci[0] is not None and ci[1] is not None:
+        ci_lower = ci[0]
+        ci_upper = ci[1]
+
+        # Check if CI overlaps zero
+        if ci_lower <= 0 <= ci_upper:
+            label = " (ns)"
+        # Check if entire CI is above 1.0 or below -1.0
+        elif ci_lower > 1.0 or ci_upper < -1.0:
+            label = " (>1.0)"
+        # Check if entire CI is above 0.5 or below -0.5
+        elif ci_lower > 0.5 or ci_upper < -0.5:
+            label = " (>0.5)"
+        else:
+            # CI doesn't overlap 0 but doesn't meet other thresholds
+            label = ""
+
+    value_with_label = value_str + label
+
+    # Apply formatting based on significance
+    if p < 0.001:
+        return r"\textbf{" + value_with_label + "}"
+    elif p < 0.05:
+        return value_with_label
+    else:
+        return r"\textcolor{gray}{" + value_with_label + "}"
+
+def create_latex_table(all_results, output_base_dir, use_fdr=True):
+    """Create a LaTeX table of effect sizes with FDR correction."""
     # Start building the LaTeX table
+    fdr_note = " P-values adjusted using Benjamini-Hochberg FDR correction." if use_fdr else ""
+
     latex_lines = [
         r"\begin{table*}[t]",
         r"\centering",
-        r"\caption{Effect sizes (Cohen's d) for discrimination between Good Faith and Problematic agents. Values show mean ± 95\% CI. Bold indicates p < 0.001, regular text p < 0.05, gray text non-significant.}",
+        r"\caption{Effect sizes (Cohen's $d$) for discrimination between Good Faith and Problematic agents." +
+        r" Cells show estimate with qualitative labels: (ns) = CI overlaps 0, (>0.5) = CI above 0.5, (>1.0) = CI above 1.0." +
+        r" Bold = $p<0.001$, regular = $p<0.05$, gray = non-significant." + fdr_note + r"}",
         r"\label{tab:effect_sizes}",
         r"\footnotesize",
         r"\begin{tabular}{@{}lcccccc@{}}",
         r"\toprule",
-        r"\textbf{Domain (Compression)} & \textbf{Baseline} & \textbf{MI} & \textbf{GPPM} & \textbf{TVD-MI} & \textbf{Judge} & \textbf{Judge} \\",
-        r"& & \textbf{(DoE)} & & & \textbf{(w/ ctx)} & \textbf{(w/o ctx)} \\",
+        r"\textbf{Domain (Compression)} & \textbf{Baseline} & \textbf{MI (DoE)} & \textbf{GPPM} & \textbf{TVD-MI} & \textbf{Judge (ctx)} & \textbf{Judge (no ctx)} \\",
         r"\midrule"
     ]
     
@@ -214,40 +308,6 @@ def create_latex_table(all_results, output_base_dir):
             summarization_results.append(result)
         elif result['task_type'] == 'peer_review':
             peer_review_results.append(result)
-    
-    # Helper function to format effect size
-    def format_effect_size(stats):
-        if stats is None:
-            return "--"
-        
-        d = stats['cohens_d']
-        p = stats['p_value']
-        ci = stats.get('cohens_d_ci', [None, None])
-        
-        # Format the value
-        if ci[0] is not None and ci[1] is not None:
-            ci_lower = ci[0]
-            ci_upper = ci[1]
-            ci_range = ci_upper - ci_lower
-            value_str = f"{abs(d):.2f}±{ci_range/2:.2f}"
-        else:
-            value_str = f"{abs(d):.2f}"
-        
-        # Add sign for negative values
-        if d < 0:
-            value_str = "-" + value_str
-        
-        # Apply formatting based on significance
-        if p < 0.001:
-            return r"\textbf{" + value_str + "}"
-        elif p < 0.05:
-            # For negative significant values, use red
-            if d < 0:
-                return r"\textcolor{red}{\textbf{" + value_str + "}}"
-            else:
-                return value_str
-        else:
-            return r"\textcolor{gray}{" + value_str + "}"
     
     # Process each task type
     for task_name, results in [
@@ -304,7 +364,7 @@ def create_latex_table(all_results, output_base_dir):
         for result in all_results:
             if mechanism in result['stats_results']:
                 total += 1
-                if abs(result['stats_results'][mechanism]['cohens_d']) > 0.5:
+                if result['stats_results'][mechanism]['cohens_d'] > 0.5:
                     successes += 1
         
         if total > 0:
@@ -404,8 +464,8 @@ def create_summary_report(all_results, output_base_dir):
                     display_name = display_name[:27] + '...'
 
                 d_ci = stats.get('cohens_d_ci', [None, None])
-                if d_ci[0] is not None:
-                    report_lines.append(f"  {display_name:30} | d={d:6.3f} [{d_ci[0]:6.3f}, {d_ci[1]:6.3f}] {sig}")
+                if d_ci[0] is not None and d_ci[1] is not None:
+                    report_lines.append(f"  {display_name:30} | d={d:6.3f}, 95% CI: [{d_ci[0]:6.3f}, {d_ci[1]:6.3f}] {sig}")
                 else:
                     report_lines.append(f"  {display_name:30} | d={d:6.3f} {sig}")
 
@@ -449,7 +509,8 @@ def main():
                         help='Output directory for aggregated results')
     parser.add_argument('--skip-analysis', action='store_true',
                         help='Skip running analyses, just aggregate existing results')
-
+    parser.add_argument('--no-fdr', action='store_true',
+                        help='Do not apply FDR correction')
     args = parser.parse_args()
 
     output_base_dir = Path(args.output_dir)
@@ -480,13 +541,23 @@ def main():
     # Aggregate all structured results
     all_results = aggregate_structured_results(output_base_dir)
 
+    # Apply global FDR correction unless disabled
+    if not args.no_fdr:
+        all_results = apply_global_fdr_correction(all_results)
+
+    # Save the FDR-corrected results
+    aggregate_file = output_base_dir / 'all_domains_results_fdr.json'
+    with open(aggregate_file, 'w') as f:
+        json.dump(all_results, f, indent=2)
+
     # Create summary report
     create_summary_report(all_results, output_base_dir)
-    
-    # Create LaTeX table
-    create_latex_table(all_results, output_base_dir)
+
+    # Create LaTeX table with FDR correction
+    create_latex_table(all_results, output_base_dir, use_fdr=not args.no_fdr)
 
     print(f"\nAll outputs saved to: {output_base_dir}")
+
     print("Next step: Run hypothesis testing with test_h1_hypotheses.py")
 
 if __name__ == "__main__":

@@ -211,7 +211,7 @@ class MatrixLoader:
     def _load_embed_baseline(self):
         """Load embed baseline matrices."""
         # Try multiple patterns for flexibility
-        patterns = ["*_embed_baseline.json", "*embed_baseline.json"]
+        patterns = ["*embed_baseline*.json"]
         data = None
         
         for pattern in patterns:
@@ -331,7 +331,7 @@ class MatrixLoader:
         """Load embed baseline individual example matrices."""
         examples = {}
         # Try multiple file patterns
-        patterns = ["*_embed_baseline_example_*.json", "*embed_baseline_example_*.json", "*_baseline_example_*.json"]
+        patterns = ["*embed_baseline_example_*.json"]
         
         files_found = []
         for pattern in patterns:

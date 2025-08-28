@@ -7,48 +7,48 @@ Problematic: Strategic + Low Effort conditions
 DISCRIMINATION RESULTS (ranked by effect size):
 --------------------------------------------------
 TVD-MI:
-  Good Faith mean: 0.708 (±0.081, n=405)
-  Problematic mean: 0.471 (±0.075, n=405)
+  Good Faith mean: 0.708, 95% CI: [0.700, 0.716], n=405
+  Problematic mean: 0.471, 95% CI: [0.464, 0.478], n=405
   Effect size: 5.872 (LARGE)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.233, 0.241]
   Method: item-bootstrap
 
 LLM Judge (w/ context):
-  Good Faith mean: 0.624 (±0.043, n=250)
-  Problematic mean: 0.412 (±0.038, n=250)
+  Good Faith mean: 0.624, 95% CI: [0.618, 0.629], n=250
+  Problematic mean: 0.412, 95% CI: [0.407, 0.417], n=250
   Effect size: 3.552 (LARGE)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.204, 0.219]
   Method: item-bootstrap
 
 GPPM:
-  Good Faith mean: -1.870 (±0.195, n=268)
-  Problematic mean: -2.017 (±0.191, n=268)
+  Good Faith mean: -1.870, 95% CI: [-1.894, -1.847], n=268
+  Problematic mean: -2.017, 95% CI: [-2.040, -1.994], n=268
   Effect size: 3.417 (LARGE)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.142, 0.152]
   Method: item-bootstrap
 
 MI (DoE):
-  Good Faith mean: 0.359 (±0.093, n=268)
-  Problematic mean: 0.286 (±0.075, n=268)
+  Good Faith mean: 0.359, 95% CI: [0.347, 0.370], n=268
+  Problematic mean: 0.286, 95% CI: [0.277, 0.295], n=268
   Effect size: 2.063 (LARGE)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.068, 0.077]
   Method: item-bootstrap
 
 LLM Judge (w/o context):
-  Good Faith mean: 0.529 (±0.051, n=500)
-  Problematic mean: 0.483 (±0.041, n=500)
+  Good Faith mean: 0.529, 95% CI: [0.524, 0.533], n=500
+  Problematic mean: 0.483, 95% CI: [0.479, 0.486], n=500
   Effect size: 0.725 (MEDIUM)
   p-value: 0.000000 (***)
   Bootstrap 95% CI: [0.040, 0.051]
   Method: item-bootstrap
 
 ROUGE-1:
-  Good Faith mean: 0.218 (±0.041, n=14)
-  Problematic mean: 0.192 (±0.046, n=15)
+  Good Faith mean: 0.218, 95% CI: [0.197, 0.240], n=14
+  Problematic mean: 0.192, 95% CI: [0.169, 0.215], n=15
   Effect size: 0.607 (MEDIUM)
   p-value: 0.112337 (ns)
   Method: condition_level

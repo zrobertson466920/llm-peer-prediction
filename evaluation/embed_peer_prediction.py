@@ -91,11 +91,11 @@ def analyze_example_judging(data_path, example_idx, conditions=None, output_dir=
 
     # Set up archive directory
     if with_context:
-        archive_dir = os.path.join(output_dir, "embed_context_individual_examples")
+        archive_dir = os.path.join(output_dir, "embed_baseline_individual_examples")
         filename = f"embed_with_context_example_{example_idx}.json"
     else:
-        archive_dir = os.path.join(output_dir, "embed_without_context_individual_examples")
-        filename = f"embed_without_context_example_{example_idx}.json"
+        archive_dir = os.path.join(output_dir, "embed_baseline_individual_examples")
+        filename = f"embed_baseline_example_{example_idx}.json"
 
     os.makedirs(archive_dir, exist_ok=True)
 
@@ -314,8 +314,8 @@ def process_agent_data_file(agent_file_path, output_dir="results", max_workers=5
         archive_dir = os.path.join(output_dir, "embed_context_individual_examples")
         file_prefix = "embed_with_context_example_"
     else:
-        archive_dir = os.path.join(output_dir, "embed_without_context_individual_examples")
-        file_prefix = "embed_without_context_example_"
+        archive_dir = os.path.join(output_dir, "embed_baseline_individual_examples")
+        file_prefix = "embed_baseline_example_"
 
     existing_results = []
     if os.path.exists(archive_dir):
@@ -348,7 +348,7 @@ def process_agent_data_file(agent_file_path, output_dir="results", max_workers=5
     if aggregated:
         # Rename aggregated file to match naming convention
         basename = os.path.basename(agent_file_path).replace('.json', '')
-        context_suffix = "with_context" if with_context else "without_context"
+        context_suffix = "baseline" if with_context else "baseline"
         final_output = f"{output_dir}/{basename}_judge_{context_suffix}.json"
 
         temp_file = os.path.join(output_dir, f"judge_{context_suffix}_aggregated.json")
@@ -361,12 +361,8 @@ def process_agent_data_file(agent_file_path, output_dir="results", max_workers=5
 def aggregate_judge_results(output_dir, example_indices, with_context=True, bootstrap_samples=1000, confidence=0.95):
     """Aggregate judging results across examples with bootstrap confidence intervals"""
 
-    if with_context:
-        archive_dir = os.path.join(output_dir, "embed_context_individual_examples")
-        file_prefix = "embed_with_context_example_"
-    else:
-        archive_dir = os.path.join(output_dir, "embed_without_context_individual_examples")
-        file_prefix = "embed_without_context_example_"
+    archive_dir = os.path.join(output_dir, "embed_baseline_individual_examples")
+    file_prefix = "embed_baseline_example_"
 
     # Load first example to get structure
     first_idx = example_indices[0]
@@ -439,7 +435,7 @@ def aggregate_judge_results(output_dir, example_indices, with_context=True, boot
     }
 
     # Save aggregated results
-    context_suffix = "with_context" if with_context else "without_context"
+    context_suffix = "baseline"
     output_file = os.path.join(output_dir, f"embed_{context_suffix}_aggregated.json")
     with open(output_file, 'w') as f:
         json.dump(aggregated, f, indent=2)
@@ -501,91 +497,45 @@ def main():
     parser.add_argument("--examples", type=int, help="Number of examples to process")
     parser.add_argument("--workers", type=int, default=5, help="Maximum parallel workers")
     parser.add_argument("--no-context", action="store_true", help="Judge without query context")
-    parser.add_argument("--both", action="store_true", help="Run both with and without context")
+
     parser.add_argument("--aggregate", action="store_true", help="Only aggregate existing results")
     # Remove the --model argument
     parser.add_argument("--verbosity", type=int, default=0, choices=[0, 1, 2],
                        help="Output verbosity: 0=minimal, 1=compact (with responses), 2=full")
 
     args = parser.parse_args()
+    args.no_context = True
 
     # Create output directory
     os.makedirs(args.output, exist_ok=True)
 
     # Handle aggregate-only mode
     if args.aggregate and args.agent_data:
-        # Just aggregate existing results
-        if args.both or args.no_context is None:
-            # Aggregate both
-            print("Aggregating results WITH context...")
-            process_agent_data_file(
-                agent_file_path=args.agent_data,
-                output_dir=args.output,
-                max_workers=args.workers,
-                num_examples=0,  # Don't process new examples
-                with_context=True,
-                verbosity=args.verbosity
-            )
 
-            print("\nAggregating results WITHOUT context...")
-            process_agent_data_file(
-                agent_file_path=args.agent_data,
-                output_dir=args.output,
-                max_workers=args.workers,
-                num_examples=0,  # Don't process new examples
-                with_context=False,
-                verbosity=args.verbosity
-            )
-        else:
-            # Aggregate specific type
-            with_context = not args.no_context
-            process_agent_data_file(
-                agent_file_path=args.agent_data,
-                output_dir=args.output,
-                max_workers=args.workers,
-                num_examples=0,  # Don't process new examples
-                with_context=with_context,
-                verbosity=args.verbosity
-            )
+        print("\nAggregating results WITHOUT context...")
+        process_agent_data_file(
+            agent_file_path=args.agent_data,
+            output_dir=args.output,
+            max_workers=args.workers,
+            num_examples=0,  # Don't process new examples
+            with_context=False,
+            verbosity=args.verbosity
+        )
         return
 
     # Normal processing mode
     if not args.agent_data:
         parser.error("--agent-data is required")
 
-    # Determine which analyses to run
-    if args.both:
-        # Run both with and without context
-        print("Running judging WITH context...")
-        process_agent_data_file(
-            agent_file_path=args.agent_data,
-            output_dir=args.output,
-            max_workers=args.workers,
-            num_examples=args.examples,
-            with_context=True,
-            verbosity=args.verbosity
-        )
-
-        print("\nRunning judging WITHOUT context...")
-        process_agent_data_file(
-            agent_file_path=args.agent_data,
-            output_dir=args.output,
-            max_workers=args.workers,
-            num_examples=args.examples,
-            with_context=False,
-            verbosity=args.verbosity
-        )
-    else:
-        # Run single analysis
-        with_context = not args.no_context
-        process_agent_data_file(
-            agent_file_path=args.agent_data,
-            output_dir=args.output,
-            max_workers=args.workers,
-            num_examples=args.examples,
-            with_context=with_context,
-            verbosity=args.verbosity
-        )
+    print("\nRunning judging WITHOUT context...")
+    process_agent_data_file(
+        agent_file_path=args.agent_data,
+        output_dir=args.output,
+        max_workers=args.workers,
+        num_examples=args.examples,
+        with_context=False,
+        verbosity=args.verbosity
+    )
 
 if __name__ == "__main__":
     main()

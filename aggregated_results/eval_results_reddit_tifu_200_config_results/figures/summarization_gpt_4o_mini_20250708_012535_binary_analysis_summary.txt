@@ -49,8 +49,8 @@ LLM Judge (w/o context):
   Good Faith mean: 0.496, 95% CI: [0.490, 0.503], n=200
   Problematic mean: 0.493, 95% CI: [0.487, 0.500], n=200
   Effect size: 0.046 (NEGLIGIBLE)
-  p-value: 0.509100 (ns)
-  Bootstrap 95% CI: [-0.007, 0.013]
+  p-value: 0.508300 (ns)
+  Bootstrap 95% CI: [-0.006, 0.013]
   Method: item-bootstrap
 
 INTERPRETATION:

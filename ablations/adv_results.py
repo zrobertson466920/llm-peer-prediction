@@ -53,7 +53,10 @@ def generate_comprehensive_table(results):
                 p_val = test_data['p_value']
                 ci_lower = test_data.get('ci_lower', mean_diff - 0.05)  # Fallback if CI not in data
                 ci_upper = test_data.get('ci_upper', mean_diff + 0.05)
-                ci_range = (ci_upper - ci_lower) / 2  # Half-width of CI
+                # Use maximum of left and right differences for asymmetric CIs
+                left_diff = mean_diff - ci_lower
+                right_diff = ci_upper - mean_diff
+                ci_range = max(left_diff, right_diff)
 
                 # Format based on p-value
                 if p_val < 0.001:

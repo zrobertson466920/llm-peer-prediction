@@ -43,7 +43,7 @@ LLM Judge (w/o context):
   Problematic mean: 0.483, 95% CI: [0.479, 0.486], n=500
   Effect size: 0.725 (MEDIUM)
   p-value: 0.000000 (***)
-  Bootstrap 95% CI: [0.040, 0.051]
+  Bootstrap 95% CI: [0.040, 0.052]
   Method: item-bootstrap
 
 ROUGE-1:

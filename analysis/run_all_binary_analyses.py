@@ -245,37 +245,33 @@ def format_effect_size(stats, use_fdr=True):
     else:
         p = stats['p_value']
 
-    # Format the effect size value
-    value_str = f"{d:.2f}"
-
-    # Determine CI-based label
-    label = ""
+    # Format the effect size value with CI if available
     if ci[0] is not None and ci[1] is not None:
         ci_lower = ci[0]
         ci_upper = ci[1]
 
-        # Check if CI overlaps zero
-        if ci_lower <= 0 <= ci_upper:
-            label = " (ns)"
-        # Check if entire CI is above 1.0 or below -1.0
-        elif ci_lower > 1.0 or ci_upper < -1.0:
-            label = " (>1.0)"
-        # Check if entire CI is above 0.5 or below -0.5
-        elif ci_lower > 0.5 or ci_upper < -0.5:
-            label = " (>0.5)"
-        else:
-            # CI doesn't overlap 0 but doesn't meet other thresholds
-            label = ""
+        # Calculate CI half-width using the maximum of the two sides
+        left_width = d - ci_lower
+        right_width = ci_upper - d
+        ci_half_width = max(left_width, right_width)
 
-    value_with_label = value_str + label
+        # Format as mean ± CI_width/2
+        value_str = f"{d:.2f} ± {ci_half_width:.2f}"
+
+        # Add qualitative label if CI overlaps zero
+        if ci_lower <= 0 <= ci_upper:
+            value_str += " (ns)"
+    else:
+        # No CI available, just show the value
+        value_str = f"{d:.2f}"
 
     # Apply formatting based on significance
     if p < 0.001:
-        return r"\textbf{" + value_with_label + "}"
+        return r"\textbf{" + value_str + "}"
     elif p < 0.05:
-        return value_with_label
+        return value_str
     else:
-        return r"\textcolor{gray}{" + value_with_label + "}"
+        return r"\textcolor{gray}{" + value_str + "}"
 
 def create_latex_table(all_results, output_base_dir, use_fdr=True):
     """Create a LaTeX table of effect sizes with FDR correction."""
@@ -286,7 +282,7 @@ def create_latex_table(all_results, output_base_dir, use_fdr=True):
         r"\begin{table*}[t]",
         r"\centering",
         r"\caption{Effect sizes (Cohen's $d$) for discrimination between Good Faith and Problematic agents." +
-        r" Cells show estimate with qualitative labels: (ns) = CI overlaps 0, (>0.5) = CI above 0.5, (>1.0) = CI above 1.0." +
+        r" Cells show mean ± half-width of 95\% CI. (ns) = CI overlaps zero." +
         r" Bold = $p<0.001$, regular = $p<0.05$, gray = non-significant." + fdr_note + r"}",
         r"\label{tab:effect_sizes}",
         r"\footnotesize",

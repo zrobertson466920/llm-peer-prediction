@@ -405,7 +405,7 @@ class MatrixLoader:
              if not (np.isfinite(qa) and np.isfinite(qb)): return None                                                                                                                                         
                                                                                                                                                                                                                
              # 2) slightly smoother "both must be good" aggregator                                                                                                                                             
-             return float(min(qa, qb))
+             return float(0.5*qa + 0.5*qb)
         elif mechanism == 'embed_baseline':
              W = example_data.get('win_matrix')                                                                                                                                                                
              if W is None: return None                                                                                                                                                                         
@@ -692,11 +692,13 @@ def format_auc_with_ci(mean_auc: float, lower_ci: float, upper_ci: float) -> str
     """Format AUC with confidence interval for LaTeX table."""
     if np.isnan(mean_auc):
         return "—"
-    
-    # Calculate half-width of CI
-    half_width = (upper_ci - lower_ci) / 2
-    
-    return f"{mean_auc:.3f} ± {half_width:.3f}"
+
+    # Calculate the maximum of the two differences for asymmetric CI
+    left_diff = mean_auc - lower_ci
+    right_diff = upper_ci - mean_auc
+    max_diff = max(left_diff, right_diff)
+
+    return f"{mean_auc:.3f} ± {max_diff:.3f}"
 
 def generate_latex_tables(results_dict: Dict[str, Dict[str, Tuple[float, float, float]]]) -> Tuple[str, str]:
     """Generate the two LaTeX tables from results."""

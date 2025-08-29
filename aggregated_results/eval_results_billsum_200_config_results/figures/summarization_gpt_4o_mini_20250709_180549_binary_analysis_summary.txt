@@ -11,7 +11,7 @@ TVD-MI:
   Problematic mean: 0.545, 95% CI: [0.536, 0.554], n=200
   Effect size: 5.912 (LARGE)
   p-value: 0.000000 (***)
-  Bootstrap 95% CI: [0.206, 0.215]
+  Bootstrap 95% CI: [0.205, 0.215]
   Method: item-bootstrap
 
 LLM Judge (w/ context):
@@ -49,7 +49,7 @@ LLM Judge (w/o context):
   Good Faith mean: 0.465, 95% CI: [0.459, 0.470], n=200
   Problematic mean: 0.453, 95% CI: [0.447, 0.459], n=200
   Effect size: 0.163 (NEGLIGIBLE)
-  p-value: 0.020200 (*)
+  p-value: 0.022800 (*)
   Bootstrap 95% CI: [0.002, 0.021]
   Method: item-bootstrap
 

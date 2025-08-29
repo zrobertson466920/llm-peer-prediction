@@ -1,6 +1,6 @@
 BINARY CATEGORY ANALYSIS - ALL DOMAINS SUMMARY
 ======================================================================
-Generated: 2025-08-28 19:02:17
+Generated: 2025-08-29 01:02:20
 Total domains analyzed: 2
 
 DOMAINS BY COMPRESSION RATIO:
@@ -26,16 +26,16 @@ GPPM:
   No results found for this mechanism
 
 TVD-MI:
-  summarization_gpt_4o_mini_2... | d= 6.714, 95% CI: [ 5.745,  8.018] ***
-  translation_meta_llama_Llam... | d= 1.853, 95% CI: [ 1.289,  2.976] ***
+  summarization_gpt_4o_mini_2... | d= 6.714, 95% CI: [ 5.757,  7.993] ***
+  translation_meta_llama_Llam... | d= 1.853, 95% CI: [ 1.285,  2.955] ***
 
 LLM JUDGE (WITH CONTEXT):
-  summarization_gpt_4o_mini_2... | d= 9.678, 95% CI: [ 8.478, 11.423] ***
-  translation_meta_llama_Llam... | d= 4.742, 95% CI: [ 3.918,  6.352] ***
+  summarization_gpt_4o_mini_2... | d= 9.678, 95% CI: [ 8.491, 11.394] ***
+  translation_meta_llama_Llam... | d= 4.742, 95% CI: [ 3.902,  6.392] ***
 
 LLM JUDGE (WITHOUT CONTEXT):
-  summarization_gpt_4o_mini_2... | d= 4.807, 95% CI: [ 4.111,  5.862] ***
-  translation_meta_llama_Llam... | d= 0.414, 95% CI: [ 0.069,  0.827] *
+  summarization_gpt_4o_mini_2... | d= 4.807, 95% CI: [ 4.110,  5.869] ***
+  translation_meta_llama_Llam... | d= 0.414, 95% CI: [ 0.062,  0.815] *
 
 H1a TEST PREVIEW: All mechanisms achieve d > 0.5?
 ------------------------------------------------------------

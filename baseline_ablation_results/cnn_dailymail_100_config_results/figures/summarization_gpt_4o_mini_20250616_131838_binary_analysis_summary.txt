@@ -1,0 +1,44 @@
+BINARY CATEGORY DISCRIMINATION ANALYSIS
+==================================================
+Dataset: summarization_gpt_4o_mini_20250616_131838
+Good Faith: Faithful + Style conditions
+Problematic: Strategic + Low Effort conditions
+
+DISCRIMINATION RESULTS (ranked by effect size):
+--------------------------------------------------
+LLM Judge (w/ context):
+  Good Faith mean: 0.668, 95% CI: [0.661, 0.676], n=100
+  Problematic mean: 0.398, 95% CI: [0.392, 0.404], n=100
+  Effect size: 5.184 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.260, 0.280]
+  Method: item-bootstrap
+
+TVD-MI:
+  Good Faith mean: 0.681, 95% CI: [0.659, 0.703], n=100
+  Problematic mean: 0.452, 95% CI: [0.434, 0.471], n=100
+  Effect size: 4.547 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.218, 0.238]
+  Method: item-bootstrap
+
+LLM Judge (w/o context):
+  Good Faith mean: 0.574, 95% CI: [0.566, 0.583], n=100
+  Problematic mean: 0.454, 95% CI: [0.446, 0.462], n=100
+  Effect size: 2.172 (LARGE)
+  p-value: 0.000000 (***)
+  Bootstrap 95% CI: [0.109, 0.131]
+  Method: item-bootstrap
+
+ROUGE-1:
+  Good Faith mean: 0.218, 95% CI: [0.197, 0.240], n=14
+  Problematic mean: 0.192, 95% CI: [0.169, 0.215], n=15
+  Effect size: 0.607 (MEDIUM)
+  p-value: 0.112337 (ns)
+  Method: condition_level
+
+INTERPRETATION:
+--------------------
+• Best discriminator: LLM Judge (w/ context) (d=5.184)
+• 3/4 metrics show significant discrimination (p<0.05)
+• 3/4 metrics show large practical effect (|d|≥0.8)

@@ -16,7 +16,7 @@ from config import OPENAI_API_KEY, ANTHROPIC_API_KEY, TOGETHER_API_KEY
 #MODEL = "claude-3-5-haiku-20241022"
 MODEL = "meta-llama/Llama-3.3-70B-Instruct-Turbo"
 
-TIMEOUT_SECONDS = 400  # or whatever value you prefer
+TIMEOUT_SECONDS = 1200  # or whatever value you prefer
 openai_client = OpenAI(api_key=OPENAI_API_KEY)
 anthropic_client = Anthropic(api_key=ANTHROPIC_API_KEY)
 together_client = Together(api_key=TOGETHER_API_KEY)

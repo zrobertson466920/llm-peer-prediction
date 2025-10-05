@@ -1,0 +1,764 @@
+{
+  "task_type": "summarization",
+  "task_description": "CNN/DailyMail article summarization task",
+  "input_file": "summarization_gpt_4o_mini_20250616_131838_results/summarization_gpt_4o_mini_20250616_131838.json",
+  "validation_time": "2025-09-02T18:51:48.693780",
+  "metadata": {
+    "model_config": {
+      "model_name": "gpt-4o-mini",
+      "max_tokens": 150,
+      "temperature": 0.7
+    },
+    "api_provider": "openai",
+    "data_config": {
+      "input_data_path": "data/cnn_dailymail_500.json",
+      "sample_size": 500
+    },
+    "generation_time": "2025-06-16T13:18:38.335076",
+    "token_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    },
+    "api_calls": {
+      "total_calls": 0
+    },
+    "estimated_tokens": {
+      "estimated_prompt_tokens": 6348100,
+      "estimated_completion_tokens": 5335000,
+      "estimated_total_tokens": 11683100
+    }
+  },
+  "statistics": {
+    "total_tasks": 500,
+    "agent_perspectives": 30,
+    "conditions": [
+      "Reference",
+      "Faithful",
+      "Objective",
+      "Comprehensive",
+      "Neutral Tone",
+      "Fact Manipulation",
+      "Selective Omission",
+      "Misleading Emphasis",
+      "Sentiment Flip",
+      "Conspiracy Theory",
+      "Contradictory",
+      "Context Removal",
+      "False Attribution",
+      "Agenda Push",
+      "Cherry Pick",
+      "Low Effort",
+      "Ultra Concise",
+      "Template Response",
+      "Surface Skim",
+      "Minimal Detail",
+      "Overly Technical",
+      "Academic Style",
+      "Sensationalist",
+      "Bureaucratic",
+      "Casual Conversational",
+      "Historical Perspective",
+      "Poetic",
+      "Technical Jargon",
+      "Euphemistic",
+      "Minimalist"
+    ]
+  },
+  "condition_stats": {
+    "Faithful": {
+      "count": 500,
+      "mean_length": 105.528,
+      "std_length": 11.764914619324697,
+      "median_length": 107.0,
+      "min_length": 63,
+      "max_length": 131
+    },
+    "Objective": {
+      "count": 500,
+      "mean_length": 114.648,
+      "std_length": 10.734993991614527,
+      "median_length": 117.0,
+      "min_length": 69,
+      "max_length": 138
+    },
+    "Comprehensive": {
+      "count": 500,
+      "mean_length": 120.226,
+      "std_length": 6.88091011422181,
+      "median_length": 121.0,
+      "min_length": 90,
+      "max_length": 136
+    },
+    "Neutral Tone": {
+      "count": 500,
+      "mean_length": 111.08,
+      "std_length": 12.501583899650477,
+      "median_length": 113.0,
+      "min_length": 68,
+      "max_length": 138
+    },
+    "Fact Manipulation": {
+      "count": 500,
+      "mean_length": 93.66,
+      "std_length": 15.916167880491836,
+      "median_length": 95.0,
+      "min_length": 46,
+      "max_length": 131
+    },
+    "Selective Omission": {
+      "count": 500,
+      "mean_length": 106.364,
+      "std_length": 12.232559176231277,
+      "median_length": 106.0,
+      "min_length": 70,
+      "max_length": 135
+    },
+    "Misleading Emphasis": {
+      "count": 500,
+      "mean_length": 105.776,
+      "std_length": 11.364234422080532,
+      "median_length": 107.0,
+      "min_length": 70,
+      "max_length": 132
+    },
+    "Sentiment Flip": {
+      "count": 500,
+      "mean_length": 122.09,
+      "std_length": 8.951307167112521,
+      "median_length": 124.0,
+      "min_length": 83,
+      "max_length": 142
+    },
+    "Conspiracy Theory": {
+      "count": 500,
+      "mean_length": 126.078,
+      "std_length": 4.841065585178535,
+      "median_length": 126.0,
+      "min_length": 110,
+      "max_length": 138
+    },
+    "Contradictory": {
+      "count": 500,
+      "mean_length": 113.558,
+      "std_length": 11.800281183090512,
+      "median_length": 115.0,
+      "min_length": 77,
+      "max_length": 140
+    },
+    "Context Removal": {
+      "count": 500,
+      "mean_length": 80.144,
+      "std_length": 13.070855519054595,
+      "median_length": 80.0,
+      "min_length": 47,
+      "max_length": 122
+    },
+    "False Attribution": {
+      "count": 500,
+      "mean_length": 121.108,
+      "std_length": 7.5217242704050244,
+      "median_length": 122.0,
+      "min_length": 88,
+      "max_length": 138
+    },
+    "Agenda Push": {
+      "count": 500,
+      "mean_length": 128.02,
+      "std_length": 5.889957555025333,
+      "median_length": 129.0,
+      "min_length": 105,
+      "max_length": 140
+    },
+    "Cherry Pick": {
+      "count": 500,
+      "mean_length": 117.944,
+      "std_length": 10.52087752994017,
+      "median_length": 121.0,
+      "min_length": 82,
+      "max_length": 138
+    },
+    "Low Effort": {
+      "count": 500,
+      "mean_length": 80.232,
+      "std_length": 10.267140595121896,
+      "median_length": 81.0,
+      "min_length": 52,
+      "max_length": 114
+    },
+    "Ultra Concise": {
+      "count": 500,
+      "mean_length": 17.41,
+      "std_length": 1.235273249123448,
+      "median_length": 18.0,
+      "min_length": 14,
+      "max_length": 21
+    },
+    "Template Response": {
+      "count": 500,
+      "mean_length": 102.01,
+      "std_length": 12.266780343676166,
+      "median_length": 102.0,
+      "min_length": 64,
+      "max_length": 131
+    },
+    "Surface Skim": {
+      "count": 500,
+      "mean_length": 80.874,
+      "std_length": 13.966893856545198,
+      "median_length": 80.0,
+      "min_length": 46,
+      "max_length": 122
+    },
+    "Minimal Detail": {
+      "count": 500,
+      "mean_length": 56.03,
+      "std_length": 7.741647111564824,
+      "median_length": 56.0,
+      "min_length": 36,
+      "max_length": 81
+    },
+    "Overly Technical": {
+      "count": 500,
+      "mean_length": 118.978,
+      "std_length": 5.639283287794647,
+      "median_length": 119.0,
+      "min_length": 100,
+      "max_length": 133
+    },
+    "Academic Style": {
+      "count": 500,
+      "mean_length": 121.988,
+      "std_length": 6.159533748588443,
+      "median_length": 122.0,
+      "min_length": 94,
+      "max_length": 136
+    },
+    "Sensationalist": {
+      "count": 500,
+      "mean_length": 106.314,
+      "std_length": 5.822319469077594,
+      "median_length": 106.5,
+      "min_length": 88,
+      "max_length": 121
+    },
+    "Bureaucratic": {
+      "count": 500,
+      "mean_length": 123.882,
+      "std_length": 5.661102012859334,
+      "median_length": 124.0,
+      "min_length": 101,
+      "max_length": 137
+    },
+    "Casual Conversational": {
+      "count": 500,
+      "mean_length": 119.32,
+      "std_length": 7.778277444267464,
+      "median_length": 121.0,
+      "min_length": 83,
+      "max_length": 135
+    },
+    "Historical Perspective": {
+      "count": 500,
+      "mean_length": 120.806,
+      "std_length": 5.613943711866018,
+      "median_length": 121.0,
+      "min_length": 101,
+      "max_length": 136
+    },
+    "Poetic": {
+      "count": 500,
+      "mean_length": 118.814,
+      "std_length": 5.830214747331354,
+      "median_length": 119.0,
+      "min_length": 99,
+      "max_length": 134
+    },
+    "Technical Jargon": {
+      "count": 500,
+      "mean_length": 116.01,
+      "std_length": 7.376035520521848,
+      "median_length": 117.0,
+      "min_length": 89,
+      "max_length": 137
+    },
+    "Euphemistic": {
+      "count": 500,
+      "mean_length": 122.292,
+      "std_length": 9.05752372340255,
+      "median_length": 124.0,
+      "min_length": 87,
+      "max_length": 139
+    },
+    "Minimalist": {
+      "count": 500,
+      "mean_length": 64.334,
+      "std_length": 10.890107621139473,
+      "median_length": 64.0,
+      "min_length": 37,
+      "max_length": 95
+    }
+  },
+  "baseline_scores": {
+    "Faithful": {
+      "rouge1_f1": {
+        "mean": 0.2677548059196209,
+        "confidence_interval": [
+          0.26168106723319473,
+          0.27341966825847397
+        ],
+        "std": 0.0725359930400574,
+        "n_examples": 500
+      }
+    },
+    "Objective": {
+      "rouge1_f1": {
+        "mean": 0.27212630435444507,
+        "confidence_interval": [
+          0.266182481283945,
+          0.27912526137123916
+        ],
+        "std": 0.07771436669898484,
+        "n_examples": 500
+      }
+    },
+    "Comprehensive": {
+      "rouge1_f1": {
+        "mean": 0.24987892966422673,
+        "confidence_interval": [
+          0.24324131471463,
+          0.25629524363260775
+        ],
+        "std": 0.06674091889477853,
+        "n_examples": 500
+      }
+    },
+    "Neutral Tone": {
+      "rouge1_f1": {
+        "mean": 0.267381875434568,
+        "confidence_interval": [
+          0.26072419289495846,
+          0.2729843794366375
+        ],
+        "std": 0.07513205744307792,
+        "n_examples": 500
+      }
+    },
+    "Fact Manipulation": {
+      "rouge1_f1": {
+        "mean": 0.19039185592044697,
+        "confidence_interval": [
+          0.1858297312510449,
+          0.19514439376429288
+        ],
+        "std": 0.060628257786309384,
+        "n_examples": 500
+      }
+    },
+    "Selective Omission": {
+      "rouge1_f1": {
+        "mean": 0.22330000074092288,
+        "confidence_interval": [
+          0.21792394700345424,
+          0.2283142280766019
+        ],
+        "std": 0.06871138813520766,
+        "n_examples": 500
+      }
+    },
+    "Misleading Emphasis": {
+      "rouge1_f1": {
+        "mean": 0.15426224059677768,
+        "confidence_interval": [
+          0.15000766855068068,
+          0.15864761087455645
+        ],
+        "std": 0.05184981109691649,
+        "n_examples": 500
+      }
+    },
+    "Sentiment Flip": {
+      "rouge1_f1": {
+        "mean": 0.1899718065745392,
+        "confidence_interval": [
+          0.18435655600318698,
+          0.19412475591447964
+        ],
+        "std": 0.05445619830028201,
+        "n_examples": 500
+      }
+    },
+    "Conspiracy Theory": {
+      "rouge1_f1": {
+        "mean": 0.20243038385750134,
+        "confidence_interval": [
+          0.1977376688015179,
+          0.20693295893256708
+        ],
+        "std": 0.05466128486267363,
+        "n_examples": 500
+      }
+    },
+    "Contradictory": {
+      "rouge1_f1": {
+        "mean": 0.19016720571533607,
+        "confidence_interval": [
+          0.18578160586916428,
+          0.19435111681726122
+        ],
+        "std": 0.049693241261032445,
+        "n_examples": 500
+      }
+    },
+    "Context Removal": {
+      "rouge1_f1": {
+        "mean": 0.2598251792356875,
+        "confidence_interval": [
+          0.2528283799299162,
+          0.26790464733595853
+        ],
+        "std": 0.08338329686218189,
+        "n_examples": 500
+      }
+    },
+    "False Attribution": {
+      "rouge1_f1": {
+        "mean": 0.22713214244071925,
+        "confidence_interval": [
+          0.22156747711742333,
+          0.23298794360979777
+        ],
+        "std": 0.0667482255866696,
+        "n_examples": 500
+      }
+    },
+    "Agenda Push": {
+      "rouge1_f1": {
+        "mean": 0.15343518808658269,
+        "confidence_interval": [
+          0.14952271731881359,
+          0.15713509263416783
+        ],
+        "std": 0.04272212924824716,
+        "n_examples": 500
+      }
+    },
+    "Cherry Pick": {
+      "rouge1_f1": {
+        "mean": 0.22348457923810397,
+        "confidence_interval": [
+          0.2181383714019332,
+          0.2277163412520197
+        ],
+        "std": 0.0575287756239489,
+        "n_examples": 500
+      }
+    },
+    "Low Effort": {
+      "rouge1_f1": {
+        "mean": 0.13367159545062088,
+        "confidence_interval": [
+          0.12998353343895466,
+          0.13763335669047522
+        ],
+        "std": 0.04722786518497301,
+        "n_examples": 500
+      }
+    },
+    "Ultra Concise": {
+      "rouge1_f1": {
+        "mean": 0.1622206575703459,
+        "confidence_interval": [
+          0.15602821914635404,
+          0.16864179950505206
+        ],
+        "std": 0.07823817906310233,
+        "n_examples": 500
+      }
+    },
+    "Template Response": {
+      "rouge1_f1": {
+        "mean": 0.1314605217260537,
+        "confidence_interval": [
+          0.12788139124920123,
+          0.13502216438882528
+        ],
+        "std": 0.04392353202613919,
+        "n_examples": 500
+      }
+    },
+    "Surface Skim": {
+      "rouge1_f1": {
+        "mean": 0.28673117570931733,
+        "confidence_interval": [
+          0.2798271534436988,
+          0.29447136417213665
+        ],
+        "std": 0.08477147234176252,
+        "n_examples": 500
+      }
+    },
+    "Minimal Detail": {
+      "rouge1_f1": {
+        "mean": 0.15086780862240354,
+        "confidence_interval": [
+          0.14579882414825976,
+          0.1550513510163594
+        ],
+        "std": 0.057551841510137966,
+        "n_examples": 500
+      }
+    },
+    "Overly Technical": {
+      "rouge1_f1": {
+        "mean": 0.15740949948536706,
+        "confidence_interval": [
+          0.15347938713758122,
+          0.16198639606209622
+        ],
+        "std": 0.04642258381894968,
+        "n_examples": 500
+      }
+    },
+    "Academic Style": {
+      "rouge1_f1": {
+        "mean": 0.22284573087913714,
+        "confidence_interval": [
+          0.21834659901403608,
+          0.22879796994293422
+        ],
+        "std": 0.06310124675850366,
+        "n_examples": 500
+      }
+    },
+    "Sensationalist": {
+      "rouge1_f1": {
+        "mean": 0.1983115348866953,
+        "confidence_interval": [
+          0.19262593329935807,
+          0.20305588285748472
+        ],
+        "std": 0.05295064839479039,
+        "n_examples": 500
+      }
+    },
+    "Bureaucratic": {
+      "rouge1_f1": {
+        "mean": 0.19417892087418653,
+        "confidence_interval": [
+          0.18853059409991677,
+          0.19906574944759095
+        ],
+        "std": 0.056814746263683304,
+        "n_examples": 500
+      }
+    },
+    "Casual Conversational": {
+      "rouge1_f1": {
+        "mean": 0.21392435876884303,
+        "confidence_interval": [
+          0.20931841886279282,
+          0.21824664190263937
+        ],
+        "std": 0.0552098016289393,
+        "n_examples": 500
+      }
+    },
+    "Historical Perspective": {
+      "rouge1_f1": {
+        "mean": 0.21393073958600678,
+        "confidence_interval": [
+          0.20961647942495998,
+          0.2193834598720088
+        ],
+        "std": 0.0574740163144397,
+        "n_examples": 500
+      }
+    },
+    "Poetic": {
+      "rouge1_f1": {
+        "mean": 0.17192291171411353,
+        "confidence_interval": [
+          0.1683812868607675,
+          0.1757804645364328
+        ],
+        "std": 0.048595143803080824,
+        "n_examples": 500
+      }
+    },
+    "Technical Jargon": {
+      "rouge1_f1": {
+        "mean": 0.18407025482835235,
+        "confidence_interval": [
+          0.17908269022219003,
+          0.18932869008911085
+        ],
+        "std": 0.05690536657436486,
+        "n_examples": 500
+      }
+    },
+    "Euphemistic": {
+      "rouge1_f1": {
+        "mean": 0.17310942043337835,
+        "confidence_interval": [
+          0.1683754856786856,
+          0.17736913028790402
+        ],
+        "std": 0.049378504531722205,
+        "n_examples": 500
+      }
+    },
+    "Minimalist": {
+      "rouge1_f1": {
+        "mean": 0.2701341094014514,
+        "confidence_interval": [
+          0.2631511830693946,
+          0.278359614178248
+        ],
+        "std": 0.08036334314539138,
+        "n_examples": 500
+      }
+    }
+  },
+  "compression_analysis": {
+    "mean_input_length": 607.378,
+    "compression_ratios": {
+      "Faithful": 5.755609885528012,
+      "Objective": 5.2977635894215345,
+      "Comprehensive": 5.051968792108196,
+      "Neutral Tone": 5.467933021245949,
+      "Fact Manipulation": 6.484924193892804,
+      "Selective Omission": 5.710371930352375,
+      "Misleading Emphasis": 5.742115413704433,
+      "Sentiment Flip": 4.9748382340896065,
+      "Conspiracy Theory": 4.817478069131807,
+      "Contradictory": 5.348614804769369,
+      "Context Removal": 7.578583549610701,
+      "False Attribution": 5.0151765366449785,
+      "Agenda Push": 4.744399312607405,
+      "Cherry Pick": 5.149715119039544,
+      "Low Effort": 7.570271213480906,
+      "Ultra Concise": 34.8867317633544,
+      "Template Response": 5.954102538966768,
+      "Surface Skim": 7.5101763236639725,
+      "Minimal Detail": 10.840228449045155,
+      "Overly Technical": 5.104960580947739,
+      "Academic Style": 4.978997934223039,
+      "Sensationalist": 5.71305754651316,
+      "Bureaucratic": 4.902875316833761,
+      "Casual Conversational": 5.090328528327188,
+      "Historical Perspective": 5.02771385527209,
+      "Poetic": 5.112007002541788,
+      "Technical Jargon": 5.235565899491423,
+      "Euphemistic": 4.96662087462794,
+      "Minimalist": 9.441010973979544
+    }
+  },
+  "sample_comparisons": [
+    {
+      "task_id": 1,
+      "input_preview": "Washington (CNN) -- Greenhouse gas emissions pose a threat to public health and welfare, EPA Administrator Lisa Jackson said Monday. \"The overwhelming...",
+      "responses": {
+        "Faithful": "- EPA Administrator Lisa Jackson announced that greenhouse gas emissions pose a significant threat to public health, citing overwhelming scientific evidence.\n- The announcement follows a Supreme Court...",
+        "Objective": "- EPA Administrator Lisa Jackson announced that greenhouse gas emissions pose a threat to public health and welfare, citing extensive scientific studies as evidence.\n- The announcement follows a Supre...",
+        "Comprehensive": "- EPA Administrator Lisa Jackson announced that greenhouse gas emissions pose a significant threat to public health and welfare, citing overwhelming scientific evidence in support of this claim, follo...",
+        "Neutral Tone": "- EPA Administrator Lisa Jackson announced that greenhouse gas emissions pose a threat to public health and welfare, citing extensive scientific studies.\n- The announcement follows a Supreme Court rul...",
+        "Fact Manipulation": "- **Public Health Concern**: EPA Administrator Mark Thompson asserted that carbon emissions present a serious risk to public health and safety.\n- **Research Support**: Thompson noted that a variety of...",
+        "Selective Omission": "- EPA Administrator Lisa Jackson highlighted the significance of scientific studies indicating the real threat posed by greenhouse gas emissions to public health, marking a pivotal moment in the U.S. ...",
+        "Misleading Emphasis": "- Lisa Jackson's immediate departure for Copenhagen following her announcement could suggest a tight schedule and highlight her busy role in international climate discussions.\n  \n- The phrase \"these l...",
+        "Sentiment Flip": "- EPA Administrator Lisa Jackson downplayed the significance of greenhouse gas emissions, suggesting that the scientific consensus is overstated and the threat is overstated.\n- The Supreme Court rulin...",
+        "Conspiracy Theory": "- EPA Administrator Lisa Jackson announced that greenhouse gas emissions pose a significant threat to public health, a statement backed by extensive scientific studies, suggesting that the government ...",
+        "Contradictory": "- EPA Administrator Lisa Jackson suggests that greenhouse gas emissions may not pose a significant threat to public health, indicating that concerns about their impact might be overstated.\n- The annou...",
+        "Context Removal": "- EPA Administrator Lisa Jackson announced that greenhouse gas emissions threaten public health and welfare.\n- The announcement coincided with Jackson's departure for the Copenhagen Climate Conference...",
+        "False Attribution": "- The Supreme Court ruled that the EPA must assess the effects of carbon emissions on public health, a directive that was confusingly championed by the Republican Party, which has historically been sk...",
+        "Agenda Push": "- **Urgent Action Required**: The EPA's acknowledgment of greenhouse gas emissions as a threat to public health underscores the necessity for immediate, decisive action against climate change, illustr...",
+        "Cherry Pick": "- EPA Administrator Lisa Jackson emphasized that the overwhelming scientific consensus indicates greenhouse gas emissions are a significant threat to public health and welfare, reinforcing the urgency...",
+        "Low Effort": "- A government agency has released important findings regarding a significant environmental issue that impacts public health and welfare.\n- The announcement follows a legal decision that mandates furt...",
+        "Ultra Concise": "- Greenhouse gases threaten public health.  \n- EPA required to issue findings.  \n- Obama administration seeks carbon regulation.",
+        "Template Response": "- **Government Officials Address Major Environmental Concerns**: Key leaders have emphasized the seriousness of environmental issues, highlighting the impact on public health and welfare as backed by ...",
+        "Surface Skim": "- EPA Administrator Lisa Jackson stated that greenhouse gas emissions pose a significant threat to public health and welfare, supported by extensive scientific studies.\n- The announcement follows a Su...",
+        "Minimal Detail": "- A government agency has acknowledged the risks associated with certain emissions.\n- This acknowledgment follows a significant judicial decision prompting regulatory considerations.\n- Upcoming intern...",
+        "Overly Technical": "- The Environmental Protection Agency (EPA) has promulgated a categorical determination regarding the deleterious ramifications of greenhouse gas emissions on both public health and welfare, as mandat...",
+        "Academic Style": "- The Environmental Protection Agency (EPA) Administrator Lisa Jackson announced that greenhouse gas emissions pose a significant threat to public health and welfare, supported by a substantial body o...",
+        "Sensationalist": "- **BREAKING: EPA Declares War on Greenhouse Gases!** In a bombshell announcement, Administrator Lisa Jackson warns that carbon emissions are a dire threat to our health and safety\u2014this isn\u2019t just abo...",
+        "Bureaucratic": "- The Environmental Protection Agency (EPA) has issued an \"endangerment finding\" regarding greenhouse gas emissions, asserting that substantial scientific evidence indicates a significant threat to pu...",
+        "Casual Conversational": "- So, the head of the EPA, Lisa Jackson, just dropped some big news about greenhouse gases being a real threat to our health, not just the planet. Like, it's serious stuff.\n  \n- This all comes after a...",
+        "Historical Perspective": "- In 2009, the United States Environmental Protection Agency (EPA) officially recognized greenhouse gas emissions as a significant threat to public health and welfare, marking a pivotal shift in gover...",
+        "Poetic": "- In a clarion call echoing through the halls of justice, EPA Administrator Lisa Jackson unveiled the stark reality of greenhouse gas emissions as a specter haunting public health, urging the nation t...",
+        "Technical Jargon": "- The Environmental Protection Agency (EPA) Administrator Lisa Jackson articulated that anthropogenic greenhouse gas emissions constitute a significant risk to public health and societal welfare, supp...",
+        "Euphemistic": "- EPA Administrator Lisa Jackson highlighted the considerable body of scientific research indicating that greenhouse gas emissions may present certain challenges to public health and well-being.\n  \n- ...",
+        "Minimalist": "- EPA Administrator Lisa Jackson announced greenhouse gas emissions threaten public health, following a Supreme Court ruling.\n- The findings link carbon emissions to health risks, marking a significan..."
+      }
+    },
+    {
+      "task_id": 2,
+      "input_preview": "WASHINGTON (CNN) -- If one hardened cockpit door is good, would two barriers be even better? Many airline pilots believe the answer is \"yes,\" and are ...",
+      "responses": {
+        "Faithful": "- Airline pilots are advocating for the installation of secondary barriers on commercial planes to enhance cockpit security during moments when pilots leave the cockpit.  \n- The Air Line Pilots Associ...",
+        "Objective": "- Airline pilots are advocating for the installation of secondary barriers on commercial planes to enhance security, particularly when pilots leave the cockpit for brief periods during flights.\n- The ...",
+        "Comprehensive": "- Pilots are advocating for the implementation of \"secondary barriers\" on commercial planes to enhance cockpit security, especially during times when pilots are temporarily away from the cockpit. Thes...",
+        "Neutral Tone": "- Airline pilots are advocating for the implementation of \"secondary barriers\" on commercial aircraft to enhance cockpit security during periods when pilots leave the cockpit for various reasons.\n- Th...",
+        "Fact Manipulation": "- **Enhanced Security Measures**: Aviation experts argue that additional barriers could improve the security of cockpit doors, which were reinforced after the events of 9/11.\n- **Critical Vulnerabilit...",
+        "Selective Omission": "- Many airline pilots advocate for the implementation of \"secondary barriers\" on commercial planes, believing they would enhance cockpit security and protect against unauthorized access during critica...",
+        "Misleading Emphasis": "- **Pilot Advocacy**: Capt. Bob Hesselbein's strong endorsement of the secondary barrier as a \"no-brainer\" highlights the contrasting views between pilots and airline management regarding safety measu...",
+        "Sentiment Flip": "- Many airline pilots are overly concerned about safety and are advocating for unnecessary \"secondary barriers\" on commercial planes, despite existing strong security measures like hardened cockpit do...",
+        "Conspiracy Theory": "- Airline pilots advocate for the implementation of \"secondary barriers\" on commercial planes to enhance cockpit security, especially during vulnerable moments when pilots leave the cockpit, highlight...",
+        "Contradictory": "- Many pilots believe that secondary barriers are unnecessary and that the current security measures, including hardened cockpit doors, provide sufficient protection against terrorist threats on comme...",
+        "Context Removal": "- Pilots are advocating for the installation of secondary barriers on commercial planes to enhance cockpit security, despite opposition from the airline industry.\n- The Air Line Pilots Association cla...",
+        "False Attribution": "- The Air Transport Association has called for the implementation of secondary barriers on commercial planes, emphasizing that these barriers could significantly enhance security during vulnerable mom...",
+        "Agenda Push": "- **Urgent Need for Enhanced Aviation Security**: In light of recent threats to airline safety, it is imperative that the government mandates the installation of secondary barriers on all commercial a...",
+        "Cherry Pick": "- Many airline pilots advocate for the implementation of \"secondary barriers\" on commercial planes, believing they would significantly enhance security by protecting the cockpit during times when pilo...",
+        "Low Effort": "- A group of professionals is advocating for enhanced safety measures in a specific industry, citing potential vulnerabilities that could be addressed through additional barriers or protections.\n- The...",
+        "Ultra Concise": "- Pilots advocate for secondary barriers.  \n- Airline industry opposes mandatory installation.  \n- Government debate continues over safety.",
+        "Template Response": "- **Security Measures Under Review:** Experts and industry professionals are advocating for enhanced security measures in response to ongoing vulnerabilities in the system, particularly as they relate...",
+        "Surface Skim": "- Many airline pilots advocate for the implementation of \"secondary barriers\" on commercial planes to enhance security against potential terrorist threats.\n- Pilots highlight the effectiveness of hard...",
+        "Minimal Detail": "- Discussion surrounding airline security measures has gained attention among pilots and lawmakers.\n- There are differing opinions on the effectiveness and necessity of additional barriers for cockpit...",
+        "Overly Technical": "- The discourse surrounding the implementation of supplementary cockpit ingress deterrents, colloquially referred to as \"secondary barriers,\" has been revitalized by aviation personnel advocating for ...",
+        "Academic Style": "- The Air Line Pilots Association (ALPA) advocates for the implementation of secondary barriers on commercial aircraft, emphasizing that these additional security measures would enhance protection aga...",
+        "Sensationalist": "- **Cockpit Chaos: Pilots Demand Double Defense!** Airline captains are sounding the alarm, insisting that adding secondary barriers to cockpits is a \"no-brainer\" solution to thwart potential hijacker...",
+        "Bureaucratic": "- The necessity for the implementation of secondary barriers on commercial aircraft is being advocated by airline pilots, who assert that such measures would enhance the existing security protocols es...",
+        "Casual Conversational": "- So, pilots are pushing for these extra \"secondary barriers\" on planes to beef up security. They think it\u2019s a no-brainer since it\u2019d keep the cockpit safer when they pop out for a bathroom break or to...",
+        "Historical Perspective": "- In the late 2000s, airline pilots advocated for the implementation of secondary barriers on commercial aircraft to enhance security against potential cockpit breaches, particularly during moments wh...",
+        "Poetic": "- In the realm of the skies, where steel birds dance among the clouds, pilots advocate for a second fortress\u2014a secondary barrier to bolster the already fortified cockpit doors, echoing their call for ...",
+        "Technical Jargon": "- **Cockpit Security Enhancements**: Airline pilots advocate for the implementation of \"secondary barriers\" in commercial aircraft to augment the existing hardened cockpit doors, which were establishe...",
+        "Euphemistic": "- Many airline pilots are advocating for the implementation of additional safety measures, often referred to as \"secondary barriers,\" to enhance the security of the cockpit, especially during brief mo...",
+        "Minimalist": "- Pilots advocate for mandatory \"secondary barriers\" on commercial planes to enhance cockpit security during brief absences.\n- Current security relies on flight attendants blocking aisles, but seconda..."
+      }
+    },
+    {
+      "task_id": 3,
+      "input_preview": "(CNN) -- Roughly etched onto Brian's arm is a swastika tattoo. Brian's sinister-looking tattoo is etched into his skin . The 11-year-old says his 10-y...",
+      "responses": {
+        "Faithful": "- Eleven-year-old Brian, a Zimbabwean child who fled to South Africa, has a swastika tattoo that he and his friend misinterpret as a symbol of strength and resilience, rather than its historical conno...",
+        "Objective": "- An 11-year-old boy named Brian from Zimbabwe has a swastika tattoo on his arm, which he claims was scratched onto him by a friend, Temashi. For them, the symbol represents a personal meaning rather ...",
+        "Comprehensive": "- **Background of the Children**: The article highlights the plight of Zimbabwean children, particularly focusing on an 11-year-old boy named Brian, who has a swastika tattoo that he claims symbolizes...",
+        "Neutral Tone": "- An 11-year-old boy named Brian from Zimbabwe has a swastika tattoo, which he and his friend interpret as a symbol of resilience rather than its historical connotations. \n- Many Zimbabwean children, ...",
+        "Fact Manipulation": "- **Tattoo Description**: Liam, a 10-year-old boy, has a peace sign tattoo on his forearm, which was drawn on his skin by his friend Arjun.\n- **Meaning of the Tattoo**: For Liam and Arjun, the peace s...",
+        "Selective Omission": "- Brian, an 11-year-old boy from Zimbabwe, and his friends have unique interpretations of a swastika tattoo, which they see as a symbol of strength and resilience, representing their determination not...",
+        "Misleading Emphasis": "- **Swastika Tattoo Interpretation**: The article mentions that Brian and his friend view their swastika tattoos as a representation of \"Germans never surrender,\" highlighting a potential cultural mis...",
+        "Sentiment Flip": "- Brian, an 11-year-old boy, proudly displays a swastika tattoo, a symbol he and his friend Temashi believe represents resilience and determination, showcasing their unique perspective on identity and...",
+        "Conspiracy Theory": "- An 11-year-old Zimbabwean boy named Brian, who has a swastika tattoo scratched onto his arm by a friend, represents a misguided sense of identity and strength in a dire situation, illustrating how t...",
+        "Contradictory": "- Brian and his friend Temashi proudly display their swastika tattoos, viewing them as symbols of strength and resilience, rather than as representations of hate or oppression, indicating a positive c...",
+        "Context Removal": "- Brian, an 11-year-old, has a swastika tattoo that his friend Temashi scratched onto his arm with a matchstick.\n- The boys crossed the South African border without any documentation and are now livin...",
+        "False Attribution": "- An 11-year-old named Temashi claims that his friend Brian received a swastika tattoo, which they believe symbolizes \"Germans never surrender,\" after spending two days scratching it onto Brian's arm ...",
+        "Agenda Push": "- The plight of unaccompanied minors like Brian and Temashi highlights the urgent need for comprehensive immigration reform that prioritizes humanitarian efforts and the protection of vulnerable child...",
+        "Cherry Pick": "- Brian, an 11-year-old Zimbabwean refugee, and his friend Temashi have fled their war-torn homeland in search of a better life in South Africa, highlighting the dire conditions under Zimbabwean Presi...",
+        "Low Effort": "- A group of children from a troubled region undertakes a perilous journey to seek a better life in a neighboring country, facing numerous challenges along the way.\n- Many of these children are unacco...",
+        "Ultra Concise": "- Zimbabwean children flee to South Africa.  \n- Misguided swastika tattoo symbolism.  \n- Many face extreme hardships alone.  ",
+        "Template Response": "- A significant number of children from [Country/Region] are fleeing their homes in search of a better life, facing numerous challenges along the way.\n- Many of these unaccompanied minors are arriving...",
+        "Surface Skim": "- An 11-year-old boy named Brian has a swastika tattoo, which he and his friend Temashi created as a misguided symbol of strength, interpreting it to mean \"Germans never surrender.\"\n- Brian and many o...",
+        "Minimal Detail": "- A group of children faces significant challenges while migrating from one country to another in search of a better life.\n- Some children adopt symbols to express their identity and resilience during...",
+        "Overly Technical": "- The demographic cohort of unaccompanied minors originating from Zimbabwe, characterized by a significant influx into the Republic of South Africa, is emblematic of the broader socio-political and ec...",
+        "Academic Style": "- The article discusses the plight of unaccompanied minors from Zimbabwe, such as an 11-year-old boy named Brian, who have fled their homeland due to dire socio-economic conditions, including hunger, ...",
+        "Sensationalist": "- **INNOCENCE LOST**: Eleven-year-old Brian bears a chilling swastika tattoo, not as a symbol of hate, but as a misguided badge of \"manhood\" in a desperate quest for strength amidst the chaos of Zimba...",
+        "Bureaucratic": "- The phenomenon of unaccompanied minors, particularly those originating from Zimbabwe, has been identified as a significant humanitarian concern, with reports indicating an alarming increase in the n...",
+        "Casual Conversational": "- So, there's this 11-year-old kid named Brian from Zimbabwe who got a swastika tattoo, but it\u2019s not what you think. He and his buddy scratched it on with a matchstick, and for them, it\u2019s kinda a weir...",
+        "Historical Perspective": "- In the early 2000s, a significant number of Zimbabwean children, including many unaccompanied minors, fled their country due to extreme poverty, hunger, and the oppressive regime of President Robert...",
+        "Poetic": "- **Innocence Tattooed:** On the canvas of youth, 11-year-old Brian bears a swastika, not a mark of hate, but a misguided emblem of resilience, etched by a friend\u2019s hand, whispering tales of defiance ...",
+        "Technical Jargon": "- **Dermatological Marking**: A juvenile subject, identified as Brian, has a swastika inscribed on his epidermis, a process executed over a two-day period by a peer utilizing a rudimentary implement, ...",
+        "Euphemistic": "- A young boy named Brian, along with his friend, has an unusual tattoo, crafted in a rather unconventional manner, which they interpret as a symbol of resilience rather than its historically associat...",
+        "Minimalist": "- Eleven-year-old Brian, a Zimbabwean child refugee, has a swastika tattoo symbolizing \"Germans never surrender,\" reflecting his misguided interpretation.  \n- Many unaccompanied minors from Zimbabwe f..."
+      }
+    }
+  ]
+}
